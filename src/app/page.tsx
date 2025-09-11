@@ -9,10 +9,21 @@ import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
+import WhoWeAre from '@/components/WhoWeAre'
+import Solutions from "@/components/Solutions"
+import BusinessModel from "@/components/BusinessModel"
 import { Metadata } from "next";
+import WhyChoose from "@/components/WhyChoose";
+import Applications from "@/components/Applications";
+import Results from "@/components/Results";
+import GreenLabs from "@/components/GreenLabSection";
+import RecognitionNews from "@/components/RecognitionNews";
+import Vision from "@/components/Vision";
+import ClosingCTA from "@/components/ClosingCTA";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
+  title: "Saarthi GreenTech",
   description: "This is Home for Startup Nextjs Template",
   // other metadata
 };
@@ -22,15 +33,26 @@ export default function Home() {
     <>
       <ScrollUp />
       <Hero />
-      <Features />
+      <WhoWeAre />
+      <Solutions />
+      <BusinessModel />
+      <WhyChoose />
+      {/* <Features /> */}
       <Video />
-      <Brands />
+      {/* <Brands /> */}
       <AboutSectionOne />
       <AboutSectionTwo />
-      <Testimonials />
-      <Pricing />
-      <Blog />
-      <Contact />
+      <Applications />
+      {/* <Testimonials /> */}
+      <Results />
+      <GreenLabs />
+      {/* <RecognitionNews /> */}
+      {/* <Pricing /> */}
+      {/* <Blog /> */}
+      <Vision />
+      <ClosingCTA />
+      {/* <Footer /> */}
+      {/* <Contact /> */}
     </>
   );
 }
