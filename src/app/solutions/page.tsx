@@ -34,14 +34,14 @@ export default function OurSolutionsPage() {
               Saarthi GreenTech combines Consulting, Products, Projects and continual innovation (GreenLabs) to reduce emissions, save fuel and deliver Stage 1–3 ESG reporting that stands up to regulators and investors.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            {/* <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/contact" className="inline-flex rounded-full bg-[var(--brand,#33A04A)] px-6 py-3 font-semibold text-black">
                 Talk to Our Experts
               </Link>
               <Link href="/our-solutions#solutions" className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-white/90">
                 Explore Solutions
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -73,7 +73,7 @@ export default function OurSolutionsPage() {
       {/* SECTION 2 - Business Model (4 pillars) */}
       <section id="business-model" className="py-16 bg-slate-50">
         <div className="container mx-auto px-6 max-w-6xl text-center">
-          <h2 className="text-3xl font-extrabold mb-4">The SGT business model</h2>
+          <h2 className="text-3xl font-extrabold mb-4">The Saarthi business model</h2>
           <p className="text-slate-600 mb-8 max-w-3xl mx-auto">
             We deliver measurable decarbonisation via four integrated pillars centered on GreenVision.
           </p>
@@ -106,7 +106,7 @@ export default function OurSolutionsPage() {
       <section id="esg" className="py-16 bg-white">
         <div className="container mx-auto px-6 max-w-6xl">
           <h2 className="text-3xl font-extrabold mb-4">Why this matters for ESG</h2>
-          <p className="text-slate-600 mb-6">SGT enables Stage 1–3 reporting with data-driven actions that reduce emissions and generate financial savings.</p>
+          <p className="text-slate-600 mb-6">Saarthi enables Stage 1–3 reporting with data-driven actions that reduce emissions and generate financial savings.</p>
 
           <div className="grid gap-6 sm:grid-cols-3">
             <div className="rounded-xl bg-slate-50 p-6 text-center">
@@ -127,10 +127,10 @@ export default function OurSolutionsPage() {
         </div>
       </section>
 
-      {/* SECTION 4 - Why Choose SGT */}
+      {/* SECTION 4 - Why Choose Saarthi */}
       <section id="why-choose" className="py-16 bg-slate-50">
         <div className="container mx-auto px-6 max-w-6xl">
-          <h2 className="text-3xl font-extrabold text-center mb-4">Why choose SGT</h2>
+          <h2 className="text-3xl font-extrabold text-center mb-4">Why choose Saarthi</h2>
           <p className="text-center text-slate-600 mb-8">We’re an outcome partner — not a parts vendor.</p>
 
           <div className="grid gap-4 md:grid-cols-3">
@@ -158,7 +158,7 @@ export default function OurSolutionsPage() {
           <p className="mt-3 text-lg text-white/90">Whether through Consulting, Products, Projects or GreenLabs, Saarthi GreenTech helps you cut emissions, save fuel, and deliver ESG reports that stand up to global scrutiny.</p>
 
           <div className="mt-6 flex justify-center gap-4">
-            <Link href="/contact" className="inline-flex items-center rounded-full bg-white/90 px-6 py-3 text-slate-900 font-semibold">Get Started Today</Link>
+            {/* <Link href="/contact" className="inline-flex items-center rounded-full bg-white/90 px-6 py-3 text-slate-900 font-semibold">Get Started Today</Link> */}
             <Link href="/contact" className="inline-flex items-center rounded-full border border-white/30 px-6 py-3 text-white">Book a Consultation</Link>
           </div>
         </div>

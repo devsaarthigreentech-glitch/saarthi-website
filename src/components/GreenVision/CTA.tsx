@@ -36,14 +36,14 @@ export default function CTA() {
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row sm:justify-center gap-3 sm:gap-4">
-          <Link
+          {/* <Link
             href="/book-demo"
             className="inline-flex items-center justify-center rounded-full px-6 py-3 text-base font-semibold shadow-lg transition transform hover:scale-[1.02]"
             style={{ background: "var(--brand, #33A04A)", color: "#07121a" }}
             aria-label="Book a demo for GreenVision"
           >
             Book a Demo
-          </Link>
+          </Link> */}
 
           <Link
             href="/contact"
@@ -54,12 +54,12 @@ export default function CTA() {
           </Link>
         </div>
 
-        <div className="mt-8 text-sm text-white/80">
+        {/* <div className="mt-8 text-sm text-white/80">
           <span className="inline-block mr-2">Trusted by:</span>
           <span className="inline-block mr-3 px-2 py-1 rounded bg-white/10">Port Authority</span>
           <span className="inline-block mr-3 px-2 py-1 rounded bg-white/10">Logistics Co.</span>
           <span className="inline-block px-2 py-1 rounded bg-white/10">Industrial Plant</span>
-        </div>
+        </div> */}
       </div>
     </section>
   );

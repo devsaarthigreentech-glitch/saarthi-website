@@ -22,7 +22,7 @@ export default function Hero() {
           analyze, control, and report emissions across your assets — from trucks to
           generators, ships to factories, and even entire smart cities.
         </p>
-        <div className="flex flex-wrap gap-4 justify-center">
+        {/* <div className="flex flex-wrap gap-4 justify-center">
           <Link
             href="/book-demo"
             className="rounded-full bg-[var(--brand)] px-6 py-3 font-semibold text-white hover:opacity-90"
@@ -35,7 +35,7 @@ export default function Hero() {
           >
             Talk to Our Experts
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

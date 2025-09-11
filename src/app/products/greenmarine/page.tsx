@@ -40,14 +40,14 @@ export default function GreenMarinePage() {
               GreenMarine is a hydrogen-based retrofit solution suite for the maritime ecosystem — helping large ships, port vessels and small boats cut emissions, reduce fuel costs, and prepare for IMO-aligned sustainability goals.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            {/* <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/contact" className="inline-flex rounded-full bg-[var(--brand,#33A04A)] px-6 py-3 font-semibold text-black">
                 Book a Pilot
               </Link>
               <Link href="/contact#marine-experts" className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-white/90">
                 Talk to Our Marine Experts
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -271,7 +271,7 @@ export default function GreenMarinePage() {
           <p className="mt-3 text-lg text-white/90">GreenMarine helps vessels and ports become cleaner, more efficient, and ESG-ready — without complex retrofits.</p>
           <div className="mt-6 flex justify-center gap-4">
             <Link href="/contact" className="inline-flex items-center rounded-full bg-white/90 px-6 py-3 text-slate-900 font-semibold">Book a Pilot</Link>
-            <Link href="/contact#marine-experts" className="inline-flex items-center rounded-full border border-white/30 px-6 py-3 text-white">Talk to Our Marine Experts</Link>
+            {/* <Link href="/contact#marine-experts" className="inline-flex items-center rounded-full border border-white/30 px-6 py-3 text-white">Talk to Our Marine Experts</Link> */}
           </div>
         </div>
       </section>

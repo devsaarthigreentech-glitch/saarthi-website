@@ -29,7 +29,7 @@ export default function Results() {
   return (
     <section
       id="results"
-      className="relative z-10 bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900 py-16 md:py-20 lg:py-28 overflow-hidden"
+      className="relative z-10 bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-900 py-12 md:py-20 lg:py-28 overflow-hidden"
     >
       <div className="container relative z-20">
         <SectionTitle

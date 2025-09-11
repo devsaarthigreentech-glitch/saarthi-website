@@ -24,7 +24,7 @@ const areas = [
 
 export default function FocusAreas() {
   return (
-    <section id="focus" className="py-16 md:py-20 lg:py-24 bg-white">
+    <section id="focus" className="py-12 md:py-20 lg:py-24 bg-white">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">Focus Areas of GreenLabs</h2>

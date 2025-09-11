@@ -52,14 +52,14 @@ export default function Strategic() {
               </li>
             </ul>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            {/* <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/book-demo" className="inline-flex items-center rounded-full bg-[var(--brand,#33A04A)] px-6 py-3 text-sm font-semibold text-white shadow-sm">
                 Book a Demo
               </Link>
               <Link href="/contact" className="inline-flex items-center rounded-full border border-slate-200 px-6 py-3 text-sm font-medium text-slate-900 hover:bg-slate-50">
                 Talk to Our Experts
               </Link>
-            </div>
+            </div> */}
           </div>
 
           {/* Right: diagram/visual */}

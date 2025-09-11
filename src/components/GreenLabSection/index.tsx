@@ -49,12 +49,14 @@ const labs = [
 
 export default function GreenLabs() {
   return (
-    <section id="greenlabs" className="py-16 md:py-20 lg:py-28 bg-gray-50 dark:bg-slate-900">
+    <section id="greenlabs" className="py-12 md:py-20 lg:py-28 bg-gray-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700">
       <div className="container">
         <SectionTitle
-          title="GreenLabs — Our Innovation Backbone"
+          title="GreenLabs"
+          subtitle='Our Innovation Backbone'
           paragraph="Engineering the future of hydrogen — from catalyst retrofits to full hydrogen systems. R&D, prototyping, and OEM partnerships."
           center
+          mb='60px'
         />
 
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">

@@ -218,7 +218,7 @@
 //           <div className="flex items-center shrink-0">
 //             <Link href="/" className="flex items-center gap-3">
 //               {/* small consistent logo size - adjust width/height as needed */}
-//               <Image src="/images/logo/company_logo.png" alt="SGT" width={48} height={48} className="block" />
+//               <Image src="/images/logo/company_logo.png" alt="Saarthi" width={48} height={48} className="block" />
 //               <span className="hidden md:inline-block font-extrabold text-lg text-slate-900">Saarthi GreenTech</span>
 //             </Link>
 //           </div>
@@ -440,7 +440,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center shrink-0">
             <Link href="/" className="flex items-center gap-3">
-              <Image src="/images/logo/company_logo.png" alt="SGT" width={48} height={48} className="block" />
+              <Image src="/images/logo/company_logo.png" alt="Saarthi" width={48} height={48} className="block" />
               <span className={`hidden md:inline-block font-extrabold text-lg ${sticky ? "text-slate-900" : "text-white"}`}>
                 Saarthi GreenTech
               </span>

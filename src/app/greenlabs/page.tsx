@@ -16,7 +16,7 @@ export default function GreenLabsPage() {
       <SupportingThemes />
       <ValueProps />
       <Strategic />
-      <Conclusion />
+      {/* <Conclusion /> */}
     </main>
   );
 }

@@ -1,7 +1,7 @@
 // Problem.tsx
 export default function Problem() {
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-slate-50">
+    <section className="py-12 md:py-20 lg:py-24 bg-slate-50">
       <div className="container mx-auto px-6 lg:px-8 max-w-5xl">
         <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900">The Problem</h2>
         <p className="mt-4 text-lg text-slate-700">

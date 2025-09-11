@@ -52,7 +52,7 @@ export default function Advantage() {
   ]
 
   return (
-    <section id="greenvision-advantage" className="py-16 md:py-20 lg:py-24 bg-slate-50">
+    <section id="greenvision-advantage" className="py-12 md:py-20 lg:py-24 bg-slate-50 border-t border-slate-200 dark:border-slate-700">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">
@@ -81,14 +81,14 @@ export default function Advantage() {
         </div>
 
         {/* short CTA below for continuity */}
-        <div className="mt-10 text-center">
+        {/* <div className="mt-10 text-center">
           <a
             href="/book-demo"
             className="inline-flex items-center gap-2 rounded-full bg-[var(--brand,#33A04A)] px-6 py-3 text-sm font-semibold text-white shadow hover:brightness-95"
           >
             Book a Demo
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   )

@@ -92,6 +92,13 @@ layer(base);
   }
 }
 
+.text-outline {
+  /* -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px rgba(0, 0, 0, 0.5); */
+  outline: auto;
+}
+
+
 @utility header-logo {
   .sticky & {
     @apply py-5 lg:py-2;

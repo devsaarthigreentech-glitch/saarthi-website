@@ -315,21 +315,32 @@ export default function Hero({ heroSrc = '/images/hero/hero-illustration.png' }:
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-24 md:py-32">
         <div className="max-w-3xl">
           <div
-            className="mb-2 text-sm font-semibold"
-            style={{ color: 'var(--accent, #98C948)' }}
+            className="mb-2 text-2xl font-extrabold"
+            style={{ color: 'var(--accent, #98C948)',textShadow: "0 1px 3px rgba(0,0,0,0.5)" }}
           >
             Smart Hydrogen. Cleaner Future.
           </div>
 
-<h1 className="mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-[64px] leading-tight font-extrabold text-white">
-Decarbonise Your Fleet, Generators, and Marine Operations
-With <span style={{ color: 'var(--brand, #33A04A)' }}>Smart Hydrogen Systems</span> Delivered as Service {' '}
-  .
+{/* <h1 className="mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-extrabold text-white">
+  Decarbonise Your Fleet, Generators, and Marine Operations
+  With <span style={{ color: 'var(--brand, #33A04A)' }}>Smart Hydrogen Systems</span> Delivered as Service{' '} .
+</h1> */}
+<h1 className="mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-extrabold text-white">
+  Decarbonise Your Fleet, Generators, and Marine Operations With{" "}
+  <span
+    style={{
+      color: "var(--brand, #33A04A)",
+      // WebkitTextStroke: "0.8px rgba(0,0,0,0.5)", // faint black outline
+      textShadow: "0 1px 3px rgba(0,0,0,0.5)",   // soft glow for readability
+    }}
+  >
+    Smart Hydrogen Systems
+  </span>{" "}
+  Delivered as Service.
 </h1>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+
+
+
 
           {/* <p className="mt-6 text-lg text-slate-700 dark:text-white/90">
             We make decarbonisation practical, profitable, and provable —
@@ -338,7 +349,7 @@ With <span style={{ color: 'var(--brand, #33A04A)' }}>Smart Hydrogen Systems</sp
           </p> */}
 
           {/* Buttons */}
-          <div className="mt-8 flex flex-wrap gap-3">
+          {/* <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/book-demo"
               className="inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold bg-[var(--brand,#33A04A)] text-white shadow-sm hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--accent,#98C948)]"
@@ -359,7 +370,7 @@ With <span style={{ color: 'var(--brand, #33A04A)' }}>Smart Hydrogen Systems</sp
             >
               Download Overview PDF
             </a>
-          </div>
+          </div> */}
 
           {/* Trusted-by strip */}
           {/* <div className="mt-8 flex items-center gap-4 overflow-x-auto">

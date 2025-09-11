@@ -10,13 +10,13 @@ export default function Video() {
 
   return (
     <>
-      <section className="relative z-10 py-16 md:py-20 lg:py-28">
+      <section className="relative z-10 py-16 md:py-20 lg:py-28 border-t border-slate-200 dark:border-slate-700">
         <div className="container">
           <SectionTitle
             title="We are ready to help"
             paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
             center
-            mb="80px"
+            mb="60px"
           />
         </div>
         <div className="relative overflow-hidden">

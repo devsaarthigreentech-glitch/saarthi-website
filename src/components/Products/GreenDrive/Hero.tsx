@@ -2,66 +2,55 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image"; // ✅ import Next.js <Image>
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative w-full pt-[88px] bg-white">
-      {/* Background Fleet Image */}
+    <section id="hero" className="relative bg-slate-900 text-white">
+      {/* Background Image */}
       <div className="absolute inset-0 -z-10">
-        <Image
-          src="/images/greendrive/hero-fleet.jpg"
-          alt="Fleet of trucks with green trails"
-          fill
-          priority
-          className="object-cover object-center opacity-90"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-white/10" />
+        <div className="relative w-full h-full">
+          <Image
+            src="/images/greendrive/hero-fleet.jpg"
+            alt="GreenDrive hero - cleaner engines for every vehicle"
+            priority
+            fill
+            style={{ objectFit: "cover", objectPosition: "center" }}
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/50" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8 py-20 md:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-7">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900">
-              One Brand. Multiple Models. Cleaner Engines for Every Vehicle.
-            </h1>
-            <p className="mt-4 text-lg text-slate-700 max-w-2xl">
-              GreenDrive is Saarthi GreenTech’s flagship product family for
-              commercial diesel engines — from delivery vans and buses to
-              Class-8 trucks, mining, construction, and agricultural equipment.
-            </p>
+      <div className="container mx-auto px-6 py-24 md:py-32">
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold text-green-300 mb-2">
+            GreenDrive — Hydrogen retrofits for trucks, buses, mining and construction
+          </p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+            One Brand. Multiple Models.{" "}
+            <span className="text-green-400">Cleaner Engines for Every Vehicle.</span>
+          </h1>
+          <p className="mt-6 text-lg text-slate-200/90">
+            GreenDrive is Saarthi GreenTech’s flagship retrofit family for commercial diesel
+            engines — from delivery vans and buses to Class-8 trucks, mining, construction,
+            and agricultural equipment.
+          </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/products/greendrive#product-range"
-                className="inline-flex items-center rounded-full px-6 py-3 font-semibold"
-                style={{ background: "var(--brand, #33A04A)", color: "#07121a" }}
-              >
-                Explore Models
-              </Link>
-
-              {/* <Link
-                href="/products/greendrive#fact-sheets"
-                className="inline-flex items-center rounded-full px-6 py-3 border border-slate-200 text-slate-900"
-              >
-                See Real-World Results
-              </Link> */}
-            </div>
-          </div>
-
-          {/* Product Image */}
-          <div className="lg:col-span-5">
-            <div className="relative rounded-xl overflow-hidden border border-slate-100 shadow-sm h-64 md:h-80 lg:h-[420px]">
-              <Image
-                src="/images/greendrive/hero-product.png"
-                alt="GreenDrive product visual"
-                fill
-                className="object-contain object-center"
-                priority
-              />
-            </div>
-          </div>
+          {/* <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="/products/greendrive#product-range"
+              className="inline-flex rounded-full bg-[var(--brand,#33A04A)] px-6 py-3 font-semibold text-black"
+            >
+              Explore Models
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-white/90"
+            >
+              Book a Pilot
+            </Link>
+          </div> */}
         </div>
       </div>
     </section>

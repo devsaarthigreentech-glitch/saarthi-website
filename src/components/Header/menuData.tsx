@@ -140,12 +140,12 @@ const menuData: Menu[] = [
     title: "Resources",
     newTab: false,
     submenu: [
-      {
-        id: 61,
-        title: "Blogs",
-        path: "/resources/blogs",
-        newTab: false,
-      },
+      // {
+      //   id: 61,
+      //   title: "Blogs",
+      //   path: "/resources/blogs",
+      //   newTab: false,
+      // },
       {
         id: 62,
         title: "Downloads",
@@ -158,12 +158,12 @@ const menuData: Menu[] = [
         path: "/resources/gallery",
         newTab: false,
       },
-      {
-        id: 64,
-        title: "Media",
-        path: "/resources/media",
-        newTab: false,
-      },
+      // {
+      //   id: 64,
+      //   title: "Media",
+      //   path: "/resources/media",
+      //   newTab: false,
+      // },
     ],
   },
   {

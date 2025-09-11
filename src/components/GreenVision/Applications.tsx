@@ -74,7 +74,7 @@ const apps = [
 
 export default function Applications() {
   return (
-    <section id="greenvision-applications" className="py-16 md:py-20 lg:py-24 bg-white">
+    <section id="greenvision-applications" className="py-12 md:py-20 lg:py-24 bg-gradient-to-b from-white to-gray-50 dark:from-slate-900 dark:to-slate-800 border-t border-slate-200 dark:border-slate-700">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">
@@ -106,26 +106,26 @@ export default function Applications() {
                 <p className="mt-2 text-sm text-slate-600">{a.body}</p>
               </div>
 
-              <div className="mt-2">
+              {/* <div className="mt-2">
                 <Link
                   href="/solutions"
                   className="inline-flex items-center text-sm font-medium text-[var(--brand,#33A04A)] hover:underline"
                 >
                   Learn how
                 </Link>
-              </div>
+              </div> */}
             </article>
           ))}
         </div>
 
-        <div className="mt-10 text-center">
+        {/* <div className="mt-10 text-center">
           <Link
             href="/case-studies"
             className="inline-flex items-center rounded-full bg-[var(--brand,#33A04A)] px-6 py-3 text-sm font-semibold text-white shadow hover:brightness-95"
           >
             See Case Studies
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   )

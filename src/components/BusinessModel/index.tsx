@@ -27,7 +27,7 @@ const pillars = [
     id: 3,
     label: "Projects",
     summary:
-      "Outcome-as-a-Service: SGT installs, operates, maintains, and reports results for a monthly fee — low upfront cost for customers.",
+      "Outcome-as-a-Service: Saarthi installs, operates, maintains, and reports results for a monthly fee — low upfront cost for customers.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" className="fill-current" aria-hidden>
         <path d="M3 13v-2h2V9h2v2h8V9h2v2h2v2h-2v2h-2v-2H7v2H5v-2H3z" />
@@ -48,12 +48,14 @@ const pillars = [
 
 export default function BusinessModel() {
   return (
-    <section id="business-model" className="py-16 md:py-20 lg:py-28">
+    <section id="business-model" className="py-12 md:py-20 lg:py-28 bg-gradient-to-b from-white to-gray-50 dark:from-slate-900 dark:to-slate-800 border-t border-slate-200 dark:border-slate-700">
       <div className="container">
         <SectionTitle
-          title="Business Model: How We Work"
+          title="Business Model"
+          subtitle="How We Work"
           paragraph="We deliver outcomes through four integrated pillars — consulting, products, projects, and R&D via GreenLabs."
           center
+          mb="60px"
         />
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

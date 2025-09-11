@@ -6,12 +6,14 @@ import applicationsData from "./applicationsData";
 
 export default function Applications() {
   return (
-    <section id="applications" className="py-16 md:py-20 lg:py-28 bg-white dark:bg-slate-900">
+    <section id="applications" className="py-12 md:py-20 lg:py-28 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700">
       <div className="container">
         <SectionTitle
-          title="Applications — Where We Deliver Value"
+          title="Applications"
+          subtitle="Where We Deliver Value"
           paragraph="Ports & Shipping, Fleets & Logistics, Factories & Campuses, and Smart Cities — practical decarbonisation for today’s real-world assets."
           center
+          mb="60px"
         />
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">

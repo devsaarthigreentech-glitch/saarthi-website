@@ -12,12 +12,13 @@ export default function WhyChoose() {
   }
 
   return (
-    <section id="why-choose" className="py-16 md:py-20 lg:py-28 bg-white dark:bg-slate-900">
+    <section id="why-choose" className="py-12 md:py-20 lg:py-28 bg-gradient-to-b from-white to-gray-50 dark:from-slate-900 dark:to-slate-800 border-t border-slate-200 dark:border-slate-700">
       <div className="container">
         <SectionTitle
-          title="Why Choose SGT (Impact Icons)"
+          title="Why Choose Saarthi"
           paragraph="Dual ROI, ESG readiness, compact retrofits, proven pilots, and future-ready R&D — engineered for measurable decarbonisation."
           center
+          mb='60px'
         />
 
         <div className="mt-10 relative">

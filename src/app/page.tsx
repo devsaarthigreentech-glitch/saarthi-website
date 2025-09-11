@@ -49,7 +49,7 @@ export default function Home() {
       {/* <RecognitionNews /> */}
       {/* <Pricing /> */}
       {/* <Blog /> */}
-      <Vision />
+      {/* <Vision /> */}
       <ClosingCTA />
       {/* <Footer /> */}
       {/* <Contact /> */}

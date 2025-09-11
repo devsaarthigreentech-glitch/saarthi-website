@@ -35,14 +35,14 @@ export default function GreenGenPage() {
               GreenGen is Saarthi GreenTech’s hydrogen retrofit brand for diesel generators (20 kVA → 4000 kVA). It reduces emissions while saving fuel — an alternative to bulky post-treatment systems.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            {/* <div className="mt-8 flex flex-wrap gap-3">
               <Link href="#product-range" className="inline-flex rounded-full bg-[var(--brand,#33A04A)] px-6 py-3 font-semibold text-black">
                 Explore Models
               </Link>
               <a href="/downloads/green-gen-case-studies.pdf" className="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-white/90">
                 Download Case Studies
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -270,7 +270,7 @@ export default function GreenGenPage() {
 
           <div className="mt-6 flex justify-center gap-4">
             <Link href="/contact" className="inline-flex items-center rounded-full bg-white/90 px-6 py-3 text-slate-900 font-semibold">Book a Pilot</Link>
-            <a href="/downloads/green-gen-brochure.pdf" className="inline-flex items-center rounded-full border border-white/30 px-6 py-3 text-white">Download Brochure</a>
+            {/* <a href="/downloads/green-gen-brochure.pdf" className="inline-flex items-center rounded-full border border-white/30 px-6 py-3 text-white">Download Brochure</a> */}
           </div>
         </div>
       </section>

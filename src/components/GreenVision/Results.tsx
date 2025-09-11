@@ -133,7 +133,7 @@ const rows = [
 
 export default function Results() {
   return (
-    <section id="greenvision-results" className="py-16 md:py-20 lg:py-24 bg-gray-50 dark:bg-gray-900">
+    <section id="greenvision-results" className="py-12 md:py-20 lg:py-24 bg-gray-50 dark:bg-gray-900 border-t border-slate-200 dark:border-slate-700">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white">
