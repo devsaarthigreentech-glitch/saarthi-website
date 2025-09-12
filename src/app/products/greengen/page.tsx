@@ -54,8 +54,9 @@ export default function GreenGenPage() {
             <div>
               <h2 className="text-2xl font-extrabold mb-3">The challenge with DG sets</h2>
               <p className="text-slate-600 mb-4">
-                Diesel generators are critical in many sectors (telecom, hospitals, data centers, ports, mining) but are also major polluters and expensive to operate. Conventional post-combustion systems are bulky, costly, and don't reduce fuel consumption.
-              </p>
+  Diesel generators are critical in many sectors (telecom, hospitals, data centers, ports, mining) but are also major polluters and expensive to operate. Conventional post-combustion systems are bulky, costly, and don&apos;t reduce fuel consumption.
+</p>
+
 
               <ul className="list-disc list-inside text-slate-600 space-y-2">
                 <li>Filters/SCRs treat exhaust after combustion and add OPEX.</li>
