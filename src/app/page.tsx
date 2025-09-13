@@ -124,8 +124,8 @@ export default function Home() {
     url: "https://saarthigreentech.com",
     logo: "https://saarthigreentech.com/images/company_logo.png",
     sameAs: [
-      "https://www.linkedin.com/company/saarthi-greentech",
-      "https://twitter.com/saarthigreentech"
+      "https://www.linkedin.com/company/saarthigreentech",
+      "https://twitter.com/saarthigreen"
     ],
     contactPoint: {
       "@type": "ContactPoint",
