@@ -122,15 +122,15 @@ export default function Home() {
     "@type": "Organization",
     name: "Saarthi GreenTech",
     url: "https://saarthigreentech.com",
-    logo: "https://saarthigreentech.com/images/logo.png",
+    logo: "https://saarthigreentech.com/images/company_logo.png",
     sameAs: [
       "https://www.linkedin.com/company/saarthi-greentech",
       "https://twitter.com/saarthigreentech"
     ],
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+91-XXXXXXXXXX",
-      contactType: "Customer Service",
+      email: "contact@saarthigreentech.com",
+      contactType: "Customer Support",
       areaServed: "IN",
       availableLanguage: ["English", "Hindi"]
     }
