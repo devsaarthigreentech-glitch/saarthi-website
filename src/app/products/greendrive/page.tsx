@@ -120,11 +120,6 @@ const productJsonLd = {
     name: "Saarthi GreenTech",
     url: "https://saarthigreentech.com",
   },
-  offers: {
-    "@type": "Offer",
-    priceCurrency: "INR",
-    availability: "https://schema.org/InStock",
-  },
 };
 
 const breadcrumbJsonLd = {
