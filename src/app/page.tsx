@@ -89,6 +89,11 @@ export const metadata = {
   title: "Saarthi GreenTech — Smart Hydrogen Retrofit Solutions",
   description: "Saarthi GreenTech provides hydrogen retrofits (GreenDrive, GreenGen, GreenMarine) and IoT (GreenVision) for practical, provable decarbonisation.",
   keywords: ["Saarthi GreenTech", "hydrogen retrofits", "GreenDrive", "GreenGen", "GreenMarine", "GreenVision", "ESG reporting"],
+    icons: {
+    icon: '/company_logo.ico',
+    shortcut: '/company_logo.ico',
+    apple: '/company_logo.png', // Optional: for iOS devices
+  },
   openGraph: {
     title: "Saarthi GreenTech — Smart Hydrogen Retrofit Solutions",
     description: "Hydrogen retrofits and IoT for fleets, generators, and ships — practical, profitable and provable decarbonisation.",
