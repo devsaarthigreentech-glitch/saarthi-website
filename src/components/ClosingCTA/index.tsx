@@ -31,7 +31,7 @@ export default function ClosingCTA() {
           </div>
 
           <p className="mt-6 text-sm text-slate-500">
-            Or email us at <a href="mailto:contact@saarthigreentech.com" className="underline">contact@saarthigreentech.com</a>
+            Or email us at <a href="mailto:contact@saarthigreen.com" className="underline">contact@saarthigreen.com</a>
           </p>
         </div>
       </div>

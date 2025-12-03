@@ -13,7 +13,7 @@
       {
         id: "b2",
         title: "GreenVision for ESG reporting",
-        excerpt: "IoT intelligence for provable Scope 1–3 emissions.",
+        excerpt: "IoT intelligence for provable Scope 1-3 emissions.",
         slug: "/blog/greenvision-esg",
         date: "2025-04-18",
         image: "/images/resources/blog-02.jpg",

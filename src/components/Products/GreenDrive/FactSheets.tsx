@@ -1,7 +1,7 @@
 // src/components/Products/GreenDrive/FactSheets.tsx
 export default function FactSheets() {
   const cases = [
-    { title: 'Fleet Operator – Trucks', summary: 'Fuel savings & emission cuts over 3 months', link: '/documents/fleet-case-study.pdf' },
+    { title: 'Fleet Operator - Trucks', summary: 'Fuel savings & emission cuts over 3 months', link: '/documents/fleet-case-study.pdf' },
     { title: 'Construction Loader', summary: 'Idling emission reductions in heavy earthmoving', link: '/documents/construction-case.pdf' },
     { title: 'Agriculture Tractor', summary: 'Field efficiency improvements', link: '/documents/agri-case.pdf' },
   ];

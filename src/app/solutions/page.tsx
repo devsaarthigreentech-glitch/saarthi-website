@@ -31,7 +31,7 @@ export default function OurSolutionsPage() {
             </h1>
 
             <p className="mt-6 text-lg text-slate-200/90">
-              Saarthi GreenTech combines Consulting, Products, Projects and continual innovation (GreenLabs) to reduce emissions, save fuel and deliver Stage 1–3 ESG reporting that stands up to regulators and investors.
+              Saarthi GreenTech combines Consulting, Products, Projects and continual innovation (GreenLabs) to reduce emissions, save fuel and deliver Stage 1-3 ESG reporting that stands up to regulators and investors.
             </p>
 
             {/* <div className="mt-8 flex flex-wrap gap-3">
@@ -106,7 +106,7 @@ export default function OurSolutionsPage() {
       <section id="esg" className="py-16 bg-white">
         <div className="container mx-auto px-6 max-w-6xl">
           <h2 className="text-3xl font-extrabold mb-4">Why this matters for ESG</h2>
-          <p className="text-slate-600 mb-6">Saarthi enables Stage 1–3 reporting with data-driven actions that reduce emissions and generate financial savings.</p>
+          <p className="text-slate-600 mb-6">Saarthi enables Stage 1-3 reporting with data-driven actions that reduce emissions and generate financial savings.</p>
 
           <div className="grid gap-6 sm:grid-cols-3">
             <div className="rounded-xl bg-slate-50 p-6 text-center">

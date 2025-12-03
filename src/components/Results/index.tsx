@@ -5,7 +5,7 @@ import SectionTitle from "../Common/SectionTitle"
 const resultsData = [
   {
     id: 1,
-    title: "DG Trials (20–250 kVA)",
+    title: "DG Trials (20-250 kVA)",
     description: "Up to 8% fuel saving, >80% PM reduction.",
   },
   {

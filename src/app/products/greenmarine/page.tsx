@@ -136,7 +136,7 @@ export default function GreenMarinePage() {
                 <div className="rounded-md bg-[var(--accent,#98C948)]/10 p-3 text-[var(--accent,#98C948)]">📉</div>
                 <div>
                   <h4 className="font-semibold">Expected operational savings</h4>
-                  <p className="text-slate-600">Propulsion: ~3–5% (expected). Auxiliary engines: ~4–6%. Boilers at partial load: up to ~8% — results depend on duty cycles.</p>
+                  <p className="text-slate-600">Propulsion: ~3-5% (expected). Auxiliary engines: ~4-6%. Boilers at partial load: up to ~8% — results depend on duty cycles.</p>
                 </div>
               </div>
 
@@ -163,7 +163,7 @@ export default function GreenMarinePage() {
               { t: "Large Ships", d: "Bulk carriers, container ships, tankers, cruise liners." },
               { t: "Port Vessels", d: "Tugboats, supply vessels, ferries, pilot boats." },
               { t: "Smaller Vessels", d: "Fishing boats, coastal cargo, patrol craft." },
-              { t: "Port Infrastructure", d: "Cranes, port vehicles and auxiliary DGs (pair with GreenGen & GreenDrive)." },
+              { t: "Port Infrastructure", d: "Cranes, port vehicles and auxiliary DGs (pair with GreenX & GreenDrive)." },
               { t: "Auxiliary Engines & Boilers", d: "Boilers and service gensets with high partial-load benefits." },
             ].map((c) => (
               <div key={c.t} className="rounded-xl bg-white p-6 shadow">
@@ -248,7 +248,7 @@ export default function GreenMarinePage() {
 
           <div className="grid gap-4 md:grid-cols-3">
             {[
-              { t: "Fuel Savings", d: "3–8% depending on engine & load" },
+              { t: "Fuel Savings", d: "3-8% depending on engine & load" },
               { t: "Emission Reduction", d: "PM, HC, CO, CO₂ and NOx lowered" },
               { t: "Safety", d: "On-demand hydrogen — no bulk storage" },
               { t: "Simple Retrofit", d: "No drydocking or complex conversion" },

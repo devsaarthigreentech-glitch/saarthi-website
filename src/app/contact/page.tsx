@@ -89,13 +89,13 @@ Saarthi GreenTech Pty Limited
                <p>41 Pokolbin Avenue, The Ponds, NSW 2769
               </p>
               <p>
-                <strong>Email:</strong> contact@saarthigreentech.com
+                <strong>Email:</strong> contact@saarthigreen.com
               </p>
               {/* <p>
                 <strong>Phone:</strong> +91 90492 70404
               </p> */}
               <p>
-                <strong>Working Hours:</strong> Friday – Wednesday, 9:30 AM – 6:30 PM IST
+                <strong>Working Hours:</strong> Friday - Wednesday, 9:30 AM - 6:30 PM IST
               </p>
             </div>
           </div>

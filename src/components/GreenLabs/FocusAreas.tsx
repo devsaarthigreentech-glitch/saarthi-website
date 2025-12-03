@@ -6,7 +6,7 @@ const areas = [
     id: "catalyst",
     title: "Hydrogen as a Catalyst in Engines",
     body:
-      "R&D into on-demand hydrogen generation and catalyst approaches that improve combustion efficiency — potential fuel savings of 10–40% depending on use case.",
+      "R&D into on-demand hydrogen generation and catalyst approaches that improve combustion efficiency — potential fuel savings of 10-40% depending on use case.",
   },
   {
     id: "supplement",

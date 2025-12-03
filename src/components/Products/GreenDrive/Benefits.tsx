@@ -1,12 +1,12 @@
 // src/components/Products/GreenDrive/Benefits.tsx
 export default function Benefits() {
   const items = [
-    'Fuel Savings – measurable ROI (up to 20%)',
-    'Emission Reduction – PM, CO₂, HC, CO',
-    'Smart Monitoring – Linked with GreenVision',
-    'No Engine Modifications – Easy retrofit installation',
-    'Applications Across Industries – Transport, construction, mining, agriculture',
-    'Proven on the Road – Real-world validations'
+    'Fuel Savings - measurable ROI (up to 20%)',
+    'Emission Reduction - PM, CO₂, HC, CO',
+    'Smart Monitoring - Linked with GreenVision',
+    'No Engine Modifications - Easy retrofit installation',
+    'Applications Across Industries - Transport, construction, mining, agriculture',
+    'Proven on the Road - Real-world validations'
   ];
 
   return (

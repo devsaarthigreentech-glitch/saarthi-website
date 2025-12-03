@@ -22,72 +22,17 @@ import Vision from "@/components/Vision";
 import ClosingCTA from "@/components/ClosingCTA";
 import Footer from "@/components/Footer";
 
-// export const metadata = {
-//   title: "GreenDrive — Hydrogen retrofits for commercial diesel engines | Saarthi GreenTech",
-//   description: "GreenDrive by Saarthi GreenTech: hydrogen retrofit family for vans, trucks and buses — reduce emissions and save fuel.",
-//   keywords: ["hydrogen retrofit", "GreenDrive", "Saarthi GreenTech", "diesel retrofit", "fleet decarbonisation"],
-//   openGraph: {
-//     title: "GreenDrive — Hydrogen retrofits for commercial engines",
-//     description: "Cleaner engines for delivery vans, buses and heavy trucks — retrofit hydrogen systems that save fuel and cut emissions.",
-//     url: "https://saarthigreentech.com/products/greendrive",
-//     siteName: "Saarthi GreenTech",
-//     images: [
-//       {
-//         url: "https://saarthigreentech.com/images/greendrive/og-image.jpg",
-//         width: 1200,
-//         height: 630,
-//         alt: "GreenDrive product visual",
-//       },
-//     ],
-//     type: "product",
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: "GreenDrive — Hydrogen retrofit family",
-//     description: "Cleaner engines, measurable fuel savings. Explore GreenDrive models for every vehicle type.",
-//     images: ["/images/greendrive/og-image.jpg"],
-//   },
-//   metadataBase: new URL("https://saarthigreentech.com"),
-//   alternates: {
-//     canonical: "/products/greendrive",
-//   },
-// };
-
-// export default function Home() {
-//   return (
-//     <>
-//       <ScrollUp />
-//       <Hero />
-//       <WhoWeAre />
-//       <Solutions />
-//       <BusinessModel />
-//       <WhyChoose />
-//       {/* <Features /> */}
-//       <Video />
-//       {/* <Brands /> */}
-//       <AboutSectionOne />
-//       <AboutSectionTwo />
-//       <Applications />
-//       {/* <Testimonials /> */}
-//       <Results />
-//       <GreenLabs />
-//       {/* <RecognitionNews /> */}
-//       {/* <Pricing /> */}
-//       {/* <Blog /> */}
-//       {/* <Vision /> */}
-//       <ClosingCTA />
-//       {/* <Footer /> */}
-//       {/* <Contact /> */}
-//     </>
-//   );
-// }
-
-
-import Script from "next/script"; // 👈 add this
+import Script from "next/script";
+import CO2SavingsSection from "@/components/GreenVisionWidget";
+import EvidenceStrip from "@/components/EvidenceStrip";
+import EcosystemFlow from "@/components/EcosystemFlow";
+import DaasSection from "@/components/DaaSSection";
+import FoundingStory from "@/components/FoundingStorySection";
+import FinalCTA from "@/components/FinalCTA";
 
 export const metadata = {
-  title: "Saarthi GreenTech — Smart Hydrogen Retrofit Solutions",
-  description: "Saarthi GreenTech provides hydrogen retrofits (GreenDrive, GreenGen, GreenMarine) and IoT (GreenVision) for practical, provable decarbonisation.",
+  title: "Saarthi Green — Smart Hydrogen Retrofit Solutions",
+  description: "Saarthi Green provides hydrogen retrofits (GreenDrive, GreenGen, GreenMarine) and IoT (GreenVision) for practical, provable decarbonisation.",
   keywords: ["Saarthi GreenTech", "hydrogen retrofits", "GreenDrive", "GreenGen", "GreenMarine", "GreenVision", "ESG reporting"],
     icons: {
     icon: '/company_logo.ico',
@@ -95,27 +40,27 @@ export const metadata = {
     apple: '/company_logo.png', // Optional: for iOS devices
   },
   openGraph: {
-    title: "Saarthi GreenTech — Smart Hydrogen Retrofit Solutions",
+    title: "Saarthi Green — Smart Hydrogen Retrofit Solutions",
     description: "Hydrogen retrofits and IoT for fleets, generators, and ships — practical, profitable and provable decarbonisation.",
-    url: "https://saarthigreentech.com",
-    siteName: "Saarthi GreenTech",
+    url: "https://saarthigreen.com",
+    siteName: "Saarthi Green",
     images: [
       {
-        url: "https://saarthigreentech.com/images/hero-illustration.png",
+        url: "https://saarthigreen.com/images/hero-illustration.png",
         width: 1200,
         height: 630,
-        alt: "Saarthi GreenTech Hydrogen Retrofit Solutions",
+        alt: "Saarthi Green Hydrogen Retrofit Solutions",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Saarthi GreenTech — Smart Hydrogen Retrofit Solutions",
+    title: "Saarthi Green — Smart Hydrogen Retrofit Solutions",
     description: "Practical hydrogen retrofits + IoT ESG reporting tools. Reduce emissions, save fuel, prove ROI.",
     images: ["/images/og-home.jpg"],
   },
-  metadataBase: new URL("https://saarthigreentech.com"),
+  metadataBase: new URL("https://saarthigreen.com"),
   alternates: {
     canonical: "/",
   },
@@ -125,16 +70,16 @@ export default function Home() {
   const orgJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Saarthi GreenTech",
-    url: "https://saarthigreentech.com",
-    logo: "https://saarthigreentech.com/images/company_logo.png",
+    name: "Saarthi Green",
+    url: "https://saarthigreen.com",
+    logo: "https://saarthigreen.com/images/company_logo.png",
     sameAs: [
       "https://www.linkedin.com/company/saarthigreentech",
       "https://twitter.com/saarthigreen"
     ],
     contactPoint: {
       "@type": "ContactPoint",
-      email: "contact@saarthigreentech.com",
+      email: "contact@saarthigreen.com",
       contactType: "Customer Support",
       areaServed: "IN",
       availableLanguage: ["English", "Hindi"]
@@ -144,11 +89,11 @@ export default function Home() {
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    url: "https://saarthigreentech.com",
-    name: "Saarthi GreenTech",
+    url: "https://saarthigreen.com",
+    name: "Saarthi Green",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://saarthigreentech.com/search?q={search_term_string}",
+      target: "https://saarthigreen.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
@@ -162,24 +107,30 @@ export default function Home() {
       {/* Your existing sections */}
       <ScrollUp />
       <Hero />
-      <WhoWeAre />
+      <CO2SavingsSection />
+      {/* <WhoWeAre /> */}
       <Solutions />
-      <BusinessModel />
-      <WhyChoose />
+      <EvidenceStrip />
+      <EcosystemFlow />
+      <DaasSection />
+      <FoundingStory />
+      {/* <BusinessModel /> */}
+      {/* <WhyChoose /> */}
       {/* <Features /> */}
-      <Video />
+      {/* <Video /> */}
       {/* <Brands /> */}
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Applications />
+      {/* <AboutSectionOne /> */}
+      {/* <AboutSectionTwo /> */}
+      {/* <Applications /> */}
       {/* <Testimonials /> */}
-      <Results />
-      <GreenLabs />
+      {/* <Results /> */}
+      {/* <GreenLabs /> */}
       {/* <RecognitionNews /> */}
       {/* <Pricing /> */}
       {/* <Blog /> */}
       {/* <Vision /> */}
-      <ClosingCTA />
+      {/* <FinalCTA /> */}
+      {/* <ClosingCTA /> */}
       {/* <Footer /> */}
       {/* <Contact /> */}
     </>
