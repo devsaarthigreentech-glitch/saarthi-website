@@ -432,7 +432,7 @@ const GreenMentorPage = () => {
                                     alt="Sample GreenMentor Advisory Report" 
                                     className="rounded-lg w-full h-auto object-cover"
                                 />
-                                <div className="mt-6 text-center">
+                                {/* <div className="mt-6 text-center">
                                     <a 
                                         href="/request-template" 
                                         className="inline-flex items-center text-base font-bold transition-colors group"
@@ -441,7 +441,7 @@ const GreenMentorPage = () => {
                                         Request an Assessment Report Template
                                         <IconArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>

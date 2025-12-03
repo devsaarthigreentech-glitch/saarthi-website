@@ -199,11 +199,11 @@ const CertificationsPageCompact = () => {
                     <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">Need specific compliance documents?</h3>
                     <p className="text-gray-500 dark:text-gray-400 mb-6">Our compliance team is available to assist with detailed audits.</p>
                     <a 
-                        href="/contact-compliance" 
+                        href="/contact" 
                         className="inline-block px-6 py-2.5 text-sm font-bold text-white rounded-full shadow-md hover:shadow-lg transition-transform transform hover:-translate-y-0.5"
                         style={{ backgroundColor: PRIMARY_COLOR }}
                     >
-                        Contact Compliance Team
+                        Contact Team
                     </a>
                 </div>
 

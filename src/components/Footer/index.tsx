@@ -63,10 +63,10 @@ const linkGroups = [
     title: "Ecosystem",
     links: [
       { name: "Ecosystem Overview", href: "/ecosystem" },
-      { name: "GreenMentor", href: "/greenmentor" },
-      { name: "GreenLabs", href: "/greenlabs" },
-      { name: "GreenVision", href: "/greenvision" },
-      { name: "DaaS Solution", href: "/daas" },
+      { name: "GreenMentor", href: "/ecosystem/greenmentor" },
+      { name: "GreenLabs", href: "/ecosystem/greenlabs" },
+      { name: "GreenVision", href: "/ecosystem/greenvision" },
+      { name: "DaaS Solution", href: "/ecosystem/daas" },
     ]
   },
   {
@@ -74,9 +74,9 @@ const linkGroups = [
     links: [
       { name: "Home", href: "/" },
       { name: "Solutions", href: "/solutions" },
-      { name: "Evidence Hub", href: "/evidence" },
+      { name: "Evidence Hub", href: "/evidence/certificates" },
       { name: "Resources", href: "/resources" },
-      { name: "About Saarthi", href: "/about" },
+      { name: "About Saarthi", href: "/about/leadership" },
     ]
   },
 ];
@@ -90,7 +90,7 @@ const Footer = () => {
   const socialLinks = [
       { name: "LinkedIn", href: "https://linkedin.com/company/saarthigreentech/" },
       { name: "X (Twitter)", href: "https://x.com/SaarthiGreen" },
-      { name: "Facebook", href: "https://facebook.com/SaarthiGreen" },
+      { name: "Facebook", href: "https://www.facebook.com/people/Saarthi-GreenTech/61557879393946/" },
   ];
 
 
