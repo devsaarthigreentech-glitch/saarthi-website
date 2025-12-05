@@ -605,7 +605,7 @@ const productRange = [
 
                     <div className="text-center mt-8">
                         <a 
-                            href="/certifications" 
+                            href="/evidence/certificates" 
                             className="inline-flex items-center text-lg font-bold transition-colors group"
                             style={{ color: BRAND_COLOR }}
                         >
@@ -636,7 +636,7 @@ const productRange = [
                             Explore Retrofit Options
                         </a>
                         <a 
-                            href="/contact-tech" 
+                            href="/contact" 
                             className="inline-flex items-center justify-center px-10 py-4 text-xl font-bold rounded-full border border-white text-white hover:bg-white hover:text-gray-900 transition-all duration-300"
                         >
                             Request Technical Consultation

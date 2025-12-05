@@ -68,7 +68,7 @@ export default function GreenXPage() {
             <div className="rounded-xl overflow-hidden shadow-lg">
               <div className="relative w-full h-64">
                 <Image
-                  src="/images/GreenX/saarthi-dg.png"
+                  src="/images/GreenGen/saarthi-dg.png"
                   alt="Smoky DG vs clean DG"
                   fill
                   sizes="(min-width:1024px) 50vw, 100vw"

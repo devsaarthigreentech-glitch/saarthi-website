@@ -326,7 +326,7 @@ const GreenVisionPage = () => {
                             View Dashboard Samples
                         </a>
                         <a 
-                            href="/contact-data" 
+                            href="/contact" 
                             className="px-8 py-3 font-semibold rounded-full border border-gray-500 hover:bg-white hover:bg-opacity-10 transition-all duration-300 transform hover:scale-[1.05]"
                             style={{ color: TEXT_LIGHT }}
                         >

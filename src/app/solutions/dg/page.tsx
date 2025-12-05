@@ -308,12 +308,12 @@ const DGSetsIndustrialPowerPage = () => {
                         >
                             Explore DG Retrofit Options
                         </a>
-                        <a 
+                        {/* <a 
                             href="/contact-assessment" 
                             className="px-8 py-3 font-semibold rounded-full border border-gray-400 hover:bg-white hover:bg-opacity-10 transition-all duration-300 transform hover:scale-[1.05] text-white"
                         >
                             Request Site Assessment
-                        </a>
+                        </a> */}
                     </div>
                 </div>
             </section>
@@ -396,7 +396,7 @@ const DGSetsIndustrialPowerPage = () => {
                     
                     <div className="text-center mt-12">
                         <a 
-                            href="/greengen-details" 
+                            href="/products/greenx" 
                             className="inline-flex items-center text-lg font-bold transition-colors group"
                             style={{ color: PRIMARY_COLOR }}
                         >
