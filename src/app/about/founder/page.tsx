@@ -25,7 +25,7 @@ const FounderStory = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-start">
                     
                     {/* Column 1: Founder's Image and Title */}
-                    <div className="lg:col-span-1 flex flex-col items-center lg:items-start text-center lg:text-left sticky top-8">
+                    <div className="lg:col-span-1 flex flex-col items-center lg:items-start text-center lg:text-left top-8">
                         <div className="w-64 h-64 md:w-80 md:h-80 lg:w-full lg:h-auto lg:aspect-square overflow-hidden rounded-3xl shadow-2xl mb-6 transform transition-all duration-500 hover:scale-[1.01] hover:shadow-3xl">
                             <img 
                                 src={founderImageUrl} 

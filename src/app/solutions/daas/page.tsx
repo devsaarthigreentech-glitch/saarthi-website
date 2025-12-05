@@ -109,13 +109,13 @@ const DaaSPage = () => {
                         Retrofit any diesel engine with <strong>zero upfront cost</strong>. Pay a predictable monthly fee that is always lower than the value of fuel saved — verified by GreenVision.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <a
+                        {/* <a
                             href="/calculate-daas"
                             className={`inline-flex items-center justify-center px-8 py-3 text-lg font-bold rounded-full shadow-lg transition-all duration-300 transform hover:scale-[1.05]`}
                             style={{ backgroundColor: PRIMARY_COLOR, color: 'white' }}
                         >
                             Calculate My DaaS Plan
-                        </a>
+                        </a> */}
                         <a
                             href="/contact"
                             className={`inline-flex items-center justify-center px-8 py-3 text-lg font-bold rounded-full border-2 border-white text-white hover:bg-white hover:text-gray-900 transition-all duration-300`}
