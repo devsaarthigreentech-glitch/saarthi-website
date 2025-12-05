@@ -32,11 +32,11 @@ import FinalCTA from "@/components/FinalCTA";
 
 export const metadata = {
   title: "Saarthi Green — Smart Hydrogen Retrofit Solutions",
-  description: "Saarthi Green provides hydrogen retrofits (GreenDrive, GreenGen, GreenMarine) and IoT (GreenVision) for practical, provable decarbonisation.",
-  keywords: ["Saarthi GreenTech", "hydrogen retrofits", "GreenDrive", "GreenGen", "GreenMarine", "GreenVision", "ESG reporting"],
+  description: "Saarthi Green provides hydrogen retrofits (GreenDrive, GreenX, GreenMarine) and IoT (GreenVision) for practical, provable decarbonisation.",
+  keywords: ["Saarthi GreenTech", "hydrogen retrofits", "GreenDrive", "GreenX", "GreenMarine", "GreenVision", "ESG reporting"],
     icons: {
-    icon: '/company_logo.ico',
-    shortcut: '/company_logo.ico',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
     apple: '/company_logo.png', // Optional: for iOS devices
   },
   openGraph: {
