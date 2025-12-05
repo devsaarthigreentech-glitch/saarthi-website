@@ -392,12 +392,12 @@ const DaaSPage = () => {
                         Share your engines and monthly diesel spend — we’ll calculate your savings and monthly fee.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="/calculate-daas" className="px-8 py-4 bg-white text-green-600 font-bold text-xl rounded-full shadow-xl hover:bg-gray-100 transition transform hover:scale-105">
-                            Calculate My DaaS Plan
-                        </a>
-                        <a href="/contact" className="px-8 py-4 border-2 border-white text-white font-bold text-xl rounded-full hover:bg-white/10 transition">
+                        <a href="/contact" className="px-8 py-4 bg-white text-green-600 font-bold text-xl rounded-full shadow-xl hover:bg-gray-100 transition transform hover:scale-105">
                             Speak With a Specialist
                         </a>
+                        {/* <a href="/contact" className="px-8 py-4 border-2 border-white text-white font-bold text-xl rounded-full hover:bg-white/10 transition">
+                            Speak With a Specialist
+                        </a> */}
                     </div>
                 </div>
             </section>
