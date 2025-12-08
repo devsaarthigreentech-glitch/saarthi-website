@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 // === CONFIGURATION ===
-const N8N_WEBHOOK_URL = "https://n8n.saarthigreentech.com/webhook/917e0a18-4b37-4241-897e-4382110c8376/chat";
+const N8N_CHAT_WEBHOOK_URL = process.env.NEXT_PUBLIC_N8N_CHAT_WEBHOOK || ' ';
 // =====================
 
 const initialMessage = {
@@ -87,7 +87,7 @@ const ChatbotWidget = () => {
                 body: JSON.stringify(payload)
             };
 
-            const response = await fetchWithRetry(N8N_WEBHOOK_URL, options);
+            const response = await fetchWithRetry(N8N_CHAT_WEBHOOK_URL, options);
             const contentType = response.headers.get('content-type');
             
             let result;
