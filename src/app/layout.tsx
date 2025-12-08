@@ -27,7 +27,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <ScrollToTop />
-          <ChatbotWidget />
+          {/* <ChatbotWidget /> */}
         </Providers>
       </body>
     </html>
