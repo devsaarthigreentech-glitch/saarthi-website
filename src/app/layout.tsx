@@ -27,6 +27,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <ScrollToTop />
+          <ChatbotWidget />
         </Providers>
       </body>
     </html>
@@ -34,4 +35,5 @@ export default function RootLayout({
 }
 
 import { Providers } from "./providers";
+import ChatbotWidget from "@/components/Chatbot/page";
 

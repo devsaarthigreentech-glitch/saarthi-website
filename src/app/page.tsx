@@ -101,9 +101,18 @@ export default function Home() {
   return (
     <>
       {/* ✅ JSON-LD Scripts */}
-      <Script id="org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
-      <Script id="website-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
-
+<Script 
+  id="org-schema" 
+  type="application/ld+json" 
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+  strategy="lazyOnload" // ⬅️ Add this
+/>
+<Script 
+  id="website-schema" 
+  type="application/ld+json" 
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+  strategy="lazyOnload" // ⬅️ Add this
+/>
       {/* Your existing sections */}
       <ScrollUp />
       <Hero />
