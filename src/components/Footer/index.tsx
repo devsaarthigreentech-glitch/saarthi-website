@@ -66,7 +66,7 @@ const linkGroups = [
       { name: "GreenMentor", href: "/ecosystem/greenmentor" },
       { name: "GreenLabs", href: "/ecosystem/greenlabs" },
       { name: "GreenVision", href: "/ecosystem/greenvision" },
-      { name: "DaaS Solution", href: "/ecosystem/daas" },
+      { name: "DaaS Solution", href: "/sollutions/daas" },
     ]
   },
   {
