@@ -10,20 +10,19 @@ export type GalleryEvent = {
 
 const galleryData: GalleryEvent[] = [
   {
-    id: "event-1",
-    title: "Advancing Sustainable Mobility with On-Demand Hydrogen at EGYPES 2025",
-    date: "June 12, 2024",
-    excerpt: "At EGYPES 2025, We presented our work on On-Demand Hydrogen Generation for Internal Combustion Engines, a cost-effective, scalable solution to cut fuel consumption and emissions. This patented technology accelerates cleaner transportation without overhauling existing engines. Engaging with global experts reinforced the potential of bridging today’s systems with a zero-emission future.",
-    cover: "/images/gallery/event-1/cover.jpg",
+    id: "event-4",
+    title: "Showcasing Sustainable Innovation at the 1st International Science & Technology Clusters Conference",
+    date: "December 2025",
+    excerpt: "Saarthi Green had the privilege of presenting our Decarbonization as a Service (DaaS) technologies at the 1st International Science & Technology Clusters Conference, held at the Dr. Ambedkar International Center, New Delhi. We showcased innovative solutions like GreenX for Diesel Generator applications, GreenMarine for marine and ship applications, and GreenDrive for commercial trucks. The event, organized by the Office of the Principal Scientific Adviser to the Government of India, fostered collaboration between industry, startups, research institutions, and policymakers — reinforcing our mission toward clean energy and sustainable mobility.",
+    cover: "/images/gallery/event-4/cover.jpeg",
     images: [
-      "/images/gallery/event-1/1.jpg",
-      "/images/gallery/event-1/2.jpg",
-      "/images/gallery/event-1/3.jpg",
-      "/images/gallery/event-1/4.jpg"
-
+      "/images/gallery/event-4/1.jpeg",
+      "/images/gallery/event-4/2.jpeg",
+      "/images/gallery/event-4/3.jpeg",
+      "/images/gallery/event-4/4.jpeg",
+      "/images/gallery/event-4/5.jpeg"
     ],
   },
-  
   {
     id: "event-2",
     title: "Saarthi GreenTech Recieves the Energy Leap Award",
@@ -39,6 +38,21 @@ const galleryData: GalleryEvent[] = [
     ],
   },
   {
+    id: "event-1",
+    title: "Advancing Sustainable Mobility with On-Demand Hydrogen at EGYPES 2025",
+    date: "June 12, 2024",
+    excerpt: "At EGYPES 2025, We presented our work on On-Demand Hydrogen Generation for Internal Combustion Engines, a cost-effective, scalable solution to cut fuel consumption and emissions. This patented technology accelerates cleaner transportation without overhauling existing engines. Engaging with global experts reinforced the potential of bridging today’s systems with a zero-emission future.",
+    cover: "/images/gallery/event-1/cover.jpg",
+    images: [
+      "/images/gallery/event-1/1.jpg",
+      "/images/gallery/event-1/2.jpg",
+      "/images/gallery/event-1/3.jpg",
+      "/images/gallery/event-1/4.jpg"
+
+    ],
+  },
+  
+  {
     id: "event-3",
     title: "Saarthi GreenTech Inauguration: A New Era of Innovation and Sustainability",
     date: "April 10, 2024",
@@ -49,7 +63,8 @@ const galleryData: GalleryEvent[] = [
       "/images/gallery/event-3/2.jpeg",
       "/images/gallery/event-3/3.jpeg"
     ],
-  }
+  },
+
   
   // add more events...
 ];
