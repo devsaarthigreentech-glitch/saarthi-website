@@ -29,6 +29,7 @@ import EcosystemFlow from "@/components/EcosystemFlow";
 import DaasSection from "@/components/DaaSSection";
 import FoundingStory from "@/components/FoundingStorySection";
 import FinalCTA from "@/components/FinalCTA";
+import MediaCarousel from "@/components/MediaCarousal";
 
 export const metadata = {
   title: "Saarthi Green — Smart Hydrogen Retrofit Solutions",
@@ -123,6 +124,7 @@ export default function Home() {
       <EcosystemFlow />
       <DaasSection />
       <FoundingStory />
+      <MediaCarousel />
       {/* <BusinessModel /> */}
       {/* <WhyChoose /> */}
       {/* <Features /> */}
