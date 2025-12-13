@@ -29,6 +29,21 @@ export default function RootLayout({
             gtag('config', 'G-X4N04SK58J');
           `}
         </Script>
+        <Script id="rb2b" strategy="afterInteractive">
+          {`
+            !function(key) {
+              if (window.reb2b) return;
+              window.reb2b = { loaded: true };
+              var s = document.createElement("script");
+              s.async = true;
+              s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";
+              document.getElementsByTagName("script")[0].parentNode.insertBefore(
+                s,
+                document.getElementsByTagName("script")[0]
+              );
+            }("W6Z57HZZL2OX");
+          `}
+        </Script>
       </head>
 
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
