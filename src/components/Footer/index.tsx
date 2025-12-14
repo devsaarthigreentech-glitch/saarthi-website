@@ -55,6 +55,7 @@
 //     </footer>
 //   )
 // }
+import Link from 'next/link';
 import React from 'react';
 
 // --- NAV LINK DATA STRUCTURE (Grouped) ---
@@ -177,6 +178,10 @@ const Footer = () => {
         {/* Copyright and Legal */}
         <div className="text-center text-sm text-slate-500 pt-3">
           <p>&copy; {new Date().getFullYear()} Saarthi GreenTech Pvt Ltd. All rights reserved.</p>
+          <Link href="/privacy-policy" className="hover:underline">
+  Privacy Policy
+</Link>
+
         </div>
         
       </div>
