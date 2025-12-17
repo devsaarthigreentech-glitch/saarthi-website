@@ -429,41 +429,41 @@ const leadership: Person[] = [
 		photo: "/images/team/nandani-kumar.png",
 	},
 	{
-		id: "karunjit",
-		name: "Karunjit Kumar Dhir",
-		role: "Director - Australia",
-		bio:
-			"A dynamic leader with expertise in scaling innovative technologies for global markets. Based out of Sydney in Australia.",
-		photo: "/images/team/karunjit-dhir.png",
-	},
-	{
 		id: "shailesh",
 		name: "Laxmikant Karande",
 		role: "Head - Engineering",
 		bio:
-			"A veteran in engineering and product development, leading the technical innovations of GreenDrive Technology.",
+		"A veteran in engineering and product development, leading the technical innovations of GreenDrive Technology.",
 		photo: "/images/team/laxmikant-karande.png",
 	},
 ];
 
 const advisory: Person[] = [
 	// {
-	//  	id: "gavan",
-	//  	name: "Gavan Knox",
-	//  	role: "Research advisor",
-	//  	bio:
-	//  	 	"A teacher, researcher, and inventor driven by a passion for scientific innovation and sustainability. Inventor and patent holder of the Hydrogen Fuel System.",
-	//  	photo: "/images/team/gavan-knox.jpg",
-	// },
-	{
-		id: "ramasub",
-		name: "A. Ramasubramanian",
-		role: "Advisor",
-		bio:
+		//  	id: "gavan",
+		//  	name: "Gavan Knox",
+		//  	role: "Research advisor",
+		//  	bio:
+		//  	 	"A teacher, researcher, and inventor driven by a passion for scientific innovation and sustainability. Inventor and patent holder of the Hydrogen Fuel System.",
+		//  	photo: "/images/team/gavan-knox.jpg",
+		// },
+		{
+			id: "karunjit",
+			name: "Karunjit Kumar Dhir",
+			role: "Advisor",
+			bio:
+				"A dynamic leader with expertise in scaling innovative technologies for global markets. Based out of Sydney in Australia.",
+			photo: "/images/team/karunjit-dhir.png",
+		},
+		{
+			id: "ramasub",
+			name: "A. Ramasubramanian",
+			role: "Advisor",
+			bio:
 			"A seasoned expert in technology and sustainability, offering strategic direction for Saarthi’s long-term vision.",
-		photo: "/images/team/a-ramasubramanian.png",
-	},
-	{
+			photo: "/images/team/a-ramasubramanian.png",
+		},
+		{
 		id: "harry",
 		name: "Harry Lagad",
 		role: "Advisor",
