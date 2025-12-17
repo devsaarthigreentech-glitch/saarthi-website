@@ -1549,16 +1549,32 @@ const SavingsCalculator: React.FC = () => {
     );
 
     return (
-        <div className="min-h-screen p-8 md:p-12 bg-gray-100 dark:bg-gray-900 font-sans">
-            <div className="max-w-4xl mx-auto">
-                <header className="text-center mb-12">
+        <>
+        {/* // <div className="min-h-screen p-8 md:p-12 bg-gray-100 dark:bg-gray-900 font-sans"> */}
+            {/* <div className="max-w-4xl mx-auto"> */}
+                {/* <header className="text-center mb-12">
                     <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-3">
-                        Estimated Savings Calculator
+                    Estimated Savings Calculator
                     </h1>
                     <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                        See your potential annual fuel cost savings and CO₂ reduction by implementing Saarthi GreenTech systems.
+                    See your potential annual fuel cost savings and CO₂ reduction by implementing Saarthi GreenTech systems.
                     </p>
-                </header>
+                    </header> */}
+      {/* =========================
+          HERO SECTION (NEW)
+          ========================= */}
+      <section className="relative bg-slate-900 text-white">
+        <div className="container mx-auto px-6 py-20 md:py-24 text-center max-w-5xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4">
+            Estimated Savings Calculator
+          </h1>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            See your potential annual fuel cost savings and CO₂ reduction by
+            implementing Saarthi GreenTech systems.
+          </p>
+        </div>
+      </section>
+
 
                 <form onSubmit={handleSubmit} className="p-8 md:p-10 bg-white dark:bg-gray-950 rounded-3xl shadow-2xl border-t-8" style={{ borderColor: BRAND_COLOR }}>
                     <div className="space-y-8">
@@ -1572,7 +1588,7 @@ const SavingsCalculator: React.FC = () => {
                                     onChange={handleChange}
                                     options={countryOptions}
                                     error={errors.country}
-                                />
+                                    />
                                 <InputField
                                     label={`Cost of diesel per litre (estimated ${currencySymbol})`}
                                     name="dieselCostPerLitre"
@@ -1582,7 +1598,7 @@ const SavingsCalculator: React.FC = () => {
                                     prefix={currencySymbol}
                                     unit=" / Litre"
                                     error={errors.dieselCostPerLitre}
-                                />
+                                    />
                             </div>
                         </div>
 
@@ -1595,7 +1611,7 @@ const SavingsCalculator: React.FC = () => {
                                 onChange={handleChange}
                                 options={applicationOptions}
                                 error={errors.applicationType}
-                            />
+                                />
                         </div>
 
                         {inputs.applicationType === 'Vehicle' && (
@@ -1608,7 +1624,7 @@ const SavingsCalculator: React.FC = () => {
                                     onChange={handleChange}
                                     options={vehicleCategoryOptions}
                                     error={errors.vehicleCategory}
-                                />
+                                    />
                             </div>
                         )}
 
@@ -1621,9 +1637,9 @@ const SavingsCalculator: React.FC = () => {
                             
                             {inputs.applicationType !== 'Marine' && (
                                 <button
-                                    type="submit"
-                                    className="mt-8 w-full px-6 py-4 text-xl font-bold rounded-xl shadow-lg transition duration-300 transform hover:scale-[1.01] text-white"
-                                    style={{ backgroundColor: BRAND_COLOR, filter: 'brightness(0.95)' }}
+                                type="submit"
+                                className="mt-8 w-full px-6 py-4 text-xl font-bold rounded-xl shadow-lg transition duration-300 transform hover:scale-[1.01] text-white"
+                                style={{ backgroundColor: BRAND_COLOR, filter: 'brightness(0.95)' }}
                                 >
                                     Calculate Estimated Annual Impact
                                 </button>
@@ -1634,14 +1650,16 @@ const SavingsCalculator: React.FC = () => {
 
                 {calculatedResults && (
                     <ResultCard
-                        results={calculatedResults}
-                        currencySymbol={currencySymbol}
-                        savingPercent={CONFIG.FUEL_SAVING_PERCENT}
-                        co2Factor={CONFIG.CO2_PER_LITER_DIESEL}
+                    results={calculatedResults}
+                    currencySymbol={currencySymbol}
+                    savingPercent={CONFIG.FUEL_SAVING_PERCENT}
+                    co2Factor={CONFIG.CO2_PER_LITER_DIESEL}
                     />
                 )}
-            </div>
-        </div>
+                
+            {/* </div> */}
+        {/* </div> */}
+                </>
     );
 };
 

@@ -75,21 +75,29 @@ const MissionJourney = () => {
     ];
 
     return (
-        <div className="bg-gray-50 dark:bg-gray-950 py-16 md:py-24 text-gray-800 dark:text-gray-200 font-inter">
-            <div className="container mx-auto px-4 max-w-7xl">
-                
+        // <div className="bg-gray-50 dark:bg-gray-950 py-16 md:py-24 text-gray-800 dark:text-gray-200 font-inter">
+        //     <div className="container mx-auto px-4 max-w-7xl">
+                <>
                 {/* Main Mission Header */}
-                <header className="text-center mb-16 md:mb-20">
-                    <h1 className="text-sm font-semibold uppercase tracking-widest" style={{ color: brandColor }}>
-                        Driving Change
-                    </h1>
-                    <h2 className="text-4xl md:text-6xl font-extrabold mt-2 leading-tight text-gray-900 dark:text-white">
-                        Our Journey & Mission
-                    </h2>
-                    <h3 className="text-2xl font-medium mt-4 text-gray-600 dark:text-gray-400">
-                        Engineering a Profitable Path to Net-Zero
-                    </h3>
-                </header>
+                <section className="relative bg-slate-900 text-white">
+    <div className="container mx-auto px-6 py-20 md:py-24 text-center max-w-6xl">
+      <p
+        className="text-sm font-semibold uppercase tracking-widest mb-3"
+        style={{ color: brandColor }}
+      >
+        Driving Change
+      </p>
+
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
+        Our Journey & Mission
+      </h1>
+
+      <p className="mt-4 text-xl md:text-2xl text-slate-300 font-medium">
+        Engineering a Profitable Path to Net-Zero
+      </p>
+    </div>
+  </section>
+
 
                 {/* Section 1: A Journey Born From a Simple Question */}
                 <section className="mb-16 md:mb-24 p-8 rounded-3xl shadow-xl bg-white dark:bg-gray-900 border-t-4" style={{ borderColor: brandColor }}>
@@ -264,10 +272,10 @@ const MissionJourney = () => {
                         The journey continues — with purpose, persistence, and an unwavering belief that the future must be built, not awaited.
                     </p>
                 </section>
-
-            </div>
-        </div>
+                
+            {/* </div>
+        </div> */}
+</>
     );
 };
-
 export default MissionJourney;

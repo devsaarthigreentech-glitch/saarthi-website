@@ -158,17 +158,29 @@ const FAQsApp = () => {
     };
 
     return (
-        <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: BG_LIGHT }}>
-            <div className="max-w-6xl mx-auto">
-                {/* Header Section */}
-                <div className="text-center mb-16">
+        // <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: BG_LIGHT }}>
+            // {/* <div className="max-w-6xl mx-auto"> */}
+                // {/* Header Section */}
+                <>
+                      <section className="relative bg-slate-900 text-white">
+        <div className="container mx-auto px-6 py-20 md:py-24 text-center max-w-5xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+Find quick answers about safety, installation, performance, and business models for hydrogen retrofit technology.
+                    
+          </p>
+        </div>
+      </section>
+                {/* <div className="text-center mb-16">
                     <h1 className="text-5xl md:text-6xl font-extrabold mb-4 leading-tight" style={{ color: TEXT_DARK }}>
                         Frequently Asked Questions
                     </h1>
                     <p className="text-xl max-w-2xl mx-auto" style={{ color: TEXT_DARK }}>
                         Find quick answers about safety, installation, performance, and business models for hydrogen retrofit technology.
                     </p>
-                </div>
+                </div> */}
 
                 {/* FAQ Sections */}
                 <div className="space-y-12">
@@ -218,8 +230,9 @@ const FAQsApp = () => {
                         Contact an Expert
                     </a>
                 </div>
-            </div>
-        </div>
+                </>
+            // {/* </div> */}
+        // {/* </div> */}
     );
 };
 
