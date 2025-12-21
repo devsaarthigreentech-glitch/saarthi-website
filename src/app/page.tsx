@@ -124,7 +124,7 @@ export default function Home() {
       <EcosystemFlow />
       <DaasSection />
       <FoundingStory />
-      {/* <MediaCarousel /> */}
+      <MediaCarousel />
       {/* <BusinessModel /> */}
       {/* <WhyChoose /> */}
       {/* <Features /> */}

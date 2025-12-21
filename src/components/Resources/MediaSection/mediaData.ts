@@ -11,6 +11,15 @@ export type MediaItem = {
 
 const mediaData: MediaItem[] = [
   {
+    id: 8,
+    title: "Green Hydrogen: The Clean Energy Alternative That Is Yet To Be",
+    date: "December 16, 2025",
+    excerpt:
+      "India’s green hydrogen drive could spark a new era of clean industrial power, but high delivery costs and patchy availability may derail the momentum. Could decentralised, point-of-use hydrogen be the real game-changer?",
+    image: "https://api.thesecretariat.in/the-secretariat-api/public//file/download-content-attachment?fileId=c86324417d2a42e2ab3a55de9cbf5943",
+    link: "https://thesecretariat.in/article/india-s-green-hydrogen-bet-boom-or-bubble",
+  },
+  {
     id: 2,
     title: "Hydrogen Retrofits, India's Most Scalable Decarbonisation Path: Saarthi GreenTech's Alok Kumar",
     date: "December 09, 2025",
