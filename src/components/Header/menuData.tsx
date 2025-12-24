@@ -133,12 +133,12 @@ const menuData: Menu[] = [
         path: "/evidence/certificates",
         newTab: false,
       },
-      // {
-      //   id: 17,
-      //   title: "Downloads Library",
-      //   path: "/evidence/downloads",
-      //   newTab: false,
-      // },
+      {
+        id: 17,
+        title: "Awards",
+        path: "/evidence/awards",
+        newTab: false,
+      },
     ],
   },
   // {

@@ -10,6 +10,21 @@ export type GalleryEvent = {
 
 const galleryData: GalleryEvent[] = [
   {
+    id: "event-5",
+    date: "19 December 2025",
+    title: "Surakshit Awards 2025 - Green Impact Award",
+    excerpt:
+      "Saarthi Greentech Pvt. Ltd. was honoured with the Green Impact Award at the Surakshit Awards 2025 in Pune, recognising outstanding contributions to safety, security, and sustainable impact.",
+    cover: "/images/gallery/event-5/3.jpeg",
+    images: [
+      "/images/gallery/event-5/1.jpeg",
+      "/images/gallery/event-5/2.jpeg",
+      "/images/gallery/event-5/3.jpeg",
+      "/images/gallery/event-5/4.jpeg",
+      "/images/gallery/event-5/5.jpeg"
+    ]
+  },
+  {
     id: "event-4",
     title: "Showcasing Sustainable Innovation at the 1st International Science & Technology Clusters Conference",
     date: "December 2025",
