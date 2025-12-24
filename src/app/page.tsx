@@ -119,12 +119,12 @@ export default function Home() {
       <Hero />
       <CO2SavingsSection />
       {/* <WhoWeAre /> */}
+      <MediaCarousel />
       <Solutions />
       <EvidenceStrip />
       <EcosystemFlow />
       <DaasSection />
       <FoundingStory />
-      <MediaCarousel />
       {/* <BusinessModel /> */}
       {/* <WhyChoose /> */}
       {/* <Features /> */}

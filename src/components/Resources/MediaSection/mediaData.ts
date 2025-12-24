@@ -11,6 +11,15 @@ export type MediaItem = {
 
 const mediaData: MediaItem[] = [
   {
+    id: 9,
+    title: "How Green Hydrogen will transform India's fuel future!",
+    date: "December 24, 2025",
+    excerpt:
+      "This episode was originally recorded with  @ABPNews  and is shared here with their permission.In this in-depth podcast conversation, we discuss how hydrogen can function as an enhancer—not a replacement—for diesel, enabling meaningful emission reductions across real-world applications such as commercial trucks, generator sets, buses, and marine engines, without requiring changes to existing infrastructure.The discussion also touches on the journey of building climate-focused innovation at scale, and why sustainability does not need to come at the cost of performance or profitability. Clean energy solutions, when designed right, can be practical, measurable, and economically viable.",
+    image: "https://img.youtube.com/vi/ZeqxHMRH8RQ/maxresdefault.jpg",
+    link: "https://www.youtube.com/watch?v=ZeqxHMRH8RQ",
+  },
+  {
     id: 8,
     title: "Green Hydrogen: The Clean Energy Alternative That Is Yet To Be",
     date: "December 16, 2025",
