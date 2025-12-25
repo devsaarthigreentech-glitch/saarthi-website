@@ -440,10 +440,10 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center shrink-0">
             <Link href="/" className="flex items-center gap-3">
-              <Image src="/images/logo/company_logo.png" alt="Saarthi" width={48} height={48} className="block" />
-              <span className={`hidden md:inline-block font-extrabold text-lg ${sticky ? "text-slate-900" : "text-white"}`}>
+              <Image src="/images/logo/company_logo.png" alt="Saarthi" width={100} height={100} className="block" />
+              {/* <span className={`hidden md:inline-block font-extrabold text-lg ${sticky ? "text-slate-900" : "text-white"}`}>
                 Saarthi Green
-              </span>
+              </span> */}
             </Link>
           </div>
 
