@@ -439,22 +439,14 @@ const leadership: Person[] = [
 ];
 
 const advisory: Person[] = [
-	// {
-		//  	id: "gavan",
-		//  	name: "Gavan Knox",
-		//  	role: "Research advisor",
-		//  	bio:
-		//  	 	"A teacher, researcher, and inventor driven by a passion for scientific innovation and sustainability. Inventor and patent holder of the Hydrogen Fuel System.",
-		//  	photo: "/images/team/gavan-knox.jpg",
-		// },
-		{
-			id: "karunjit",
-			name: "Karunjit Kumar Dhir",
-			role: "Advisor",
-			bio:
-				"A dynamic leader with expertise in scaling innovative technologies for global markets. Based out of Sydney in Australia.",
-			photo: "/images/team/karunjit-dhir.png",
-		},
+	{
+		id: "karunjit",
+		name: "Karunjit Kumar Dhir",
+		role: "Advisor",
+		bio:
+		"A dynamic leader with expertise in scaling innovative technologies for global markets. Based out of Sydney in Australia.",
+		photo: "/images/team/karunjit-dhir.png",
+	},
 		{
 			id: "ramasub",
 			name: "A. Ramasubramanian",
@@ -464,23 +456,31 @@ const advisory: Person[] = [
 			photo: "/images/team/a-ramasubramanian.png",
 		},
 		{
-		id: "harry",
-		name: "Harry Lagad",
-		role: "Advisor",
-		bio:
+			id: "harry",
+			name: "Harry Lagad",
+			role: "Advisor",
+			bio:
 			"A globally recognized leader in logistics and operations, contributing insights to scale Saarthi’s impact.",
-		photo: "/images/team/harry-lagad.png",
-	},
-	{
-		id: "pramod",
-		name: "Pramod Kumar",
-		role: "Advisor",
-		bio:
+			photo: "/images/team/harry-lagad.png",
+		},
+		{
+			id: "pramod",
+			name: "Pramod Kumar",
+			role: "Advisor",
+			bio:
 			"Experienced Marine Technology Specialist",
-		photo: "/images/team/pramod-kumar.png",
-	},
-];
-
+			photo: "/images/team/pramod-kumar.png",
+		},
+		{
+			id: "gavan",
+			name: "Gavan Knox",
+			role: "Research advisor",
+			bio:
+				"A teacher, researcher, and inventor driven by a passion for scientific innovation and sustainability. Inventor and patent holder of the Hydrogen Fuel System.",
+			photo: "/images/team/gavan-knox.jpg",
+		},
+	];
+	
 export default function AboutPage() {
 	// The Vision component is removed as requested by the original code's comment.
 	const brandColor = '#33A04A'; 
