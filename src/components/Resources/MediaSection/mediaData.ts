@@ -11,6 +11,15 @@ export type MediaItem = {
 
 const mediaData: MediaItem[] = [
   {
+    id: 10,
+    title: "How Green Hydrogen Can Reduce Emissions from DG Sets: A Practical Roadmap for India",
+    date: "January 14, 2026",
+    excerpt:
+      "Diesel generators (DG sets) remain the backbone of India's industrial and commercial reliability, powering factories, data centres, hospitals, construction sites, institutions, and telecom networks.",
+    image: "https://electronicsbuzz.in/wp-content/uploads/2026/01/Green-Hydrogen_imresizer.jpg",
+    link: "https://electronicsbuzz.in/how-green-hydrogen-can-reduce-emissions-from-dg-sets-a-practical-roadmap-for-india/",
+  },
+  {
     id: 9,
     title: "How Green Hydrogen will transform India's fuel future!",
     date: "December 24, 2025",
