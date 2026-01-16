@@ -11,6 +11,24 @@ export type MediaItem = {
 
 const mediaData: MediaItem[] = [
   {
+    id: 12,
+    title: "Sugarmint : How Green Hydrogen Can Reduce Emissions from DG Sets",
+    date: "January 14, 2026",
+    excerpt:
+      "Diesel generators (DG sets) remain the backbone of India's industrial and commercial reliability, powering factories, data centres, hospitals, construction sites, institutions, and telecom networks.",
+    image: "https://sugermint.com/wp-content/uploads/2026/01/Alok-Kumar-%E2%80%93-Founder-Director-%E2%80%93-Saarthi-GreenTech-1152x720.jpg",
+    link: "https://sugermint.com/how-green-hydrogen-can-reduce-emissions-from-dg-sets/",
+  },
+  {
+    id: 11,
+    title: "TimesTech : How Green Hydrogen Can Reduce Emissions from DG Sets",
+    date: "January 14, 2026",
+    excerpt:
+      "Diesel generators (DG sets) remain the backbone of India's industrial and commercial reliability, powering factories, data centres, hospitals, construction sites, institutions, and telecom networks.",
+    image: "https://timestech.in/wp-content/uploads/2026/01/Untitled-design-2026-01-14T111540.465-1.jpg",
+    link: "https://timestech.in/how-green-hydrogen-can-reduce-emissions-from-dg-sets-a-practical-roadmap-for-india/",
+  },
+  {
     id: 10,
     title: "How Green Hydrogen Can Reduce Emissions from DG Sets: A Practical Roadmap for India",
     date: "January 14, 2026",
