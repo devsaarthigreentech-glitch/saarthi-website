@@ -11,6 +11,15 @@ export type MediaItem = {
 
 const mediaData: MediaItem[] = [
   {
+    id: 13,
+    title: "Union Budget 2026: Experts pinpoint key growth opportunities across sectors",
+    date: "January 17, 2026",
+    excerpt:
+      "Alok Kumar, founder of Saarthi GreenTech, urges the Budget to reward innovations that cut emissions or industrial pollution. “Outcome-linked funding and targeted tax incentives can accelerate adoption of clean technologies. A functional carbon credit ecosystem will also turn compliance into growth opportunities,” he says.",
+    image: "https://imgs.search.brave.com/EaQwN3d5-JqGIStMWjLrbE0fVKVr_lZCnHS0lG1b6Zg/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly95dDMu/Z29vZ2xldXNlcmNv/bnRlbnQuY29tL3Qx/RW11Rzg2S0MxREVC/bjROcXBxSzFpSGxk/MnJqVzg5ZDBGakNs/Tk1vVXRGT1NOTFRT/eW0xVU1YaEMxV0ZY/Sl9aaS1ULURWZXpB/PXM5MDAtYy1rLWMw/eDAwZmZmZmZmLW5v/LXJq",
+    link: "https://www.cnbctv18.com/budget/india-union-budget-2026-policy-priorities-growth-sectors-19822729.htm",
+  },
+  {
     id: 12,
     title: "Sugarmint : How Green Hydrogen Can Reduce Emissions from DG Sets",
     date: "January 14, 2026",
