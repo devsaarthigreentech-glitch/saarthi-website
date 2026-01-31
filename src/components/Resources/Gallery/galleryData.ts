@@ -10,6 +10,18 @@ export type GalleryEvent = {
 
 const galleryData: GalleryEvent[] = [
   {
+    id: "event-6",
+    date: "30 January 2026",
+    title: "Recognized Among the 10 Best Climate Tech Startups of 2026",
+    excerpt:
+      "Honored among the 10 Best Climate Tech Startups of 2026 for innovation across energy and industrial sustainability.The award reflects our mission to accelerate the transition to low-carbon, resilient systems.",
+    cover: "/images/gallery/event-6/cover.png",
+    images: [
+      "/images/gallery/event-6/1.png",
+      "/images/gallery/event-6/cover.png",
+    ]
+  },
+  {
     id: "event-5",
     date: "19 December 2025",
     title: "Surakshit Awards 2025 - Green Impact Award",
