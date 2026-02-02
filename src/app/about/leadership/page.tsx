@@ -164,7 +164,7 @@ const advisory: Person[] = [
 			name: "Pramod Kumar",
 			role: "Advisor",
 			bio:
-			"Experienced Marine Technology Specialist",
+			"A seasoned marine technology specialist with deep expertise in maritime systems and operations, contributing strategic insights to Saarthi’s marine and energy initiatives.",
 			photo: "/images/team/pramod-kumar.jpeg",
 		},
 		{
