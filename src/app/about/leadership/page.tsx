@@ -143,6 +143,14 @@ const advisory: Person[] = [
 		"A dynamic leader with expertise in scaling innovative technologies for global markets. Based out of Sydney in Australia.",
 		photo: "/images/team/karunjit-dhir.png",
 	},
+	{
+		id: "kundan",
+		name: "Kundan Shendurkar",
+		role: "Advisor",
+		bio:
+		" A strategic catalyst driving SaaS and tech expansion, based in the Netherlands, accelerating and advancing Sarthi's Green Solutions across Europe.",
+		photo: "/images/team/kundan-shendurkar.png",
+	},
 		{
 			id: "ramasub",
 			name: "A. Ramasubramanian",
