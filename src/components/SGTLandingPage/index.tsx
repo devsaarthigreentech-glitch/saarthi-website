@@ -60,9 +60,9 @@ const SGTLandingPage = () => {
                   Technology <ChevronDown className="ml-1 w-4 h-4" />
                 </button>
                 <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                  <a href="#" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green border-b border-gray-100">CHFA Technology</a>
-                  <a href="#" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green border-b border-gray-100">CHCA Technology</a>
-                  <a href="#" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green">GreenVision Platform</a>
+                  <a href="/technology/chfa" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green border-b border-gray-100">CHFA Technology</a>
+                  <a href="/technology/chca" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green border-b border-gray-100">CHCA Technology</a>
+                  <a href="/technology/greenvision" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green">GreenVision Platform</a>
                 </div>
               </div>
 

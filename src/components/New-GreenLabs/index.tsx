@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import { Microscope, Cog, Award, CheckCircle, ArrowRight, Lightbulb, Shield, FlaskConical, Zap, FileCheck, Boxes, TrendingUp } from 'lucide-react';
 
