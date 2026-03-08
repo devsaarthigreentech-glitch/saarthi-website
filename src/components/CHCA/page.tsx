@@ -789,7 +789,7 @@ const CHCATechnologyPage = () => {
         </div>
       </section>
 
-      <style jsx global>{`
+      <style>{`
         .text-sgt-green { color: #1B6B3D; }
         .bg-sgt-green { background-color: #1B6B3D; }
         .text-sgt-yellow { color: #FFD700; }

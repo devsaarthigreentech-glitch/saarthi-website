@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import { Activity, Database, TrendingUp, Shield, CheckCircle, ArrowRight, Globe, FileText, Zap, BarChart3, Cloud } from 'lucide-react';
 
@@ -211,7 +212,7 @@ const GreenVisionPlatformPage = () => {
         </div>
       </section>
 
-      <style jsx global>{`
+      <style>{`
         .text-sgt-green { color: #1B6B3D; }
         .bg-sgt-green { background-color: #1B6B3D; }
         .text-sgt-yellow { color: #FFD700; }
@@ -337,7 +338,7 @@ const GreenVisionPlatformPage = () => {
         </div>
       </section>
 
-      <style jsx global>{`
+      <style>{`
         .text-sgt-green { color: #1B6B3D; }
         .bg-sgt-green { background-color: #1B6B3D; }
         .text-sgt-yellow { color: #FFD700; }
