@@ -49,9 +49,9 @@ const SGTLandingPage = () => {
                   Solutions <ChevronDown className="ml-1 w-4 h-4" />
                 </button>
                 <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                  <a href="#" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green border-b border-gray-100">Industrial Solutions</a>
-                  <a href="#" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green border-b border-gray-100">Marine Solutions</a>
-                  <a href="#" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green">Logistics & Fleet</a>
+                  <a href="/solutions/new-industrial" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green border-b border-gray-100">Industrial Solutions</a>
+                  <a href="/solutions/new-marine" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green border-b border-gray-100">Marine Solutions</a>
+                  <a href="/solutions/new-logistics" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green">Logistics & Fleet</a>
                 </div>
               </div>
 
