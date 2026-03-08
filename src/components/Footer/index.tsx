@@ -1,60 +1,3 @@
-// // src/components/Footer/index.tsx
-// import Link from 'next/link'
-
-// export default function Footer() {
-//   return (
-//     <footer className="bg-gray-900 text-gray-300 py-12">
-//       <div className="container">
-//         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-//           <div>
-//             <h4 className="text-white text-lg font-semibold mb-3">Saarthi GreenTech</h4>
-//             <p className="text-sm text-gray-400 max-w-sm">
-//               Smart hydrogen retrofits and IoT intelligence that cut emissions, save fuel, and deliver verifiable decarbonisation.
-//             </p>
-//           </div>
-
-//           <div>
-//             <h5 className="mb-3 font-semibold text-gray-200">Solutions</h5>
-//             <ul className="space-y-2 text-sm text-gray-400">
-//               <li><Link href="/products/greendrive" className="hover:text-white">GreenDrive</Link></li>
-//               <li><Link href="/products/greengen" className="hover:text-white">GreenGen</Link></li>
-//               <li><Link href="/products/greenmarine" className="hover:text-white">GreenMarine</Link></li>
-//               <li><Link href="/greenvision" className="hover:text-white">GreenVision</Link></li>
-//             </ul>
-//           </div>
-
-//           <div>
-//             <h5 className="mb-3 font-semibold text-gray-200">Company</h5>
-//             <ul className="space-y-2 text-sm text-gray-400">
-//               <li><Link href="/solutions" className="hover:text-white">Business Model</Link></li>
-//               <li><Link href="/greenlabs" className="hover:text-white">GreenLabs</Link></li>
-//               {/* <li><Link href="/case-studies" className="hover:text-white">Case Studies</Link></li> */}
-//               {/* <li><Link href="/news" className="hover:text-white">News</Link></li> */}
-//             </ul>
-//           </div>
-
-//           <div>
-//             <h5 className="mb-3 font-semibold text-gray-200">Contact</h5>
-//             <ul className="space-y-2 text-sm text-gray-400">
-//               <li><a href="mailto:contact@saarthigreentech.com" className="hover:text-white">contact@saarthigreentech.com</a></li>
-//               {/* <li><a href="tel:+911234567890" className="hover:text-white">+91 90492 70404</a></li> */}
-//               {/* <li><Link href="/contact" className="hover:text-white">Contact form</Link></li> */}
-//             </ul>
-//           </div>
-//         </div>
-
-//         <div className="mt-8 border-t border-white/6 pt-6 text-sm text-gray-500 flex flex-col items-center justify-between gap-4 md:flex-row">
-//           <div>Smart Hydrogen. Cleaner Future. &copy; {new Date().getFullYear()} Saarthi GreenTech</div>
-//           <div className="space-x-4">
-//             <Link href="/privacy" className="hover:text-white">Privacy</Link>
-//             <Link href="/terms" className="hover:text-white">Terms</Link>
-//             <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-white">LinkedIn</a>
-//           </div>
-//         </div>
-//       </div>
-//     </footer>
-//   )
-// }
 import Link from 'next/link';
 import React from 'react';
 
@@ -96,96 +39,168 @@ const Footer = () => {
 
 
   return (
-    <footer className="bg-slate-900 dark:bg-black text-white py-8 md:py-10">
-      <div className="container mx-auto px-4 max-w-7xl">
+//     <footer className="bg-slate-900 dark:bg-black text-white py-8 md:py-10">
+//       <div className="container mx-auto px-4 max-w-7xl">
         
-        {/* Footer Grid: Now using grid-cols-4 on desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 border-b border-slate-700/50 pb-6 mb-4">
+//         {/* Footer Grid: Now using grid-cols-4 on desktop */}
+//         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 border-b border-slate-700/50 pb-6 mb-4">
           
-          {/* Column 1: Brand & Tagline */}
-          <div className="space-y-3">
-            <h3 className="text-xl font-extrabold" style={{ color: brandColor }}>
-              Saarthi Green
-            </h3>
-            <p className="text-sm text-slate-400">
-              Engineering a Profitable Path to Net-Zero
-            </p>
-          </div>
+//           {/* Column 1: Brand & Tagline */}
+//           <div className="space-y-3">
+//             <h3 className="text-xl font-extrabold" style={{ color: brandColor }}>
+//               Saarthi Green
+//             </h3>
+//             <p className="text-sm text-slate-400">
+//               Engineering a Profitable Path to Net-Zero
+//             </p>
+//           </div>
           
-          {/* Column 2 & 3: Contextual Navigation Links */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:col-span-2 gap-x-12 gap-y-6">
-            {linkGroups.map((group) => (
-              <div key={group.title}>
-                <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-300 mb-3">
-                  {group.title}
-                </h4>
-                <div className="flex flex-col space-y-2 text-sm">
-                  {group.links.map((link) => (
-                    <a 
-                      key={link.name} 
-                      href={link.href}
-                      className="text-slate-400 hover:text-white transition-colors duration-200 w-fit"
-                      style={{ '--tw-text-hover': brandColor } as React.CSSProperties}
-                    >
-                      {link.name}
-                    </a>
-                  ))}
+//           {/* Column 2 & 3: Contextual Navigation Links */}
+//           <div className="grid grid-cols-1 sm:grid-cols-2 md:col-span-2 gap-x-12 gap-y-6">
+//             {linkGroups.map((group) => (
+//               <div key={group.title}>
+//                 <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-300 mb-3">
+//                   {group.title}
+//                 </h4>
+//                 <div className="flex flex-col space-y-2 text-sm">
+//                   {group.links.map((link) => (
+//                     <a 
+//                       key={link.name} 
+//                       href={link.href}
+//                       className="text-slate-400 hover:text-white transition-colors duration-200 w-fit"
+//                       style={{ '--tw-text-hover': brandColor } as React.CSSProperties}
+//                     >
+//                       {link.name}
+//                     </a>
+//                   ))}
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+
+//           {/* Column 4: Contact & Socials (Text Links) */}
+//           <div className="space-y-4">
+//             <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-300 mb-3">
+//               Get in Touch
+//             </h4>
+            
+//             <p className="text-base font-medium">
+//               <a 
+//                 href="mailto:contact@saarthigreen.com"
+//                 className="text-slate-200 hover:text-white transition-colors duration-200"
+//                 style={{ '--tw-text-hover': brandColor } as React.CSSProperties}
+//               >
+//                 contact@saarthigreen.com
+//               </a>
+//             </p>
+            
+//             <p className="text-sm text-slate-400 mb-3">
+//               India | Australia
+//             </p>
+
+//             {/* Social Text Links Section */}
+//             <div className="flex flex-col space-y-2 pt-2">
+//                 <h5 className="text-sm font-semibold text-slate-300">Follow Us</h5>
+//                 {socialLinks.map(social => (
+//                     <a 
+//                         key={social.name}
+//                         href={social.href} 
+//                         target="_blank" 
+//                         rel="noopener noreferrer"
+//                         className="text-slate-400 text-sm hover:text-white transition-colors duration-200 w-fit"
+//                         style={{ '--tw-text-hover': brandColor } as React.CSSProperties}
+//                     >
+//                         {social.name}
+//                     </a>
+//                 ))}
+//             </div>
+//           </div>
+
+//         </div>
+
+//         {/* Copyright and Legal */}
+//         <div className="text-center text-sm text-slate-500 pt-3">
+//           <p>&copy; {new Date().getFullYear()} Saarthi GreenTech Pvt Ltd. All rights reserved.</p>
+//           <Link href="/privacy-policy" className="hover:underline">
+//   Privacy Policy
+// </Link>
+
+//         </div>
+        
+//       </div>
+//     </footer>
+<footer className="bg-gray-900 text-gray-300 py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-12 mb-12">
+            {/* Company Info */}
+            <div>
+              <div className="flex items-center space-x-2 mb-4">
+                <div className="w-24 h-10">
+                  <img 
+                    src="/api/placeholder/96/40"
+                    alt="SGT Logo" 
+                    className="w-full h-full object-contain brightness-0 invert"
+                  />
                 </div>
               </div>
-            ))}
-          </div>
+              <p className="text-sm text-gray-400 leading-relaxed">
+                Patent-applied CHFA and CHCA technologies delivering proven emissions reduction at scale across industry, marine, and logistics.
+              </p>
+            </div>
 
-          {/* Column 4: Contact & Socials (Text Links) */}
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-slate-300 mb-3">
-              Get in Touch
-            </h4>
-            
-            <p className="text-base font-medium">
-              <a 
-                href="mailto:contact@saarthigreen.com"
-                className="text-slate-200 hover:text-white transition-colors duration-200"
-                style={{ '--tw-text-hover': brandColor } as React.CSSProperties}
-              >
-                contact@saarthigreen.com
-              </a>
-            </p>
-            
-            <p className="text-sm text-slate-400 mb-3">
-              India | Australia
-            </p>
+            {/* Solutions */}
+            <div>
+              <h4 className="text-white font-bold mb-4">Solutions</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="hover:text-sgt-green transition-colors">Industrial Solutions</a></li>
+                <li><a href="#" className="hover:text-sgt-green transition-colors">Marine Solutions</a></li>
+                <li><a href="#" className="hover:text-sgt-green transition-colors">Logistics & Fleet</a></li>
+                <li><a href="#" className="hover:text-sgt-green transition-colors">DaaS Model</a></li>
+              </ul>
+            </div>
 
-            {/* Social Text Links Section */}
-            <div className="flex flex-col space-y-2 pt-2">
-                <h5 className="text-sm font-semibold text-slate-300">Follow Us</h5>
-                {socialLinks.map(social => (
-                    <a 
-                        key={social.name}
-                        href={social.href} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-slate-400 text-sm hover:text-white transition-colors duration-200 w-fit"
-                        style={{ '--tw-text-hover': brandColor } as React.CSSProperties}
-                    >
-                        {social.name}
-                    </a>
-                ))}
+            {/* Technology */}
+            <div>
+              <h4 className="text-white font-bold mb-4">Technology</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="hover:text-sgt-green transition-colors">CHFA Technology</a></li>
+                <li><a href="#" className="hover:text-sgt-green transition-colors">CHCA Technology</a></li>
+                <li><a href="#" className="hover:text-sgt-green transition-colors">GreenVision Platform</a></li>
+                <li><a href="#" className="hover:text-sgt-green transition-colors">Research & Validation</a></li>
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h4 className="text-white font-bold mb-4">Company</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#" className="hover:text-sgt-green transition-colors">About Us</a></li>
+                <li><a href="#" className="hover:text-sgt-green transition-colors">Leadership</a></li>
+                <li><a href="#" className="hover:text-sgt-green transition-colors">Certifications</a></li>
+                <li><a href="#" className="hover:text-sgt-green transition-colors">Partner With Us</a></li>
+                <li><a href="#" className="hover:text-sgt-green transition-colors">Media</a></li>
+              </ul>
             </div>
           </div>
 
-        </div>
+          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-sm text-gray-400 mb-4 md:mb-0">
+              © 2026 SGT HydroEdge. All rights reserved.
+            </p>
+            <div className="flex items-center space-x-6 text-sm">
+              <a href="#" className="hover:text-sgt-green transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-sgt-green transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-sgt-green transition-colors">Contact</a>
+            </div>
+          </div>
 
-        {/* Copyright and Legal */}
-        <div className="text-center text-sm text-slate-500 pt-3">
-          <p>&copy; {new Date().getFullYear()} Saarthi GreenTech Pvt Ltd. All rights reserved.</p>
-          <Link href="/privacy-policy" className="hover:underline">
-  Privacy Policy
-</Link>
-
+          <div className="mt-8 text-center">
+            <a href="mailto:solutions@sgthydroedge.com" className="text-sgt-green font-semibold hover:text-sgt-yellow transition-colors">
+              solutions@sgthydroedge.com
+            </a>
+          </div>
         </div>
-        
-      </div>
-    </footer>
+      </footer>
   );
 };
 

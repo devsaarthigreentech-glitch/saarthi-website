@@ -47,13 +47,16 @@ export default function Hero({ heroSrc = '/images/hero/hero-illustration.png' }:
             className="mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-5xl leading-tight font-extrabold text-white"
             style={{ textShadow: "0 3px 6px rgba(0,0,0,0.7)" }}
           >
-            Engineering a Profitable Path to Net-Zero
+            Profitable Decarbonisation for Diesel-Dependent Industries
           </h1>
 
           {/* Body Paragraph: Slightly increased text size for better legibility on mobile. */}
           <p className="mt-6 text-lg md:text-xl text-white/90 dark:text-white/90 leading-relaxed">
-            Hydrogen-enabled retrofits, IoT-powered carbon intelligence, and engineered decarbonisation for fleets, DG sets, marine engines and industrial equipment — without replacing existing engines.
+          A deeptech decarbonisation company combining proprietary hardware,real-time software, and outcome-led solutions to reduce Scope-1 emissions — while improving operating economics.
           </p>
+          {/* <p className="mt-6 text-lg md:text-xl text-white/90 dark:text-white/90 leading-relaxed">
+            Hydrogen-enabled retrofits, IoT-powered carbon intelligence, and engineered decarbonisation for fleets, DG sets, marine engines and industrial equipment — without replacing existing engines.
+          </p> */}
 
           {/* Buttons: Adjusted mt for better separation from the text. */}
           <div className="mt-10 flex flex-wrap gap-4"> 
