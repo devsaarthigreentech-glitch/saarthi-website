@@ -26,7 +26,7 @@ const SGTLandingPage = () => {
             <div className="flex items-center space-x-3">
               <div className="relative w-32 h-12">
                 <img 
-                  src="/api/placeholder/128/48"
+                  src="/images/logo/company_logo.png"
                   alt="SGT Logo" 
                   className="w-full h-full object-contain"
                   style={{
@@ -131,7 +131,7 @@ const SGTLandingPage = () => {
             <div className="relative">
               <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/api/placeholder/800/600" 
+                  src="/images/hero/hero.png" 
                   alt="Industrial Facility with SGT Technology"
                   className="w-full h-full object-cover"
                 />
