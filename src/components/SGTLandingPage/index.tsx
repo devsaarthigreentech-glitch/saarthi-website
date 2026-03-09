@@ -325,7 +325,7 @@ const SGTLandingPage = () => {
               </div>
               <div className="relative">
                 <img 
-                  src="/api/placeholder/600/400" 
+                  src="/images/landing/fueltype.png" 
                   alt="Various Fuel Types"
                   className="w-full h-full object-cover"
                 />
