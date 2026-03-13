@@ -224,9 +224,9 @@ const menuData = [
     id: 5,
     title: "About",
     submenu: [
-      { id: 51, title: "Company",         path: "/about" },
+      { id: 51, title: "Founder's Story",         path: "/about/founder" },
       { id: 52, title: "Leadership",      path: "/about/leadership" },
-      // { id: 53, title: "Certifications",  path: "/about/certifications" },
+      { id: 53, title: "Our Journey & Mission",  path: "/about/journey" },
       { id: 54, title: "Partners - TBD",        path: "/about/partners" },
     ],
   },
