@@ -176,6 +176,7 @@
 
 import SGTLandingPage from "@/components/SGTLandingPage";
 import ScrollUp from "@/components/Common/ScrollUp";
+import Header from "@/components/Header";
 
 export const metadata = {
   title: "SGT HydroEdge — Profitable Decarbonisation for Industry, Marine & Logistics",
@@ -186,6 +187,7 @@ export default function Home() {
   return (
     <>
       <ScrollUp />
+      <Header />
       <SGTLandingPage />
     </>
   );
