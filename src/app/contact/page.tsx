@@ -62,7 +62,7 @@ export default function ContactPage() {
               <p>
                 <strong>Head Office</strong>
                 <br />
-                Saarthi GreenTech Pvt. Ltd.
+                SGT Hydroedge Pvt. Ltd.
                 <br />
                 A3-202, 1, Lunkad Sky Vie,
                 Viman Nagar,
@@ -73,7 +73,7 @@ export default function ContactPage() {
               <p>
                 <strong>Factory Office</strong>
                 <br />
-                Saarthi GreenTech Pvt. Ltd.
+                SGT Hydroedge Pvt. Ltd.
                 <br />
                 Plot 14, Gat # 357/86, Waghjainagar,
                 Kharabwadi, Chakan,
@@ -81,15 +81,15 @@ export default function ContactPage() {
                 <br />
                 Pune, Maharashtra, 410501
               </p>
-                <strong>Australia Office</strong>
-                <br />
-                
-Saarthi GreenTech Pty Limited
-                <br />
-               <p>41 Pokolbin Avenue, The Ponds, NSW 2769
+              <strong>Australia Office</strong>
+              <br />
+
+              Saarthi GreenTech Pty Limited
+              <br />
+              <p>41 Pokolbin Avenue, The Ponds, NSW 2769
               </p>
               <p>
-                <strong>Email:</strong> contact@saarthigreen.com
+                <strong>Email:</strong> contact@sgthydroedge.com
               </p>
               {/* <p>
                 <strong>Phone:</strong> +91 90492 70404
