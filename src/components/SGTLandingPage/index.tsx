@@ -2,6 +2,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronRight, ChevronDown, Factory, Ship, Truck, Flame, TrendingUp, Users, Award, Database, Play, CheckCircle, ArrowRight, Zap, Shield, Settings } from 'lucide-react';
+import MediaCarousel from '../MediaCarousal';
 
 
 const SGTHomepage = () => {
@@ -19,67 +20,6 @@ const SGTHomepage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      {/* <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur-sm'}`}>
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="relative w-32 h-12">
-                <img
-                  src="/images/logo/company_logo.png"
-                  alt="SGT Logo"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="border-l border-gray-300 pl-3">
-                <h1 className="text-lg font-bold text-gray-900">HydroEdge</h1>
-                <p className="text-xs text-sgt-green font-medium">Profitable Decarbonisation</p>
-              </div>
-            </div>
-
-            <div className="hidden lg:flex items-center space-x-8">
-              <button className="text-gray-700 hover:text-sgt-green transition-colors font-medium">Home</button>
-
-              <div className="relative group">
-                <button className="text-gray-700 hover:text-sgt-green transition-colors font-medium flex items-center">
-                  Solutions <ChevronDown className="ml-1 w-4 h-4" />
-                </button>
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                  <a href="/solutions/new-industrial" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green border-b border-gray-100">Industrial Solutions</a>
-                  <a href="/solutions/new-marine" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green border-b border-gray-100">Marine Solutions</a>
-                  <a href="/solutions/new-logistics" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green">Logistics & Fleet</a>
-                </div>
-              </div>
-
-
-              <div className="relative group">
-                <button className="text-gray-700 hover:text-sgt-green transition-colors font-medium flex items-center">
-                  Technology <ChevronDown className="ml-1 w-4 h-4" />
-                </button>
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                  <a href="#" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green border-b border-gray-100">CHFA Technology</a>
-                  <a href="#" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green border-b border-gray-100">CHCA Technology</a>
-                  <a href="#" className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-sgt-green">GreenVision Platform</a>
-                </div>
-              </div>
-
-
-              <button className="text-gray-700 hover:text-sgt-green transition-colors font-medium">Resources</button>
-              <button className="text-gray-700 hover:text-sgt-green transition-colors font-medium">About</button>
-
-              <button className="bg-sgt-green text-white px-6 py-2.5 rounded-md hover:bg-green-800 transition-all font-medium">
-                Contact Us
-              </button>
-            </div>
-
-            <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden text-gray-700">
-              {menuOpen ? <X /> : <Menu />}
-            </button>
-          </div>
-        </div>
-      </nav> */}
-
-
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -91,7 +31,7 @@ const SGTHomepage = () => {
                 Patent-Applied Technology | ARAI Validated | Fuel-Agnostic
               </div>
 
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-5xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
                 Profitable Decarbonisation for<br />
                 <span className="text-sgt-green">Industry, Marine & Logistics</span>
               </h1>
@@ -642,9 +582,11 @@ const SGTHomepage = () => {
         </div>
       </section>
 
+      <MediaCarousel />
+
 
       {/* Media Section */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -686,7 +628,7 @@ const SGTHomepage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
 
       {/* CTA Section */}
