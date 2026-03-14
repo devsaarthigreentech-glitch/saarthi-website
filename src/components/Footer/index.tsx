@@ -137,7 +137,7 @@ const Footer = () => {
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-24 h-10">
                   <img 
-                    src="/api/placeholder/96/40"
+                    src="/images/logo/company_logo2.png"
                     alt="SGT Logo" 
                     className="w-full h-full object-contain brightness-0 invert"
                   />
@@ -152,10 +152,10 @@ const Footer = () => {
             <div>
               <h4 className="text-white font-bold mb-4">Solutions</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-sgt-green transition-colors">Industrial Solutions</a></li>
-                <li><a href="#" className="hover:text-sgt-green transition-colors">Marine Solutions</a></li>
-                <li><a href="#" className="hover:text-sgt-green transition-colors">Logistics & Fleet</a></li>
-                <li><a href="#" className="hover:text-sgt-green transition-colors">DaaS Model</a></li>
+                <li><a href="/solutions/new-industrial" className="hover:text-sgt-green transition-colors">Industrial Solutions</a></li>
+                <li><a href="/solutions/new-marine" className="hover:text-sgt-green transition-colors">Marine Solutions</a></li>
+                <li><a href="/solutions/new-logistics" className="hover:text-sgt-green transition-colors">Logistics & Fleet</a></li>
+                {/* <li><a href="#" className="hover:text-sgt-green transition-colors">DaaS Model</a></li> */}
               </ul>
             </div>
 
@@ -163,10 +163,10 @@ const Footer = () => {
             <div>
               <h4 className="text-white font-bold mb-4">Technology</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-sgt-green transition-colors">CHFA Technology</a></li>
-                <li><a href="#" className="hover:text-sgt-green transition-colors">CHCA Technology</a></li>
-                <li><a href="#" className="hover:text-sgt-green transition-colors">GreenVision Platform</a></li>
-                <li><a href="#" className="hover:text-sgt-green transition-colors">Research & Validation</a></li>
+                <li><a href="/technology/chfa" className="hover:text-sgt-green transition-colors">CHFA Technology</a></li>
+                <li><a href="/technology/chca" className="hover:text-sgt-green transition-colors">CHCA Technology</a></li>
+                <li><a href="/technology/greenvision" className="hover:text-sgt-green transition-colors">GreenVision Platform</a></li>
+                {/* <li><a href="#" className="hover:text-sgt-green transition-colors">Research & Validation</a></li> */}
               </ul>
             </div>
 
@@ -174,11 +174,11 @@ const Footer = () => {
             <div>
               <h4 className="text-white font-bold mb-4">Company</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-sgt-green transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-sgt-green transition-colors">Leadership</a></li>
-                <li><a href="#" className="hover:text-sgt-green transition-colors">Certifications</a></li>
-                <li><a href="#" className="hover:text-sgt-green transition-colors">Partner With Us</a></li>
-                <li><a href="#" className="hover:text-sgt-green transition-colors">Media</a></li>
+                <li><a href="/about/journey" className="hover:text-sgt-green transition-colors">About Us</a></li>
+                <li><a href="/about/leadership" className="hover:text-sgt-green transition-colors">Leadership</a></li>
+                {/* <li><a href="#" className="hover:text-sgt-green transition-colors">Certifications</a></li> */}
+                <li><a href="/about/partners" className="hover:text-sgt-green transition-colors">Partner With Us</a></li>
+                <li><a href="/resources/media" className="hover:text-sgt-green transition-colors">Media</a></li>
               </ul>
             </div>
           </div>
@@ -194,11 +194,11 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="mt-8 text-center">
+          {/* <div className="mt-8 text-center">
             <a href="mailto:solutions@sgthydroedge.com" className="text-sgt-green font-semibold hover:text-sgt-yellow transition-colors">
-              solutions@sgthydroedge.com
+              contact@sgthydroedge.com
             </a>
-          </div>
+          </div> */}
         </div>
       </footer>
   );
