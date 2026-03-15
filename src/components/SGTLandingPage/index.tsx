@@ -418,7 +418,7 @@ const SGTHomepage = () => {
 
               <div className="mb-6">
                 <img
-                  src="/api/placeholder/400/250"
+                  src="/images/solutions/chfa.jpg"
                   alt="CHFA Technology"
                   className="w-full h-48 object-cover rounded-xl"
                 />
@@ -457,7 +457,7 @@ const SGTHomepage = () => {
 
               <div className="mb-6">
                 <img
-                  src="/api/placeholder/400/250"
+                  src="/images/solutions/chca.png"
                   alt="CHCA Technology"
                   className="w-full h-48 object-cover rounded-xl"
                 />
@@ -496,7 +496,7 @@ const SGTHomepage = () => {
 
               <div className="mb-6">
                 <img
-                  src="/api/placeholder/400/250"
+                  src="/images/solutions/greenvision.jpg"
                   alt="GreenVision Platform"
                   className="w-full h-48 object-cover rounded-xl"
                 />
