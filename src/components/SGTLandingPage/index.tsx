@@ -115,7 +115,7 @@ const SGTHomepage = () => {
 {/* ── Full-bleed Background Image ─────────────────────────── */}
 <div className="absolute inset-0 z-0">
   <img
-    src="/images/landing/landing.png"
+    src="/images/landing/sgt-landing.jpg"
     alt="Industrial Decarbonisation"
     className="w-full h-full object-cover object-center"
   />
