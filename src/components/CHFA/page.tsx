@@ -71,7 +71,7 @@ const CHFATechnologyPage = () => {
             <div className="relative">
               <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/api/placeholder/800/600" 
+                  src="/images/solutions/chfa.jpg" 
                   alt="CHFA Technology System"
                   className="w-full h-full object-cover"
                 />

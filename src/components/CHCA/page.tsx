@@ -72,7 +72,7 @@ const CHCATechnologyPage = () => {
             <div className="relative">
               <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/api/placeholder/800/600" 
+                  src="/images/solutions/chca.png" 
                   alt="CHCA Industrial System"
                   className="w-full h-full object-cover"
                 />
