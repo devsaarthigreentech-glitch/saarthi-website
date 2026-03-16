@@ -19,10 +19,10 @@ const SGTHomepage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-//   "use client";
+  //   "use client";
 
-// import { ChevronRight, Play, CheckCircle } from "lucide-react";
-// import Link from "next/link";
+  // import { ChevronRight, Play, CheckCircle } from "lucide-react";
+  // import Link from "next/link";
 
 
 
@@ -112,106 +112,106 @@ const SGTHomepage = () => {
       </section> */}
       <section className="relative w-full h-screen min-h-[680px] overflow-hidden">
 
-{/* ── Full-bleed Background Image ─────────────────────────── */}
-<div className="absolute inset-0 z-0">
-  <img
-    src="/images/landing/sgt-landing.jpg"
-    alt="Industrial Decarbonisation"
-    className="w-full h-full object-cover object-center"
-  />
-</div>
-
-{/* ── Left Gradient Overlay ───────────────────────────────── */}
-{/* Opaque on the left where text sits, fades to transparent on the right */}
-<div
-  className="absolute inset-0 z-10"
-  style={{
-    background:
-      "linear-gradient(to right, rgba(10,20,15,0.88) 0%, rgba(10,20,15,0.55) 38%, rgba(10,20,15,0.35) 62%, rgba(10,20,15,0.0) 100%)",
-  }}
-/>
-
-{/* ── Content ─────────────────────────────────────────────── */}
-<div className="relative z-20 h-full max-w-7xl mx-auto px-6 flex items-center">
-  <div className="w-full lg:w-[55%] xl:w-[50%] flex flex-col justify-center">
-
-    {/* Badge */}
-    <div className="inline-flex items-center self-start px-4 py-2 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full text-sm font-medium text-white/90 mb-6">
-      <span className="w-2 h-2 bg-[#FFD700] rounded-full mr-2 animate-pulse shrink-0" />
-      Patent-Applied Technology · ARAI Validated · Fuel-Agnostic
-    </div>
-
-    {/* Headline */}
-    <h1 className="text-3xl sm:text-3xl lg:text-3xl xl:text-4xl font-bold text-white mb-5 leading-[1.1] tracking-tight">
-      Profitable Decarbonisation for{" "}
-      <span className="text-[#4ADE80]">Industry, Marine &amp; Logistics</span>
-    </h1>
-
-    {/* Subheading 1 */}
-    <p className="text-lg text-white/80 mb-3 leading-relaxed max-w-xl">
-      Hydrogen-enabled retrofits for any combustion fuel — coal, biomass, diesel,
-      CNG, propane, marine fuels — without replacing engines or switching fuels.
-    </p>
-
-    {/* Subheading 2 */}
-    <p className="text-base text-white/65 mb-8 leading-relaxed max-w-xl">
-      IoT-powered carbon intelligence delivering 5–18% fuel savings and 50%+
-      emission reduction at scale.
-    </p>
-
-    {/* CTAs */}
-    <div className="flex flex-wrap gap-4 mb-9">
-      <Link
-        href="/solutions"
-        className="inline-flex items-center bg-[#1B6B3D] hover:bg-[#155730] text-white font-semibold text-base px-8 py-4 rounded-md shadow-lg transition-colors"
-      >
-        Explore Solutions
-        <ChevronRight className="ml-2 w-5 h-5" />
-      </Link>
-      <button className="inline-flex items-center bg-white/10 border border-white/30 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-base px-8 py-4 rounded-md transition-colors">
-        <Play className="mr-2 w-5 h-5" />
-        Watch Demo
-      </button>
-    </div>
-
-    {/* Trust Indicators */}
-    <div className="flex flex-wrap items-center gap-6 text-sm text-white/75">
-      {[
-        "5–18% Fuel Savings",
-        "50%+ Emission Cut",
-        "Zero CapEx Option",
-      ].map((item) => (
-        <div key={item} className="flex items-center gap-2">
-          <CheckCircle className="w-4 h-4 text-[#4ADE80] shrink-0" />
-          <span>{item}</span>
+        {/* ── Full-bleed Background Image ─────────────────────────── */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/images/landing/sgt-landing.jpg"
+            alt="Industrial Decarbonisation"
+            className="w-full h-full object-cover object-center"
+          />
         </div>
-      ))}
-    </div>
-  </div>
 
-  {/* ── Floating Stat Cards ──────────────────────────────── */}
-  {/* Bottom-left card */}
-  {/* <div className="absolute bottom-10 left-6 lg:left-auto lg:right-[calc(44%-2rem)] xl:right-[calc(48%-2rem)] bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl border border-white/60 hidden md:block">
+        {/* ── Left Gradient Overlay ───────────────────────────────── */}
+        {/* Opaque on the left where text sits, fades to transparent on the right */}
+        <div
+          className="absolute inset-0 z-10"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(10,20,15,0.88) 0%, rgba(10,20,15,0.55) 38%, rgba(10,20,15,0.35) 62%, rgba(10,20,15,0.0) 100%)",
+          }}
+        />
+
+        {/* ── Content ─────────────────────────────────────────────── */}
+        <div className="relative z-20 h-full max-w-7xl mx-auto px-6 flex items-center">
+          <div className="w-full lg:w-[55%] xl:w-[50%] flex flex-col justify-center">
+
+            {/* Badge */}
+            <div className="inline-flex items-center self-start px-4 py-2 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full text-sm font-medium text-white/90 mb-6">
+              <span className="w-2 h-2 bg-[#FFD700] rounded-full mr-2 animate-pulse shrink-0" />
+              Patent-Applied Technology · ARAI Validated · Fuel-Agnostic
+            </div>
+
+            {/* Headline */}
+            <h1 className="text-3xl sm:text-3xl lg:text-3xl xl:text-4xl font-bold text-white mb-5 leading-[1.1] tracking-tight">
+              Profitable Decarbonisation for{" "}
+              <span className="text-[#4ADE80]">Industry, Marine &amp; Logistics</span>
+            </h1>
+
+            {/* Subheading 1 */}
+            <p className="text-lg text-white/80 mb-3 leading-relaxed max-w-xl">
+              Hydrogen-enabled retrofits for any combustion fuel — coal, biomass, diesel,
+              CNG, propane, marine fuels — without replacing engines or switching fuels.
+            </p>
+
+            {/* Subheading 2 */}
+            <p className="text-base text-white/65 mb-8 leading-relaxed max-w-xl">
+              IoT-powered carbon intelligence delivering 5–18% fuel savings and 50%+
+              emission reduction at scale.
+            </p>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-4 mb-9">
+              <Link
+                href="/solutions"
+                className="inline-flex items-center bg-[#1B6B3D] hover:bg-[#155730] text-white font-semibold text-base px-8 py-4 rounded-md shadow-lg transition-colors"
+              >
+                Explore Solutions
+                <ChevronRight className="ml-2 w-5 h-5" />
+              </Link>
+              <button className="inline-flex items-center bg-white/10 border border-white/30 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-base px-8 py-4 rounded-md transition-colors">
+                <Play className="mr-2 w-5 h-5" />
+                Watch Demo
+              </button>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap items-center gap-6 text-sm text-white/75">
+              {[
+                "5–18% Fuel Savings",
+                "50%+ Emission Cut",
+                "Zero CapEx Option",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-[#4ADE80] shrink-0" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Floating Stat Cards ──────────────────────────────── */}
+          {/* Bottom-left card */}
+          {/* <div className="absolute bottom-10 left-6 lg:left-auto lg:right-[calc(44%-2rem)] xl:right-[calc(48%-2rem)] bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl border border-white/60 hidden md:block">
     <p className="text-3xl font-bold text-[#1B6B3D] leading-none">3,00,000+</p>
     <p className="text-sm text-gray-500 font-medium mt-1">km Road Tested</p>
   </div> */}
 
-  {/* Top-right card */}
-  <div className="absolute top-32 right-6 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl border border-white/60 hidden lg:block">
-    <p className="text-3xl font-bold text-[#FFD700] leading-none">Patent</p>
-    <p className="text-sm text-gray-500 font-medium mt-1">Approved</p>
-  </div>
-</div>
+          {/* Top-right card */}
+          <div className="absolute top-32 right-6 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl border border-white/60 hidden lg:block">
+            <p className="text-3xl font-bold text-[#FFD700] leading-none">Patent</p>
+            <p className="text-sm text-gray-500 font-medium mt-1">Approved</p>
+          </div>
+        </div>
 
-{/* ── Bottom fade for smooth section transition ────────────── */}
-<div
-  className="absolute bottom-0 left-0 right-0 h-24 z-20 pointer-events-none"
-  style={{
-    background:
-      "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 100%)",
-  }}
-/>
-</section>
+        {/* ── Bottom fade for smooth section transition ────────────── */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-24 z-20 pointer-events-none"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 100%)",
+          }}
+        />
+      </section>
 
       {/* Stats Bar */}
       <section className="bg-sgt-green text-white py-12">
@@ -411,8 +411,8 @@ const SGTHomepage = () => {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* CHFA */}
-            <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-blue-400 hover:shadow-xl transition-all">
-              <div className="inline-flex px-4 py-2 bg-blue-50 rounded-full text-blue-700 text-sm font-semibold mb-6">
+            <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-blue-400 hover:shadow-xl transition-all flex flex-col">
+              <div className="inline-flex px-4 py-2 bg-gray-100 rounded-full text-gray-700 text-sm font-semibold mb-3">
                 Engine Applications
               </div>
 
@@ -420,7 +420,7 @@ const SGTHomepage = () => {
                 <img
                   src="/images/solutions/chfa.jpg"
                   alt="CHFA Technology"
-                  className="w-full h-48 object-cover rounded-xl"
+                  className="w-full object-contain rounded-xl"
                 />
               </div>
 
@@ -443,15 +443,15 @@ const SGTHomepage = () => {
               </div>
 
 
-              <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-all">
+              <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-all mt-auto">
                 View Technology Details
               </button>
             </div>
 
 
             {/* CHCA */}
-            <div className="bg-white rounded-2xl p-8 border-2 border-sgt-green shadow-xl">
-              <div className="inline-flex px-4 py-2 bg-sgt-green/10 rounded-full text-sgt-green text-sm font-semibold mb-6">
+            <div className="bg-white rounded-2xl p-8 border-2 border-sgt-green shadow-xl flex flex-col">
+              <div className="inline-flex px-4 py-2 bg-gray-100 rounded-full text-gray-700 text-sm font-semibold mb-3 ">
                 Industrial Scale
               </div>
 
@@ -459,7 +459,7 @@ const SGTHomepage = () => {
                 <img
                   src="/images/solutions/chca.png"
                   alt="CHCA Technology"
-                  className="w-full h-48 object-cover rounded-xl"
+                  className="w-full object-contain rounded-xl"
                 />
               </div>
 
@@ -482,15 +482,15 @@ const SGTHomepage = () => {
               </div>
 
 
-              <button className="w-full bg-sgt-green text-white py-3 rounded-lg font-medium hover:bg-green-800 transition-all">
+              <button className="w-full bg-sgt-green text-white py-3 rounded-lg font-medium hover:bg-green-800 transition-all mt-auto">
                 View Technology Details
               </button>
             </div>
 
 
             {/* GreenVision */}
-            <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-400 hover:shadow-xl transition-all">
-              <div className="inline-flex px-4 py-2 bg-gray-100 rounded-full text-gray-700 text-sm font-semibold mb-6">
+            <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-400 hover:shadow-xl transition-all flex flex-col">
+              <div className="inline-flex px-4 py-2 bg-gray-100 rounded-full text-gray-700 text-sm font-semibold mb-3">
                 Software Layer
               </div>
 
@@ -498,7 +498,7 @@ const SGTHomepage = () => {
                 <img
                   src="/images/solutions/greenvision.jpg"
                   alt="GreenVision Platform"
-                  className="w-full h-48 object-cover rounded-xl"
+                  className="w-full object-contain rounded-xl"
                 />
               </div>
 
@@ -521,7 +521,7 @@ const SGTHomepage = () => {
               </div>
 
 
-              <button className="w-full bg-gray-700 text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-all">
+              <button className="w-full bg-gray-700 text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-all mt-auto">
                 View Platform Details
               </button>
             </div>
