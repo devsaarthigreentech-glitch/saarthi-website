@@ -437,7 +437,7 @@ const IndustrialSolutionsComplete = () => {
 
             <div>
               <img
-                src="/api/placeholder/600/500"
+                src="/images/solutions/dg.jpg"
                 alt="DG Set Installation"
                 className="w-full rounded-2xl shadow-2xl"
               />
@@ -465,7 +465,7 @@ const IndustrialSolutionsComplete = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <img
-                src="/api/placeholder/600/500"
+                src="/images/solutions/boiler.jpg"
                 alt="Industrial Boiler"
                 className="w-full rounded-2xl shadow-2xl"
               />
@@ -611,7 +611,7 @@ const IndustrialSolutionsComplete = () => {
 
             <div>
               <img
-                src="/api/placeholder/600/500"
+                src="/images/solutions/kiln.jpg"
                 alt="Industrial Kiln"
                 className="w-full rounded-2xl shadow-2xl"
               />
