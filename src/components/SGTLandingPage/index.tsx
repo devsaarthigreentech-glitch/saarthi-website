@@ -642,7 +642,7 @@ const SGTHomepage = () => {
       {/* DaaS Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-gradient-to-br from-sgt-green to-green-800 rounded-3xl overflow-hidden shadow-2xl">
+          <div className="bg-gradient-to-br from-green-800 to-sgt-green rounded-3xl overflow-hidden shadow-2xl">
             <div className="grid md:grid-cols-2 gap-0">
               <div className="p-12 lg:p-16 text-white flex flex-col justify-center">
                 <div className="inline-flex px-4 py-2 bg-white/20 rounded-full text-white text-sm font-semibold mb-6 self-start">
@@ -679,13 +679,17 @@ const SGTHomepage = () => {
               </div>
 
 
-              <div className="relative h-full min-h-[400px]">
-                <img
-                  src="/api/placeholder/700/500"
-                  alt="DaaS Model"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="bg-white p-4 lg:p-8 flex items-center justify-center">
+    <div className="relative w-full h-full rounded-2xl overflow-hidden border border-gray-100 shadow-inner">
+      <img
+        src="/images/solutions/daas.jpg"
+        alt="DaaS Model"
+        className="w-full h-full object-contain bg-white" 
+      />
+      {/* Subtle overlay to soften the white-on-white edges if needed */}
+      <div className="absolute inset-0 pointer-events-none border-[12px] border-white rounded-2xl"></div>
+    </div>
+  </div>
             </div>
           </div>
         </div>
