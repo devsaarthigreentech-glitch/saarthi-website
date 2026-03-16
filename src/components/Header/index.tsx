@@ -213,9 +213,9 @@ const menuData = [
     id: 4,
     title: "Resources",
     submenu: [
-      { id: 44, title: "Gallery", path: "/resources/gallery" },
-      { id: 45, title: "Media", path: "/resources/media" },
-      // { id: 41, title: "Calculators - rework",   path: "/resources/calculators" },
+      { id: 41, title: "Fuel Savings Calculator",   path: "/resources/calculators" },
+      { id: 42, title: "Gallery", path: "/resources/gallery" },
+      { id: 43, title: "Media", path: "/resources/media" },
       // { id: 42, title: "Downloads - rework",      path: "/resources/downloads" },
       // { id: 43, title: "Knowledge Base - rework",           path: "/resources/knowledgebase" },
     ],
