@@ -19,97 +19,9 @@ const SGTHomepage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  //   "use client";
-
-  // import { ChevronRight, Play, CheckCircle } from "lucide-react";
-  // import Link from "next/link";
-
-
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      {/* <section className="relative pt-32 pb-20 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-
-            <div className="lg:pr-8">
-              <div className="inline-flex items-center px-4 py-2 bg-sgt-green/10 border border-sgt-green/30 rounded-full text-sm font-medium text-sgt-green mb-6">
-                <span className="w-2 h-2 bg-sgt-green rounded-full mr-2 animate-pulse"></span>
-                Patent-Applied Technology | ARAI Validated | Fuel-Agnostic
-              </div>
-
-              <h1 className="text-5xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                Profitable Decarbonisation for<br />
-                <span className="text-sgt-green">Industry, Marine & Logistics</span>
-              </h1>
-
-              <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                Hydrogen-enabled retrofits for any combustion fuel — coal, biomass, diesel, CNG, propane, marine fuels — without replacing engines or switching fuels
-              </p>
-
-
-              <p className="text-lg text-gray-500 mb-8 leading-relaxed">
-                IoT-powered carbon intelligence delivering 5-18% fuel savings and 50%+ emission reduction at scale
-              </p>
-
-
-              <div className="flex flex-wrap gap-4 mb-8">
-                <button className="bg-sgt-green text-white px-8 py-4 rounded-md hover:bg-green-800 transition-all font-medium text-lg flex items-center shadow-lg">
-                  Explore Solutions <ChevronRight className="ml-2 w-5 h-5" />
-                </button>
-                <button className="bg-white border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-md hover:border-sgt-green hover:text-sgt-green transition-all font-medium text-lg flex items-center">
-                  <Play className="mr-2 w-5 h-5" /> Watch Demo
-                </button>
-              </div>
-
-
-
-              <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-sgt-green mr-2" />
-                  <span>5-18% Fuel Savings</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-sgt-green mr-2" />
-                  <span>50%+ Emission Cut</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-sgt-green mr-2" />
-                  <span>Zero CapEx Option</span>
-                </div>
-              </div>
-            </div>
-
-
-
-            <div className="relative">
-              <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="/images/hero/hero-square.jpg"
-                  alt="Industrial Decarbonization"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm px-6 py-3 rounded-lg shadow-lg">
-                  <p className="text-sm font-medium text-gray-600">Industrial Decarbonization</p>
-                  <p className="text-2xl font-bold text-sgt-green">In Action</p>
-                </div>
-              </div>
-
-
-              <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-2xl border border-gray-100 hidden lg:block">
-                <p className="text-3xl font-bold text-sgt-green">3,00,000+</p>
-                <p className="text-sm text-gray-600 font-medium">km Tested</p>
-              </div>
-
-              <div className="absolute -top-8 -right-8 bg-white p-6 rounded-xl shadow-2xl border border-gray-100 hidden lg:block">
-                <p className="text-3xl font-bold text-sgt-yellow">Patent</p>
-                <p className="text-sm text-gray-600 font-medium">Applied</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
       <section className="relative w-full h-screen min-h-[680px] overflow-hidden">
 
         {/* ── Full-bleed Background Image ─────────────────────────── */}
@@ -680,16 +592,16 @@ const SGTHomepage = () => {
 
 
               <div className="bg-white p-4 lg:p-8 flex items-center justify-center">
-    <div className="relative w-full h-full rounded-2xl overflow-hidden border border-gray-100 shadow-inner">
-      <img
-        src="/images/solutions/daas.jpg"
-        alt="DaaS Model"
-        className="w-full h-full object-contain bg-white" 
-      />
-      {/* Subtle overlay to soften the white-on-white edges if needed */}
-      <div className="absolute inset-0 pointer-events-none border-[12px] border-white rounded-2xl"></div>
-    </div>
-  </div>
+                <div className="relative w-full h-full rounded-2xl overflow-hidden border border-gray-100 shadow-inner">
+                  <img
+                    src="/images/solutions/daas.jpg"
+                    alt="DaaS Model"
+                    className="w-full h-full object-contain bg-white"
+                  />
+                  {/* Subtle overlay to soften the white-on-white edges if needed */}
+                  <div className="absolute inset-0 pointer-events-none border-[12px] border-white rounded-2xl"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

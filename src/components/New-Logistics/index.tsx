@@ -13,9 +13,104 @@ const LogisticsFleetPage = () => {
           </p>
         </div>
       </div>
+      <section className="relative w-full h-screen min-h-[680px] overflow-hidden">
+
+  {/* Background Image */}
+  <div className="absolute inset-0 z-0">
+    <img
+      src="/images/solutions/logistics.jpg"
+      alt="Fleet Vehicles"
+      className="w-full h-full object-cover object-center"
+    />
+  </div>
+
+  {/* Left Gradient Overlay */}
+  <div
+    className="absolute inset-0 z-10"
+    style={{
+      background:
+        "linear-gradient(to right, rgba(10,20,15,0.88) 0%, rgba(10,20,15,0.55) 38%, rgba(10,20,15,0.35) 62%, rgba(10,20,15,0.0) 100%)",
+    }}
+  />
+
+  {/* Content */}
+  <div className="relative z-20 h-full max-w-7xl mx-auto px-6 flex items-center">
+    <div className="w-full lg:w-[55%] xl:w-[50%] flex flex-col justify-center">
+
+      {/* Badge */}
+      <div className="inline-flex items-center self-start px-4 py-2 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full text-sm font-medium text-white/90 mb-6">
+        <span className="w-2 h-2 bg-[#FFD700] rounded-full mr-2 animate-pulse shrink-0" />
+        ARAI Research Published · 3,00,000+ km Tested · Diesel Proven
+      </div>
+
+      {/* Headline */}
+      <h1 className="text-3xl sm:text-3xl lg:text-3xl xl:text-4xl font-bold text-white mb-5 leading-[1.1] tracking-tight">
+        Fleet Solutions for{" "}
+        <span className="text-[#4ADE80]">Diesel Vehicles</span>
+      </h1>
+
+      {/* Subheading */}
+      <p className="text-lg text-white/80 mb-3 leading-relaxed max-w-xl">
+        Low-cost CHFA retrofit for trucks, mining equipment, construction machinery,
+        and agricultural vehicles — proven 3–15% fuel savings on diesel engines.
+      </p>
+
+      {/* Proof note */}
+      <p className="text-base text-white/65 mb-8 leading-relaxed max-w-xl">
+        Research conducted at ARAI and published in their journal — making SGT the
+        only company with comprehensive understanding of hydrogen dosing for diesel engines.
+      </p>
+
+      {/* CTAs */}
+      <div className="flex flex-wrap gap-4 mb-9">
+        <button className="inline-flex items-center bg-[#1B6B3D] hover:bg-[#155730] text-white font-semibold text-base px-8 py-4 rounded-md shadow-lg transition-colors">
+          Request Fleet Assessment
+          <ArrowRight className="ml-2 w-5 h-5" />
+        </button>
+        <button className="inline-flex items-center bg-white/10 border border-white/30 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-base px-8 py-4 rounded-md transition-colors">
+          Download Fleet Brief
+        </button>
+      </div>
+
+      {/* Trust Indicators */}
+      <div className="flex flex-wrap items-center gap-6 text-sm text-white/75">
+        {[
+          "3–15% Fuel Savings",
+          "3,00,000+ km Tested",
+          "ARAI Journal Published",
+        ].map((item) => (
+          <div key={item} className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4 text-[#4ADE80] shrink-0" />
+            <span>{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* Floating Stat Cards */}
+    <div className="absolute bottom-10 right-6 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl border border-white/60 hidden md:block">
+      <p className="text-sm text-gray-500 font-medium">Fuel Savings</p>
+      <p className="text-3xl font-bold text-[#1B6B3D] leading-none">3–15%</p>
+      <p className="text-xs text-gray-400 mt-1">Road Proven</p>
+    </div>
+
+    <div className="absolute top-32 right-6 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl border border-white/60 hidden lg:block">
+      <p className="text-3xl font-bold text-[#FFD700] leading-none">3L+</p>
+      <p className="text-sm text-gray-500 font-medium mt-1">km Tested</p>
+    </div>
+  </div>
+
+  {/* Bottom fade */}
+  <div
+    className="absolute bottom-0 left-0 right-0 h-24 z-20 pointer-events-none"
+    style={{
+      background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 100%)",
+    }}
+  />
+</section>
 
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-green-50 to-white">
+      {/* <section className="py-16 bg-gradient-to-br from-green-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -65,7 +160,7 @@ const LogisticsFleetPage = () => {
               </div>
               
               {/* Floating Stats */}
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-2xl border border-gray-100">
+              {/* <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-2xl border border-gray-100">
                 <p className="text-sm text-gray-600 mb-1">Fuel Savings</p>
                 <p className="text-4xl font-bold text-sgt-green">3-15%</p>
                 <p className="text-xs text-gray-500 mt-1">Road Proven</p>
@@ -78,8 +173,8 @@ const LogisticsFleetPage = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </div> */}
+      {/* </section> */}
 
       {/* ARAI Research & Testing */}
       <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
