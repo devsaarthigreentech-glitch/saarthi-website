@@ -528,7 +528,7 @@ const SGTHomepage = () => {
             </div>
 
             {/* Card 3: GreenVision */}
-            <a href="/greenvision" className="flex-1 bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-400 hover:shadow-xl transition-all group">
+            <a href="/technology/greenvision" className="flex-1 bg-white rounded-2xl p-8 border-2 border-gray-200 hover:border-gray-400 hover:shadow-xl transition-all group">
               <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gray-700 transition-all">
                 <Database className="w-8 h-8 text-gray-700 group-hover:text-white transition-colors" />
               </div>

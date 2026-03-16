@@ -73,102 +73,102 @@ const IndustrialSolutionsComplete = () => {
         </div>
       </section> */}
 
-<section className="relative w-full h-screen min-h-[680px] overflow-hidden">
+      <section className="relative w-full h-screen min-h-[680px] overflow-hidden">
 
-{/* Background Image */}
-<div className="absolute inset-0 z-0">
-  <img
-    src="/images/solutions/industrial.jpg"
-    alt="Industrial Facility"
-    className="w-full h-full object-cover object-center"
-  />
-</div>
-
-{/* Left Gradient Overlay — warm dark tone for industrial */}
-<div
-  className="absolute inset-0 z-10"
-  style={{
-    background:
-      "linear-gradient(to right, rgba(15,10,5,0.88) 0%, rgba(15,10,5,0.55) 38%, rgba(15,10,5,0.35) 62%, rgba(15,10,5,0.0) 100%)",
-  }}
-/>
-
-{/* Content */}
-<div className="relative z-20 h-full max-w-7xl mx-auto px-6 flex items-center">
-  <div className="w-full lg:w-[55%] xl:w-[50%] flex flex-col justify-center">
-
-    {/* Badge */}
-    <div className="inline-flex items-center self-start px-4 py-2 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full text-sm font-medium text-white/90 mb-6">
-      <Factory className="w-4 h-4 mr-2 shrink-0 text-[#FFD700]" />
-      Industrial Decarbonisation · Custom-Engineered · Fuel-Agnostic
-    </div>
-
-    {/* Headline */}
-    <h1 className="text-3xl sm:text-3xl lg:text-3xl xl:text-4xl font-bold text-white mb-5 leading-[1.1] tracking-tight">
-      Industrial Solutions for{" "}
-      <span className="text-[#4ADE80]">Any Combustion Fuel</span>
-    </h1>
-
-    {/* Subheading */}
-    <p className="text-lg text-white/80 mb-3 leading-relaxed max-w-xl">
-      Custom-engineered hydrogen enhancement systems for DG sets, boilers, kilns,
-      and smelters — regardless of fuel type. Coal, biomass, diesel, CNG, propane,
-      LDO, HFO, pet coke.
-    </p>
-
-    {/* Protective note */}
-    <p className="text-base text-white/65 mb-8 leading-relaxed max-w-xl">
-      DG set solutions are proven and available now. Boiler, kiln, and smelter
-      systems are custom-engineered and currently being piloted with select partners.
-    </p>
-
-    {/* CTAs */}
-    <div className="flex flex-wrap gap-4 mb-9">
-      <button className="inline-flex items-center bg-[#1B6B3D] hover:bg-[#155730] text-white font-semibold text-base px-8 py-4 rounded-md shadow-lg transition-colors">
-        Request Engineering Consultation
-        <ArrowRight className="ml-2 w-5 h-5" />
-      </button>
-      <button className="inline-flex items-center bg-white/10 border border-white/30 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-base px-8 py-4 rounded-md transition-colors">
-        Download Overview
-      </button>
-    </div>
-
-    {/* Trust Indicators */}
-    <div className="flex flex-wrap items-center gap-6 text-sm text-white/75">
-      {[
-        "DG Sets — Proven & Available",
-        "Boilers & Kilns — Pilot Phase",
-        "Any Combustion Fuel",
-      ].map((item) => (
-        <div key={item} className="flex items-center gap-2">
-          <CheckCircle className="w-4 h-4 text-[#4ADE80] shrink-0" />
-          <span>{item}</span>
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/images/solutions/industrial.jpg"
+            alt="Industrial Facility"
+            className="w-full h-full object-cover object-center"
+          />
         </div>
-      ))}
-    </div>
-  </div>
 
-  {/* Floating Stat Cards */}
-  <div className="absolute bottom-10 right-6 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl border border-white/60 hidden md:block">
-    <p className="text-sm text-gray-500 font-medium">Fuel Savings</p>
-    <p className="text-3xl font-bold text-[#1B6B3D] leading-none">5–18%</p>
-    <p className="text-xs text-gray-400 mt-1">Application Dependent</p>
-  </div>
+        {/* Left Gradient Overlay — warm dark tone for industrial */}
+        <div
+          className="absolute inset-0 z-10"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(15,10,5,0.88) 0%, rgba(15,10,5,0.55) 38%, rgba(15,10,5,0.35) 62%, rgba(15,10,5,0.0) 100%)",
+          }}
+        />
 
-  <div className="absolute top-32 right-6 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl border border-white/60 hidden lg:block">
-    <p className="text-3xl font-bold text-[#FFD700] leading-none">Custom</p>
-    <p className="text-sm text-gray-500 font-medium mt-1">Engineered</p>
-  </div>
-</div>
+        {/* Content */}
+        <div className="relative z-20 h-full max-w-7xl mx-auto px-6 flex items-center">
+          <div className="w-full lg:w-[55%] xl:w-[50%] flex flex-col justify-center">
 
-{/* Bottom fade */}
-<div
-  className="absolute bottom-0 left-0 right-0 h-24 z-20 pointer-events-none"
-  style={{
-    background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 100%)",
-  }}
-/>
-</section>
+            {/* Badge */}
+            <div className="inline-flex items-center self-start px-4 py-2 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full text-sm font-medium text-white/90 mb-6">
+              <Factory className="w-4 h-4 mr-2 shrink-0 text-[#FFD700]" />
+              Industrial Decarbonisation · Custom-Engineered · Fuel-Agnostic
+            </div>
+
+            {/* Headline */}
+            <h1 className="text-3xl sm:text-3xl lg:text-3xl xl:text-4xl font-bold text-white mb-5 leading-[1.1] tracking-tight">
+              Industrial Solutions for{" "}
+              <span className="text-[#4ADE80]">Any Combustion Fuel</span>
+            </h1>
+
+            {/* Subheading */}
+            <p className="text-lg text-white/80 mb-3 leading-relaxed max-w-xl">
+              Custom-engineered hydrogen enhancement systems for DG sets, boilers, kilns,
+              and smelters — regardless of fuel type. Coal, biomass, diesel, CNG, propane,
+              LDO, HFO, pet coke.
+            </p>
+
+            {/* Protective note */}
+            <p className="text-base text-white/65 mb-8 leading-relaxed max-w-xl">
+              DG set solutions are proven and available now. Boiler, kiln, and smelter
+              systems are custom-engineered and currently being piloted with select partners.
+            </p>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-4 mb-9">
+              <button className="inline-flex items-center bg-[#1B6B3D] hover:bg-[#155730] text-white font-semibold text-base px-8 py-4 rounded-md shadow-lg transition-colors">
+                Request Engineering Consultation
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </button>
+              <button className="inline-flex items-center bg-white/10 border border-white/30 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-base px-8 py-4 rounded-md transition-colors">
+                Download Overview
+              </button>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap items-center gap-6 text-sm text-white/75">
+              {[
+                "DG Sets — Proven & Available",
+                "Boilers & Kilns — Pilot Phase",
+                "Any Combustion Fuel",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-[#4ADE80] shrink-0" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Floating Stat Cards */}
+          <div className="absolute bottom-10 right-6 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl border border-white/60 hidden md:block">
+            <p className="text-sm text-gray-500 font-medium">Fuel Savings</p>
+            <p className="text-3xl font-bold text-[#1B6B3D] leading-none">5–18%</p>
+            <p className="text-xs text-gray-400 mt-1">Application Dependent</p>
+          </div>
+
+          <div className="absolute top-32 right-6 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl border border-white/60 hidden lg:block">
+            <p className="text-3xl font-bold text-[#FFD700] leading-none">Custom</p>
+            <p className="text-sm text-gray-500 font-medium mt-1">Engineered</p>
+          </div>
+        </div>
+
+        {/* Bottom fade */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-24 z-20 pointer-events-none"
+          style={{
+            background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 100%)",
+          }}
+        />
+      </section>
 
 
       {/* Four Application Areas Grid */}
@@ -190,14 +190,14 @@ const IndustrialSolutionsComplete = () => {
               <div className="inline-flex px-3 py-1 bg-green-100 rounded-full text-green-800 text-xs font-bold mb-4">
                 ✓ PROVEN & DEPLOYED
               </div>
-              
+
               <div className="w-14 h-14 bg-sgt-green/10 rounded-xl flex items-center justify-center mb-4">
                 <Settings className="w-7 h-7 text-sgt-green" />
               </div>
-              
+
               <h3 className="text-xl font-bold text-gray-900 mb-2">DG Sets</h3>
               <p className="text-sm text-sgt-green font-semibold mb-4">Stationary Power</p>
-              
+
               <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                 CHFA technology for diesel and CNG generator sets. ARAI validated, 3L+ km tested.
               </p>
@@ -244,14 +244,14 @@ const IndustrialSolutionsComplete = () => {
               <div className="inline-flex px-3 py-1 bg-orange-100 rounded-full text-orange-800 text-xs font-bold mb-4">
                 PILOT PHASE
               </div>
-              
+
               <div className="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center mb-4">
                 <Flame className="w-7 h-7 text-orange-600" />
               </div>
-              
+
               <h3 className="text-xl font-bold text-gray-900 mb-2">Boilers</h3>
               <p className="text-sm text-orange-600 font-semibold mb-4">Steam Generation</p>
-              
+
               <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                 CHCA systems for industrial boilers - any combustion fuel type.
               </p>
@@ -287,14 +287,14 @@ const IndustrialSolutionsComplete = () => {
               <div className="inline-flex px-3 py-1 bg-red-100 rounded-full text-red-800 text-xs font-bold mb-4">
                 DEVELOPMENT PHASE
               </div>
-              
+
               <div className="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center mb-4">
                 <Factory className="w-7 h-7 text-red-600" />
               </div>
-              
+
               <h3 className="text-xl font-bold text-gray-900 mb-2">Kilns</h3>
               <p className="text-sm text-red-600 font-semibold mb-4">High-Temp Processing</p>
-              
+
               <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                 CHCA for cement, ceramic, glass kilns burning coal, pet coke, or gas.
               </p>
@@ -330,14 +330,14 @@ const IndustrialSolutionsComplete = () => {
               <div className="inline-flex px-3 py-1 bg-purple-100 rounded-full text-purple-800 text-xs font-bold mb-4">
                 PILOT PHASE
               </div>
-              
+
               <div className="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center mb-4">
                 <Zap className="w-7 h-7 text-purple-600" />
               </div>
-              
+
               <h3 className="text-xl font-bold text-gray-900 mb-2">Smelters</h3>
               <p className="text-sm text-purple-600 font-semibold mb-4">Metal Recycling</p>
-              
+
               <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                 Gas-fired reverberatory and rotary furnaces for secondary metal smelting.
               </p>
@@ -380,11 +380,11 @@ const IndustrialSolutionsComplete = () => {
                 <CheckCircle className="w-4 h-4 mr-2" />
                 PROVEN & DEPLOYED
               </div>
-              
+
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 DG Set Solutions
               </h2>
-              
+
               <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                 Proven CHFA technology for diesel and CNG generator sets from 125 kVA to 1,500 kVA. ARAI validated with extensive road-equivalent testing and multiple live deployments.
               </p>
@@ -436,12 +436,12 @@ const IndustrialSolutionsComplete = () => {
 
 
             <div>
-              <img 
-                src="/api/placeholder/600/500" 
+              <img
+                src="/api/placeholder/600/500"
                 alt="DG Set Installation"
                 className="w-full rounded-2xl shadow-2xl"
               />
-              
+
               <div className="mt-6 bg-white border-2 border-green-200 rounded-xl p-6">
                 <h4 className="text-lg font-bold text-gray-900 mb-4">Key Applications</h4>
                 <div className="grid grid-cols-2 gap-3">
@@ -464,12 +464,12 @@ const IndustrialSolutionsComplete = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <img 
-                src="/api/placeholder/600/500" 
+              <img
+                src="/api/placeholder/600/500"
                 alt="Industrial Boiler"
                 className="w-full rounded-2xl shadow-2xl"
               />
-              
+
               <div className="mt-6 bg-white border-2 border-orange-200 rounded-xl p-6">
                 <h4 className="text-lg font-bold text-gray-900 mb-4">Target Industries</h4>
                 <div className="grid grid-cols-2 gap-3">
@@ -488,11 +488,11 @@ const IndustrialSolutionsComplete = () => {
               <div className="inline-flex px-4 py-2 bg-orange-100 rounded-full text-orange-800 text-sm font-bold mb-6">
                 PILOT PHASE
               </div>
-              
+
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Boiler Solutions
               </h2>
-              
+
               <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                 Custom CHCA systems for industrial steam and process heat generation. Fuel-agnostic design works with coal, biomass, natural gas, CNG, propane, diesel, LDO, HFO, and multi-fuel boilers.
               </p>
@@ -554,11 +554,11 @@ const IndustrialSolutionsComplete = () => {
               <div className="inline-flex px-4 py-2 bg-red-100 rounded-full text-red-800 text-sm font-bold mb-6">
                 DEVELOPMENT PHASE
               </div>
-              
+
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Kiln Solutions
               </h2>
-              
+
               <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                 High-volume CHCA systems for cement, ceramic, glass, and brick kilns. Specialized design for high-temperature industrial processing using coal, pet coke, natural gas, or LPG.
               </p>
@@ -610,12 +610,12 @@ const IndustrialSolutionsComplete = () => {
 
 
             <div>
-              <img 
-                src="/api/placeholder/600/500" 
+              <img
+                src="/api/placeholder/600/500"
                 alt="Industrial Kiln"
                 className="w-full rounded-2xl shadow-2xl"
               />
-              
+
               <div className="mt-6 bg-white border-2 border-red-200 rounded-xl p-6">
                 <h4 className="text-lg font-bold text-gray-900 mb-4">Target Industries</h4>
                 <div className="grid grid-cols-2 gap-3">
@@ -638,12 +638,12 @@ const IndustrialSolutionsComplete = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <img 
-                src="/api/placeholder/600/500" 
+              <img
+                src="/api/placeholder/600/500"
                 alt="Gas-Fired Smelting Furnace"
                 className="w-full rounded-2xl shadow-2xl"
               />
-              
+
               <div className="mt-6 bg-white border-2 border-purple-200 rounded-xl p-6">
                 <h4 className="text-lg font-bold text-gray-900 mb-4">Target Industries</h4>
                 <div className="grid grid-cols-2 gap-3">
@@ -662,11 +662,11 @@ const IndustrialSolutionsComplete = () => {
               <div className="inline-flex px-4 py-2 bg-purple-100 rounded-full text-purple-800 text-sm font-bold mb-6">
                 PILOT PHASE
               </div>
-              
+
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Smelter & Furnace Solutions
               </h2>
-              
+
               <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                 HHO-assisted combustion for gas-fired reverberatory and rotary furnaces in secondary metal recycling. Specifically designed for CNG, LPG, Propane, and Natural Gas applications.
               </p>
@@ -729,7 +729,7 @@ const IndustrialSolutionsComplete = () => {
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Works With Any Combustion Fuel
               </h2>
-              
+
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Our technology is fuel-agnostic. Whether you burn coal, pet coke, biomass, natural gas, CNG, propane, diesel, LDO, or HFO — we enhance your existing combustion without changing your fuel type.
               </p>
@@ -751,8 +751,8 @@ const IndustrialSolutionsComplete = () => {
 
 
             <div>
-              <img 
-                src="/api/placeholder/600/500" 
+              <img
+                src="/api/placeholder/600/500"
                 alt="Various Industrial Fuels"
                 className="w-full rounded-xl shadow-2xl"
               />
@@ -771,7 +771,7 @@ const IndustrialSolutionsComplete = () => {
           <p className="text-xl text-gray-600 mb-12">
             Get a preliminary estimate of fuel savings and ROI for your industrial application
           </p>
-          
+
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-gray-50 rounded-xl p-6">
               <TrendingUp className="w-12 h-12 text-sgt-green mx-auto mb-3" />

@@ -68,7 +68,7 @@ const MarineSolutionsPage = () => {
               </div>
               
               {/* Floating Stats */}
-              {/* <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-2xl border border-gray-100">
+      {/* <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-2xl border border-gray-100">
                 <p className="text-sm text-gray-600 mb-1">Fuel Savings</p>
                 <p className="text-4xl font-bold text-blue-600">3-12%</p>
                 <p className="text-xs text-gray-500 mt-1">Validated</p>
@@ -86,101 +86,101 @@ const MarineSolutionsPage = () => {
 
       <section className="relative w-full h-screen min-h-[680px] overflow-hidden">
 
-  {/* Background Image */}
-  <div className="absolute inset-0 z-0">
-    <img
-      src="/images/solutions/marine.jpg"
-      alt="Marine Vessel"
-      className="w-full h-full object-cover object-center"
-    />
-  </div>
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/images/solutions/marine.jpg"
+            alt="Marine Vessel"
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
 
-  {/* Left Gradient Overlay */}
-  <div
-    className="absolute inset-0 z-10"
-    style={{
-      background:
-        "linear-gradient(to right, rgba(5,15,25,0.88) 0%, rgba(5,15,25,0.55) 38%, rgba(5,15,25,0.35) 62%, rgba(5,15,25,0.0) 100%)",
-    }}
-  />
+        {/* Left Gradient Overlay */}
+        <div
+          className="absolute inset-0 z-10"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(5,15,25,0.88) 0%, rgba(5,15,25,0.55) 38%, rgba(5,15,25,0.35) 62%, rgba(5,15,25,0.0) 100%)",
+          }}
+        />
 
-  {/* Content */}
-  <div className="relative z-20 h-full max-w-7xl mx-auto px-6 flex items-center">
-    <div className="w-full lg:w-[55%] xl:w-[50%] flex flex-col justify-center">
+        {/* Content */}
+        <div className="relative z-20 h-full max-w-7xl mx-auto px-6 flex items-center">
+          <div className="w-full lg:w-[55%] xl:w-[50%] flex flex-col justify-center">
 
-      {/* Badge */}
-      <div className="inline-flex items-center self-start px-4 py-2 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full text-sm font-medium text-white/90 mb-6">
-        <Ship className="w-4 h-4 mr-2 shrink-0 text-[#FFD700]" />
-        IMO 2050 Compliant · HFO, MDO, MGO, Diesel · All Vessel Types
-      </div>
+            {/* Badge */}
+            <div className="inline-flex items-center self-start px-4 py-2 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full text-sm font-medium text-white/90 mb-6">
+              <Ship className="w-4 h-4 mr-2 shrink-0 text-[#FFD700]" />
+              IMO 2050 Compliant · HFO, MDO, MGO, Diesel · All Vessel Types
+            </div>
 
-      {/* Headline */}
-      <h1 className="text-3xl sm:text-3xl lg:text-3xl xl:text-4xl font-bold text-white mb-5 leading-[1.1] tracking-tight">
-        Marine Solutions for{" "}
-        <span className="text-[#4ADE80]">Any Marine Fuel</span>
-      </h1>
+            {/* Headline */}
+            <h1 className="text-3xl sm:text-3xl lg:text-3xl xl:text-4xl font-bold text-white mb-5 leading-[1.1] tracking-tight">
+              Marine Solutions for{" "}
+              <span className="text-[#4ADE80]">Any Marine Fuel</span>
+            </h1>
 
-      {/* Subheading */}
-      <p className="text-lg text-white/80 mb-3 leading-relaxed max-w-xl">
-        CHFA for auxiliary engines and ship boilers on all vessels. Main propulsion
-        on support vessels — tugboats, barges, fishing vessels, DP ships. Proven
-        3–12% fuel savings on HFO, MDO, MGO, and diesel.
-      </p>
+            {/* Subheading */}
+            <p className="text-lg text-white/80 mb-3 leading-relaxed max-w-xl">
+              CHFA for auxiliary engines and ship boilers on all vessels. Main propulsion
+              on support vessels — tugboats, barges, fishing vessels, DP ships. Proven
+              3–12% fuel savings on HFO, MDO, MGO, and diesel.
+            </p>
 
-      {/* Proof note */}
-      <p className="text-base text-white/65 mb-8 leading-relaxed max-w-xl">
-        Open to pilot partnerships for 2-stroke HFO main propulsion evaluation on
-        larger commercial vessels.
-      </p>
+            {/* Proof note */}
+            <p className="text-base text-white/65 mb-8 leading-relaxed max-w-xl">
+              Open to pilot partnerships for 2-stroke HFO main propulsion evaluation on
+              larger commercial vessels.
+            </p>
 
-      {/* CTAs */}
-      <div className="flex flex-wrap gap-4 mb-9">
-        <button className="inline-flex items-center bg-[#1B6B3D] hover:bg-[#155730] text-white font-semibold text-base px-8 py-4 rounded-md shadow-lg transition-colors">
-          Request Marine Assessment
-          <ArrowRight className="ml-2 w-5 h-5" />
-        </button>
-        <button className="inline-flex items-center bg-white/10 border border-white/30 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-base px-8 py-4 rounded-md transition-colors">
-          Download Marine Brief
-        </button>
-      </div>
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-4 mb-9">
+              <button className="inline-flex items-center bg-[#1B6B3D] hover:bg-[#155730] text-white font-semibold text-base px-8 py-4 rounded-md shadow-lg transition-colors">
+                Request Marine Assessment
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </button>
+              <button className="inline-flex items-center bg-white/10 border border-white/30 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-base px-8 py-4 rounded-md transition-colors">
+                Download Marine Brief
+              </button>
+            </div>
 
-      {/* Trust Indicators */}
-      <div className="flex flex-wrap items-center gap-6 text-sm text-white/75">
-        {[
-          "3–12% Fuel Savings",
-          "IMO 2050 Aligned",
-          "All Marine Fuels",
-        ].map((item) => (
-          <div key={item} className="flex items-center gap-2">
-            <CheckCircle className="w-4 h-4 text-[#4ADE80] shrink-0" />
-            <span>{item}</span>
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap items-center gap-6 text-sm text-white/75">
+              {[
+                "3–12% Fuel Savings",
+                "IMO 2050 Aligned",
+                "All Marine Fuels",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-[#4ADE80] shrink-0" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
-      </div>
-    </div>
 
-    {/* Floating Stat Cards */}
-    <div className="absolute bottom-10 right-6 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl border border-white/60 hidden md:block">
-      <p className="text-sm text-gray-500 font-medium">Fuel Savings</p>
-      <p className="text-3xl font-bold text-[#1B6B3D] leading-none">3–12%</p>
-      <p className="text-xs text-gray-400 mt-1">Validated</p>
-    </div>
+          {/* Floating Stat Cards */}
+          <div className="absolute bottom-10 right-6 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl border border-white/60 hidden md:block">
+            <p className="text-sm text-gray-500 font-medium">Fuel Savings</p>
+            <p className="text-3xl font-bold text-[#1B6B3D] leading-none">3–12%</p>
+            <p className="text-xs text-gray-400 mt-1">Validated</p>
+          </div>
 
-    <div className="absolute top-32 right-6 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl border border-white/60 hidden lg:block">
-      <p className="text-sm text-gray-500 font-medium">ROI Period</p>
-      <p className="text-3xl font-bold text-[#FFD700] leading-none">6–36</p>
-      <p className="text-xs text-gray-400 mt-1">months</p>
-    </div>
-  </div>
+          <div className="absolute top-32 right-6 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl border border-white/60 hidden lg:block">
+            <p className="text-sm text-gray-500 font-medium">ROI Period</p>
+            <p className="text-3xl font-bold text-[#FFD700] leading-none">6–36</p>
+            <p className="text-xs text-gray-400 mt-1">months</p>
+          </div>
+        </div>
 
-  {/* Bottom fade */}
-  <div
-    className="absolute bottom-0 left-0 right-0 h-24 z-20 pointer-events-none"
-    style={{
-      background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 100%)",
-    }}
-  />
-</section>
+        {/* Bottom fade */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-24 z-20 pointer-events-none"
+          style={{
+            background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 100%)",
+          }}
+        />
+      </section>
 
       {/* Marine Fuels Compatibility */}
       <section className="py-20 bg-white">
@@ -232,7 +232,7 @@ const MarineSolutionsPage = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-1">{item.fuel}</h3>
                 <p className={`text-sm text-${item.color}-600 font-semibold mb-3`}>{item.name}</p>
                 <p className="text-sm text-gray-600 mb-4 leading-relaxed">{item.desc}</p>
-                
+
                 <div className={`bg-${item.color}-50 rounded-lg p-3`}>
                   <p className="text-xs text-gray-600 mb-1">Target Savings</p>
                   <p className={`text-2xl font-bold text-${item.color}-600`}>{item.savings}</p>
@@ -252,11 +252,11 @@ const MarineSolutionsPage = () => {
                 <Globe className="w-4 h-4 mr-2" />
                 International Compliance
               </div>
-              
+
               <h2 className="text-4xl font-bold mb-6">
                 IMO 2050 Net-Zero Pathway
               </h2>
-              
+
               <p className="text-xl text-blue-100 mb-8 leading-relaxed">
                 The International Maritime Organization's 2050 net-zero target requires immediate action. Our CHFA technology helps vessels meet interim targets while planning long-term transitions.
               </p>
@@ -296,8 +296,8 @@ const MarineSolutionsPage = () => {
             </div>
 
             <div>
-              <img 
-                src="/api/placeholder/600/500" 
+              <img
+                src="/api/placeholder/600/500"
                 alt="IMO 2050 Pathway"
                 className="w-full rounded-xl shadow-2xl"
               />
@@ -314,7 +314,7 @@ const MarineSolutionsPage = () => {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Comprehensive Emission Reduction
               </h2>
-              
+
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Beyond fuel savings, CHFA technology delivers measurable reductions across all major pollutants — critical for IMO compliance and port regulations.
               </p>
@@ -348,7 +348,7 @@ const MarineSolutionsPage = () => {
             <div>
               <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border-2 border-blue-200">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Port & ECA Compliance</h3>
-                
+
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start">
                     <CheckCircle className="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" />
@@ -380,8 +380,8 @@ const MarineSolutionsPage = () => {
                   </div>
                 </div>
 
-                <img 
-                  src="/api/placeholder/500/300" 
+                <img
+                  src="/api/placeholder/500/300"
                   alt="Emission Comparison"
                   className="w-full rounded-xl"
                 />
@@ -409,14 +409,14 @@ const MarineSolutionsPage = () => {
               <div className="inline-flex px-3 py-1 bg-green-100 rounded-full text-green-800 text-xs font-bold mb-4">
                 PROVEN APPLICATIONS
               </div>
-              
+
               <div className="w-16 h-16 bg-sgt-green/10 rounded-xl flex items-center justify-center mb-6">
                 <Ship className="w-8 h-8 text-sgt-green" />
               </div>
-              
+
               <h3 className="text-2xl font-bold text-gray-900 mb-2">All Vessels</h3>
               <p className="text-sm text-sgt-green font-semibold mb-4">Boilers & Auxiliary Engines</p>
-              
+
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Ship boilers and auxiliary engines on all vessel types — ocean-going to coastal.
               </p>
@@ -440,14 +440,14 @@ const MarineSolutionsPage = () => {
               <div className="inline-flex px-3 py-1 bg-blue-100 rounded-full text-blue-800 text-xs font-bold mb-4">
                 MAIN PROPULSION - PROVEN
               </div>
-              
+
               <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
                 <Anchor className="w-8 h-8 text-blue-600" />
               </div>
-              
+
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Support Vessels</h3>
               <p className="text-sm text-blue-600 font-semibold mb-4">High-RPM Main Propulsion</p>
-              
+
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Main propulsion engines and DGs on tugboats, barges, fishing vessels, DP ships, supply vessels.
               </p>
@@ -471,14 +471,14 @@ const MarineSolutionsPage = () => {
               <div className="inline-flex px-3 py-1 bg-orange-100 rounded-full text-orange-800 text-xs font-bold mb-4">
                 PILOT TESTING AVAILABLE
               </div>
-              
+
               <div className="w-16 h-16 bg-orange-50 rounded-xl flex items-center justify-center mb-6">
                 <Waves className="w-8 h-8 text-orange-600" />
               </div>
-              
+
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Large Commercial</h3>
               <p className="text-sm text-orange-600 font-semibold mb-4">2-Stroke Main Propulsion</p>
-              
+
               <p className="text-gray-600 mb-6 leading-relaxed">
                 We are open to testing HHO impact on 2-stroke HFO main propulsion engines for bulk carriers, container ships, tankers.
               </p>
@@ -507,11 +507,11 @@ const MarineSolutionsPage = () => {
                   <DollarSign className="w-4 h-4 mr-2" />
                   Marine DaaS Model
                 </div>
-                
+
                 <h2 className="text-4xl lg:text-5xl font-bold mb-6">
                   Device-as-a-Service for Marine
                 </h2>
-                
+
                 <p className="text-xl text-green-100 mb-8 leading-relaxed">
                   Minimize upfront investment with our marine DaaS model. Small down payment followed by monthly subscription covering system, installation, monitoring, and ongoing support.
                 </p>
@@ -573,8 +573,8 @@ const MarineSolutionsPage = () => {
               </div>
 
               <div className="relative h-full min-h-[500px]">
-                <img 
-                  src="/api/placeholder/700/600" 
+                <img
+                  src="/api/placeholder/700/600"
                   alt="Marine DaaS Model"
                   className="w-full h-full object-cover"
                 />
@@ -647,7 +647,7 @@ const MarineSolutionsPage = () => {
           <p className="text-xl text-gray-600 mb-12">
             Join leading marine operators achieving IMO compliance while reducing fuel costs
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <button className="bg-blue-600 text-white px-10 py-5 rounded-lg text-lg font-bold hover:bg-blue-700 transition-all">
               Request Vessel Assessment
