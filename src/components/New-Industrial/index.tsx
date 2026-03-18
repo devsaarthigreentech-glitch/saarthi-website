@@ -639,7 +639,7 @@ const IndustrialSolutionsComplete = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <img
-                src="/api/placeholder/600/500"
+                src="/images/solutions/smelters.jpg"
                 alt="Gas-Fired Smelting Furnace"
                 className="w-full rounded-2xl shadow-2xl"
               />
@@ -752,7 +752,7 @@ const IndustrialSolutionsComplete = () => {
 
             <div>
               <img
-                src="/api/placeholder/600/500"
+                src="/images/solutions/multifuel.jpg"
                 alt="Various Industrial Fuels"
                 className="w-full rounded-xl shadow-2xl"
               />

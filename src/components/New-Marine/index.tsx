@@ -297,7 +297,7 @@ const MarineSolutionsPage = () => {
 
             <div>
               <img
-                src="/api/placeholder/600/500"
+                src="/images/solutions/imo2050.jpg"
                 alt="IMO 2050 Pathway"
                 className="w-full rounded-xl shadow-2xl"
               />
@@ -381,7 +381,7 @@ const MarineSolutionsPage = () => {
                 </div>
 
                 <img
-                  src="/api/placeholder/500/300"
+                  src="/images/solutions/emission-reduction-marine.jpg"
                   alt="Emission Comparison"
                   className="w-full rounded-xl"
                 />
@@ -500,7 +500,7 @@ const MarineSolutionsPage = () => {
       {/* DaaS Model - Zero CapEx */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-gradient-to-br from-sgt-green to-green-800 rounded-3xl overflow-hidden shadow-2xl">
+          <div className="bg-gradient-to-br from-green-800 to-sgt-green rounded-3xl overflow-hidden shadow-2xl">
             <div className="grid md:grid-cols-2 gap-0">
               <div className="p-12 lg:p-16 text-white flex flex-col justify-center">
                 <div className="inline-flex px-4 py-2 bg-white/20 rounded-full text-white text-sm font-semibold mb-6 self-start">
@@ -571,14 +571,14 @@ const MarineSolutionsPage = () => {
                   Discuss DaaS Options <ArrowRight className="ml-2" />
                 </button>
               </div>
-
-              <div className="relative h-full min-h-[500px]">
+              <div className="relative min-h-[500px]">
                 <img
-                  src="/api/placeholder/700/600"
+                  src="/images/solutions/marine-daas.jpg"
                   alt="Marine DaaS Model"
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
+
             </div>
           </div>
         </div>

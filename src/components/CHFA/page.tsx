@@ -141,7 +141,7 @@ const CHFATechnologyPage = () => {
           {/* Technical Diagram Placeholder */}
           <div className="bg-gray-100 rounded-2xl p-12 text-center">
             <img 
-              src="/api/placeholder/1000/400" 
+              src="/images/technology/wet-cell-chfa.jpg" 
               alt="CHFA Technology Diagram"
               className="w-full rounded-xl"
             />
