@@ -216,8 +216,8 @@ const menuData = [
       { id: 41, title: "Fuel Savings Calculator",   path: "/resources/calculators" },
       { id: 42, title: "Gallery", path: "/resources/gallery" },
       { id: 43, title: "Media", path: "/resources/media" },
+      { id: 44, title: "Knowledge Base",           path: "/resources/knowledgebase" },
       // { id: 42, title: "Downloads - rework",      path: "/resources/downloads" },
-      // { id: 43, title: "Knowledge Base - rework",           path: "/resources/knowledgebase" },
     ],
   },
   {
@@ -227,7 +227,7 @@ const menuData = [
       { id: 51, title: "Founder's Story",         path: "/about/founder" },
       { id: 52, title: "Leadership",      path: "/about/leadership" },
       { id: 53, title: "Our Journey & Mission",  path: "/about/journey" },
-      { id: 54, title: "Partners - TBD",        path: "/about/partners" },
+      { id: 54, title: "Partners",        path: "/about/partners" },
     ],
   },
 ];
