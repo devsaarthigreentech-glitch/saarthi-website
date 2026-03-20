@@ -142,7 +142,7 @@ export default function VideosSection() {
         {/* YouTube channel CTA */}
         <div className="mt-12 text-center">
           <a
-            href="https://www.youtube.com/@YOUR_CHANNEL_HANDLE"
+            href="https://www.youtube.com/@SGTHydroedge"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-medium text-slate-700 shadow-sm hover:shadow-md hover:border-[#33A04A] hover:text-[#33A04A] transition-all duration-200"
