@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import { Factory, Flame, Settings, CheckCircle, AlertCircle, ArrowRight, Zap, TrendingUp, Shield, Award } from 'lucide-react';
+import Link from 'next/link';
 
 
 const IndustrialSolutionsComplete = () => {
@@ -186,7 +187,7 @@ const IndustrialSolutionsComplete = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* DG Sets - PROVEN */}
-            <div className="bg-white border-2 border-sgt-green rounded-2xl p-6 hover:shadow-2xl transition-all">
+            <div className="bg-white border-2 border-sgt-green rounded-2xl p-6 hover:shadow-2xl transition-all flex flex-col">
               <div className="inline-flex px-3 py-1 bg-green-100 rounded-full text-green-800 text-xs font-bold mb-4">
                 ✓ PROVEN & DEPLOYED
               </div>
@@ -233,14 +234,14 @@ const IndustrialSolutionsComplete = () => {
               </div>
 
 
-              <button className="w-full bg-sgt-green text-white py-2.5 rounded-lg text-sm font-medium hover:bg-green-800 transition-all">
+              <button className="w-full bg-sgt-green text-white py-2.5 rounded-lg text-sm font-medium hover:bg-green-800 transition-all mt-auto">
                 View Details Below
               </button>
             </div>
 
 
             {/* Boilers - PILOT */}
-            <div className="bg-white border-2 border-orange-200 rounded-2xl p-6 hover:shadow-2xl transition-all">
+            <div className="bg-white border-2 border-orange-200 rounded-2xl p-6 hover:shadow-2xl transition-all flex flex-col">
               <div className="inline-flex px-3 py-1 bg-orange-100 rounded-full text-orange-800 text-xs font-bold mb-4">
                 PILOT PHASE
               </div>
@@ -276,14 +277,14 @@ const IndustrialSolutionsComplete = () => {
               </div>
 
 
-              <button className="w-full bg-orange-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-orange-700 transition-all">
+              <button className="w-full bg-orange-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-orange-700 transition-all mt-auto">
                 View Details Below
               </button>
             </div>
 
 
             {/* Kilns - PILOT */}
-            <div className="bg-white border-2 border-red-200 rounded-2xl p-6 hover:shadow-2xl transition-all">
+            <div className="bg-white border-2 border-red-200 rounded-2xl p-6 hover:shadow-2xl transition-all flex flex-col">
               <div className="inline-flex px-3 py-1 bg-red-100 rounded-full text-red-800 text-xs font-bold mb-4">
                 DEVELOPMENT PHASE
               </div>
@@ -319,14 +320,14 @@ const IndustrialSolutionsComplete = () => {
               </div>
 
 
-              <button className="w-full bg-red-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-red-700 transition-all">
+              <button className="w-full bg-red-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-red-700 transition-all mt-auto">
                 View Details Below
               </button>
             </div>
 
 
             {/* Smelters - PILOT */}
-            <div className="bg-white border-2 border-purple-200 rounded-2xl p-6 hover:shadow-2xl transition-all">
+            <div className="bg-white border-2 border-purple-200 rounded-2xl p-6 hover:shadow-2xl transition-all flex flex-col">
               <div className="inline-flex px-3 py-1 bg-purple-100 rounded-full text-purple-800 text-xs font-bold mb-4">
                 PILOT PHASE
               </div>
@@ -362,7 +363,7 @@ const IndustrialSolutionsComplete = () => {
               </div>
 
 
-              <button className="w-full bg-purple-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-purple-700 transition-all">
+              <button className="w-full bg-purple-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-purple-700 transition-all mt-auto">
                 View Details Below
               </button>
             </div>
@@ -792,12 +793,15 @@ const IndustrialSolutionsComplete = () => {
 
 
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-sgt-green text-white px-10 py-4 rounded-lg text-lg font-bold hover:bg-green-800 transition-all">
+            <Link
+              className="bg-sgt-green text-white px-10 py-4 rounded-lg text-lg font-bold hover:bg-green-800 transition-all"
+              href='/resources/calculators'
+            >
               Calculate ROI
-            </button>
-            <button className="bg-white border-2 border-gray-300 text-gray-700 px-10 py-4 rounded-lg text-lg font-bold hover:border-sgt-green hover:text-sgt-green transition-all">
+            </Link>
+            <Link className="bg-white border-2 border-gray-300 text-gray-700 px-10 py-4 rounded-lg text-lg font-bold hover:border-sgt-green hover:text-sgt-green transition-all" href='/contact'>
               Request Engineering Consultation
-            </button>
+            </Link>
           </div>
         </div>
       </section>
