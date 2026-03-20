@@ -73,13 +73,13 @@ const SGTHomepage = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 mb-9">
-              <Link
+              {/* <Link
                 href="/solutions"
                 className="inline-flex items-center bg-[#1B6B3D] hover:bg-[#155730] text-white font-semibold text-base px-8 py-4 rounded-md shadow-lg transition-colors"
               >
                 Explore Solutions
                 <ChevronRight className="ml-2 w-5 h-5" />
-              </Link>
+              </Link> */}
               <Link href = '/resources/videos' className="inline-flex items-center bg-white/10 border border-white/30 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-base px-8 py-4 rounded-md transition-colors">
                 <Play className="mr-2 w-5 h-5" />
                 Watch Videos
