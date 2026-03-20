@@ -1,23 +1,26 @@
 // videoData.ts
 
 export type VideoCategory =
-  | "All"
-  | "Boiler"
-  | "Kiln"
-  | "DG & Power"
-  | "Marine"
-  | "Engine on Wheels"
-  | "Company";
+  | "all"
+  | "product"
+  | "media"
+  | "industry"
+  | "marine"
+  | "logistics"
+  | "technology";
 
-export type VideoItem = {
-  id: string;
-  youtubeId: string;              // YouTube video ID (e.g. "ZeqxHMRH8RQ")
-  title: string;
-  description?: string;
-  date: string;                   // display date
-  category: VideoCategory[];      // one video can belong to multiple verticals
-  featured?: boolean;             // pin to top / hero treatment
-};
+  export type VideoItem = {
+    id: string;
+    youtubeId: string;
+    title: string;
+    description?: string;
+    date: string;
+    duration?: string;           // e.g. "8:42"
+    views?: string;              // e.g. "12.4K views"
+    category: VideoCategory;
+    tag: string;                 // Display label e.g. "Product Demo", "Marine"
+    featured?: boolean;
+  };
 
 /**
  * ─────────────────────────────────────────────
@@ -52,8 +55,9 @@ const videoData: VideoItem[] = [
     description:
       "In-depth podcast with ABP News discussing how hydrogen enhances — not replaces — diesel across trucks, DG sets, buses, and marine engines.",
     date: "December 24, 2025",
-    category: ["DG & Power", "Engine on Wheels", "Marine", "Company"],
+    category: 'all',
     featured: true,
+    tag: 'Media'
   },
 
   {
@@ -63,8 +67,9 @@ const videoData: VideoItem[] = [
     description:
       "Diesel generators are the silent backbone of India’s economy — powering hospitals, factories, data centers, and telecom towers when the grid fails.",
     date: "January 15, 2026",
-    category: ["DG & Power"],
+    category: 'industry',
     featured: false,
+    tag:'Industrial'
   },
   {
     id: "vid-3",
@@ -73,8 +78,9 @@ const videoData: VideoItem[] = [
     description:
       "Global trade isn’t powered by future ships.It’s powered by marine engines already running—tugboats, harbour craft, offshore vessels, fishing fleets, and auxiliary engines operating day and night.",
     date: "January 21, 2026",
-    category: ["Marine"],
+    category: "marine",
     featured: false,
+    tag:'Marine'
   },
   {
     id: "vid-4",
@@ -83,8 +89,9 @@ const videoData: VideoItem[] = [
     description:
       "GreenDrive was built for one purpose first: save diesel and improve profitability.Sustainability is the outcome — not the burden.",
     date: "January 19, 2026",
-    category: ["Engine on Wheels"],
+    category: "logistics",
     featured: false,
+    tag:'Logistics'
   },
   {
     id: "vid-5",
@@ -93,8 +100,9 @@ const videoData: VideoItem[] = [
     description:
       "The global challenge of emissions is not limited to the future — it exists in the engines already powering our world today.Real decarbonisation begins inside the engine.",
     date: "January 16, 2026",
-    category: ["Company"],
+    category: 'all',
     featured: true,
+    tag:'Company'
   },
   // {
   //   id: "vid-6",
@@ -108,14 +116,15 @@ const videoData: VideoItem[] = [
   // },
 ];
 
-export const VIDEO_CATEGORIES: VideoCategory[] = [
-  "All",
-  "Boiler",
-  "Kiln",
-  "DG & Power",
-  "Marine",
-  "Engine on Wheels",
-  "Company",
+export const FILTER_TABS: { filter: VideoCategory; label: string }[] = [
+  { filter: "all",        label: "All Videos" },
+  { filter: "product",    label: "Product Demos" },
+  { filter: "media",      label: "Media Coverage" },
+  { filter: "industry",   label: "Industry" },
+  { filter: "marine",     label: "Marine" },
+  { filter: "logistics",  label: "Logistics" },
+  { filter: "technology", label: "Technology" },
 ];
+ 
 
 export default videoData;

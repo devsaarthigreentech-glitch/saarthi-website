@@ -421,12 +421,6 @@ const LogisticsFleetPage = () => {
                   </div>
                 ))}
               </div>
-
-              <div className="mt-8 bg-blue-50 border-l-4 border-blue-500 p-4">
-                <p className="text-sm text-blue-900">
-                  <strong>Note:</strong> Emission reduction percentages vary based on vehicle type, engine condition, operating profile, and baseline emissions. Results from comprehensive testing program.
-                </p>
-              </div>
             </div>
 
             <div>
@@ -464,12 +458,18 @@ const LogisticsFleetPage = () => {
                   </div>
                 </div>
 
+
                 {/* <img
                   src="/api/placeholder/500/300"
                   alt="Fleet Monitoring Dashboard"
                   className="w-full rounded-xl"
-                /> */}
+                  /> */}
               </div>
+                  <div className="mt-8 bg-blue-50 border-l-4 border-blue-500 p-4">
+                  <p className="text-sm text-blue-900">
+                    <strong>Note:</strong> Emission reduction percentages vary based on vehicle type, engine condition, operating profile, and baseline emissions. Results from comprehensive testing program.
+                  </p>
+                </div>
             </div>
           </div>
         </div>
