@@ -190,7 +190,7 @@ export default function AboutPage() {
 	const brandColor = '#33A04A'; 
 
 	return (
-		<div className="min-h-screen bg-white dark:bg-gray-950">
+		<div className="min-h-screen bg-white dark:bg-gray-950 mt-15">
 			{/* 1. HERO: full-bleed group photo + overlayed title */}
 			<AboutHeader
 				hero

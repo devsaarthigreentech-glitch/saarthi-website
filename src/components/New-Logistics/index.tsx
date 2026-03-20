@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { Truck, Construction, Tractor, TrendingUp, CheckCircle, AlertCircle, ArrowRight, Award, Shield, Zap, Activity } from 'lucide-react';
+import { Truck, Construction, Tractor, TrendingUp, CheckCircle, AlertCircle, ArrowRight, Award, Shield, Zap, Activity, Database } from 'lucide-react';
 import Link from 'next/link';
 
 const LogisticsFleetPage = () => {
@@ -53,7 +53,7 @@ const LogisticsFleetPage = () => {
             {/* Subheading */}
             <p className="text-lg text-white/80 mb-3 leading-relaxed max-w-xl">
               Low-cost CHFA retrofit for trucks, mining equipment, construction machinery,
-              and agricultural vehicles — proven 3–15% fuel savings on diesel engines.
+              and agricultural vehicles — proven 3–12% fuel savings on diesel engines.
             </p>
 
             {/* Proof note */}
@@ -76,7 +76,7 @@ const LogisticsFleetPage = () => {
             {/* Trust Indicators */}
             <div className="flex flex-wrap items-center gap-6 text-sm text-white/75">
               {[
-                "3–15% Fuel Savings",
+                "3–12% Fuel Savings",
                 "3,00,000+ km Tested",
                 "ARAI Journal Published",
               ].map((item) => (
@@ -91,7 +91,7 @@ const LogisticsFleetPage = () => {
           {/* Floating Stat Cards */}
           <div className="absolute bottom-10 right-6 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl border border-white/60 hidden md:block">
             <p className="text-sm text-gray-500 font-medium">Fuel Savings</p>
-            <p className="text-3xl font-bold text-[#1B6B3D] leading-none">3–15%</p>
+            <p className="text-3xl font-bold text-[#1B6B3D] leading-none">3–12%</p>
             <p className="text-xs text-gray-400 mt-1">Road Proven</p>
           </div>
 
@@ -476,7 +476,7 @@ const LogisticsFleetPage = () => {
       </section>
 
       {/* GreenVision Fleet Management */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -521,8 +521,130 @@ const LogisticsFleetPage = () => {
               </div>
             ))}
           </div>
+
         </div>
-      </section>
+                    <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-12 text-white">
+                      <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                          <div className="inline-flex px-4 py-2 bg-white/20 rounded-full text-white text-sm font-bold mb-6">
+                            <Database className="w-4 h-4 mr-2" />
+                            IoT Digital Twin
+                          </div>
+                          <h3 className="text-3xl font-bold mb-6">GreenVision Digital Twin Platform</h3>
+                          <p className="text-xl text-gray-300 mb-8">
+                            Every CHCA installation includes IoT connectivity to the GreenVision platform - your digital twin for complete system visibility and performance analytics.
+                          </p>
+                          <ul className="space-y-3 text-gray-200">
+                            <li className="flex items-start">
+                              <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                              <span>Real-time system monitoring from anywhere</span>
+                            </li>
+                            <li className="flex items-start">
+                              <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                              <span>Predictive maintenance alerts and diagnostics</span>
+                            </li>
+                            <li className="flex items-start">
+                              <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                              <span>Performance analytics and baseline trending</span>
+                            </li>
+                            <li className="flex items-start">
+                              <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                              <span>Automated ESG reporting (BRSR, CBAM compliant)</span>
+                            </li>
+                            <li className="flex items-start">
+                              <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                              <span>Mobile app for plant operators</span>
+                            </li>
+                            <li className="flex items-start">
+                              <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                              <span>Historical data archival and reporting</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <img
+                            src="/images/technology/gv-demo.jpg"
+                            alt="GreenVision Dashboard"
+                            className="w-full rounded-xl shadow-2xl"
+                          />
+                          <div className='mt-3' />
+                          <img
+                            src="/images/technology/gv-demo-2.png"
+                            alt="GreenVision Dashboard"
+                            className="w-full rounded-xl shadow-2xl"
+                          />
+                        </div>
+                      </div>
+                    </div>
+      </section> */}
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-12 text-white">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex px-4 py-2 bg-white/20 rounded-full text-white text-sm font-bold mb-6">
+                <Database className="w-4 h-4 mr-2" />
+                Fleet Management Platform
+              </div>
+              <h3 className="text-3xl font-bold mb-6">GreenVision Fleet Management</h3>
+              <p className="text-xl text-gray-300 mb-8">
+                Every vehicle gets a digital twin for real-time monitoring and performance optimization across your entire fleet.
+              </p>
+
+              {/* 3 feature groups in a compact layout */}
+              <div className="space-y-6">
+                {[
+                  {
+                    icon: <Activity className="w-5 h-5" />,
+                    title: "Real-Time Tracking",
+                    features: ["Per-vehicle fuel consumption", "Live emission monitoring", "Performance dashboards", "Route optimization insights"]
+                  },
+                  {
+                    icon: <TrendingUp className="w-5 h-5" />,
+                    title: "Fleet Analytics",
+                    features: ["Baseline normalization", "Driver behavior analysis", "Vehicle-level ROI", "Fleet-wide trends"]
+                  },
+                  {
+                    icon: <Shield className="w-5 h-5" />,
+                    title: "Predictive Maintenance",
+                    features: ["System health monitoring", "Early warning alerts", "Maintenance scheduling", "Uptime maximization"]
+                  }
+                ].map((group, idx) => (
+                  <div key={idx}>
+                    <div className="flex items-center mb-3">
+                      <div className="w-8 h-8 bg-sgt-green/20 rounded-lg flex items-center justify-center text-sgt-yellow mr-3">
+                        {group.icon}
+                      </div>
+                      <h4 className="text-lg font-bold text-white">{group.title}</h4>
+                    </div>
+                    <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 pl-11">
+                      {group.features.map((item, i) => (
+                        <div key={i} className="flex items-start text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-sgt-yellow mr-2 flex-shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <img
+                src="/images/technology/gv-demo.jpg"
+                alt="GreenVision Dashboard"
+                className="w-full rounded-xl shadow-2xl"
+              />
+              <div className="mt-3" />
+              <img
+                src="/images/technology/gv-demo-2.png"
+                alt="GreenVision Dashboard"
+                className="w-full rounded-xl shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Key Benefits */}
       <section className="py-20 bg-gray-50">
@@ -599,7 +721,7 @@ const LogisticsFleetPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <p className="text-4xl font-bold text-sgt-green mb-2">3-15%</p>
+              <p className="text-4xl font-bold text-sgt-green mb-2">3-12%</p>
               <p className="text-gray-600">Fuel Savings</p>
             </div>
             <div>

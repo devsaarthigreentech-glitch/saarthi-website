@@ -152,7 +152,7 @@ const IndustrialSolutionsComplete = () => {
           {/* Floating Stat Cards */}
           <div className="absolute bottom-10 right-6 bg-white/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl border border-white/60 hidden md:block">
             <p className="text-sm text-gray-500 font-medium">Fuel Savings</p>
-            <p className="text-3xl font-bold text-[#1B6B3D] leading-none">5–18%</p>
+            <p className="text-3xl font-bold text-[#1B6B3D] leading-none">3–12%</p>
             <p className="text-xs text-gray-400 mt-1">Application Dependent</p>
           </div>
 
@@ -503,7 +503,7 @@ const IndustrialSolutionsComplete = () => {
                 <div className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-orange-600 mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900">5-18% Target Fuel Savings</p>
+                    <p className="font-semibold text-gray-900">3-12% Target Fuel Savings</p>
                     <p className="text-sm text-gray-600">Application-dependent based on fuel type and baseline efficiency</p>
                   </div>
                 </div>
@@ -569,7 +569,7 @@ const IndustrialSolutionsComplete = () => {
                 <div className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-red-600 mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-gray-900">5-18% Target Savings</p>
+                    <p className="font-semibold text-gray-900">3-12% Target Savings</p>
                     <p className="text-sm text-gray-600">Based on fuel type and kiln configuration</p>
                   </div>
                 </div>
@@ -776,7 +776,7 @@ const IndustrialSolutionsComplete = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-gray-50 rounded-xl p-6">
               <TrendingUp className="w-12 h-12 text-sgt-green mx-auto mb-3" />
-              <p className="text-2xl font-bold text-gray-900 mb-2">5-18%</p>
+              <p className="text-2xl font-bold text-gray-900 mb-2">3-12%</p>
               <p className="text-gray-600 text-sm">Fuel Savings Range</p>
             </div>
             <div className="bg-gray-50 rounded-xl p-6">

@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { Zap, CheckCircle, Award, FileText, Settings, TrendingUp, ArrowRight, Download } from 'lucide-react';
+import { Zap, CheckCircle, Award, FileText, Settings, TrendingUp, ArrowRight, Download, Database } from 'lucide-react';
 
 const CHFATechnologyPage = () => {
   return (
@@ -23,11 +23,11 @@ const CHFATechnologyPage = () => {
                 <CheckCircle className="w-4 h-4 mr-2" />
                 ARAI RESEARCH PUBLISHED | 3,00,000+ KM TESTED
               </div>
-              
+
               <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 CHFA Technology
               </h1>
-              
+
               <p className="text-2xl text-blue-600 font-semibold mb-6">
                 Controlled Hydrogen Fuel Assist
               </p>
@@ -70,13 +70,13 @@ const CHFATechnologyPage = () => {
 
             <div className="relative">
               <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="/images/solutions/chfa.jpg" 
+                <img
+                  src="/images/solutions/chfa.jpg"
                   alt="CHFA Technology System"
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               {/* Floating Stats */}
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-2xl border border-gray-100">
                 <p className="text-sm text-gray-600 mb-1">Fuel Efficiency</p>
@@ -138,15 +138,69 @@ const CHFATechnologyPage = () => {
             </div>
           </div>
 
+          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-12 text-white">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex px-4 py-2 bg-white/20 rounded-full text-white text-sm font-bold mb-6">
+                  <Database className="w-4 h-4 mr-2" />
+                  IoT Digital Twin
+                </div>
+                <h3 className="text-3xl font-bold mb-6">GreenVision Digital Twin Platform</h3>
+                <p className="text-xl text-gray-300 mb-8">
+                  Every CHCA installation includes IoT connectivity to the GreenVision platform - your digital twin for complete system visibility and performance analytics.
+                </p>
+                <ul className="space-y-3 text-gray-200">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                    <span>Real-time system monitoring from anywhere</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                    <span>Predictive maintenance alerts and diagnostics</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                    <span>Performance analytics and baseline trending</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                    <span>Automated ESG reporting (BRSR, CBAM compliant)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                    <span>Mobile app for plant operators</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                    <span>Historical data archival and reporting</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <img
+                  src="/images/technology/digital-twin.png"
+                  alt="GreenVision Dashboard"
+                  className="w-full rounded-xl shadow-2xl"
+                />
+                <div className='mt-3' />
+                <img
+                  src="/images/technology/digital-twin-2.png"
+                  alt="GreenVision Dashboard"
+                  className="w-full rounded-xl shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+
           {/* Technical Diagram Placeholder */}
-          <div className="bg-gray-100 rounded-2xl p-12 text-center">
+          {/* <div className="bg-gray-100 rounded-2xl p-12 text-center">
             <img 
               src="/images/technology/wet-cell-chfa.jpg" 
               alt="CHFA Technology Diagram"
               className="w-full rounded-xl"
             />
             <p className="text-sm text-gray-600 mt-4">CHFA System Architecture and Integration</p>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -212,7 +266,7 @@ const CHFATechnologyPage = () => {
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Savings Vary by Engine Age & Type
               </h2>
-              
+
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Fuel savings from CHFA technology range from 3% to 22%, depending on the engine's age, emission standard, and baseline condition. Older engines show significantly higher savings due to carbon cleaning effects.
               </p>
@@ -268,7 +322,7 @@ const CHFATechnologyPage = () => {
             <div>
               <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border-2 border-gray-200">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Older Engines Save More</h3>
-                
+
                 <div className="space-y-6">
                   <div>
                     <div className="flex items-center mb-3">
@@ -427,11 +481,11 @@ const CHFATechnologyPage = () => {
                 <Award className="w-4 h-4 mr-2" />
                 Published Research
               </div>
-              
+
               <h2 className="text-4xl font-bold mb-6">
                 ARAI Journal Published Research
               </h2>
-              
+
               <p className="text-xl text-blue-100 mb-8 leading-relaxed">
                 SGT's research on CHFA technology and hydrogen dosing for engines has been published in the ARAI (Automotive Research Association of India) scientific journal.
               </p>
@@ -464,8 +518,8 @@ const CHFATechnologyPage = () => {
             </div>
 
             <div className="relative">
-              <img 
-                src="/api/placeholder/600/500" 
+              <img
+                src="/api/placeholder/600/500"
                 alt="Research Testing"
                 className="w-full rounded-xl shadow-2xl"
               />
@@ -543,7 +597,7 @@ const CHFATechnologyPage = () => {
           </div>
         </div>
       </section>
-      
+
 
       <style>{`
         .text-sgt-green { color: #1B6B3D; }

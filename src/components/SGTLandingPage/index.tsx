@@ -82,7 +82,7 @@ const SGTHomepage = () => {
               </Link>
               <button className="inline-flex items-center bg-white/10 border border-white/30 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-base px-8 py-4 rounded-md transition-colors">
                 <Play className="mr-2 w-5 h-5" />
-                Watch Demo
+                Watch Videos
               </button>
             </div>
 

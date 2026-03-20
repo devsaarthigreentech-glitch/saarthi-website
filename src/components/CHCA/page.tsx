@@ -234,7 +234,7 @@ const CHCATechnologyPage = () => {
 
             <div>
               <img
-                src="/api/placeholder/600/500"
+                src="/images/technology/wet-cell-chfa.jpg"
                 alt="Wet Cell Technology"
                 className="w-full rounded-xl shadow-2xl"
               />
@@ -468,7 +468,7 @@ const CHCATechnologyPage = () => {
           </div>
 
           {/* GreenVision Digital Twin */}
-          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-12 text-white">
+          {/* <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-12 text-white">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-flex px-4 py-2 bg-white/20 rounded-full text-white text-sm font-bold mb-6">
@@ -520,7 +520,7 @@ const CHCATechnologyPage = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 

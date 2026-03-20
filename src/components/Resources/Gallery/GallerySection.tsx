@@ -10,7 +10,7 @@ export default function GallerySection() {
   const [active, setActive] = useState<GalleryEvent | null>(null);
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 mt-10">
       <div className="container mx-auto px-6 max-w-6xl">
         <header className="mb-8 text-center">
           <h2 className="text-3xl font-extrabold text-slate-900">Events & Gallery</h2>
