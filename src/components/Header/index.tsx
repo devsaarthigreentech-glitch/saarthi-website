@@ -264,8 +264,8 @@ const Header = () => {
             <Image
               src="/images/logo/company_logo.png"
               alt="SGT HydroEdge"
-              width={56}
-              height={56}
+              width={72}
+              height={72}
               className="object-contain"
             />
             <div className="border-l border-gray-300 pl-3">

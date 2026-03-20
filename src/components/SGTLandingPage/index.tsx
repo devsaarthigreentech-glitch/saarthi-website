@@ -50,7 +50,7 @@ const SGTHomepage = () => {
             {/* Badge */}
             <div className="inline-flex items-center self-start px-4 py-2 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full text-sm font-medium text-white/90 mb-6">
               <span className="w-2 h-2 bg-[#FFD700] rounded-full mr-2 animate-pulse shrink-0" />
-              Patent-Applied Technology · ARAI Validated · Fuel-Agnostic
+              Patent-Approved Technology · ARAI Validated · Fuel-Agnostic
             </div>
 
             {/* Headline */}
@@ -170,7 +170,7 @@ const SGTHomepage = () => {
           {/* Three Main Verticals */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Industrial */}
-            <div className="group bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-sgt-green hover:shadow-2xl transition-all duration-300">
+            <div className="group bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-sgt-green hover:shadow-2xl transition-all duration-300 flex flex-col">
               <div className="w-16 h-16 bg-sgt-green/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-sgt-green group-hover:scale-110 transition-all">
                 <Factory className="w-8 h-8 text-sgt-green group-hover:text-white transition-colors" />
               </div>
@@ -208,15 +208,18 @@ const SGTHomepage = () => {
                 </div>
               </div>
 
-
-              <button className="w-full bg-gray-50 hover:bg-sgt-green hover:text-white text-gray-700 py-3 rounded-lg font-medium transition-all flex items-center justify-center group">
+              <Link
+                href="/solutions/new-industrial"
+                className="w-full bg-gray-50 hover:bg-sgt-green hover:text-white text-gray-700 py-3 rounded-lg font-medium transition-all flex items-center justify-center group mt-auto"
+              >
                 Learn More <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
+
             </div>
 
 
             {/* Marine */}
-            <div className="group bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-blue-600 hover:shadow-2xl transition-all duration-300">
+            <div className="group bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-blue-600 hover:shadow-2xl transition-all duration-300 flex flex-col">
               <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:scale-110 transition-all">
                 <Ship className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors" />
               </div>
@@ -254,15 +257,17 @@ const SGTHomepage = () => {
                 </div>
               </div>
 
-
-              <button className="w-full bg-gray-50 hover:bg-blue-600 hover:text-white text-gray-700 py-3 rounded-lg font-medium transition-all flex items-center justify-center group">
+              <Link
+                href="/solutions/new-marine"
+                className="w-full bg-gray-50 hover:bg-blue-600 hover:text-white text-gray-700 py-3 rounded-lg font-medium transition-all flex items-center justify-center group mt-auto"
+              >
                 Learn More <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
             </div>
 
 
             {/* Logistics */}
-            <div className="group bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-sgt-green hover:shadow-2xl transition-all duration-300">
+            <div className="group bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-sgt-green hover:shadow-2xl transition-all duration-300 flex flex-col">
               <div className="w-16 h-16 bg-sgt-green/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-sgt-green group-hover:scale-110 transition-all">
                 <Truck className="w-8 h-8 text-sgt-green group-hover:text-white transition-colors" />
               </div>
@@ -297,9 +302,12 @@ const SGTHomepage = () => {
               </div>
 
 
-              <button className="w-full bg-gray-50 hover:bg-sgt-green hover:text-white text-gray-700 py-3 rounded-lg font-medium transition-all flex items-center justify-center group">
+              <Link
+                href="/solutions/new-logistics"
+                className="w-full bg-gray-50 hover:bg-sgt-green hover:text-white text-gray-700 py-3 rounded-lg font-medium transition-all flex items-center justify-center group mt-auto"
+              >
                 Learn More <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -354,10 +362,12 @@ const SGTHomepage = () => {
                 ))}
               </div>
 
-
-              <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-all mt-auto">
+              <Link
+                href="/technology/chfA"
+                className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-all mt-auto text-center block"
+              >
                 View Technology Details
-              </button>
+              </Link>
             </div>
 
 
@@ -393,10 +403,12 @@ const SGTHomepage = () => {
                 ))}
               </div>
 
-
-              <button className="w-full bg-sgt-green text-white py-3 rounded-lg font-medium hover:bg-green-800 transition-all mt-auto">
+              <Link
+                href="/technology/chca"
+                className="w-full bg-sgt-green text-white py-3 rounded-lg font-medium hover:bg-green-800 transition-all mt-auto text-center block"
+              >
                 View Technology Details
-              </button>
+              </Link>
             </div>
 
 
@@ -432,10 +444,12 @@ const SGTHomepage = () => {
                 ))}
               </div>
 
-
-              <button className="w-full bg-gray-700 text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-all mt-auto">
-                View Platform Details
-              </button>
+              <Link
+                href="/technology/greenvision"
+                className="w-full bg-gray-700 text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-all mt-auto text-center block"
+              >
+                View Technology Details
+              </Link>
             </div>
           </div>
         </div>
@@ -584,10 +598,12 @@ const SGTHomepage = () => {
                   ))}
                 </div>
 
-
-                <button className="bg-white text-sgt-green px-8 py-4 rounded-lg text-lg font-bold hover:bg-sgt-yellow hover:text-gray-900 transition-all inline-flex items-center self-start">
+                <Link
+                  href="/solutions/daas"
+                  className="bg-white text-sgt-green px-8 py-4 rounded-lg text-lg font-bold hover:bg-sgt-yellow hover:text-gray-900 transition-all inline-flex items-center self-start text-center block"
+                >
                   Explore DaaS Model <ArrowRight className="ml-2" />
-                </button>
+                </Link>
               </div>
 
 
@@ -667,12 +683,25 @@ const SGTHomepage = () => {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <button className="bg-sgt-green text-white px-10 py-5 rounded-lg text-lg font-bold hover:bg-green-700 transition-all">
+            <Link
+              href="/contact"
+              className="bg-sgt-green text-white px-10 py-5 rounded-lg text-lg font-bold hover:bg-green-700 transition-all text-center block"
+            >
               Schedule Consultation
-            </button>
-            <button className="bg-white/10 border-2 border-white text-white px-10 py-5 rounded-lg text-lg font-bold hover:bg-white/20 transition-all">
+            </Link>
+            <Link
+              href="/resources/downloads"
+              className="bg-white/10 border-2 border-white text-white px-10 py-5 rounded-lg text-lg font-bold hover:bg-white/20 transition-all text-center block"
+            >
               Download Brochure
-            </button>
+            </Link>
+            {/* <button className="bg-sgt-green text-white px-10 py-5 rounded-lg text-lg font-bold hover:bg-green-700 transition-all">
+              Schedule Consultation
+            </button> */}
+
+            {/* <button className="bg-white/10 border-2 border-white text-white px-10 py-5 rounded-lg text-lg font-bold hover:bg-white/20 transition-all">
+              Download Brochure
+            </button> */}
           </div>
 
 
