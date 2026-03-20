@@ -56,9 +56,6 @@ const videoData: VideoItem[] = [
     featured: true,
   },
 
-  // ── Add your videos below ─────────────────
-  // Example entries — replace with your actual YouTube videos:
-
   {
     id: "vid-2",
     youtubeId: "UgL2hP1vuSk",
@@ -91,7 +88,7 @@ const videoData: VideoItem[] = [
   },
   {
     id: "vid-5",
-    youtubeId: "YOUR_VIDEO_ID",
+    youtubeId: "Q1m9MgjhSW0",
     title: "SGT HydroEdge",
     description:
       "The global challenge of emissions is not limited to the future — it exists in the engines already powering our world today.Real decarbonisation begins inside the engine.",
