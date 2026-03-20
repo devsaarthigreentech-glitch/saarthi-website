@@ -191,7 +191,7 @@ const menuData = [
     title: "Solutions",
     submenu: [
       { id: 21, title: "Industrial Solutions", path: "/solutions/new-industrial" },
-      // { id: 22, title: "Boiler Solutions",     path: "/solutions/boiler" },
+      { id: 22, title: "Daas Solution",     path: "/solutions/daas" },
       // { id: 23, title: "Kiln Solutions",        path: "/solutions/kiln" },
       // { id: 24, title: "DG & Power Backup",     path: "/solutions/dg-power" },
       { id: 25, title: "Marine Solutions",      path: "/solutions/new-marine" },

@@ -18,7 +18,7 @@ const AboutHeader = ({ title, subtitle, imgSrc, hero }) => {
 	const paddingClass = isHero ? 'py-20 md:py-32' : 'pt-20 pb-12';
 	const titleClass = isHero ? 'text-5xl md:text-7xl font-black' : 'text-3xl md:text-5xl font-extrabold';
 	
-	// Using a consistent Saarthi Green color for accent
+	// Using a consistent SGT Green color for accent
 	const brandColor = '#33A04A'; 
 
 	return (
@@ -113,7 +113,7 @@ const leadership: Person[] = [
 		name: "Alok Kumar",
 		role: "Director",
 		bio:
-			"A seasoned leader with over three decades of experience in engineering, technology, and sustainability, Alok Kumar spearheads Saarthi GreenTech’s vision for transformative green solutions.",
+			"A seasoned leader with over three decades of experience in engineering, technology, and sustainability, Alok Kumar spearheads SGT HydroEdge’s vision for transformative green solutions.",
 		photo: "/images/team/alok-kumar.png",
 	},
 	{
@@ -121,7 +121,7 @@ const leadership: Person[] = [
 		name: "Nandani Kumar",
 		role: "Director",
 		bio:
-			"A strategic leader with a focus on corporate governance and sustainability, driving Saarthi’s initiatives for greener industries.",
+			"A strategic leader with a focus on corporate governance and sustainability, driving SGT HydroEdge’s initiatives for greener industries.",
 		photo: "/images/team/nandani-kumar.png",
 	},
 	{
@@ -156,7 +156,7 @@ const advisory: Person[] = [
 			name: "A. Ramasubramanian",
 			role: "Advisor",
 			bio:
-			"A seasoned expert in technology and sustainability, offering strategic direction for Saarthi’s long-term vision.",
+			"A seasoned expert in technology and sustainability, offering strategic direction for SGT HydroEdge’s long-term vision.",
 			photo: "/images/team/a-ramasubramanian.png",
 		},
 		{
@@ -164,7 +164,7 @@ const advisory: Person[] = [
 			name: "Harry Lagad",
 			role: "Advisor",
 			bio:
-			"A globally recognized leader in logistics and operations, contributing insights to scale Saarthi’s impact.",
+			"A globally recognized leader in logistics and operations, contributing insights to scale SGT HydroEdge’s impact.",
 			photo: "/images/team/harry-lagad.png",
 		},
 		{
@@ -172,7 +172,7 @@ const advisory: Person[] = [
 			name: "Pramod Kumar",
 			role: "Advisor",
 			bio:
-			"A seasoned marine technology specialist with deep expertise in maritime systems and operations, contributing strategic insights to Saarthi’s marine and energy initiatives.",
+			"A seasoned marine technology specialist with deep expertise in maritime systems and operations, contributing strategic insights to SGT HydroEdge’s marine and energy initiatives.",
 			photo: "/images/team/pramod-kumar.jpeg",
 		},
 		{
@@ -195,7 +195,7 @@ export default function AboutPage() {
 			<AboutHeader
 				hero
 				title="About Us"
-				subtitle="Get to know the people driving Saarthi GreenTech forward."
+				subtitle="Get to know the people driving SGT HydroEdge forward."
 				imgSrc="/images/team/group-photo.jpg"
 			/>
 
@@ -206,7 +206,7 @@ export default function AboutPage() {
 						Leadership Team
 					</h2>
 					<p className="text-xl text-gray-600 dark:text-gray-400 max-w-4xl">
-						The full-time leadership team at Saarthi GreenTech drives our strategy, execution, and innovation, ensuring our solutions deliver both environmental and economic value.
+						The full-time leadership team at SGT HydroEdge drives our strategy, execution, and innovation, ensuring our solutions deliver both environmental and economic value.
 					</p>
 				</div>
 			</div>

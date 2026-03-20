@@ -188,8 +188,8 @@ const Footer = () => {
               © 2026 SGT HydroEdge. All rights reserved.
             </p>
             <div className="flex items-center space-x-6 text-sm">
-              <a href="#" className="hover:text-sgt-green transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-sgt-green transition-colors">Terms of Service</a>
+              <a href="/privacy-policy" className="hover:text-sgt-green transition-colors">Privacy Policy</a>
+              <a href="/terms-of-service" className="hover:text-sgt-green transition-colors">Terms of Service</a>
               <a href="#" className="hover:text-sgt-green transition-colors">Contact</a>
             </div>
           </div>

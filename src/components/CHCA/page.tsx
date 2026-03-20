@@ -185,7 +185,7 @@ const CHCATechnologyPage = () => {
       </section>
 
       {/* Wet Cell Technology Advantage */}
-      <section className="py-20 bg-gradient-to-br from-sgt-green to-green-800 text-white">
+      <section className="py-20 bg-gradient-to-br from-green-800 to-sgt-green text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>

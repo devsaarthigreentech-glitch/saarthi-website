@@ -457,7 +457,7 @@ const SGTHomepage = () => {
 
 
       {/* Validation Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -488,7 +488,7 @@ const SGTHomepage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
 
       {/* Ecosystem Section */}
