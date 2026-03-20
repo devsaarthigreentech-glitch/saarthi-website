@@ -217,6 +217,7 @@ const menuData = [
       { id: 42, title: "Gallery", path: "/resources/gallery" },
       { id: 43, title: "Media", path: "/resources/media" },
       { id: 44, title: "Knowledge Base",           path: "/resources/knowledgebase" },
+      { id: 45, title: "Videos",      path: "/resources/videos" },
       // { id: 42, title: "Downloads - rework",      path: "/resources/downloads" },
     ],
   },
