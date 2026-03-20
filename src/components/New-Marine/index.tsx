@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import { Ship, Anchor, Waves, CheckCircle, AlertCircle, ArrowRight, TrendingUp, Shield, Award, Globe, Fuel, DollarSign } from 'lucide-react';
+import Link from 'next/link';
 
 const MarineSolutionsPage = () => {
   return (
@@ -405,7 +406,7 @@ const MarineSolutionsPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* All Large Vessels */}
-            <div className="bg-white rounded-2xl p-8 border-2 border-sgt-green shadow-xl">
+            <div className="bg-white rounded-2xl p-8 border-2 border-sgt-green shadow-xl flex flex-col">
               <div className="inline-flex px-3 py-1 bg-green-100 rounded-full text-green-800 text-xs font-bold mb-4">
                 PROVEN APPLICATIONS
               </div>
@@ -430,13 +431,13 @@ const MarineSolutionsPage = () => {
                 ))}
               </div>
 
-              <button className="w-full bg-sgt-green text-white py-3 rounded-lg font-medium hover:bg-green-800 transition-all">
+              <button className="w-full bg-sgt-green text-white py-3 rounded-lg font-medium hover:bg-green-800 transition-all mt-auto">
                 Explore Boiler & Auxiliary Solutions
               </button>
             </div>
 
             {/* Support Vessels - Main Propulsion */}
-            <div className="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-xl">
+            <div className="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-xl flex flex-col">
               <div className="inline-flex px-3 py-1 bg-blue-100 rounded-full text-blue-800 text-xs font-bold mb-4">
                 MAIN PROPULSION - PROVEN
               </div>
@@ -461,13 +462,13 @@ const MarineSolutionsPage = () => {
                 ))}
               </div>
 
-              <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-all">
+              <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-all mt-auto">
                 Explore Support Vessel Solutions
               </button>
             </div>
 
             {/* Large Commercial - Pilot Available */}
-            <div className="bg-white rounded-2xl p-8 border-2 border-orange-200">
+            <div className="bg-white rounded-2xl p-8 border-2 border-orange-200 flex flex-col">
               <div className="inline-flex px-3 py-1 bg-orange-100 rounded-full text-orange-800 text-xs font-bold mb-4">
                 PILOT TESTING AVAILABLE
               </div>
@@ -489,7 +490,7 @@ const MarineSolutionsPage = () => {
                 </p>
               </div>
 
-              <button className="w-full bg-orange-600 text-white py-3 rounded-lg font-medium hover:bg-orange-700 transition-all">
+              <button className="w-full bg-orange-600 text-white py-3 rounded-lg font-medium hover:bg-orange-700 transition-all mt-auto">
                 Discuss Pilot Opportunity
               </button>
             </div>
@@ -498,7 +499,7 @@ const MarineSolutionsPage = () => {
       </section>
 
       {/* DaaS Model - Zero CapEx */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-gradient-to-br from-green-800 to-sgt-green rounded-3xl overflow-hidden shadow-2xl">
             <div className="grid md:grid-cols-2 gap-0">
@@ -573,9 +574,84 @@ const MarineSolutionsPage = () => {
               </div>
               <div className="relative min-h-[500px]">
                 <img
-                  src="/images/solutions/marine-daas.jpg"
+                  src="/images/solutions/marine-daas-portrait.jpg"
                   alt="Marine DaaS Model"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-contain"
+                />
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="bg-gradient-to-br from-green-800 to-sgt-green rounded-3xl overflow-hidden shadow-2xl">
+            <div className="grid md:grid-cols-2 gap-0">
+
+              {/* Left - Content */}
+              <div className="p-10 lg:p-12 text-white flex flex-col justify-center">
+
+                <div className="inline-flex px-3 py-1.5 bg-white/20 rounded-full text-white text-xs font-semibold mb-4 self-start">
+                  <DollarSign className="w-3.5 h-3.5 mr-1.5" />
+                  Marine DaaS Model
+                </div>
+
+                <h2 className="text-3xl lg:text-4xl font-bold mb-3">
+                  Device-as-a-Service for Marine
+                </h2>
+
+                <p className="text-base text-green-100 mb-6 leading-relaxed">
+                  Minimize upfront investment — small down payment followed by monthly subscription covering system, installation, monitoring, and ongoing support.
+                </p>
+
+                {/* Benefits - 2 column grid */}
+                <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-6">
+                  {[
+                    "Reduced upfront capital",
+                    "Down payment + monthly sub",
+                    "Installation included",
+                    "GreenVision monitoring",
+                    "Maintenance & support",
+                    "Telemetry verification"
+                  ].map((benefit, idx) => (
+                    <div key={idx} className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-sgt-yellow mr-2 flex-shrink-0" />
+                      <span className="text-white text-sm">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Combined info card */}
+                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-5 border border-white/20 mb-6 space-y-4">
+                  <div>
+                    <p className="text-sm font-semibold text-sgt-yellow mb-1">Custom Financial Model</p>
+                    <p className="text-sm text-green-100 leading-relaxed">
+                      Each deployment is customized based on vessel type, engine configuration, fuel consumption, installation complexity, and service level needs.
+                    </p>
+                  </div>
+
+                  <div className="border-t border-white/15 pt-3">
+                    <p className="text-sm font-semibold text-sgt-yellow mb-1">ROI Timeline</p>
+                    <p className="text-sm text-green-100">
+                      Typical return: <span className="text-white font-bold">6–36 months</span> depending on vessel operations and financial structure.
+                    </p>
+                  </div>
+                </div>
+
+                <button className="bg-white text-sgt-green px-6 py-3 rounded-lg font-bold hover:bg-sgt-yellow hover:text-gray-900 transition-all inline-flex items-center self-start text-sm">
+                  Discuss DaaS Options <ArrowRight className="ml-2 w-4 h-4" />
+                </button>
+
+              </div>
+
+              {/* Right - Image */}
+              <div className="relative min-h-[500px]">
+                <img
+                  src="/images/solutions/marine-daas-portrait.jpg"
+                  alt="Marine DaaS Model"
+                  className="absolute inset-0 w-full h-full object-contain"
                 />
               </div>
 
@@ -649,12 +725,12 @@ const MarineSolutionsPage = () => {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <button className="bg-blue-600 text-white px-10 py-5 rounded-lg text-lg font-bold hover:bg-blue-700 transition-all">
+            <Link href='/contact' className="bg-blue-600 text-white px-10 py-5 rounded-lg text-lg font-bold hover:bg-blue-700 transition-all">
               Request Vessel Assessment
-            </button>
-            <button className="bg-white border-2 border-gray-300 text-gray-700 px-10 py-5 rounded-lg text-lg font-bold hover:border-blue-600 hover:text-blue-600 transition-all">
+            </Link>
+            <Link href='/resources/calculators' className="bg-white border-2 border-gray-300 text-gray-700 px-10 py-5 rounded-lg text-lg font-bold hover:border-blue-600 hover:text-blue-600 transition-all">
               Calculate ROI
-            </button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
