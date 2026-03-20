@@ -425,8 +425,8 @@ const MiningSolutionsPage = () => {
                             <div className="p-6 rounded-xl shadow-md" style={{ backgroundColor: BG_CARD_LIGHT }}>
                                 <p className="text-xl font-bold mb-2" style={{ color: PRIMARY_COLOR }}>Typical Observations:</p>
                                 <ul className="space-y-1 text-gray-700 list-disc list-inside">
-                                    <li>Idle-heavy machines: **5–18% savings**</li>
-                                    <li>Constant-load equipment: **3–15% savings**</li>
+                                    <li>Idle-heavy machines: **3-12% savings**</li>
+                                    <li>Constant-load equipment: **3-12% savings**</li>
                                     <li>Reduced particulate build-up and cleaner injector performance.</li>
                                     <li>Lower engine stress under quick load changes.</li>
                                 </ul>
@@ -462,8 +462,8 @@ const MiningSolutionsPage = () => {
                         <div className="p-8 rounded-xl shadow-lg bg-gray-50 border-l-4 border-green-600">
                             <h3 className="text-2xl font-bold mb-4 text-green-700">Fuel Efficiency:</h3>
                             <ul className="space-y-2 text-lg text-gray-700">
-                                <li>Idle cycles: **5–18% savings**</li>
-                                <li>Heavy excavation cycles: **5–15% savings**</li>
+                                <li>Idle cycles: **3-12% savings**</li>
+                                <li>Heavy excavation cycles: **3–15% savings**</li>
                                 <li>Transport cycles (dumpers): **4–12% savings**</li>
                             </ul>
                         </div>

@@ -67,7 +67,7 @@ const SGTHomepage = () => {
 
             {/* Subheading 2 */}
             <p className="text-base text-white/65 mb-8 leading-relaxed max-w-xl">
-              IoT-powered carbon intelligence delivering 5–18% fuel savings and 50%+
+              IoT-powered carbon intelligence delivering 3-12% fuel savings and 50%+
               emission reduction at scale.
             </p>
 
@@ -89,7 +89,7 @@ const SGTHomepage = () => {
             {/* Trust Indicators */}
             <div className="flex flex-wrap items-center gap-6 text-sm text-white/75">
               {[
-                "5–18% Fuel Savings",
+                "3-12% Fuel Savings",
                 "50%+ Emission Cut",
                 "Zero CapEx Option",
               ].map((item) => (
