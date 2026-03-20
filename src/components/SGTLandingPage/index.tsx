@@ -130,7 +130,7 @@ const SGTHomepage = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-4xl font-bold mb-2">5-18%</p>
+              <p className="text-4xl font-bold mb-2">3-12%</p>
               <p className="text-green-100">Fuel Savings</p>
               <p className="text-xs text-green-200 mt-1">Verified by Telemetry</p>
             </div>
@@ -200,7 +200,7 @@ const SGTHomepage = () => {
               <div className="border-t border-gray-200 pt-6 mb-4">
                 <div className="flex items-center justify-between text-sm mb-2">
                   <span className="text-gray-500">Savings:</span>
-                  <span className="font-bold text-sgt-green">5-18%</span>
+                  <span className="font-bold text-sgt-green">3-12%</span>
                 </div>
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-gray-500">Applications:</span>
@@ -395,7 +395,7 @@ const SGTHomepage = () => {
 
 
               <div className="space-y-3 mb-6">
-                {["Industrial-scale generation", "Fuel-agnostic design", "5-18% fuel savings"].map((feat, idx) => (
+                {["Industrial-scale generation", "Fuel-agnostic design", "3-12% fuel savings"].map((feat, idx) => (
                   <div key={idx} className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-sgt-green mr-3 mt-0.5 flex-shrink-0" />
                     <p className="text-sm text-gray-600">{feat}</p>

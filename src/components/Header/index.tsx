@@ -269,7 +269,7 @@ const Header = () => {
               className="object-contain"
             />
             <div className="border-l border-gray-300 pl-3">
-              <p className="text-base font-bold text-gray-900 leading-tight">HydroEdge</p>
+              <p className="text-base font-bold text-gray-900 leading-tight">SGT HydroEdge</p>
               <p className="text-xs font-medium text-[#1B6B3D] leading-tight">Profitable Decarbonisation</p>
             </div>
           </Link>
