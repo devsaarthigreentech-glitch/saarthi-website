@@ -24,11 +24,11 @@ const CHCATechnologyPage = () => {
                 <Factory className="w-4 h-4 mr-2" />
                 INDUSTRIAL-SCALE TECHNOLOGY
               </div>
-              
+
               <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
                 CHCA Technology
               </h1>
-              
+
               <p className="text-2xl text-orange-600 font-semibold mb-6">
                 Controlled Hydrogen Combustion Assist
               </p>
@@ -71,13 +71,13 @@ const CHCATechnologyPage = () => {
 
             <div className="relative">
               <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="/images/solutions/chca.png" 
+                <img
+                  src="/images/solutions/chca.png"
                   alt="CHCA Industrial System"
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               {/* Floating Stats */}
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-2xl border border-gray-100">
                 <p className="text-sm text-gray-600 mb-1">Base Capacity</p>
@@ -192,11 +192,11 @@ const CHCATechnologyPage = () => {
                 <Award className="w-4 h-4 mr-2" />
                 Patent-Applied Technology
               </div>
-              
+
               <h2 className="text-4xl font-bold mb-6">
                 Wet Cell Architecture: Safer & More Efficient
               </h2>
-              
+
               <p className="text-xl text-green-100 mb-8 leading-relaxed">
                 SGT's patent-applied wet cell (immersed-electrode) technology delivers superior performance, safety, and reliability compared to conventional dry cell designs commonly used in smaller systems.
               </p>
@@ -233,12 +233,12 @@ const CHCATechnologyPage = () => {
             </div>
 
             <div>
-              <img 
-                src="/api/placeholder/600/500" 
+              <img
+                src="/api/placeholder/600/500"
                 alt="Wet Cell Technology"
                 className="w-full rounded-xl shadow-2xl"
               />
-              
+
               <div className="mt-6 bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <h4 className="text-lg font-bold text-white mb-3">Key Technical Advantages</h4>
                 <div className="grid grid-cols-2 gap-4 text-sm text-green-100">
@@ -507,8 +507,14 @@ const CHCATechnologyPage = () => {
                 </ul>
               </div>
               <div>
-                <img 
-                  src="/api/placeholder/500/400" 
+                <img
+                  src="/images/technology/gv-demo.jpg"
+                  alt="GreenVision Dashboard"
+                  className="w-full rounded-xl shadow-2xl"
+                />
+                <div className='mt-3' />
+                <img
+                  src="/images/technology/gv-demo-2.png"
                   alt="GreenVision Dashboard"
                   className="w-full rounded-xl shadow-2xl"
                 />
@@ -626,7 +632,7 @@ const CHCATechnologyPage = () => {
                 color: "purple"
               }
             ].map((item, idx) => (
-              <div key={idx} className="relative">
+              <div key={idx} className="relative group">
                 <div className={`bg-gradient-to-br from-${item.color}-50 to-white rounded-xl p-6 border-2 border-${item.color}-200 h-full`}>
                   <div className={`w-12 h-12 bg-${item.color}-600 rounded-full flex items-center justify-center mb-4`}>
                     <span className="text-2xl font-bold text-white">{item.step}</span>
@@ -635,8 +641,10 @@ const CHCATechnologyPage = () => {
                   <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
                 </div>
                 {idx < 3 && (
-                  <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
-                    <ArrowRight className="w-6 h-6 text-orange-600" />
+                  <div className="hidden lg:flex absolute top-1/2 -right-9 transform -translate-y-1/2 z-20 px-2 items-center justify-center">
+                    <div className="bg-white rounded-full p-1 shadow-md border border-gray-100">
+                      <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-gray-900 transition-colors" />
+                    </div>
                   </div>
                 )}
               </div>

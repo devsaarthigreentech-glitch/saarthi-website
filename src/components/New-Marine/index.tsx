@@ -15,76 +15,6 @@ const MarineSolutionsPage = () => {
         </div>
       </div>
 
-      {/* Hero Section */}
-      {/* <section className="py-16 bg-gradient-to-br from-blue-50 to-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center px-4 py-2 bg-blue-100 border border-blue-300 rounded-full text-sm font-bold text-blue-800 mb-6">
-                <Ship className="w-4 h-4 mr-2" />
-                IMO 2050 COMPLIANT
-              </div>
-              
-              <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Marine Solutions for<br />
-                <span className="text-blue-600">Any Marine Fuel</span>
-              </h1>
-              
-              <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                CHFA for auxiliary engines and ship boilers on all vessels. Main propulsion engines on smaller support vessels (tugboats, barges, fishing vessels, DP ships, supply vessels). Proven 3-12% fuel savings on any marine fuel — HFO, MDO, MGO, diesel.
-              </p>
-
-              <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
-                <div className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-sm font-semibold text-blue-900 mb-1">Our Marine Focus</p>
-                    <p className="text-sm text-blue-800 mb-2">
-                      <strong>Proven Applications:</strong> Ship boilers and auxiliary engines (all vessels). Main propulsion engines and DGs on high-RPM support vessels (tugs, barges, fishing, DP ships, supply vessels).
-                    </p>
-                    <p className="text-sm text-blue-800">
-                      <strong>Under Evaluation:</strong> We are open to testing HHO impact on 2-stroke HFO main propulsion engines for larger commercial vessels. This is not our current focus but available for pilot partnerships.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-4">
-                <button className="bg-blue-600 text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-all font-medium text-lg flex items-center">
-                  Request Marine Assessment <ArrowRight className="ml-2 w-5 h-5" />
-                </button>
-                <button className="bg-white border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-md hover:border-blue-600 hover:text-blue-600 transition-all font-medium text-lg">
-                  Download Marine Brief
-                </button>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="/api/placeholder/800/600" 
-                  alt="Marine Vessel"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              {/* Floating Stats */}
-      {/* <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-2xl border border-gray-100">
-                <p className="text-sm text-gray-600 mb-1">Fuel Savings</p>
-                <p className="text-4xl font-bold text-blue-600">3-12%</p>
-                <p className="text-xs text-gray-500 mt-1">Validated</p>
-              </div>
-
-              <div className="absolute -top-6 -right-6 bg-white p-6 rounded-xl shadow-2xl border border-gray-100">
-                <p className="text-sm text-gray-600 mb-1">ROI Period</p>
-                <p className="text-4xl font-bold text-sgt-green">6-36</p>
-                <p className="text-xs text-gray-500 mt-1">months</p>
-              </div>
-            </div>
-          </div>
-        </div> */}
-      {/* </section>  */}
-
       <section className="relative w-full h-screen min-h-[680px] overflow-hidden">
 
         {/* Background Image */}
@@ -136,13 +66,13 @@ const MarineSolutionsPage = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 mb-9">
-              <button className="inline-flex items-center bg-[#1B6B3D] hover:bg-[#155730] text-white font-semibold text-base px-8 py-4 rounded-md shadow-lg transition-colors">
+              <Link href='/contact' className="inline-flex items-center bg-[#1B6B3D] hover:bg-[#155730] text-white font-semibold text-base px-8 py-4 rounded-md shadow-lg transition-colors">
                 Request Marine Assessment
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
-              <button className="inline-flex items-center bg-white/10 border border-white/30 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-base px-8 py-4 rounded-md transition-colors">
+              </Link>
+              <Link href='/resources/downloads' className="inline-flex items-center bg-white/10 border border-white/30 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-base px-8 py-4 rounded-md transition-colors">
                 Download Marine Brief
-              </button>
+              </Link>
             </div>
 
             {/* Trust Indicators */}

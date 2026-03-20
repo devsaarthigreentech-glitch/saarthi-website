@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import { Truck, Construction, Tractor, TrendingUp, CheckCircle, AlertCircle, ArrowRight, Award, Shield, Zap, Activity } from 'lucide-react';
+import Link from 'next/link';
 
 const LogisticsFleetPage = () => {
   return (
@@ -63,13 +64,13 @@ const LogisticsFleetPage = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 mb-9">
-              <button className="inline-flex items-center bg-[#1B6B3D] hover:bg-[#155730] text-white font-semibold text-base px-8 py-4 rounded-md shadow-lg transition-colors">
+              <Link href='/contact' className="inline-flex items-center bg-[#1B6B3D] hover:bg-[#155730] text-white font-semibold text-base px-8 py-4 rounded-md shadow-lg transition-colors">
                 Request Fleet Assessment
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
-              <button className="inline-flex items-center bg-white/10 border border-white/30 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-base px-8 py-4 rounded-md transition-colors">
+              </Link>
+              <Link href='/resources/downloads' className="inline-flex items-center bg-white/10 border border-white/30 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-base px-8 py-4 rounded-md transition-colors">
                 Download Fleet Brief
-              </button>
+              </Link>
             </div>
 
             {/* Trust Indicators */}
@@ -263,7 +264,7 @@ const LogisticsFleetPage = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Commercial Fleets */}
-            <div className="bg-white border-2 border-sgt-green rounded-2xl p-6 hover:shadow-2xl transition-all">
+            <div className="bg-white border-2 border-sgt-green rounded-2xl p-6 hover:shadow-2xl transition-all flex flex-col">
               <div className="inline-flex px-3 py-1 bg-green-100 rounded-full text-green-800 text-xs font-bold mb-4">
                 ✓ PROVEN
               </div>
@@ -288,13 +289,13 @@ const LogisticsFleetPage = () => {
                 ))}
               </div>
 
-              <button className="w-full bg-sgt-green text-white py-2.5 rounded-lg text-sm font-medium hover:bg-green-800 transition-all">
+              <button className="mt-auto w-full bg-sgt-green text-white py-2.5 rounded-lg text-sm font-medium hover:bg-green-800 transition-all">
                 View Fleet Solutions
               </button>
             </div>
 
             {/* Mining */}
-            <div className="bg-white border-2 border-orange-200 rounded-2xl p-6 hover:shadow-2xl transition-all">
+            <div className="bg-white border-2 border-orange-200 rounded-2xl p-6 hover:shadow-2xl transition-all flex flex-col">
               <div className="inline-flex px-3 py-1 bg-orange-100 rounded-full text-orange-800 text-xs font-bold mb-4">
                 ✓ PROVEN
               </div>
@@ -319,13 +320,13 @@ const LogisticsFleetPage = () => {
                 ))}
               </div>
 
-              <button className="w-full bg-orange-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-orange-700 transition-all">
+              <button className="mt-auto w-full bg-orange-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-orange-700 transition-all">
                 View Mining Solutions
               </button>
             </div>
 
             {/* Construction */}
-            <div className="bg-white border-2 border-blue-200 rounded-2xl p-6 hover:shadow-2xl transition-all">
+            <div className="flex flex-col bg-white border-2 border-blue-200 rounded-2xl p-6 hover:shadow-2xl transition-all">
               <div className="inline-flex px-3 py-1 bg-blue-100 rounded-full text-blue-800 text-xs font-bold mb-4">
                 ✓ PROVEN
               </div>
@@ -350,13 +351,13 @@ const LogisticsFleetPage = () => {
                 ))}
               </div>
 
-              <button className="w-full bg-blue-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-blue-700 transition-all">
+              <button className="mt-auto w-full bg-blue-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-blue-700 transition-all">
                 View Construction Solutions
               </button>
             </div>
 
             {/* Agriculture */}
-            <div className="bg-white border-2 border-green-200 rounded-2xl p-6 hover:shadow-2xl transition-all">
+            <div className="flex flex-col bg-white border-2 border-green-200 rounded-2xl p-6 hover:shadow-2xl transition-all">
               <div className="inline-flex px-3 py-1 bg-green-100 rounded-full text-green-800 text-xs font-bold mb-4">
                 ✓ PROVEN
               </div>
@@ -381,7 +382,7 @@ const LogisticsFleetPage = () => {
                 ))}
               </div>
 
-              <button className="w-full bg-green-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-green-700 transition-all">
+              <button className="mt-auto w-full bg-green-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-green-700 transition-all">
                 View Agriculture Solutions
               </button>
             </div>
@@ -588,12 +589,12 @@ const LogisticsFleetPage = () => {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <button className="bg-sgt-green text-white px-10 py-5 rounded-lg text-lg font-bold hover:bg-green-800 transition-all">
+            <Link href='/contact' className="bg-sgt-green text-white px-10 py-5 rounded-lg text-lg font-bold hover:bg-green-800 transition-all">
               Request Fleet Assessment
-            </button>
-            <button className="bg-white border-2 border-gray-300 text-gray-700 px-10 py-5 rounded-lg text-lg font-bold hover:border-sgt-green hover:text-sgt-green transition-all">
+            </Link>
+            <Link href='/resources/downloads' className="bg-white border-2 border-gray-300 text-gray-700 px-10 py-5 rounded-lg text-lg font-bold hover:border-sgt-green hover:text-sgt-green transition-all">
               Download Fleet Brief
-            </button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

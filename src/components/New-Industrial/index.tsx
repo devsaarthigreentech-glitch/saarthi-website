@@ -125,13 +125,13 @@ const IndustrialSolutionsComplete = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 mb-9">
-              <button className="inline-flex items-center bg-[#1B6B3D] hover:bg-[#155730] text-white font-semibold text-base px-8 py-4 rounded-md shadow-lg transition-colors">
+              <Link href='/contact' className="inline-flex items-center bg-[#1B6B3D] hover:bg-[#155730] text-white font-semibold text-base px-8 py-4 rounded-md shadow-lg transition-colors">
                 Request Engineering Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
-              <button className="inline-flex items-center bg-white/10 border border-white/30 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-base px-8 py-4 rounded-md transition-colors">
+              </Link>
+              <Link href='/resources/downloads' className="inline-flex items-center bg-white/10 border border-white/30 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-base px-8 py-4 rounded-md transition-colors">
                 Download Overview
-              </button>
+              </Link>
             </div>
 
             {/* Trust Indicators */}
