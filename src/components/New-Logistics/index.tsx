@@ -234,7 +234,7 @@ const LogisticsFleetPage = () => {
 
             <div>
               <img
-                src="/api/placeholder/600/500"
+                src="/images/technology/arai.jpg"
                 alt="Research Testing"
                 className="w-full rounded-xl shadow-2xl"
               />
@@ -464,11 +464,11 @@ const LogisticsFleetPage = () => {
                   </div>
                 </div>
 
-                <img
+                {/* <img
                   src="/api/placeholder/500/300"
                   alt="Fleet Monitoring Dashboard"
                   className="w-full rounded-xl"
-                />
+                /> */}
               </div>
             </div>
           </div>

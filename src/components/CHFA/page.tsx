@@ -138,7 +138,7 @@ const CHFATechnologyPage = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-12 text-white">
+          {/* <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-12 text-white">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-flex px-4 py-2 bg-white/20 rounded-full text-white text-sm font-bold mb-6">
@@ -190,7 +190,7 @@ const CHFATechnologyPage = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Technical Diagram Placeholder */}
           {/* <div className="bg-gray-100 rounded-2xl p-12 text-center">
@@ -519,7 +519,7 @@ const CHFATechnologyPage = () => {
 
             <div className="relative">
               <img
-                src="/api/placeholder/600/500"
+                src="/images/technology/arai.jpg"
                 alt="Research Testing"
                 className="w-full rounded-xl shadow-2xl"
               />

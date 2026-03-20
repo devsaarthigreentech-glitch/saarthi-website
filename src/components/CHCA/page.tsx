@@ -467,6 +467,60 @@ const CHCATechnologyPage = () => {
             </div>
           </div>
 
+                    <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-12 text-white">
+                      <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                          <div className="inline-flex px-4 py-2 bg-white/20 rounded-full text-white text-sm font-bold mb-6">
+                            <Database className="w-4 h-4 mr-2" />
+                            IoT Digital Twin
+                          </div>
+                          <h3 className="text-3xl font-bold mb-6">GreenVision Digital Twin Platform</h3>
+                          <p className="text-xl text-gray-300 mb-8">
+                            Every CHCA installation includes IoT connectivity to the GreenVision platform - your digital twin for complete system visibility and performance analytics.
+                          </p>
+                          <ul className="space-y-3 text-gray-200">
+                            <li className="flex items-start">
+                              <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                              <span>Real-time system monitoring from anywhere</span>
+                            </li>
+                            <li className="flex items-start">
+                              <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                              <span>Predictive maintenance alerts and diagnostics</span>
+                            </li>
+                            <li className="flex items-start">
+                              <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                              <span>Performance analytics and baseline trending</span>
+                            </li>
+                            <li className="flex items-start">
+                              <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                              <span>Automated ESG reporting (BRSR, CBAM compliant)</span>
+                            </li>
+                            <li className="flex items-start">
+                              <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                              <span>Mobile app for plant operators</span>
+                            </li>
+                            <li className="flex items-start">
+                              <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
+                              <span>Historical data archival and reporting</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div>
+                          <img
+                            src="/images/technology/digital-twin.png"
+                            alt="GreenVision Dashboard"
+                            className="w-full rounded-xl shadow-2xl"
+                          />
+                          <div className='mt-3' />
+                          <img
+                            src="/images/technology/digital-twin-2.png"
+                            alt="GreenVision Dashboard"
+                            className="w-full rounded-xl shadow-2xl"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
           {/* GreenVision Digital Twin */}
           {/* <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-12 text-white">
             <div className="grid lg:grid-cols-2 gap-12 items-center">

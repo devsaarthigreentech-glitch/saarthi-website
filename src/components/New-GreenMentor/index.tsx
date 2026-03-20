@@ -5,8 +5,8 @@ import { Lightbulb, CheckCircle, ArrowRight, ClipboardCheck, Wrench, Activity, D
 
 const GreenMentorPage = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <section className="py-16 bg-gradient-to-br from-sgt-green to-green-800 text-white">
+    <div className="min-h-screen bg-white mt-15">
+      <section className="py-16 bg-gradient-to-br from-green-800 to-sgt-green text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl">
             <h1 className="text-5xl font-bold mb-6">GreenMentor</h1>
