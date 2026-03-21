@@ -361,9 +361,9 @@ const MarineSolutionsPage = () => {
                 ))}
               </div>
 
-              <button className="w-full bg-sgt-green text-white py-3 rounded-lg font-medium hover:bg-green-800 transition-all mt-auto">
+              {/* <button className="w-full bg-sgt-green text-white py-3 rounded-lg font-medium hover:bg-green-800 transition-all mt-auto">
                 Explore Boiler & Auxiliary Solutions
-              </button>
+              </button> */}
             </div>
 
             {/* Support Vessels - Main Propulsion */}
@@ -392,9 +392,9 @@ const MarineSolutionsPage = () => {
                 ))}
               </div>
 
-              <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-all mt-auto">
+              {/* <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-all mt-auto">
                 Explore Support Vessel Solutions
-              </button>
+              </button> */}
             </div>
 
             {/* Large Commercial - Pilot Available */}
@@ -420,9 +420,9 @@ const MarineSolutionsPage = () => {
                 </p>
               </div>
 
-              <button className="w-full bg-orange-600 text-white py-3 rounded-lg font-medium hover:bg-orange-700 transition-all mt-auto">
+              {/* <button className="w-full bg-orange-600 text-white py-3 rounded-lg font-medium hover:bg-orange-700 transition-all mt-auto">
                 Discuss Pilot Opportunity
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
@@ -570,9 +570,9 @@ const MarineSolutionsPage = () => {
                   </div>
                 </div>
 
-                <button className="bg-white text-sgt-green px-6 py-3 rounded-lg font-bold hover:bg-sgt-yellow hover:text-gray-900 transition-all inline-flex items-center self-start text-sm">
+                {/* <button className="bg-white text-sgt-green px-6 py-3 rounded-lg font-bold hover:bg-sgt-yellow hover:text-gray-900 transition-all inline-flex items-center self-start text-sm">
                   Discuss DaaS Options <ArrowRight className="ml-2 w-4 h-4" />
-                </button>
+                </button> */}
 
               </div>
 
