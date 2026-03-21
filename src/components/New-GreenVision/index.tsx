@@ -1,7 +1,8 @@
 "use client"
 // export default GreenVisionPlatformPage;
 import React from 'react';
-import { Activity, Database, CheckCircle, ArrowRight, Zap, Globe, TrendingUp, FileText, BarChart3, Cloud, Shield } from 'lucide-react';
+import { Activity, Database, CheckCircle, ArrowRight, Zap, Globe, TrendingUp, FileText, BarChart3, Cloud, Shield, VideoOff } from 'lucide-react';
+import Link from 'next/link';
 
 
 const GreenVisionPlatformPage = () => {
@@ -93,7 +94,7 @@ const GreenVisionPlatformPage = () => {
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-4">
+              {/* <div className="flex flex-wrap gap-4">
                 <button className="bg-[#1B6B3D] text-white px-8 py-4 rounded-md hover:bg-[#155730] transition-all font-medium text-lg flex items-center">
                   Explore GreenVision <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
@@ -101,10 +102,32 @@ const GreenVisionPlatformPage = () => {
                   View Demo
                 </button>
               </div>
+              <div className="flex items-center px-8 py-4 text-gray-400 font-medium italic text-lg">
+  <VideoOff className="mr-2 w-5 h-5 opacity-50" />
+  Video Walkthrough Coming Soon
+</div> */}
 
+{/* <div className="relative">
+  <button className="opacity-60 bg-white border-2 border-gray-300 text-gray-500 px-8 py-4 rounded-md font-medium text-lg cursor-default">
+    Watch Videos
+  </button>
+  <span className="absolute -top-3 -right-2 bg-sgt-yellow text-gray-900 text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-wider shadow-sm">
+    Coming Soon
+  </span>
+</div> */}
+
+
+{/* 
               <p className="text-sm text-gray-500 mt-4">
                 Visit <span className="font-medium text-gray-700">greenvision.sgthydroedge.com</span> for interactive demos and API docs
-              </p>
+              </p> */}
+
+<button 
+  disabled 
+  className="bg-gray-100 border-2 border-gray-200 text-gray-400 px-8 py-4 rounded-md font-medium text-lg cursor-not-allowed flex items-center"
+>
+  Explore GreenVision <span className="ml-2 text-xs uppercase bg-gray-200 px-2 py-1 rounded text-gray-500">Coming Soon</span>
+</button>
             </div>
 
             {/* Right — Image + Floating Stats */}
@@ -527,13 +550,13 @@ const GreenVisionPlatformPage = () => {
             </div>
           </div>
 
-
+{/* 
           <a
             href="https://greenvision.sgthydroedge.com"
             className="inline-flex items-center bg-yellow-400 text-gray-900 px-12 py-5 rounded-lg text-xl font-bold hover:bg-yellow-300"
           >
             Visit greenvision.sgthydroedge.com <ArrowRight className="ml-3 w-6 h-6" />
-          </a>
+          </a> */}
         </div>
       </section>
 
@@ -545,12 +568,12 @@ const GreenVisionPlatformPage = () => {
             Contact our team to discuss platform deployment and integration
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gray-900 text-white px-10 py-4 rounded-lg text-lg font-bold hover:bg-gray-800">
+            <Link href='/contact' className="bg-gray-900 text-white px-10 py-4 rounded-lg text-lg font-bold hover:bg-gray-800">
               Request Platform Demo
-            </button>
-            <button className="bg-white border-2 border-gray-300 text-gray-700 px-10 py-4 rounded-lg text-lg font-bold hover:border-gray-900">
+            </Link>
+            {/* <Link href='/resources/downloads' className="bg-white border-2 border-gray-300 text-gray-700 px-10 py-4 rounded-lg text-lg font-bold hover:border-gray-900">
               Download Overview
-            </button>
+            </Link> */}
           </div>
         </div>
       </section>
