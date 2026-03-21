@@ -1948,14 +1948,14 @@ const PAGE_HTML = `<!-- NAV -->
     <h2 class="cta-title">Bring your fuel data.<br>We will show you the impact.</h2>
     <p class="cta-sub">Share your asset details with us and we will model your decarbonisation potential — fuel savings, emission reductions, and ROI — before you commit a rupee.</p>
     <div class="cta-btns">
-      <a href="#" class="btn-white">Talk to Us →</a>
-      <a href="#" class="btn-outline-white">Explore Our Technology</a>
+    <a href="/contact" class="btn-white">Talk to Us →</a>
     </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-`;
+    </div>
+    </section>
+    
+    <!-- FOOTER -->
+    `;
+    // <a href="#" class="btn-outline-white">Explore Our Technology</a>
 
 export default function PurposePage() {
   const stylesRef = useRef(false);

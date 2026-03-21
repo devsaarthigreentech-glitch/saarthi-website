@@ -3,6 +3,7 @@
 import React from 'react';
 import { Factory, Flame, CheckCircle, Award, Settings, Shield, Database, TrendingUp, ArrowRight, Zap, AlertCircle } from 'lucide-react';
 import GreenVisionEngineOnWheels from '../GreenVision/GreenVisionOnWheels';
+import Link from 'next/link';
 
 const CHCATechnologyPage = () => {
   return (
@@ -61,12 +62,12 @@ const CHCATechnologyPage = () => {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <button className="bg-orange-600 text-white px-8 py-4 rounded-md hover:bg-orange-700 transition-all font-medium text-lg flex items-center">
+                <Link href="/resources/downloads" className="inline-flex items-center justify-center bg-orange-600 text-white px-8 py-4 rounded-md hover:bg-orange-700 transition-all font-medium text-lg flex items-center">
                   Download Technical Whitepaper <ArrowRight className="ml-2 w-5 h-5" />
-                </button>
-                <button className="bg-white border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-md hover:border-orange-600 hover:text-orange-600 transition-all font-medium text-lg">
+                </Link>
+                <Link href="/contact" className="bg-white border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-md hover:border-orange-600 hover:text-orange-600 transition-all font-medium text-lg">
                   Request Engineering Consultation
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -228,9 +229,9 @@ const CHCATechnologyPage = () => {
                 </p>
               </div>
 
-              <button className="bg-white text-sgt-green px-8 py-4 rounded-lg text-lg font-bold hover:bg-sgt-yellow hover:text-gray-900 transition-all flex items-center">
+              <Link href='/resources/downloads' className="inline-flex items-center justify-center bg-white text-sgt-green px-8 py-4 rounded-lg text-lg font-bold hover:bg-sgt-yellow hover:text-gray-900 transition-all flex items-center">
                 Download Wet Cell Engineering Whitepaper <ArrowRight className="ml-2" />
-              </button>
+              </Link>
             </div>
 
             <div>
@@ -321,7 +322,7 @@ const CHCATechnologyPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Boilers */}
-            <div className="bg-white border-2 border-orange-200 rounded-2xl p-8 hover:shadow-xl transition-all">
+            <div className="bg-white border-2 border-orange-200 rounded-2xl p-8 hover:shadow-xl transition-all flex flex-col">
               <div className="inline-flex px-3 py-1 bg-orange-100 rounded-full text-orange-800 text-xs font-bold mb-4">
                 PILOT PHASE
               </div>
@@ -334,13 +335,13 @@ const CHCATechnologyPage = () => {
                   <strong>Status:</strong> Custom engineering required per boiler type and fuel. Pilot partnerships available.
                 </p>
               </div>
-              <button className="w-full bg-orange-600 text-white py-3 rounded-lg font-medium hover:bg-orange-700 transition-all">
+              <Link href='/solutions/new-industrial#boiler-details'className="mt-auto inline-flex items-center justify-center w-full bg-orange-600 text-white py-3 rounded-lg font-medium hover:bg-orange-700 transition-all">
                 View Boiler Solutions
-              </button>
+              </Link>
             </div>
 
             {/* Kilns */}
-            <div className="bg-white border-2 border-red-200 rounded-2xl p-8 hover:shadow-xl transition-all">
+            <div className="bg-white border-2 border-red-200 rounded-2xl p-8 hover:shadow-xl transition-all flex flex-col">
               <div className="inline-flex px-3 py-1 bg-red-100 rounded-full text-red-800 text-xs font-bold mb-4">
                 DEVELOPMENT PHASE
               </div>
@@ -353,13 +354,13 @@ const CHCATechnologyPage = () => {
                   <strong>Status:</strong> High-volume systems under development. Early partnerships available for validation testing.
                 </p>
               </div>
-              <button className="w-full bg-red-600 text-white py-3 rounded-lg font-medium hover:bg-red-700 transition-all">
+              <Link href='/solutions/new-industrial#kiln-details' className="inline-flex items-center justify-center mt-auto w-full bg-red-600 text-white py-3 rounded-lg font-medium hover:bg-red-700 transition-all">
                 View Kiln Solutions
-              </button>
+              </Link>
             </div>
 
             {/* Smelters */}
-            <div className="bg-white border-2 border-purple-200 rounded-2xl p-8 hover:shadow-xl transition-all">
+            <div className="bg-white border-2 border-purple-200 rounded-2xl p-8 hover:shadow-xl transition-all flex flex-col">
               <div className="inline-flex px-3 py-1 bg-purple-100 rounded-full text-purple-800 text-xs font-bold mb-4">
                 PILOT PHASE
               </div>
@@ -372,9 +373,9 @@ const CHCATechnologyPage = () => {
                   <strong>Status:</strong> Gas-fired furnaces only (CNG, LPG, propane, natural gas). Custom engineering per application.
                 </p>
               </div>
-              <button className="w-full bg-purple-600 text-white py-3 rounded-lg font-medium hover:bg-purple-700 transition-all">
+              <Link href='/solutions/new-industrial#smelter-details' className="inline-flex items-center justify-center mt-auto w-full bg-purple-600 text-white py-3 rounded-lg font-medium hover:bg-purple-700 transition-all">
                 View Smelter Solutions
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -811,9 +812,9 @@ const CHCATechnologyPage = () => {
           </div>
 
           <div className="text-center mt-8">
-            <button className="bg-orange-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-orange-700 transition-all inline-flex items-center">
+            <Link href='/resources/downloads' className="inline-flex items-center justify-center bg-orange-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-orange-700 transition-all inline-flex items-center">
               Download Complete Technical Datasheet <ArrowRight className="ml-2" />
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -828,12 +829,12 @@ const CHCATechnologyPage = () => {
             Contact our engineering team to discuss your industrial decarbonization requirements
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <button className="bg-orange-600 text-white px-10 py-5 rounded-lg text-lg font-bold hover:bg-orange-700 transition-all flex items-center">
+            <Link href='/contact'className="inline-flex items-center justify-center bg-orange-600 text-white px-10 py-5 rounded-lg text-lg font-bold hover:bg-orange-700 transition-all flex items-center">
               Request Engineering Consultation <ArrowRight className="ml-2" />
-            </button>
-            <button className="bg-white border-2 border-gray-300 text-gray-700 px-10 py-5 rounded-lg text-lg font-bold hover:border-orange-600 hover:text-orange-600 transition-all">
+            </Link>
+            <Link href='/resources/downloads' className="inline-flex items-center justify-center bg-white border-2 border-gray-300 text-gray-700 px-10 py-5 rounded-lg text-lg font-bold hover:border-orange-600 hover:text-orange-600 transition-all">
               Download Technical Documentation
-            </button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import { Zap, CheckCircle, Award, FileText, Settings, TrendingUp, ArrowRight, Download, Database } from 'lucide-react';
+import Link from 'next/link';
 
 const CHFATechnologyPage = () => {
   return (
@@ -59,12 +60,12 @@ const CHFATechnologyPage = () => {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <button className="bg-sgt-green text-white px-8 py-4 rounded-md hover:bg-green-800 transition-all font-medium text-lg flex items-center">
+                <Link href="/resources/downloads" className="inline-flex items-center justify-center bg-sgt-green text-white px-8 py-4 rounded-md hover:bg-green-800 transition-all font-medium text-lg flex items-center">
                   Download Technical Datasheet <Download className="ml-2 w-5 h-5" />
-                </button>
-                <button className="bg-white border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-md hover:border-sgt-green hover:text-sgt-green transition-all font-medium text-lg">
+                </Link>
+                <Link href="/resources/downloads" className="inline-flex items-center justify-center bg-white border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-md hover:border-sgt-green hover:text-sgt-green transition-all font-medium text-lg">
                   View Research Paper
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -386,7 +387,7 @@ const CHFATechnologyPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* DG Sets */}
-            <div className="bg-gradient-to-br from-green-50 to-white border-2 border-green-200 rounded-2xl p-8">
+            <div className="flex flex-col bg-gradient-to-br from-green-50 to-white border-2 border-green-200 rounded-2xl p-8">
               <div className="inline-flex px-3 py-1 bg-green-100 rounded-full text-green-800 text-xs font-bold mb-4">
                 DEPLOYED & OPERATIONAL
               </div>
@@ -408,13 +409,13 @@ const CHFATechnologyPage = () => {
                   <span>Proven reliability 24/7 operation</span>
                 </li>
               </ul>
-              <button className="w-full bg-green-600 text-white py-3 rounded-lg font-medium hover:bg-green-700 transition-all">
+              <Link href="/solutions/new-industrial#dg-details" className="mt-auto inline-flex items-center justify-center w-full bg-green-600 text-white py-3 rounded-lg font-medium hover:bg-green-700 transition-all">
                 View DG Set Solutions
-              </button>
+              </Link>
             </div>
 
             {/* Marine */}
-            <div className="bg-gradient-to-br from-blue-50 to-white border-2 border-blue-200 rounded-2xl p-8">
+            <div className="flex flex-col bg-gradient-to-br from-blue-50 to-white border-2 border-blue-200 rounded-2xl p-8">
               <div className="inline-flex px-3 py-1 bg-blue-100 rounded-full text-blue-800 text-xs font-bold mb-4">
                 PROVEN TECHNOLOGY
               </div>
@@ -436,13 +437,13 @@ const CHFATechnologyPage = () => {
                   <span>DaaS model available</span>
                 </li>
               </ul>
-              <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-all">
+              <Link href="/solutions/new-marine" className="mt-auto inline-flex items-center justify-center w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-all">
                 View Marine Solutions
-              </button>
+              </Link>
             </div>
 
             {/* Logistics */}
-            <div className="bg-gradient-to-br from-green-50 to-white border-2 border-green-200 rounded-2xl p-8">
+            <div className="flex flex-col bg-gradient-to-br from-green-50 to-white border-2 border-green-200 rounded-2xl p-8">
               <div className="inline-flex px-3 py-1 bg-green-100 rounded-full text-green-800 text-xs font-bold mb-4">
                 ROAD TESTED
               </div>
@@ -464,9 +465,9 @@ const CHFATechnologyPage = () => {
                   <span>Fleet management via GreenVision</span>
                 </li>
               </ul>
-              <button className="w-full bg-green-600 text-white py-3 rounded-lg font-medium hover:bg-green-700 transition-all">
+              <Link href='/solutions/new-logistics' className="mt-auto inline-flex items-center justify-center w-full bg-green-600 text-white py-3 rounded-lg font-medium hover:bg-green-700 transition-all">
                 View Logistics Solutions
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -512,9 +513,9 @@ const CHFATechnologyPage = () => {
                 </p>
               </div>
 
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-bold hover:bg-sgt-yellow hover:text-gray-900 transition-all inline-flex items-center">
+              <Link href ='/resources/downloads'className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-bold hover:bg-sgt-yellow hover:text-gray-900 transition-all inline-flex items-center">
                 Download Research Paper <Download className="ml-2" />
-              </button>
+              </Link>
             </div>
 
             <div className="relative">
@@ -571,9 +572,9 @@ const CHFATechnologyPage = () => {
           </div>
 
           <div className="text-center mt-8">
-            <button className="bg-sgt-green text-white px-8 py-4 rounded-lg font-bold hover:bg-green-800 transition-all inline-flex items-center">
+            <Link href="/resources/downloads" className="inline-flex items-center justify-center bg-sgt-green text-white px-8 py-4 rounded-lg font-bold hover:bg-green-800 transition-all inline-flex items-center">
               Download Complete Technical Datasheet <Download className="ml-2" />
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -588,12 +589,12 @@ const CHFATechnologyPage = () => {
             Contact our engineering team to discuss your specific application
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-sgt-green text-white px-10 py-4 rounded-lg text-lg font-bold hover:bg-green-800 transition-all">
+            <Link href='/contact' className="inline-flex items-center justify-center bg-sgt-green text-white px-10 py-4 rounded-lg text-lg font-bold hover:bg-green-800 transition-all">
               Schedule Technical Consultation
-            </button>
-            <button className="bg-white border-2 border-gray-300 text-gray-700 px-10 py-4 rounded-lg text-lg font-bold hover:border-sgt-green hover:text-sgt-green transition-all">
+            </Link>
+            <Link href='/contact' className="inline-flex items-center justify-center bg-white border-2 border-gray-300 text-gray-700 px-10 py-4 rounded-lg text-lg font-bold hover:border-sgt-green hover:text-sgt-green transition-all">
               Request Quote
-            </button>
+            </Link>
           </div>
         </div>
       </section>
