@@ -930,8 +930,8 @@ const PAGE_HTML = `<!-- NAV -->
         <div class="hero-pill"><span class="dot"></span>Continuous improvement</div>
       </div>
       <div class="hero-cta-row">
-        <a href="#" class="btn-primary">Explore DaaS Eligibility →</a>
-        <a href="#" class="btn-ghost-light">How it works</a>
+        <a href="#eligibility" class="btn-primary">Explore DaaS Eligibility →</a>
+        <a href="#how-it-works" class="btn-ghost-light">How it works</a>
       </div>
     </div>
     <div class="hero-right">
@@ -1166,7 +1166,7 @@ const PAGE_HTML = `<!-- NAV -->
 </section>
 
 <!-- ELIGIBILITY -->
-<section class="eligibility-section">
+<section class="eligibility-section" id="eligibility">
   <div class="container">
     <div class="reveal">
       <span class="section-label">Eligibility & Fit</span>
@@ -1463,14 +1463,14 @@ const PAGE_HTML = `<!-- NAV -->
     <h2 class="cta-title">Bring your asset data.<br>We'll show you what's possible.</h2>
     <p class="cta-sub">Share details of your assets, fuel consumption, and sector — and SGT will assess whether DaaS is the right fit for you, and what a programme structure could look like.</p>
     <div class="cta-btns">
-      <a href="#" class="btn-green">Talk to a DaaS Specialist →</a>
-      <a href="#" class="btn-outline">Explore Our Technology</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-`;
+      <a href="/contact" class="btn-green">Talk to a DaaS Specialist →</a>
+      </div>
+      </div>
+      </section>
+      
+      <!-- FOOTER -->
+      `;
+      // <a href="#" class="btn-outline">Explore Our Technology</a>
 
 export default function DaaSPage() {
   const stylesRef = useRef(false);

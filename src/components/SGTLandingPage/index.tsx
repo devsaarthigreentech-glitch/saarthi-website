@@ -363,7 +363,7 @@ const SGTHomepage = () => {
               </div>
 
               <Link
-                href="/technology/chfA"
+                href="/technology/chfa"
                 className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-all mt-auto text-center block"
               >
                 View Technology Details

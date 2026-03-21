@@ -707,7 +707,7 @@ const PAGE_HTML = `<!-- HERO -->
 
     <div class="cta-card">
       <p>Still have questions? Our team is happy to walk you through any aspect of our technology or commercial model.</p>
-      <a href="/cdn-cgi/l/email-protection#c0a3afaeb4a1a3b480b3a7b4a8b9a4b2afa5a4a7a5eea3afad">Get in touch →</a>
+      <a href="/contact">Get in touch →</a>
     </div>
   </aside>
 

@@ -234,9 +234,9 @@ const IndustrialSolutionsComplete = () => {
               </div>
 
 
-              <button className="w-full bg-sgt-green text-white py-2.5 rounded-lg text-sm font-medium hover:bg-green-800 transition-all mt-auto">
+              <Link href='#dg-details' className="inline-flex items-center justify-center w-full bg-sgt-green text-white py-2.5 rounded-lg text-sm font-medium hover:bg-green-800 transition-all mt-auto">
                 View Details Below
-              </button>
+              </Link>
             </div>
 
 
@@ -277,9 +277,9 @@ const IndustrialSolutionsComplete = () => {
               </div>
 
 
-              <button className="w-full bg-orange-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-orange-700 transition-all mt-auto">
+              <Link href="#boiler-details" className="inline-flex items-center justify-center w-full bg-orange-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-orange-700 transition-all mt-auto">
                 View Details Below
-              </button>
+              </Link>
             </div>
 
 
@@ -320,9 +320,9 @@ const IndustrialSolutionsComplete = () => {
               </div>
 
 
-              <button className="w-full bg-red-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-red-700 transition-all mt-auto">
+              <Link href="#kiln-details" className="inline-flex items-center justify-center w-full bg-red-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-red-700 transition-all mt-auto">
                 View Details Below
-              </button>
+              </Link>
             </div>
 
 
@@ -363,9 +363,9 @@ const IndustrialSolutionsComplete = () => {
               </div>
 
 
-              <button className="w-full bg-purple-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-purple-700 transition-all mt-auto">
+              <Link href='#smelter-details' className="inline-flex items-center justify-center w-full bg-purple-600 text-white py-2.5 rounded-lg text-sm font-medium hover:bg-purple-700 transition-all mt-auto">
                 View Details Below
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -373,7 +373,7 @@ const IndustrialSolutionsComplete = () => {
 
 
       {/* DG Sets Deep Dive - PROVEN */}
-      <section className="py-20 bg-gradient-to-br from-green-50 to-white">
+      <section className="py-20 bg-gradient-to-br from-green-50 to-white" id="dg-details">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -430,9 +430,9 @@ const IndustrialSolutionsComplete = () => {
               </div>
 
 
-              <button className="bg-sgt-green text-white px-8 py-4 rounded-md hover:bg-green-800 transition-all font-medium flex items-center">
+              <Link href='/resources/downloads' className="inline-flex items-center justify-center bg-sgt-green text-white px-8 py-4 rounded-md hover:bg-green-800 transition-all font-medium flex items-center">
                 Get DG Set Solution Details <ArrowRight className="ml-2" />
-              </button>
+              </Link>
             </div>
 
 
@@ -461,7 +461,7 @@ const IndustrialSolutionsComplete = () => {
 
 
       {/* Boilers Deep Dive - PILOT */}
-      <section className="py-20 bg-gradient-to-br from-orange-50 to-white">
+      <section className="py-20 bg-gradient-to-br from-orange-50 to-white" id="boiler-details">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
@@ -538,9 +538,9 @@ const IndustrialSolutionsComplete = () => {
               </div>
 
 
-              <button className="bg-orange-600 text-white px-8 py-4 rounded-md hover:bg-orange-700 transition-all font-medium flex items-center">
+              <Link href='/contact' className="inline-flex items-center justify-center bg-orange-600 text-white px-8 py-4 rounded-md hover:bg-orange-700 transition-all font-medium flex items-center">
                 Discuss Boiler Application <ArrowRight className="ml-2" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -548,7 +548,7 @@ const IndustrialSolutionsComplete = () => {
 
 
       {/* Kilns Deep Dive - DEVELOPMENT */}
-      <section className="py-20 bg-gradient-to-br from-red-50 to-white">
+      <section className="py-20 bg-gradient-to-br from-red-50 to-white" id="kiln-details">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -604,9 +604,9 @@ const IndustrialSolutionsComplete = () => {
               </div>
 
 
-              <button className="bg-red-600 text-white px-8 py-4 rounded-md hover:bg-red-700 transition-all font-medium flex items-center">
+              <Link href='/contact' className="inline-flex items-center justify-center bg-red-600 text-white px-8 py-4 rounded-md hover:bg-red-700 transition-all font-medium flex items-center">
                 Discuss Kiln Partnership <ArrowRight className="ml-2" />
-              </button>
+              </Link>
             </div>
 
 
@@ -635,7 +635,7 @@ const IndustrialSolutionsComplete = () => {
 
 
       {/* Smelters Deep Dive - PILOT */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-white">
+      <section className="py-20 bg-gradient-to-br from-purple-50 to-white" id='smelter-details'>
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
@@ -712,9 +712,9 @@ const IndustrialSolutionsComplete = () => {
               </div>
 
 
-              <button className="bg-purple-600 text-white px-8 py-4 rounded-md hover:bg-purple-700 transition-all font-medium flex items-center">
+              <Link href='/resources/downloads' className="inline-flex items-center justify-center bg-purple-600 text-white px-8 py-4 rounded-md hover:bg-purple-700 transition-all font-medium flex items-center">
                 Download Smelter Technical Brief <ArrowRight className="ml-2" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
