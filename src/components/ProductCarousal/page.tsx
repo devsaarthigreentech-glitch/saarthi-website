@@ -520,10 +520,10 @@ const products = [
   },
   {
     id: "install-9",
-    name: "GreenDrive - Installation",
+    name: "GreenX - Installation",
     description: "Industrial CHCA system for steam boilers. Fuel-agnostic — works with coal, gas, biomass, oil.",
     image: "/images/gallery/product-gallery/Installation/9.jpeg",
-    vertical: "Logistics",
+    vertical: "Industrial",
     stat: "Any combustion fuel",
   },
   // {
