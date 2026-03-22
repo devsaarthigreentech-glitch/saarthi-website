@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronRight, ChevronDown, Factory, Ship, Truck, Flame, TrendingUp, Users, Award, Database, Play, CheckCircle, ArrowRight, Zap, Shield, Settings } from 'lucide-react';
 import MediaCarousel from '../MediaCarousal';
 import Link from 'next/link';
+import ProductCarousel from '../ProductCarousal/page';
 
 
 const SGTHomepage = () => {
@@ -314,6 +315,8 @@ const SGTHomepage = () => {
 
         </div>
       </section>
+
+      <ProductCarousel />
 
 
       {/* Technology Section */}
