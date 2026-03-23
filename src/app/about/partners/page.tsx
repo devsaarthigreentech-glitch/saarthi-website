@@ -354,92 +354,10 @@ export default function PartnershipPage() {
           </div>
         </div>
 
-        {/* ── INQUIRY FORM ── */}
-        <div style={{ borderTop: '0.5px solid var(--color-border-tertiary, #e5e7eb)', paddingTop: '2.5rem', marginTop: '2.5rem' }}>
-          <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--color-text-secondary, #6b7280)', marginBottom: '0.5rem' }}>
-            Get in touch
-          </div>
-          <h2 style={{ fontSize: 20, fontWeight: 500, marginBottom: '0.4rem' }}>Partner inquiry</h2>
-          <p style={{ fontSize: 14, color: 'var(--color-text-secondary, #6b7280)', marginBottom: '1.75rem' }}>
-            Tell us about yourself and the opportunity you see. We'll respond within 2 business days.
-          </p>
-
-          {!submitted ? (
-            <div>
-              <div className="form-grid-partner" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                {/* Name */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                  <label style={{ fontSize: 13, fontWeight: 500, color: 'var(--color-text-secondary, #6b7280)' }}>Full name *</label>
-                  <input className="partner-input" type="text" value={form.name} onChange={set('name')} placeholder="Your name"
-                    style={{ fontFamily: "'Sora', sans-serif", fontSize: 14, padding: '9px 12px', border: '0.5px solid var(--color-border-tertiary, #e5e7eb)', borderRadius: 8, background: 'var(--color-background-primary, #fff)', color: 'var(--color-text-primary, #111)', transition: 'border-color 0.15s', outline: 'none' }} />
-                </div>
-                {/* Company */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                  <label style={{ fontSize: 13, fontWeight: 500, color: 'var(--color-text-secondary, #6b7280)' }}>Company / Organisation *</label>
-                  <input className="partner-input" type="text" value={form.company} onChange={set('company')} placeholder="Company name"
-                    style={{ fontFamily: "'Sora', sans-serif", fontSize: 14, padding: '9px 12px', border: '0.5px solid var(--color-border-tertiary, #e5e7eb)', borderRadius: 8, background: 'var(--color-background-primary, #fff)', color: 'var(--color-text-primary, #111)', transition: 'border-color 0.15s', outline: 'none' }} />
-                </div>
-                {/* Email */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                  <label style={{ fontSize: 13, fontWeight: 500, color: 'var(--color-text-secondary, #6b7280)' }}>Email address *</label>
-                  <input className="partner-input" type="email" value={form.email} onChange={set('email')} placeholder="you@company.com"
-                    style={{ fontFamily: "'Sora', sans-serif", fontSize: 14, padding: '9px 12px', border: '0.5px solid var(--color-border-tertiary, #e5e7eb)', borderRadius: 8, background: 'var(--color-background-primary, #fff)', color: 'var(--color-text-primary, #111)', transition: 'border-color 0.15s', outline: 'none' }} />
-                </div>
-                {/* Phone */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                  <label style={{ fontSize: 13, fontWeight: 500, color: 'var(--color-text-secondary, #6b7280)' }}>Phone / WhatsApp</label>
-                  <input className="partner-input" type="tel" value={form.phone} onChange={set('phone')} placeholder="+91 or international"
-                    style={{ fontFamily: "'Sora', sans-serif", fontSize: 14, padding: '9px 12px', border: '0.5px solid var(--color-border-tertiary, #e5e7eb)', borderRadius: 8, background: 'var(--color-background-primary, #fff)', color: 'var(--color-text-primary, #111)', transition: 'border-color 0.15s', outline: 'none' }} />
-                </div>
-                {/* Country */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                  <label style={{ fontSize: 13, fontWeight: 500, color: 'var(--color-text-secondary, #6b7280)' }}>Country / Region *</label>
-                  <select className="partner-input" value={form.country} onChange={set('country')}
-                    style={{ fontFamily: "'Sora', sans-serif", fontSize: 14, padding: '9px 12px', border: '0.5px solid var(--color-border-tertiary, #e5e7eb)', borderRadius: 8, background: 'var(--color-background-primary, #fff)', color: form.country ? 'var(--color-text-primary, #111)' : '#9ca3af', transition: 'border-color 0.15s', outline: 'none' }}>
-                    <option value="">Select...</option>
-                    {COUNTRIES.map(c => <option key={c} value={c}>{c}</option>)}
-                  </select>
-                </div>
-                {/* Type */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                  <label style={{ fontSize: 13, fontWeight: 500, color: 'var(--color-text-secondary, #6b7280)' }}>Partnership interest *</label>
-                  <select className="partner-input" value={form.type} onChange={set('type')}
-                    style={{ fontFamily: "'Sora', sans-serif", fontSize: 14, padding: '9px 12px', border: '0.5px solid var(--color-border-tertiary, #e5e7eb)', borderRadius: 8, background: 'var(--color-background-primary, #fff)', color: form.type ? 'var(--color-text-primary, #111)' : '#9ca3af', transition: 'border-color 0.15s', outline: 'none' }}>
-                    <option value="">Select...</option>
-                    {PARTNER_TYPES.map(t => <option key={t} value={t}>{t}</option>)}
-                  </select>
-                </div>
-                {/* Message — full width */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 6, gridColumn: '1 / -1' }}>
-                  <label style={{ fontSize: 13, fontWeight: 500, color: 'var(--color-text-secondary, #6b7280)' }}>Your background & what you bring</label>
-                  <textarea className="partner-input" value={form.message} onChange={set('message')}
-                    placeholder="Tell us about your current business, fleet connections, geographic reach, or any specific opportunity you've spotted..."
-                    style={{ fontFamily: "'Sora', sans-serif", fontSize: 14, padding: '9px 12px', border: '0.5px solid var(--color-border-tertiary, #e5e7eb)', borderRadius: 8, background: 'var(--color-background-primary, #fff)', color: 'var(--color-text-primary, #111)', transition: 'border-color 0.15s', outline: 'none', resize: 'vertical', minHeight: 90 }} />
-                </div>
-              </div>
-
-              {/* submit row */}
-              <div className="submit-row-partner" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1.25rem' }}>
-                <span style={{ fontSize: 12, color: 'var(--color-text-secondary, #6b7280)' }}>We respect your privacy. No spam, ever.</span>
-                <button className="submit-btn-partner" onClick={handleSubmit}
-                  style={{ background: '#1D9E75', color: 'white', border: 'none', fontFamily: "'Sora', sans-serif", fontSize: 14, fontWeight: 500, padding: '10px 24px', borderRadius: 8, cursor: 'pointer', transition: 'background 0.15s, transform 0.1s' }}>
-                  Send inquiry ↗
-                </button>
-              </div>
-            </div>
-          ) : (
-            /* success state */
-            <div style={{ textAlign: 'center', padding: '2rem', background: '#E1F5EE', borderRadius: 12, border: '0.5px solid #5DCAA5' }}>
-              <h3 style={{ fontSize: 18, fontWeight: 500, color: '#0F6E56', marginBottom: '0.5rem' }}>Inquiry received</h3>
-              <p style={{ fontSize: 14, color: '#1D9E75' }}>Thank you for your interest. Our partnerships team will review your details and be in touch within 2 business days.</p>
-            </div>
-          )}
-        </div>
-
         {/* ── FOOTER NOTE ── */}
         <div style={{ textAlign: 'center', fontSize: 12, color: 'var(--color-text-secondary, #6b7280)', marginTop: '3rem', paddingTop: '1.5rem', borderTop: '0.5px solid var(--color-border-tertiary, #e5e7eb)', lineHeight: 1.7 }}>
           SGT HydroEdge Pvt Ltd &nbsp;·&nbsp; Hydrogen-on-Demand Retrofit Systems<br />
-          Partnership enquiries: <a href="mailto:partners@sgthydroedge.com" style={{ color: '#1D9E75', textDecoration: 'none' }}>partners@sgthydroedge.com</a>
+          Partnership enquiries: <a href="mailto:contact@sgthydroedge.com" style={{ color: '#1D9E75', textDecoration: 'none' }}>contact@sgthydroedge.com</a>
         </div>
 
       </div>
