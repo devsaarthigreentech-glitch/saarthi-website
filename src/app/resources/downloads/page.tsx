@@ -6,7 +6,9 @@ import {
   Download, Eye, ChevronRight, ArrowLeft, Search,
   FileText, FolderOpen, Zap,
   Factory, Ship, Truck, Beaker, Shield, Settings,
-  BookOpen, ArrowRight, LayoutGrid
+  BookOpen, ArrowRight, LayoutGrid,
+  Award,
+  BadgeCheck
 } from "lucide-react";
 
 
@@ -28,16 +30,16 @@ const downloadCategories = [
   {
     id: "certificates",
     name: "Certifications",
-    description: "Certifications",
-    icon: <FileText className="w-5 h-5" />,
+    description: "Global quality, safety, and regulatory compliance certifications",
+    icon: <Award className="w-5 h-5" />,
     files: [
-      { name: "ISO Certifcate", path: "/downloads/certifications/ISO_Certificate.jpg", size: "171 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
-      { name: "ROHS Certifcate", path: "/downloads/certifications/ROHS-SGT-1.jpg", size: "200 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
-      { name: "CE Certifcate", path: "/downloads/certifications/CE.pdf", size: "320 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
-      { name: "UL Certifcate", path: "/downloads/certifications/UL.pdf", size: "400 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
-      { name: "FCC Certifcate", path: "/downloads/certifications/FCC.pdf", size: "112 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
-      { name: "EMC Certifcate", path: "/downloads/certifications/EMC.pdf", size: "220 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
-      { name: "IEC Certifcate", path: "/downloads/certifications/IEC.pdf", size: "108 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
+      { name: "ISO Certificate", path: "/downloads/certifications/ISO_Certificate.jpg", size: "171 KB", tag: "Compliance", tagIcon: <BadgeCheck className="w-3 h-3" /> },
+      { name: "RoHS Certificate", path: "/downloads/certifications/ROHS-SGT-1.jpg", size: "200 KB", tag: "Compliance", tagIcon: <BadgeCheck className="w-3 h-3" /> },
+      { name: "CE Certificate", path: "/downloads/certifications/CE.pdf", size: "320 KB", tag: "Compliance", tagIcon: <BadgeCheck className="w-3 h-3" /> },
+      { name: "UL Certificate", path: "/downloads/certifications/UL.pdf", size: "400 KB", tag: "Compliance", tagIcon: <BadgeCheck className="w-3 h-3" /> },
+      { name: "FCC Certificate", path: "/downloads/certifications/FCC.pdf", size: "112 KB", tag: "Compliance", tagIcon: <BadgeCheck className="w-3 h-3" /> },
+      { name: "EMC Certificate", path: "/downloads/certifications/EMC.pdf", size: "220 KB", tag: "Compliance", tagIcon: <BadgeCheck className="w-3 h-3" /> },
+      { name: "IEC Certificate", path: "/downloads/certifications/IEC.pdf", size: "108 KB", tag: "Compliance", tagIcon: <BadgeCheck className="w-3 h-3" /> },
     ]
   },
   {
