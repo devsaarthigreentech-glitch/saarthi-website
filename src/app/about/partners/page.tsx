@@ -95,12 +95,12 @@ const GLOBAL_TIERS: TierCard[] = [
 ];
 
 const OFFER_ITEMS = [
-  { icon: '🔧', bg: '#E1F5EE', title: 'Technical training',    desc: 'Initial certification + ongoing upskilling for your installation team' },
-  { icon: '📡', bg: '#E1F5EE', title: 'GreenVision access',    desc: 'System health monitoring platform for all deployed units in your territory' },
-  { icon: '🛡️', bg: '#E1F5EE', title: 'Lead protection',       desc: 'Registered leads are protected — your pipeline is yours' },
-  { icon: '📦', bg: '#E1F5EE', title: 'Genuine parts supply',  desc: 'Reliable supply of SGT-authorized components for service & warranty work' },
-  { icon: '📣', bg: '#E1F5EE', title: 'Marketing support',     desc: 'Collateral, brand guidelines, and co-marketing for qualified partners' },
-  { icon: '📊', bg: '#E1F5EE', title: 'Regulatory support',    desc: 'Technical documentation, certifications, and compliance guidance' },
+  { icon: '🔧', bg: '#E1F5EE', title: 'Technical training', desc: 'Initial certification + ongoing upskilling for your installation team' },
+  { icon: '📡', bg: '#E1F5EE', title: 'GreenVision access', desc: 'System health monitoring platform for all deployed units in your territory' },
+  { icon: '🛡️', bg: '#E1F5EE', title: 'Lead protection', desc: 'Registered leads are protected — your pipeline is yours' },
+  { icon: '📦', bg: '#E1F5EE', title: 'Genuine parts supply', desc: 'Reliable supply of SGT-authorized components for service & warranty work' },
+  { icon: '📣', bg: '#E1F5EE', title: 'Marketing support', desc: 'Collateral, brand guidelines, and co-marketing for qualified partners' },
+  { icon: '📊', bg: '#E1F5EE', title: 'Regulatory support', desc: 'Technical documentation, certifications, and compliance guidance' },
 ];
 
 const COUNTRIES = [
@@ -244,8 +244,88 @@ export default function PartnershipPage() {
           </div>
         </div>
 
+        {/* ── LIVE PARTNERSHIPS ── */}
+        <div style={{ marginBottom: '2.5rem' }}>
+          <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--color-text-secondary, #6b7280)', marginBottom: '0.5rem' }}>
+            Live partnerships
+          </div>
+          <div style={{ fontSize: 20, fontWeight: 500, marginBottom: '0.5rem' }}>The network in motion</div>
+          <p style={{ fontSize: 13, color: 'var(--color-text-secondary, #6b7280)', marginBottom: '1.25rem', lineHeight: 1.6 }}>
+            Our international model isn't theoretical. Trident Nova is our first ASEAN integrator — and we're actively building the network across other geographies.
+          </p>
+
+          <a
+            href="https://tridentnova.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'block',
+              background: 'var(--color-background-primary, #ffffff)',
+              border: '0.5px solid var(--color-border-tertiary, #e5e7eb)',
+              borderRadius: 12,
+              padding: '1.25rem',
+              textDecoration: 'none',
+              color: 'inherit',
+              transition: 'border-color 0.15s',
+            }}
+            onMouseEnter={e => (e.currentTarget.style.borderColor = '#185FA5')}
+            onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--color-border-tertiary, #e5e7eb)')}
+          >
+            <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+              {/* Logo block */}
+              <div style={{
+                flexShrink: 0,
+                width: 96,
+                height: 96,
+                background: '#F3F8FD',
+                border: '0.5px solid #D6E6F5',
+                borderRadius: 10,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                overflow: 'hidden',
+              }}>
+                <img
+                  src="/images/about/partners/tridentnova_logo.png"
+                  alt="Trident Nova"
+                  style={{ maxWidth: '80%', maxHeight: '80%', objectFit: 'contain' }}
+                />
+              </div>
+
+              {/* Content */}
+              <div style={{ flex: 1, minWidth: 220 }}>
+                <div style={{
+                  display: 'inline-block',
+                  fontSize: 11,
+                  fontWeight: 500,
+                  padding: '3px 10px',
+                  borderRadius: 99,
+                  marginBottom: '0.6rem',
+                  background: '#E6F1FB',
+                  color: '#185FA5',
+                }}>
+                  ASEAN Integrator · Malaysia
+                </div>
+                <h3 style={{ fontSize: 16, fontWeight: 500, marginBottom: '0.35rem', color: 'var(--color-text-primary, #111)' }}>
+                  Trident Nova
+                </h3>
+                <p style={{ fontSize: 13, color: 'var(--color-text-secondary, #6b7280)', lineHeight: 1.6, marginBottom: '0.85rem' }}>
+                  Energy and decarbonisation platform serving transport, logistics, marine, and industrial customers across ASEAN. Trident Nova deploys SGT's GreenDrive™ technology under their Distributed service line — engineering-led pilots and measured deployments.
+                </p>
+                <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', fontSize: 12, color: 'var(--color-text-secondary, #6b7280)', marginBottom: '0.85rem' }}>
+                  <span><strong style={{ color: 'var(--color-text-primary, #111)', fontWeight: 500 }}>Coverage:</strong> Malaysia · ASEAN</span>
+                  <span><strong style={{ color: 'var(--color-text-primary, #111)', fontWeight: 500 }}>Focus:</strong> GreenDrive (fleet · genset · marine)</span>
+                </div>
+                <div style={{ fontSize: 12, color: '#185FA5', fontFamily: "'Space Mono', monospace", display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                  Visit tridentnova.com <span style={{ fontSize: 14 }}>↗</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
         {/* ── GEOGRAPHY TABS ── */}
-        <div>
+        <div style={{ borderTop: '0.5px solid var(--color-border-tertiary, #e5e7eb)', paddingTop: '2rem' }}>
           <div style={{ fontFamily: "'Space Mono', monospace", fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--color-text-secondary, #6b7280)', marginBottom: '0.5rem' }}>
             Partner geography
           </div>
@@ -301,7 +381,7 @@ export default function PartnershipPage() {
               {/* blue info box */}
               <div style={{ background: '#E6F1FB', border: '0.5px solid #85B7EB', borderRadius: 12, padding: '1rem 1.25rem', marginBottom: '1.5rem', display: 'flex', gap: 12, alignItems: 'flex-start' }}>
                 <div style={{ width: 28, height: 28, background: '#185FA5', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 2 }}>
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="white"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 1.5a5.5 5.5 0 110 11 5.5 5.5 0 010-11zM7.25 5v.75H6V7h1.25v4h1.5V7H10V5.75H8.75V5h-1.5z"/></svg>
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="white"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 1.5a5.5 5.5 0 110 11 5.5 5.5 0 010-11zM7.25 5v.75H6V7h1.25v4h1.5V7H10V5.75H8.75V5h-1.5z" /></svg>
                 </div>
                 <div>
                   <h4 style={{ fontSize: 14, fontWeight: 500, color: '#0C447C', marginBottom: 4 }}>International partnership requires end-to-end commitment</h4>
