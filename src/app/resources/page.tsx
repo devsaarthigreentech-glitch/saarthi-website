@@ -11,7 +11,7 @@ export default function ResourcesPage() {
       <section className="container mx-auto px-6 py-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         <a href="/resources/blogs" className="block rounded-lg border p-6 hover:shadow-lg">
           <h2 className="font-semibold text-xl mb-2">Blogs</h2>
-          <p className="text-slate-600 text-sm">Articles, insights, and updates from Saarthi GreenTech.</p>
+          <p className="text-slate-600 text-sm">Articles, insights, and updates from SGT HydroEdge.</p>
         </a>
         <a href="/resources/downloads" className="block rounded-lg border p-6 hover:shadow-lg">
           <h2 className="font-semibold text-xl mb-2">Downloads</h2>

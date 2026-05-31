@@ -79,7 +79,7 @@ export default function Hero() {
             <span className="text-green-400">from catalyst retrofits to full hydrogen systems.</span>
           </h1>
           <p className="mt-6 text-lg text-slate-200/90">
-            GreenLabs is Saarthi GreenTech’s R&D arm focused on practical, ROI-first hydrogen
+            GreenLabs is SGT HydroEdge’s R&D arm focused on practical, ROI-first hydrogen
             solutions that reduce emissions and deliver measurable economic value.
           </p>
 

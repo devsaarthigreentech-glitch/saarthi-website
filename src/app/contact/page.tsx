@@ -29,8 +29,8 @@
 import ContactForm from "@/components/Contact/ContactForm";
 
 export const metadata = {
-  title: "Contact Us — Saarthi GreenTech",
-  description: "Get in touch with Saarthi GreenTech for solutions, demos and partnerships.",
+  title: "Contact Us — SGT HydroEdge",
+  description: "Get in touch with SGT HydroEdge for solutions, demos and partnerships.",
 };
 
 export default function ContactPage() {

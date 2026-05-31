@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-  title: "GreenMarine — Hydrogen solutions for maritime | Saarthi GreenTech",
+  title: "GreenMarine — Hydrogen solutions for maritime | SGT HydroEdge",
   description:
     "GreenMarine — hydrogen retrofit suite for ships, tugs, port equipment and small craft. On-demand hydrogen, GreenVision integration, marine pilots and Class testing in progress.",
 };
@@ -93,7 +93,7 @@ export default function GreenMarinePage() {
         <div className="container mx-auto px-6 max-w-6xl">
           <h2 className="text-3xl font-extrabold text-center mb-4">The GreenMarine advantage</h2>
           <p className="text-center text-slate-600 max-w-3xl mx-auto mb-8">
-            Adaptation of Saarthi’s proven hydrogen retrofit platform for marine duty cycles — on-demand hydrogen, metered dosing, and integration with GreenVision for monitoring and verification.
+            Adaptation of SGT's proven hydrogen retrofit platform for marine duty cycles — on-demand hydrogen, metered dosing, and integration with GreenVision for monitoring and verification.
           </p>
 
           <div className="grid gap-6 md:grid-cols-2">

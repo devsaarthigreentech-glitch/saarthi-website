@@ -76,7 +76,7 @@ const PRODUCT_SLUG = "greendrive";
 const PRODUCT_TITLE = "GreenDrive — Hydrogen retrofits for commercial diesel engines | Saarthi GreenTech";
 const PRODUCT_NAME = "GreenDrive";
 const PRODUCT_DESC =
-  "GreenDrive by Saarthi GreenTech: retrofit hydrogen systems for vans, buses and heavy trucks — reduce emissions and save fuel.";
+  "GreenDrive by SGT HydroEdge: retrofit hydrogen systems for vans, buses and heavy trucks — reduce emissions and save fuel.";
 const PRODUCT_OG = `/images/${PRODUCT_SLUG}/og-image.jpg`;
 const PRODUCT_URL = `https://saarthigreentech.com/products/${PRODUCT_SLUG}`;
 
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     title: PRODUCT_NAME,
     description: PRODUCT_DESC,
     url: PRODUCT_URL,
-    siteName: "Saarthi GreenTech",
+    siteName: "SGT HydroEdge",
     images: [
       {
         url: PRODUCT_OG,
@@ -117,7 +117,7 @@ const productJsonLd = {
   url: PRODUCT_URL,
   brand: {
     "@type": "Organization",
-    name: "Saarthi GreenTech",
+    name: "SGT HydroEdge",
     url: "https://saarthigreentech.com",
   },
 };

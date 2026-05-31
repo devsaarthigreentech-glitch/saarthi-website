@@ -10,7 +10,7 @@
 //     return (
 //         <div className="bg-white dark:bg-gray-900 py-16 md:py-24 text-gray-800 dark:text-gray-200 font-inter">
 //             <div className="container mx-auto px-4 max-w-7xl">
-                
+
 //                 {/* Header Section */}
 //                 {/* <header className="text-center mb-16 md:mb-20">
 //                     <h1 className="text-sm font-semibold uppercase tracking-widest" style={{ color: brandColor }}>
@@ -31,7 +31,7 @@
 
 //                 {/* Main Content Grid: Image and Core Narrative */}
 //                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-start">
-                    
+
 //                     {/* Column 1: Founder's Image and Title */}
 //                     <div className="lg:col-span-1 flex flex-col items-center lg:items-start text-center lg:text-left top-8">
 //                         <div className="w-64 h-64 md:w-80 md:h-80 lg:w-full lg:h-auto lg:aspect-square overflow-hidden rounded-3xl shadow-2xl mb-6 transform transition-all duration-500 hover:scale-[1.01] hover:shadow-3xl">
@@ -54,7 +54,7 @@
 
 //                     {/* Column 2/3: Narrative Content */}
 //                     <div className="lg:col-span-2 space-y-8 text-lg leading-relaxed">
-                        
+
 //                         {/* Section 1: Purpose and Roots */}
 //                         <section className="p-6 rounded-2xl bg-gray-50 dark:bg-gray-800 shadow-lg">
 //                             <h4 className="text-2xl font-bold mb-3" style={{ color: brandColor }}>A Life Rooted in Purpose, Driven by Innovation</h4>
@@ -76,7 +76,7 @@
 //                                 In parallel, he has supported and invested in emerging founders, guided by a core belief that true leadership lies in empowering others to rise, carry the legacy forward, and multiply the growth and impact. He sees himself not just as a builder of companies, but as a builder of leaders.
 //                             </p>
 //                         </section>
-                        
+
 //                         {/* Section 3: The Saarthi Mission and Breakthrough */}
 //                         <section className="p-6 rounded-2xl border-l-4" style={{ borderColor: brandColor }}>
 //                             <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Engineering Sustainability for the Real World</h4>
@@ -118,7 +118,7 @@
 
 //                     </div>
 //                 </div>
-                
+
 //             </div>
 //         </div>
 //     );
@@ -153,33 +153,33 @@ const FounderStory = () => {
             {/* LEFT: Founder Image */}
 
             <div className="lg:col-span-1 flex flex-col items-center lg:items-start text-center lg:text-left top-8">
-                         <div className="w-64 h-64 md:w-80 md:h-80 lg:w-full lg:h-auto lg:aspect-square overflow-hidden rounded-3xl shadow-2xl mb-6 transform transition-all duration-500 hover:scale-[1.01] hover:shadow-3xl">
-                             <img 
-                                src={founderImageUrl} 
-                                alt="Portrait of Alok Kumar, Founder of Saarthi GreenTech" 
-                                className="w-full h-full object-cover transition duration-500 ease-in-out"
-                                // Fallback handler if image fails to load
-                                // onError={(e) => {
-                                //     e.currentTarget.onerror = null;
-                                //     e.currentTarget.src = "https://placehold.co/800x800/6b7280/ffffff?text=Founder+Photo";
-                                // }}
-                            />
-                        </div>
-                        <h3 className="text-3xl font-bold text-gray-900 dark:text-white">Alok Kumar</h3>
-                        <p className="text-xl font-medium" style={{ color: brandColor }}>
-                            CEO & Founder, Saarthi GreenTech
-                        </p>
-                    </div>
+              <div className="w-64 h-64 md:w-80 md:h-80 lg:w-full lg:h-auto lg:aspect-square overflow-hidden rounded-3xl shadow-2xl mb-6 transform transition-all duration-500 hover:scale-[1.01] hover:shadow-3xl">
+                <img
+                  src={founderImageUrl}
+                  alt="Portrait of Alok Kumar, Founder of SGT HydroEdge"
+                  className="w-full h-full object-cover transition duration-500 ease-in-out"
+                // Fallback handler if image fails to load
+                // onError={(e) => {
+                //     e.currentTarget.onerror = null;
+                //     e.currentTarget.src = "https://placehold.co/800x800/6b7280/ffffff?text=Founder+Photo";
+                // }}
+                />
+              </div>
+              <h3 className="text-3xl font-bold text-gray-900 dark:text-white">Alok Kumar</h3>
+              <p className="text-xl font-medium" style={{ color: brandColor }}>
+                CEO & Founder, SGT HydroEdge
+              </p>
+            </div>
 
             {/* RIGHT: Narrative */}
             <div className="lg:col-span-2 space-y-8 text-lg leading-relaxed">
-              
+
               <section className="p-6 rounded-2xl bg-gray-50 dark:bg-gray-800 shadow">
                 <h4 className="text-2xl font-bold mb-3" style={{ color: brandColor }}>
                   A Life Rooted in Purpose, Driven by Innovation
                 </h4>
                 <p className="mb-4">
-                  Today, Alok Kumar leads Saarthi GreenTech with a singular mission:
+                  Today, Alok Kumar leads SGT HydroEdge with a singular mission:
                   to make sustainability practical, accessible, and profitable
                   through hydrogen-enabled innovations for diesel engines.
                 </p>
@@ -196,7 +196,7 @@ const FounderStory = () => {
                 </h4>
                 <p>
                   Over a 35-year career, Alok has founded and scaled organisations
-                  including Sears India, SRKAY Consulting, and Saarthi.
+                  including Sears India, SRKAY Consulting, and SGT.
                 </p>
                 <p>
                   His leadership philosophy centers on empowering others — building
@@ -209,7 +209,7 @@ const FounderStory = () => {
                   Engineering Sustainability for the Real World
                 </h4>
                 <p>
-                  Saarthi GreenTech reflects years of experimentation, failures,
+                  SGT HydroEdge reflects years of experimentation, failures,
                   redesigns, and breakthroughs in hydrogen-assisted decarbonisation.
                 </p>
                 <p className="italic text-gray-600 dark:text-gray-400 mt-3">
@@ -223,7 +223,7 @@ const FounderStory = () => {
                   A Family Grounded in Shared Values
                 </h4>
                 <p>
-                  His wife, Nandani, serves as Director at Saarthi. Their son,
+                  His wife, Nandani, serves as Director at SGT HydroEdge. Their son,
                   studying Economics at King’s College London, represents the next
                   generation of purpose-driven leadership.
                 </p>

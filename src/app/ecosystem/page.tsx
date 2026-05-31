@@ -196,7 +196,7 @@ const SaarthiEcosystemPage = () => {
     const labsData: PillarProps = {
         icon: <IconFlaskConical className="w-8 h-8" />,
         subtitle: "GreenLabs™ — Hydrogen Retrofit Systems & DaaS Delivery",
-        intro: "GreenLabs is where innovation becomes reality. This pillar develops, engineers, manufactures and delivers Saarthi’s hydrogen-diesel hybrid retrofit systems for all types of diesel engines.",
+        intro: "GreenLabs is where innovation becomes reality. This pillar develops, engineers, manufactures and delivers SGT’s hydrogen-diesel hybrid retrofit systems for all types of diesel engines.",
         details: [
             {
                 heading: "Retrofit Hardware Engineering",
@@ -251,7 +251,7 @@ const SaarthiEcosystemPage = () => {
     const visionData: PillarProps = {
         icon: <IconGauge className="w-8 h-8" />,
         subtitle: "GreenVision™ — Real-Time Fuel, Emission & Carbon Intelligence",
-        intro: "GreenVision is the independent data backbone of Saarthi. It captures, verifies and visualises all performance metrics, ensuring that fuel savings and CO₂ reductions are auditable and transparent.",
+        intro: "GreenVision is the independent data backbone of SGT. It captures, verifies and visualises all performance metrics, ensuring that fuel savings and CO₂ reductions are auditable and transparent.",
         details: [
             {
                 heading: "Real-Time Telemetry",

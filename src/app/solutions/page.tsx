@@ -2,9 +2,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Our Solutions — Saarthi GreenTech | Consulting, Products, Projects, GreenLabs",
+  title: "Our Solutions — SGT HydroEdge | Consulting, Products, Projects, GreenLabs",
   description:
-    "Saarthi GreenTech delivers Consulting, Products, Projects and R&D (GreenLabs) to deliver measurable decarbonisation with verified ESG reporting and ROI.",
+    "SGT HydroEdge delivers Consulting, Products, Projects and R&D (GreenLabs) to deliver measurable decarbonisation with verified ESG reporting and ROI.",
 };
 
 export default function OurSolutionsPage() {

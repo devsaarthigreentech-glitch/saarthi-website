@@ -1,9 +1,9 @@
 import GallerySection from "@/components/Resources/Gallery/GallerySection";
 
 export const metadata = {
-  title: "Gallery — Saarthi GreenTech",
+  title: "Gallery — SGT HydroEdge",
   description:
-    "Event-based gallery of Saarthi GreenTech — launches, pilots, and industry engagements.",
+    "Event-based gallery of SGT HydroEdge — launches, pilots, and industry engagements.",
 };
 
 export default function GalleryPage() {

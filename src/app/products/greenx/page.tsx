@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "GreenX — Hydrogen retrofits for generators | Saarthi GreenTech",
+  title: "GreenX — Hydrogen retrofits for generators | SGT HydroEdge",
   description: "GreenX by Saarthi — retrofit hydrogen systems for 20-4000 kVA generators that reduce emissions and save fuel.",
 };
 
@@ -32,7 +32,7 @@ export default function GreenXPage() {
               Cleaner, smarter generators. <span className="text-green-400">One solution for every kVA.</span>
             </h1>
             <p className="mt-6 text-lg text-slate-200/90">
-              GreenX is Saarthi GreenTech’s hydrogen retrofit brand for diesel generators (20 kVA → 4000 kVA). It reduces emissions while saving fuel — an alternative to bulky post-treatment systems.
+              GreenX is SGT HydroEdge’s hydrogen retrofit brand for diesel generators (20 kVA → 4000 kVA). It reduces emissions while saving fuel — an alternative to bulky post-treatment systems.
             </p>
 
             {/* <div className="mt-8 flex flex-wrap gap-3">

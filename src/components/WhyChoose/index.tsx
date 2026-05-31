@@ -49,7 +49,7 @@ export default function WhyChoose() {
             ref={scrollRef}
             className="flex gap-6 overflow-x-auto snap-x snap-mandatory px-2 py-4 touch-pan-x hide-scrollbar"
             role="list"
-            aria-label="Why choose Saarthi GreenTech"
+            aria-label="Why choose SGT HydroEdge"
           >
             {whyData.map((it) => (
               <article

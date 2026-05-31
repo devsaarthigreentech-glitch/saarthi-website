@@ -11,7 +11,7 @@ export default function ClosingCTA() {
             Cut emissions. Save fuel. <span className="text-[var(--brand,#33A04A)]">Prove it with data.</span>
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-slate-600 dark:text-slate-300">
-            Join governments, enterprises, and innovators choosing Saarthi GreenTech to turn climate goals into real-world action.
+            Join governments, enterprises, and innovators choosing SGT HydroEdge to turn climate goals into real-world action.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">

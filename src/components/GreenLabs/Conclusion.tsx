@@ -3,7 +3,7 @@ export default function Conclusion() {
   return (
     <section className="py-16 md:py-20 lg:py-28 bg-white">
       <div className="container mx-auto px-6 lg:px-8 max-w-4xl text-center">
-        <h3 className="text-2xl font-bold text-slate-900">GreenLabs by Saarthi GreenTech</h3>
+        <h3 className="text-2xl font-bold text-slate-900">GreenLabs by SGT HydroEdge</h3>
         <p className="mt-4 text-slate-700">
           GreenLabs is the innovation backbone that tackles hydrogen’s toughest challenges — making decarbonisation not just
           possible but profitable through applied research, retrofit pathways, and system integration.

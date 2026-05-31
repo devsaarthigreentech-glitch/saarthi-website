@@ -3,8 +3,8 @@ import Link from "next/link";
 import MediaSection from "@/components/Resources/MediaSection/MediaSection"
 
 export const metadata = {
-  title: "Media & Press — Saarthi GreenTech",
-  description: "Press mentions, videos and partner logos for Saarthi GreenTech",
+  title: "Media & Press — SGT HydroEdge",
+  description: "Press mentions, videos and partner logos for SGT HydroEdge",
 };
 
 export default function MediaPage() {
@@ -21,7 +21,7 @@ export default function MediaPage() {
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-3xl md:text-4xl font-extrabold">Media & Press</h1>
           <p className="mt-3 text-slate-200 max-w-2xl mx-auto">
-            Coverage, partner mentions and video features about Saarthi GreenTech.
+            Coverage, partner mentions and video features about SGT HydroEdge.
           </p>
           <div className="mt-6">
             <Link href="/resources" className="inline-block rounded-full bg-[var(--brand,#33A04A)] px-5 py-2 text-black font-semibold">Back to Resources</Link>

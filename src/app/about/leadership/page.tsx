@@ -148,7 +148,7 @@ const advisory: Person[] = [
 		name: "Kundan Shendurkar",
 		role: "Advisor",
 		bio:
-		" A strategic catalyst driving SaaS and tech expansion, based in the Netherlands, accelerating and advancing Sarthi's Green Solutions across Europe.",
+		" A strategic catalyst driving SaaS and tech expansion, based in the Netherlands, accelerating and advancing SGT's solutions across Europe.",
 		photo: "/images/team/kundan-shendurkar.png",
 	},
 		{

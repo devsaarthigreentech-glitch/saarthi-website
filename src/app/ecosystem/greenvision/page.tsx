@@ -634,7 +634,7 @@ const GreenVisionPage = () => {
                         Every claim — fuel savings, CO₂ reduction, emission impact — is supported by clean, timestamped, tamper-proof data.
                     </p>
                     <p className="text-xl leading-relaxed" style={{ color: TEXT_MUTED }}>
-                        For enterprises, regulators and global partners, GreenVision becomes the verifiable proof behind Saarthi’s hydrogen retrofit technology.
+                        For enterprises, regulators and global partners, GreenVision becomes the verifiable proof behind SGT's hydrogen retrofit technology.
                     </p>
                 </div>
             </section>
