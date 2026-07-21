@@ -95,7 +95,7 @@ const downloadCategories = [
     description: "Safety data sheets and technical specifications",
     icon: <Settings className="w-5 h-5" />,
     files: [
-      { name: "GreenX Safety Data Sheet", path: "/downloads/technical/GreenX_Safety_Data_Sheet.pdf", size: "162 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
+      // { name: "GreenX Safety Data Sheet", path: "/downloads/technical/GreenX_Safety_Data_Sheet.pdf", size: "162 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
       { name: "SGT Boiler Technical Document", path: "/downloads/technical/SGT_Boiler_Technical_Document.pdf", size: "340 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
       { name: "SGT GreenDrive Technical Document", path: "/downloads/technical/SGT_GreenDrive_Technical Document.pdf", size: "380 KB", tag: "Logistics", tagIcon: <Truck className="w-3 h-3" /> },
       { name: "SGT GreenX DG Technical Document", path: "/downloads/technical/SGT_GreenX_DG_Technical_document.pdf", size: "350 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
