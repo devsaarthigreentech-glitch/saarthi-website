@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 // ─── TYPES ────────────────────────────────────────────────────────────────────
 
@@ -12,6 +14,24 @@ interface TierCard {
   desc: string;
   details: string[];
   isGlobal?: boolean;
+}
+
+interface LivePartner {
+  id: string;
+  name: string;
+  badge: string;
+  badgeColor: 'green' | 'blue';
+  desc: string;
+  /** Logo file under /public; falls back to an initials monogram when absent. */
+  logo?: string;
+  initials: string;
+  meta: { label: string; value: string }[];
+  /** Offices shown as a footnote line. */
+  offices?: string;
+  href?: string;
+  linkLabel?: string;
+  /** Optional photo from the gallery, shown below the card and linking back to it. */
+  photo?: { src: string; alt: string; caption: string };
 }
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
@@ -94,6 +114,42 @@ const GLOBAL_TIERS: TierCard[] = [
   },
 ];
 
+const LIVE_PARTNERS: LivePartner[] = [
+  {
+    id: 'lp-cps-triumph',
+    name: 'Continental Power System & Triumph Engineer',
+    badge: 'Authorised Dealer · Rajasthan, India',
+    badgeColor: 'green',
+    initials: 'CP',
+    desc: "Our authorised dealer for Rajasthan, bringing SGT's Hydrogen-on-Demand retrofit systems to diesel generator and industrial customers across the state. Backed by an established power systems and engineering practice, with sales and service reach extending from Jaipur into the North India corridor.",
+    meta: [
+      { label: 'Coverage', value: 'Rajasthan · North India' },
+      { label: 'Focus', value: 'GreenX (DG sets · industrial)' },
+    ],
+    offices: 'Registered office: Chitrakoot Scheme, Ajmer Road, Jaipur 302021, Rajasthan · Branch office: Vishwakarma Colony, New Delhi 110044',
+    photo: {
+      src: '/images/gallery/event-7/cover.jpeg',
+      alt: 'SGT HydroEdge and Continental Power Systems teams at the dealership certificate handover, Pune',
+      caption: 'Dealership certificate handover at our Pune facility, July 2026',
+    },
+  },
+  {
+    id: 'lp-tridentnova',
+    name: 'Trident Nova',
+    badge: 'ASEAN Integrator · Malaysia',
+    badgeColor: 'blue',
+    logo: '/images/about/partners/tridentnova_logo.png',
+    initials: 'TN',
+    desc: "Energy and decarbonisation platform serving transport, logistics, marine, and industrial customers across ASEAN. Trident Nova deploys SGT's GreenDrive™ technology under their Distributed service line — engineering-led pilots and measured deployments.",
+    meta: [
+      { label: 'Coverage', value: 'Malaysia · ASEAN' },
+      { label: 'Focus', value: 'GreenDrive (fleet · genset · marine)' },
+    ],
+    href: 'https://tridentnova.com',
+    linkLabel: 'Visit tridentnova.com',
+  }
+];
+
 const OFFER_ITEMS = [
   { icon: '🔧', bg: '#E1F5EE', title: 'Technical training', desc: 'Initial certification + ongoing upskilling for your installation team' },
   { icon: '📡', bg: '#E1F5EE', title: 'GreenVision access', desc: 'System health monitoring platform for all deployed units in your territory' },
@@ -116,6 +172,165 @@ const PARTNER_TYPES = [
   'Strategic / JV Partner',
   'Not sure — want to discuss',
 ];
+
+// ─── LIVE PARTNER CARD COMPONENT ──────────────────────────────────────────────
+
+function LivePartnerCard({ partner }: { partner: LivePartner }) {
+  const isBlue = partner.badgeColor === 'blue';
+  const accent = isBlue ? '#185FA5' : '#1D9E75';
+  const idle = 'var(--color-border-tertiary, #e5e7eb)';
+
+  const body = (
+    <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+      {/* Logo block */}
+      <div style={{
+        flexShrink: 0,
+        width: 96,
+        height: 96,
+        background: isBlue ? '#F3F8FD' : '#F2FAF7',
+        border: `0.5px solid ${isBlue ? '#D6E6F5' : '#CDEBE0'}`,
+        borderRadius: 10,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow: 'hidden',
+      }}>
+        {partner.logo ? (
+          <img
+            src={partner.logo}
+            alt={partner.name}
+            style={{ maxWidth: '80%', maxHeight: '80%', objectFit: 'contain' }}
+          />
+        ) : (
+          <span style={{
+            fontFamily: "'Space Mono', monospace",
+            fontSize: 26,
+            letterSpacing: '0.04em',
+            color: accent,
+          }}>
+            {partner.initials}
+          </span>
+        )}
+      </div>
+
+      {/* Content */}
+      <div style={{ flex: 1, minWidth: 220 }}>
+        <div style={{
+          display: 'inline-block',
+          fontSize: 11,
+          fontWeight: 500,
+          padding: '3px 10px',
+          borderRadius: 99,
+          marginBottom: '0.6rem',
+          background: isBlue ? '#E6F1FB' : '#E1F5EE',
+          color: isBlue ? '#185FA5' : '#0F6E56',
+        }}>
+          {partner.badge}
+        </div>
+        <h3 style={{ fontSize: 16, fontWeight: 500, marginBottom: '0.35rem', color: 'var(--color-text-primary, #111)' }}>
+          {partner.name}
+        </h3>
+        <p style={{ fontSize: 13, color: 'var(--color-text-secondary, #6b7280)', lineHeight: 1.6, marginBottom: '0.85rem' }}>
+          {partner.desc}
+        </p>
+        <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', fontSize: 12, color: 'var(--color-text-secondary, #6b7280)', marginBottom: partner.offices || partner.href ? '0.85rem' : 0 }}>
+          {partner.meta.map((m, i) => (
+            <span key={i}>
+              <strong style={{ color: 'var(--color-text-primary, #111)', fontWeight: 500 }}>{m.label}:</strong> {m.value}
+            </span>
+          ))}
+        </div>
+        {partner.offices && (
+          <div style={{ fontSize: 11.5, color: 'var(--color-text-secondary, #6b7280)', lineHeight: 1.6 }}>
+            {partner.offices}
+          </div>
+        )}
+        {partner.href && (
+          <div style={{ fontSize: 12, color: accent, fontFamily: "'Space Mono', monospace", display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+            {partner.linkLabel} <span style={{ fontSize: 14 }}>↗</span>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+
+  const shell: React.CSSProperties = {
+    display: 'block',
+    background: 'var(--color-background-primary, #ffffff)',
+    border: `0.5px solid ${idle}`,
+    borderRadius: 12,
+    padding: '1.25rem',
+    textDecoration: 'none',
+    color: 'inherit',
+    transition: 'border-color 0.15s',
+  };
+
+  // Only partners with a public site become clickable cards.
+  const card = partner.href ? (
+    <a
+      href={partner.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={shell}
+      onMouseEnter={e => (e.currentTarget.style.borderColor = accent)}
+      onMouseLeave={e => (e.currentTarget.style.borderColor = idle)}
+    >
+      {body}
+    </a>
+  ) : (
+    <div style={shell}>{body}</div>
+  );
+
+  if (!partner.photo) return card;
+
+  // Photo lives in the gallery — shown here as a reference that links back to it.
+  return (
+    <div>
+      {card}
+      <Link
+        href="/resources/gallery"
+        style={{
+          display: 'block',
+          marginTop: '0.75rem',
+          border: `0.5px solid ${idle}`,
+          borderRadius: 12,
+          overflow: 'hidden',
+          textDecoration: 'none',
+          color: 'inherit',
+          transition: 'border-color 0.15s',
+        }}
+        onMouseEnter={e => (e.currentTarget.style.borderColor = accent)}
+        onMouseLeave={e => (e.currentTarget.style.borderColor = idle)}
+      >
+        <Image
+          src={partner.photo.src}
+          alt={partner.photo.alt}
+          width={1600}
+          height={900}
+          sizes="(max-width: 860px) 100vw, 860px"
+          style={{ display: 'block', width: '100%', height: 'auto' }}
+        />
+        <div style={{
+          display: 'flex',
+          gap: 12,
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          flexWrap: 'wrap',
+          padding: '0.7rem 1rem',
+          borderTop: `0.5px solid ${idle}`,
+          background: 'var(--color-background-secondary, #f9fafb)',
+        }}>
+          <span style={{ fontSize: 12, color: 'var(--color-text-secondary, #6b7280)', lineHeight: 1.5 }}>
+            {partner.photo.caption}
+          </span>
+          <span style={{ fontSize: 12, color: accent, fontFamily: "'Space Mono', monospace", whiteSpace: 'nowrap' }}>
+            View in gallery →
+          </span>
+        </div>
+      </Link>
+    </div>
+  );
+}
 
 // ─── TIER CARD COMPONENT ──────────────────────────────────────────────────────
 
@@ -251,77 +466,14 @@ export default function PartnershipPage() {
           </div>
           <div style={{ fontSize: 20, fontWeight: 500, marginBottom: '0.5rem' }}>The network in motion</div>
           <p style={{ fontSize: 13, color: 'var(--color-text-secondary, #6b7280)', marginBottom: '1.25rem', lineHeight: 1.6 }}>
-            Our international model isn't theoretical. Trident Nova is our first ASEAN integrator — and we're actively building the network across other geographies.
+            Our partner model isn't theoretical. Trident Nova is our first ASEAN integrator and Continental Power System & Triumph Engineer carries the programme into Rajasthan — and we're actively building the network across other geographies.
           </p>
 
-          <a
-            href="https://tridentnova.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'block',
-              background: 'var(--color-background-primary, #ffffff)',
-              border: '0.5px solid var(--color-border-tertiary, #e5e7eb)',
-              borderRadius: 12,
-              padding: '1.25rem',
-              textDecoration: 'none',
-              color: 'inherit',
-              transition: 'border-color 0.15s',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.borderColor = '#185FA5')}
-            onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--color-border-tertiary, #e5e7eb)')}
-          >
-            <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'flex-start', flexWrap: 'wrap' }}>
-              {/* Logo block */}
-              <div style={{
-                flexShrink: 0,
-                width: 96,
-                height: 96,
-                background: '#F3F8FD',
-                border: '0.5px solid #D6E6F5',
-                borderRadius: 10,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                overflow: 'hidden',
-              }}>
-                <img
-                  src="/images/about/partners/tridentnova_logo.png"
-                  alt="Trident Nova"
-                  style={{ maxWidth: '80%', maxHeight: '80%', objectFit: 'contain' }}
-                />
-              </div>
-
-              {/* Content */}
-              <div style={{ flex: 1, minWidth: 220 }}>
-                <div style={{
-                  display: 'inline-block',
-                  fontSize: 11,
-                  fontWeight: 500,
-                  padding: '3px 10px',
-                  borderRadius: 99,
-                  marginBottom: '0.6rem',
-                  background: '#E6F1FB',
-                  color: '#185FA5',
-                }}>
-                  ASEAN Integrator · Malaysia
-                </div>
-                <h3 style={{ fontSize: 16, fontWeight: 500, marginBottom: '0.35rem', color: 'var(--color-text-primary, #111)' }}>
-                  Trident Nova
-                </h3>
-                <p style={{ fontSize: 13, color: 'var(--color-text-secondary, #6b7280)', lineHeight: 1.6, marginBottom: '0.85rem' }}>
-                  Energy and decarbonisation platform serving transport, logistics, marine, and industrial customers across ASEAN. Trident Nova deploys SGT's GreenDrive™ technology under their Distributed service line — engineering-led pilots and measured deployments.
-                </p>
-                <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', fontSize: 12, color: 'var(--color-text-secondary, #6b7280)', marginBottom: '0.85rem' }}>
-                  <span><strong style={{ color: 'var(--color-text-primary, #111)', fontWeight: 500 }}>Coverage:</strong> Malaysia · ASEAN</span>
-                  <span><strong style={{ color: 'var(--color-text-primary, #111)', fontWeight: 500 }}>Focus:</strong> GreenDrive (fleet · genset · marine)</span>
-                </div>
-                <div style={{ fontSize: 12, color: '#185FA5', fontFamily: "'Space Mono', monospace", display: 'inline-flex', alignItems: 'center', gap: 4 }}>
-                  Visit tridentnova.com <span style={{ fontSize: 14 }}>↗</span>
-                </div>
-              </div>
-            </div>
-          </a>
+          <div style={{ display: 'grid', gap: '1rem' }}>
+            {LIVE_PARTNERS.map(partner => (
+              <LivePartnerCard key={partner.id} partner={partner} />
+            ))}
+          </div>
         </div>
 
         {/* ── GEOGRAPHY TABS ── */}
