@@ -28,6 +28,8 @@ interface LivePartner {
   meta: { label: string; value: string }[];
   /** Offices shown as a footnote line. */
   offices?: string;
+  /** Contact addresses; rendered as mailto links on non-linked cards. */
+  emails?: string[];
   href?: string;
   linkLabel?: string;
   /** Optional photo from the gallery, shown below the card and linking back to it. */
@@ -121,12 +123,13 @@ const LIVE_PARTNERS: LivePartner[] = [
     badge: 'Authorised Dealer · Rajasthan, India',
     badgeColor: 'green',
     initials: 'CP',
-    desc: "Our authorised dealer for Rajasthan, bringing SGT's Hydrogen-on-Demand retrofit systems to diesel generator and industrial customers across the state. Backed by an established power systems and engineering practice, with sales and service reach extending from Jaipur into the North India corridor.",
+    desc: "Our exclusive authorised dealer for Rajasthan, bringing SGT's Hydrogen-on-Demand retrofit systems to diesel generator and industrial customers across the state. Backed by an established power systems and engineering practice operating out of Jaipur.",
     meta: [
-      { label: 'Coverage', value: 'Rajasthan · North India' },
+      { label: 'Coverage', value: 'Exclusive — Rajasthan' },
       { label: 'Focus', value: 'GreenX (DG sets · industrial)' },
     ],
     offices: 'Registered office: Chitrakoot Scheme, Ajmer Road, Jaipur 302021, Rajasthan · Branch office: Vishwakarma Colony, New Delhi 110044',
+    emails: ['cpsdgsets@gmail.com'],
     photo: {
       src: '/images/gallery/event-7/cover.jpeg',
       alt: 'SGT HydroEdge and Continental Power Systems teams at the dealership certificate handover, Pune',
@@ -233,13 +236,31 @@ function LivePartnerCard({ partner }: { partner: LivePartner }) {
         <p style={{ fontSize: 13, color: 'var(--color-text-secondary, #6b7280)', lineHeight: 1.6, marginBottom: '0.85rem' }}>
           {partner.desc}
         </p>
-        <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', fontSize: 12, color: 'var(--color-text-secondary, #6b7280)', marginBottom: partner.offices || partner.href ? '0.85rem' : 0 }}>
+        <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', fontSize: 12, color: 'var(--color-text-secondary, #6b7280)', marginBottom: partner.offices || partner.emails || partner.href ? '0.85rem' : 0 }}>
           {partner.meta.map((m, i) => (
             <span key={i}>
               <strong style={{ color: 'var(--color-text-primary, #111)', fontWeight: 500 }}>{m.label}:</strong> {m.value}
             </span>
           ))}
         </div>
+        {partner.emails && partner.emails.length > 0 && (
+          <div style={{ fontSize: 12, color: 'var(--color-text-secondary, #6b7280)', lineHeight: 1.6, marginBottom: partner.offices ? '0.35rem' : 0 }}>
+            <strong style={{ color: 'var(--color-text-primary, #111)', fontWeight: 500 }}>Contact:</strong>{' '}
+            {partner.emails.map((email, i) => (
+              <span key={email}>
+                {i > 0 && <span style={{ color: 'var(--color-border-secondary, #d1d5db)' }}> · </span>}
+                {/* A linked card is already an <a>; nesting anchors is invalid, so plain text there. */}
+                {partner.href ? (
+                  <span>{email}</span>
+                ) : (
+                  <a href={`mailto:${email}`} style={{ color: accent, textDecoration: 'none' }}>
+                    {email}
+                  </a>
+                )}
+              </span>
+            ))}
+          </div>
+        )}
         {partner.offices && (
           <div style={{ fontSize: 11.5, color: 'var(--color-text-secondary, #6b7280)', lineHeight: 1.6 }}>
             {partner.offices}
