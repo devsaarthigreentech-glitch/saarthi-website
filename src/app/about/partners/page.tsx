@@ -32,6 +32,8 @@ interface LivePartner {
   emails?: string[];
   href?: string;
   linkLabel?: string;
+  /** Slug of this partner's storefront at /partners/<slug>, when they have one. */
+  storeSlug?: string;
   /** Optional photo from the gallery, shown below the card and linking back to it. */
   photo?: { src: string; alt: string; caption: string };
 }
@@ -130,6 +132,7 @@ const LIVE_PARTNERS: LivePartner[] = [
     ],
     offices: 'Registered office: Chitrakoot Scheme, Ajmer Road, Jaipur 302021, Rajasthan · Branch office: Vishwakarma Colony, New Delhi 110044',
     emails: ['cpsdgsets@gmail.com'],
+    storeSlug: 'continental-power-systems',
     photo: {
       src: '/images/gallery/event-7/cover.jpeg',
       alt: 'SGT HydroEdge and Continental Power Systems teams at the dealership certificate handover, Pune',
@@ -302,12 +305,41 @@ function LivePartnerCard({ partner }: { partner: LivePartner }) {
     <div style={shell}>{body}</div>
   );
 
-  if (!partner.photo) return card;
+  if (!partner.photo && !partner.storeSlug) return card;
 
-  // Photo lives in the gallery — shown here as a reference that links back to it.
+  // Storefront CTA and gallery photo sit outside the card shell: a linked card
+  // is already an <a>, and nesting anchors is invalid HTML.
   return (
     <div>
       {card}
+
+      {partner.storeSlug && (
+        <Link
+          href={`/partners/${partner.storeSlug}`}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: 12,
+            flexWrap: 'wrap',
+            marginTop: '0.75rem',
+            padding: '0.85rem 1.15rem',
+            border: `0.5px solid ${accent}`,
+            borderRadius: 12,
+            background: isBlue ? '#F3F8FD' : '#F2FAF7',
+            textDecoration: 'none',
+            color: 'inherit',
+          }}
+        >
+          <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--color-text-primary, #111)' }}>
+            Browse the {partner.name.split('&')[0].trim()} storefront
+          </span>
+          <span style={{ fontSize: 12, color: accent, fontFamily: "'Space Mono', monospace", whiteSpace: 'nowrap' }}>
+            View products →
+          </span>
+        </Link>
+      )}
+      {partner.photo && (
       <Link
         href="/resources/gallery"
         style={{
@@ -349,6 +381,7 @@ function LivePartnerCard({ partner }: { partner: LivePartner }) {
           </span>
         </div>
       </Link>
+      )}
     </div>
   );
 }
