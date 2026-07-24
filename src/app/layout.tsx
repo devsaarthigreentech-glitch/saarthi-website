@@ -47,18 +47,15 @@ export default function RootLayout({
       </head>
 
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
-        <Providers>
-          <Header />
-          {children}
-          <Footer />
-          <ScrollToTop />
-          {/* <ChatbotWidget /> */}
-        </Providers>
+        <Header />
+        {children}
+        <Footer />
+        <ScrollToTop />
+        {/* <ChatbotWidget /> */}
       </body>
     </html>
   );
 }
 
-import { Providers } from "./providers";
 import ChatbotWidget from "@/components/Chatbot/page";
 
