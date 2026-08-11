@@ -35,6 +35,10 @@ export interface PartnerStore {
   offices: { label: string; address: string }[];
   emails: string[];
   phones?: string[];
+  /** Dealer's own website, shown as an outbound link. */
+  website?: { label: string; url: string };
+  /** Show the GreenX DG-set model range table (names + ratings, no pricing). */
+  showGreenXRange?: boolean;
   /** Photo from the gallery, used as the storefront banner. */
   banner?: { src: string; alt: string; caption?: string };
   /** What this dealer does locally for customers. */
@@ -49,11 +53,13 @@ export const partnerStores: PartnerStore[] = [
     name: "Continental Power System & Triumph Engineer",
     shortName: "Continental Power Systems",
     initials: "CP",
+    // Drop the dealer logo at the path below and uncomment to replace the monogram:
+    // logo: "/images/about/partners/continental-power-system-logo.png",
     badge: "Exclusive Authorised Dealer · Rajasthan",
     tagline:
       "Hydrogen-on-Demand retrofits for diesel generators and industrial plant across Rajasthan.",
     about:
-      "Continental Power System & Triumph Engineer is SGT HydroEdge's exclusive authorised dealer for Rajasthan. Operating out of Jaipur with an established power systems and engineering practice, they bring SGT's patent-approved CHFA hydrogen retrofit technology to diesel generator operators, manufacturing plants and industrial customers across the state — handling sales, installation, commissioning and after-sales service locally.",
+      "Continental Power System and its sister concern Triumph Engineer have supplied diesel generating sets since 2005, serving customers across North India from their registered office in Jaipur and a branch office in New Delhi. Their range spans CPCB IV+ certified silent gensets from 7.5 to 750 kVA and CPCB II certified sets up to 2250 kVA, supplied with AMF and synchronising panels, complete installation, testing and commissioning, and warranty and post-warranty support. As SGT HydroEdge's exclusive authorised dealer for Rajasthan, they bring that DG expertise to our patent-approved CHFA hydrogen retrofit technology — sizing, installing and servicing GreenX on the generators their customers already run.",
     coverage: "Exclusive — Rajasthan",
     focus: "GreenX (DG sets · industrial)",
     appointed: "July 2026",
@@ -69,6 +75,9 @@ export const partnerStores: PartnerStore[] = [
       },
     ],
     emails: ["cpsdgsets@gmail.com"],
+    phones: ["+91 93145 07773", "+91 99288 77773"],
+    website: { label: "continentalpowersystem.com", url: "https://www.continentalpowersystem.com" },
+    showGreenXRange: true,
     banner: {
       src: "/images/gallery/event-7/cover.jpeg",
       alt: "SGT HydroEdge and Continental Power Systems teams at the dealership certificate handover, Pune",
@@ -76,8 +85,8 @@ export const partnerStores: PartnerStore[] = [
     },
     capabilities: [
       {
-        title: "Local sales & site survey",
-        desc: "On-site assessment of your DG sets and load profile to size the right GreenX unit.",
+        title: "Sizing & site survey",
+        desc: "On-site assessment of your DG sets and load profile to match the right GreenX model to each generator.",
       },
       {
         title: "Installation & commissioning",
@@ -93,9 +102,10 @@ export const partnerStores: PartnerStore[] = [
       },
     ],
     credentials: [
+      "DG specialists since 2005",
       "Patent-approved CHFA technology",
       "ARAI validated · NABL tested",
-      "ISO certified manufacturer",
+      "Fits 30–2500 kVA DG sets",
       "No engine modification",
     ],
   },

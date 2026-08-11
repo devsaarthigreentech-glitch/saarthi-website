@@ -12,6 +12,41 @@ export interface Product {
   stat: string;
 }
 
+/** A GreenX variant sized to a DG set rating. */
+export interface GreenXModel {
+  model: string;
+  /** DG set rating this model is matched to, in kVA. */
+  rating: string;
+}
+
+// GreenX model range for the DG Set category, matched by generator rating.
+// Commercial terms (pricing, dealer margins) are deliberately NOT held here —
+// this list is public-facing and must stay free of price data.
+export const greenXModels: GreenXModel[] = [
+  { model: "GreenX-30", rating: "30" },
+  { model: "GreenX-40", rating: "40" },
+  { model: "GreenX-50", rating: "50" },
+  { model: "GreenX-60", rating: "58.5 / 60" },
+  { model: "GreenX-80", rating: "82.5" },
+  { model: "GreenX-100", rating: "100" },
+  { model: "GreenX-125", rating: "125" },
+  { model: "GreenX-160", rating: "160" },
+  { model: "GreenX-180", rating: "180" },
+  { model: "GreenX-200", rating: "200" },
+  { model: "GreenX-250", rating: "250" },
+  { model: "GreenX-320", rating: "320" },
+  { model: "GreenX-400", rating: "380 / 400" },
+  { model: "GreenX-500", rating: "500" },
+  { model: "GreenX-650", rating: "625 / 650" },
+  { model: "GreenX-750", rating: "750" },
+  { model: "GreenX-1000", rating: "1010" },
+  { model: "GreenX-1250", rating: "1250" },
+  { model: "GreenX-1500", rating: "1500" },
+  { model: "GreenX-1800", rating: "1700 / 1750 / 1800" },
+  { model: "GreenX-2000", rating: "2000" },
+  { model: "GreenX-2500", rating: "2500" },
+];
+
 export const products: Product[] = [
   {
     id: "greenx-1",

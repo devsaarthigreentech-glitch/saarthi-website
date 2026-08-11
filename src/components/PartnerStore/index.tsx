@@ -5,11 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   BadgeCheck, MapPin, Mail, ChevronRight, ArrowRight, Factory,
-  Wrench, Headphones, Activity, ShieldCheck, Send, Building2,
+  Wrench, Headphones, Activity, ShieldCheck, Send, Building2, Globe, Phone,
 } from "lucide-react";
 
 import type { PartnerStore } from "@/data/partnerStores";
-import type { Product } from "@/data/productCatalog";
+import { greenXModels, type Product } from "@/data/productCatalog";
 
 const CAPABILITY_ICONS = [
   <MapPin key="a" className="w-4 h-4" />,
@@ -95,8 +95,13 @@ export default function PartnerStorefront({
                   Request a quote <ArrowRight className="w-4 h-4" />
                 </a>
                 <a href={`mailto:${store.emails[0]}`} className="inline-flex items-center gap-2 bg-white/10 border border-white/25 text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-white/20 transition-all">
-                  <Mail className="w-4 h-4" /> Contact dealer
+                  <Mail className="w-4 h-4" /> Email dealer
                 </a>
+                {store.phones?.[0] && (
+                  <a href={`tel:${store.phones[0].replace(/\s/g, "")}`} className="inline-flex items-center gap-2 bg-white/10 border border-white/25 text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-white/20 transition-all">
+                    <Phone className="w-4 h-4" /> {store.phones[0]}
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -187,6 +192,52 @@ export default function PartnerStorefront({
         </div>
       </section>
 
+      {/* ── GREENX MODEL RANGE ── */}
+      {store.showGreenXRange && (
+        <section className="border-t border-gray-100">
+          <div className="max-w-6xl mx-auto px-6 py-14">
+            <h2 className="text-2xl font-bold text-gray-900 mb-1">GreenX model range</h2>
+            <p className="text-gray-500 mb-7 max-w-2xl">
+              A GreenX model for every DG set from 30 kVA to 2500 kVA. {store.shortName} will confirm
+              the right model for your generator rating and duty cycle.
+            </p>
+
+            <div className="border border-gray-200 rounded-2xl overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm border-collapse">
+                  <thead>
+                    <tr className="bg-[#1B6B3D] text-white text-left">
+                      <th className="px-5 py-3 font-semibold whitespace-nowrap">Model</th>
+                      <th className="px-5 py-3 font-semibold whitespace-nowrap">DG set rating (kVA)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {greenXModels.map((m, i) => (
+                      <tr key={m.model} className={i % 2 ? "bg-gray-50" : "bg-white"}>
+                        <td className="px-5 py-2.5 font-semibold text-gray-900 whitespace-nowrap border-t border-gray-100">
+                          {m.model}
+                        </td>
+                        <td className="px-5 py-2.5 text-gray-600 whitespace-nowrap border-t border-gray-100">
+                          {m.rating}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="flex items-center justify-between gap-3 flex-wrap px-5 py-3 bg-gray-50 border-t border-gray-200">
+                <span className="text-xs text-gray-500">
+                  {greenXModels.length} models · pricing on request
+                </span>
+                <a href="#enquire" className="text-xs font-semibold text-[#1B6B3D] hover:underline whitespace-nowrap">
+                  Request pricing →
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ── WHAT THIS DEALER DOES ── */}
       <section className="bg-gray-50 border-y border-gray-100">
         <div className="max-w-6xl mx-auto px-6 py-14">
@@ -236,6 +287,22 @@ export default function PartnerStorefront({
                   ))}
                 </div>
               </div>
+              {store.website && (
+                <div className="flex gap-3">
+                  <Globe className="w-4 h-4 text-[#1B6B3D] mt-0.5 shrink-0" />
+                  <div>
+                    <p className="text-xs font-semibold text-gray-900">Dealer website</p>
+                    <a
+                      href={store.website.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-[#1B6B3D] hover:underline"
+                    >
+                      {store.website.label} ↗
+                    </a>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
