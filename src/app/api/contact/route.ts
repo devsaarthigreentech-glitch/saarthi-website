@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { name, email, message, company, phone, product, partner, partnerName } = body ?? {};
+    const { name, email, message } = body ?? {};
 
     // Basic validation
     if (!name || !email || !message) {
@@ -12,18 +12,12 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    // Build payload forwarded to n8n.
-    // Partner-storefront enquiries carry attribution so leads can be routed to
-    // the right dealer; the plain contact form omits these and is unchanged.
+    // Build payload forwarded to n8n
     const payload = {
       name,
       email,
       message,
-      ...(company ? { company } : {}),
-      ...(phone ? { phone } : {}),
-      ...(product ? { product } : {}),
-      ...(partner ? { partner, partnerName } : {}),
-      source: partner ? `partner-store:${partner}` : "website-contact",
+      source: "website-contact",
       timestamp: new Date().toISOString(),
     };
 

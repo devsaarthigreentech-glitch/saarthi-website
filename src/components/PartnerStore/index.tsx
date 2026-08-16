@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   BadgeCheck, MapPin, Mail, ChevronRight, ArrowRight, Factory,
-  Wrench, Headphones, Activity, ShieldCheck, Send, Building2, Globe, Phone,
+  Wrench, Headphones, Activity, ShieldCheck, Building2, Globe, Phone,
 } from "lucide-react";
 
 import type { PartnerStore } from "@/data/partnerStores";
@@ -91,9 +91,9 @@ export default function PartnerStorefront({
               </div>
 
               <div className="flex flex-wrap gap-3 mt-6">
-                <a href="#enquire" className="inline-flex items-center gap-2 bg-[#1B6B3D] text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:ps-bg-green-dark transition-all">
+                <Link href="/contact" className="inline-flex items-center gap-2 bg-[#1B6B3D] text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:ps-bg-green-dark transition-all">
                   Request a quote <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
                 <a href={`mailto:${store.emails[0]}`} className="inline-flex items-center gap-2 bg-white/10 border border-white/25 text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-white/20 transition-all">
                   <Mail className="w-4 h-4" /> Email dealer
                 </a>
@@ -183,9 +183,9 @@ export default function PartnerStorefront({
                   <span className="text-[10px] font-semibold text-[#1B6B3D] bg-[#1B6B3D14] px-2 py-1 rounded-full whitespace-nowrap">{p.stat}</span>
                 </div>
                 <p className="text-sm text-gray-500 leading-relaxed flex-1">{p.description}</p>
-                <a href="#enquire" className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-[#1B6B3D] hover:gap-2.5 transition-all">
+                <Link href="/contact" className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-[#1B6B3D] hover:gap-2.5 transition-all">
                   Enquire <ArrowRight className="w-3.5 h-3.5" />
-                </a>
+                </Link>
               </div>
             </article>
           ))}
@@ -229,9 +229,9 @@ export default function PartnerStorefront({
                 <span className="text-xs text-gray-500">
                   {greenXModels.length} models · pricing on request
                 </span>
-                <a href="#enquire" className="text-xs font-semibold text-[#1B6B3D] hover:underline whitespace-nowrap">
+                <Link href="/contact" className="text-xs font-semibold text-[#1B6B3D] hover:underline whitespace-nowrap">
                   Request pricing →
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -258,7 +258,7 @@ export default function PartnerStorefront({
       </section>
 
       {/* ── ABOUT + ENQUIRY ── */}
-      <section id="enquire" className="max-w-6xl mx-auto px-6 py-14 scroll-mt-8">
+      <section className="max-w-6xl mx-auto px-6 py-14">
         <div className="grid lg:grid-cols-2 gap-10">
           {/* About */}
           <div>
@@ -306,8 +306,38 @@ export default function PartnerStorefront({
             </div>
           </div>
 
-          {/* Enquiry form */}
-          <EnquiryForm store={store} catalogue={catalogue} />
+          {/* Enquiry CTA — routes to the single site-wide contact form */}
+          <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8 h-fit">
+            <h2 className="text-xl font-bold text-gray-900 mb-2">Request a quote</h2>
+            <p className="text-sm text-gray-500 leading-relaxed mb-6">
+              Send your requirement to SGT HydroEdge and we&apos;ll route it to {store.shortName}
+              {" "}for your territory. Mention your DG set rating and location so we can size the
+              right GreenX model.
+            </p>
+
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 w-full bg-[#1B6B3D] text-white px-6 py-3 rounded-lg text-sm font-bold hover:ps-bg-green-dark transition-all"
+            >
+              Go to contact form <ArrowRight className="w-4 h-4" />
+            </Link>
+
+            <div className="mt-6 pt-6 border-t border-gray-200">
+              <p className="text-xs font-semibold text-gray-900 mb-2">Or reach the dealer directly</p>
+              <div className="space-y-1.5">
+                {store.emails.map((e) => (
+                  <a key={e} href={`mailto:${e}`} className="flex items-center gap-2 text-sm text-[#1B6B3D] hover:underline">
+                    <Mail className="w-3.5 h-3.5 shrink-0" /> {e}
+                  </a>
+                ))}
+                {store.phones?.map((p) => (
+                  <a key={p} href={`tel:${p.replace(/\s/g, "")}`} className="flex items-center gap-2 text-sm text-[#1B6B3D] hover:underline">
+                    <Phone className="w-3.5 h-3.5 shrink-0" /> {p}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -346,105 +376,5 @@ function FilterChip({ label, active, onClick }: { label: string; active: boolean
     >
       {label}
     </button>
-  );
-}
-
-// ─── ENQUIRY FORM ───
-// Posts to the existing /api/contact route with partner attribution so the
-// lead reaches SGT tagged to this dealer.
-function EnquiryForm({ store, catalogue }: { store: PartnerStore; catalogue: Product[] }) {
-  const productNames = Array.from(new Set(catalogue.map((p) => p.name)));
-  const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", product: "", message: "" });
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
-
-  const set = (k: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
-    setForm((f) => ({ ...f, [k]: e.target.value }));
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setStatus("sending");
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...form,
-          message:
-            form.message ||
-            `Enquiry via ${store.shortName} storefront${form.product ? ` about ${form.product}` : ""}.`,
-          partner: store.slug,
-          partnerName: store.name,
-        }),
-      });
-      if (!res.ok) throw new Error("Request failed");
-      setStatus("success");
-      setForm({ name: "", company: "", email: "", phone: "", product: "", message: "" });
-    } catch (err) {
-      console.error(err);
-      setStatus("error");
-    }
-  };
-
-  const field = "w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 ps-focus transition-all";
-
-  return (
-    <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-8">
-      <h2 className="text-xl font-bold text-gray-900 mb-1">Request a quote</h2>
-      <p className="text-sm text-gray-500 mb-6">
-        Sent to SGT HydroEdge and routed to {store.shortName} for your territory.
-      </p>
-
-      {status === "success" ? (
-        <div className="text-center py-10">
-          <div className="w-12 h-12 rounded-full bg-[#1B6B3D14] text-[#1B6B3D] flex items-center justify-center mx-auto mb-4">
-            <BadgeCheck className="w-6 h-6" />
-          </div>
-          <p className="text-gray-900 font-semibold mb-1">Enquiry received</p>
-          <p className="text-sm text-gray-500">
-            The team will get back to you shortly. For anything urgent, email{" "}
-            <a href={`mailto:${store.emails[0]}`} className="text-[#1B6B3D] hover:underline">{store.emails[0]}</a>.
-          </p>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid sm:grid-cols-2 gap-4">
-            <input required value={form.name} onChange={set("name")} placeholder="Your name *" className={field} />
-            <input value={form.company} onChange={set("company")} placeholder="Company" className={field} />
-          </div>
-          <div className="grid sm:grid-cols-2 gap-4">
-            <input required type="email" value={form.email} onChange={set("email")} placeholder="Email *" className={field} />
-            <input value={form.phone} onChange={set("phone")} placeholder="Phone" className={field} />
-          </div>
-          <select value={form.product} onChange={set("product")} className={field}>
-            <option value="">Product of interest</option>
-            {productNames.map((n) => (
-              <option key={n} value={n}>{n}</option>
-            ))}
-            <option value="Not sure">Not sure — please advise</option>
-          </select>
-          <textarea
-            rows={4}
-            value={form.message}
-            onChange={set("message")}
-            placeholder="Tell us about your DG sets or site (rating, usage hours, location)"
-            className={field}
-          />
-          <button
-            type="submit"
-            disabled={status === "sending"}
-            className="inline-flex items-center justify-center gap-2 w-full bg-[#1B6B3D] text-white px-6 py-3 rounded-lg text-sm font-bold hover:ps-bg-green-dark transition-all disabled:opacity-60"
-          >
-            <Send className="w-4 h-4" />
-            {status === "sending" ? "Sending…" : "Send enquiry"}
-          </button>
-          {status === "error" && (
-            <p className="text-sm text-red-600">
-              Something went wrong. Please email{" "}
-              <a href={`mailto:${store.emails[0]}`} className="underline">{store.emails[0]}</a> directly.
-            </p>
-          )}
-        </form>
-      )}
-    </div>
   );
 }

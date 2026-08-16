@@ -124,6 +124,7 @@ const LIVE_PARTNERS: LivePartner[] = [
     name: 'Continental Power System & Triumph Engineer',
     badge: 'Authorised Dealer · Rajasthan, India',
     badgeColor: 'green',
+    logo: '/images/about/partners/continental-power-system-logo.png',
     initials: 'CP',
     desc: "Our exclusive authorised dealer for Rajasthan, bringing SGT's Hydrogen-on-Demand retrofit systems to diesel generator and industrial customers across the state. Backed by an established power systems and engineering practice operating out of Jaipur.",
     meta: [
