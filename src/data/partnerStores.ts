@@ -54,7 +54,7 @@ export const partnerStores: PartnerStore[] = [
     shortName: "Continental Power Systems",
     initials: "CP",
     // Drop the dealer logo at the path below and uncomment to replace the monogram:
-    // logo: "/images/about/partners/continental-power-system-logo.png",
+    logo: "/images/about/partners/continental-power-system-logo.png",
     badge: "Exclusive Authorised Dealer · Rajasthan",
     tagline:
       "Hydrogen-on-Demand retrofits for diesel generators and industrial plant across Rajasthan.",
