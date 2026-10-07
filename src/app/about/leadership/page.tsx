@@ -124,14 +124,6 @@ const leadership: Person[] = [
 			"A strategic leader with a focus on corporate governance and sustainability, driving SGT HydroEdge’s initiatives for greener industries.",
 		photo: "/images/team/nandani-kumar.png",
 	},
-	{
-		id: "shailesh",
-		name: "Laxmikant Karande",
-		role: "Head - Engineering",
-		bio:
-		"A veteran in engineering and product development, leading the technical innovations of GreenDrive Technology.",
-		photo: "/images/team/laxmikant-karande.png",
-	},
 ];
 
 const advisory: Person[] = [
