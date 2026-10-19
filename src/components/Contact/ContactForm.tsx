@@ -85,13 +85,21 @@
 // src/components/Contact/ContactForm.tsx
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { HONEYPOT_FIELD } from "@/lib/spamFilter";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<null | "idle" | "sending" | "success" | "error">(null);
+  // Spam checks: a hidden field only bots fill in, and the time since the form rendered
+  const [honeypot, setHoneypot] = useState("");
+  const renderedAt = useRef(0);
+
+  useEffect(() => {
+    renderedAt.current = Date.now();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -101,7 +109,13 @@ export default function ContactForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+          [HONEYPOT_FIELD]: honeypot,
+          elapsedMs: Date.now() - renderedAt.current,
+        }),
       });
 
       if (!res.ok) throw new Error("Network error");
@@ -110,6 +124,7 @@ export default function ContactForm() {
       setName("");
       setEmail("");
       setMessage("");
+      renderedAt.current = Date.now();
     } catch (err) {
       console.error(err);
       setStatus("error");
@@ -119,6 +134,14 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       {/* ... your inputs unchanged ... */}
+      {/* Honeypot: hidden from people and screen readers, bots fill it in */}
+      <div aria-hidden="true" style={{ position: "absolute", left: "-10000px", width: 1, height: 1, overflow: "hidden" }}>
+        <label>
+          Website
+          <input type="text" name={HONEYPOT_FIELD} value={honeypot} onChange={(e) => setHoneypot(e.target.value)} tabIndex={-1} autoComplete="off" />
+        </label>
+      </div>
+
       <div>
         <label className="block text-sm font-medium mb-1">Name</label>
         <input value={name} onChange={(e) => setName(e.target.value)} type="text" required className="w-full rounded-md border px-4 py-2" />

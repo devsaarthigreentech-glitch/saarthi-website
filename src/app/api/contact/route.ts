@@ -1,15 +1,25 @@
 // src/app/api/contact/route.ts  (App Router)
 import { NextRequest, NextResponse } from "next/server";
+import { clientIp, isRateLimited, spamReason, validateContact } from "@/lib/spamFilter";
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { name, email, message } = body ?? {};
 
-    // Basic validation
-    if (!name || !email || !message) {
-      console.warn("Missing fields in request body:", body);
-      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+    // Length and format validation
+    const valid = validateContact(body);
+    if ("error" in valid) {
+      return NextResponse.json({ error: valid.error }, { status: 400 });
+    }
+    const { name, email, message } = valid.data;
+
+    // Spam filtering: dropped submissions get the same response as real ones
+    // so bots can't tell they were caught.
+    const ip = clientIp(req.headers);
+    const reason = ip !== "unknown" && isRateLimited(ip) ? "rate-limit" : spamReason(body, valid.data);
+    if (reason) {
+      console.warn(`Contact form submission dropped (${reason}) from ${ip}`);
+      return NextResponse.json({ ok: true });
     }
 
     // Build payload forwarded to n8n
@@ -20,9 +30,6 @@ export async function POST(req: NextRequest) {
       source: "website-contact",
       timestamp: new Date().toISOString(),
     };
-
-    // DEBUG: print env var (so you can confirm it's loaded)
-    console.log("N8N_WEBHOOK env:", process.env.N8N_WEBHOOK);
 
     const n8nWebhook = process.env.N8N_WEBHOOK;
     if (!n8nWebhook) {
@@ -45,8 +52,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "n8n webhook returned error", status: resp.status, body: text }, { status: 502 });
     }
 
-    // success — return n8n response text so you can inspect it in browser
-    return NextResponse.json({ ok: true, n8nStatus: resp.status, n8nBody: text });
+    // Same body as a dropped submission (see above)
+    return NextResponse.json({ ok: true });
   } catch (err: any) {
     console.error("Contact route error:", err && err.stack ? err.stack : err);
     return NextResponse.json({ error: "Internal error", details: String(err) }, { status: 500 });
