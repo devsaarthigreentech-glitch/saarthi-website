@@ -21,6 +21,29 @@ const ACADEMY_URL = (
 ).replace(/\/$/, "");
 const LEARN_URL = `${ACADEMY_URL}/learn`;
 const EXAM_URL = `${ACADEMY_URL}/`;
+// Until the academy is deployed, its links show as "Coming soon". Set
+// NEXT_PUBLIC_ACADEMY_LIVE=true and rebuild to switch them on.
+const ACADEMY_LIVE = process.env.NEXT_PUBLIC_ACADEMY_LIVE === "true";
+
+function Soon({ label, dark = false }: { label: string; dark?: boolean }) {
+  return (
+    <span
+      aria-disabled="true"
+      className={`inline-flex cursor-not-allowed items-center gap-2 rounded-md px-6 py-3 font-semibold ${
+        dark ? "bg-white/15 text-white/70" : "bg-slate-200 text-slate-500"
+      }`}
+    >
+      {label}
+      <span
+        className={`rounded px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide ${
+          dark ? "bg-[#FFD700] text-[#1a1f1c]" : "bg-[#FFD700]/70 text-[#1a1f1c]"
+        }`}
+      >
+        Coming soon
+      </span>
+    </span>
+  );
+}
 
 const steps = [
   {
@@ -115,12 +138,16 @@ export default function Certification() {
               certificate.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a
-                href={LEARN_URL}
-                className="inline-flex items-center gap-2 rounded-md bg-[#FFD700] px-6 py-3 font-semibold text-[#1a1f1c] transition hover:bg-[#ffe34d]"
-              >
-                Start training <ArrowRight className="h-4 w-4" />
-              </a>
+              {ACADEMY_LIVE ? (
+                <a
+                  href={LEARN_URL}
+                  className="inline-flex items-center gap-2 rounded-md bg-[#FFD700] px-6 py-3 font-semibold text-[#1a1f1c] transition hover:bg-[#ffe34d]"
+                >
+                  Start training <ArrowRight className="h-4 w-4" />
+                </a>
+              ) : (
+                <Soon label="Start training" dark />
+              )}
               <a
                 href="#verify"
                 className="inline-flex items-center gap-2 rounded-md border border-white/40 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
@@ -209,18 +236,27 @@ export default function Certification() {
               ))}
             </dl>
             <div className="flex flex-wrap gap-3">
-              <a
-                href={LEARN_URL}
-                className="inline-flex items-center gap-2 rounded-md bg-[#1B6B3D] px-6 py-3 font-semibold text-white transition hover:bg-[#155730]"
-              >
-                Start the course <ArrowRight className="h-4 w-4" />
-              </a>
-              <a
-                href={EXAM_URL}
-                className="inline-flex items-center gap-2 rounded-md border border-[#1B6B3D] px-6 py-3 font-semibold text-[#1B6B3D] transition hover:bg-[#e8f5ee]"
-              >
-                Take the exam
-              </a>
+              {ACADEMY_LIVE ? (
+                <>
+                  <a
+                    href={LEARN_URL}
+                    className="inline-flex items-center gap-2 rounded-md bg-[#1B6B3D] px-6 py-3 font-semibold text-white transition hover:bg-[#155730]"
+                  >
+                    Start the course <ArrowRight className="h-4 w-4" />
+                  </a>
+                  <a
+                    href={EXAM_URL}
+                    className="inline-flex items-center gap-2 rounded-md border border-[#1B6B3D] px-6 py-3 font-semibold text-[#1B6B3D] transition hover:bg-[#e8f5ee]"
+                  >
+                    Take the exam
+                  </a>
+                </>
+              ) : (
+                <>
+                  <Soon label="Start the course" />
+                  <Soon label="Take the exam" />
+                </>
+              )}
             </div>
           </div>
           <div className="lg:col-span-3">
@@ -287,16 +323,18 @@ export default function Certification() {
               id="cert-id"
               value={certId}
               onChange={(e) => setCertId(e.target.value)}
-              placeholder="Certificate ID"
+              placeholder={ACADEMY_LIVE ? "Certificate ID" : "Certificate verification is coming soon"}
               autoComplete="off"
               spellCheck={false}
-              className="flex-1 rounded-md border border-white/20 bg-white/10 px-4 py-3 font-mono uppercase text-white placeholder:normal-case placeholder:text-white/40 focus:border-[#4ADE80] focus:outline-none"
+              disabled={!ACADEMY_LIVE}
+              className="flex-1 rounded-md border border-white/20 bg-white/10 px-4 py-3 font-mono uppercase text-white placeholder:normal-case placeholder:text-white/40 focus:border-[#4ADE80] focus:outline-none disabled:cursor-not-allowed disabled:opacity-60"
             />
             <button
               type="submit"
-              className="rounded-md bg-[#33A04A] px-6 py-3 font-semibold text-white transition hover:bg-[#2a8f53]"
+              disabled={!ACADEMY_LIVE}
+              className="rounded-md bg-[#33A04A] px-6 py-3 font-semibold text-white transition hover:bg-[#2a8f53] disabled:cursor-not-allowed disabled:bg-white/15 disabled:text-white/60"
             >
-              Verify
+              {ACADEMY_LIVE ? "Verify" : "Coming soon"}
             </button>
           </form>
         </div>
