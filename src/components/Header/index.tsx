@@ -218,6 +218,7 @@ const menuData = [
       { id: 44, title: "Knowledge Base",path: "/resources/knowledgebase" },
       { id: 45, title: "Videos",path: "/resources/videos" },
       { id: 46, title: "Downloads",path: "/resources/downloads" },
+      { id: 47, title: "Training & Certification", path: "/certification" },
     ],
   },
   {
