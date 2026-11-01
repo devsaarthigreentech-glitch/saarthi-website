@@ -95,7 +95,7 @@ const audience = [
   {
     icon: Wrench,
     title: "Field technicians",
-    text: "Install, commission and service NanoV3 units on vehicles, DG sets and marine assets.",
+    text: "Install, commission and service SGTOS units on vehicles, DG sets and marine assets.",
   },
   {
     icon: Building2,
@@ -168,7 +168,7 @@ export default function Certification() {
             </p>
             <p className="mt-3 text-xs text-slate-500">is recognised as</p>
             <p className="mt-1 text-lg font-bold text-[#2f6b1f]">
-              SGT Certified Professional – Nano System
+              SGT Certified Professional – SGT Operating System (SGTOS)
             </p>
             <div className="mt-5 flex items-center justify-between gap-4 text-left">
               <div className="flex-1 space-y-1.5">
@@ -220,11 +220,11 @@ export default function Certification() {
               Programme
             </p>
             <h2 className="mb-4 text-3xl font-bold">
-              SGT Certified Professional – Nano System
+              SGT Certified Professional – SGT Operating System (SGTOS)
             </h2>
             <p className="mb-6 text-slate-600">
               For engineers who install, commission, service and support the
-              NanoV3 / GreenDrive Smart Control Module. Based on the NanoV3 Field
+              SGTOS / GreenDrive Smart Control Module. Based on the SGTOS Field
               Manual, issue 2.0, firmware 3.0.1.
             </p>
             <dl className="mb-6 grid gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
