@@ -21,9 +21,9 @@ const ACADEMY_URL = (
 ).replace(/\/$/, "");
 const LEARN_URL = `${ACADEMY_URL}/learn`;
 const EXAM_URL = `${ACADEMY_URL}/`;
-// Until the academy is deployed, its links show as "Coming soon". Set
-// NEXT_PUBLIC_ACADEMY_LIVE=true and rebuild to switch them on.
-const ACADEMY_LIVE = process.env.NEXT_PUBLIC_ACADEMY_LIVE === "true";
+// The academy is live. Set NEXT_PUBLIC_ACADEMY_LIVE=false and rebuild to show
+// its links as "Coming soon" again (e.g. during maintenance).
+const ACADEMY_LIVE = process.env.NEXT_PUBLIC_ACADEMY_LIVE !== "false";
 
 function Soon({ label, dark = false }: { label: string; dark?: boolean }) {
   return (
