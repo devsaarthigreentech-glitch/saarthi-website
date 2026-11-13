@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import MediaCarousel from "@/components/MediaCarousal";
 import CredentialsBlock from "@/components/Shared/CredentialsBlock";
+import GensetGlobe from "@/components/Shared/GensetGlobe";
 import SavingsDisclaimer from "@/components/Shared/SavingsDisclaimer";
 import {
   CLAIMS,
@@ -247,6 +248,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* The installed base — rotating globe */}
+      <GensetGlobe />
 
       {/* 4. The platform */}
       <section className="bg-gray-50 py-20">
