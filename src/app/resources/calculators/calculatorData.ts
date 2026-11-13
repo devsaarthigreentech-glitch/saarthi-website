@@ -1,3 +1,5 @@
+import { CLAIMS } from "@/data/siteContent";
+
 // ─── Country → Currency ───────────────────────────────────────────────────────
 export const COUNTRY_CURRENCY: Record<string, string> = {
   India: "INR", UAE: "AED", "Saudi Arabia": "SAR",
@@ -11,33 +13,64 @@ export const CURRENCY_SYMBOLS: Record<string, string> = {
   MYR: "RM ", THB: "฿", IDR: "Rp ", AUD: "A$", ZAR: "R ", GBP: "£", EUR: "€",
 };
 
+// ─── Asset → Product line ─────────────────────────────────────────────────────
+export type ProductLine = "greendrive" | "greenx" | "greenedge";
+
+export const ASSET_PRODUCT: Record<string, ProductLine> = {
+  Truck:        "greendrive",
+  Earthmover:   "greendrive",
+  Construction: "greendrive",
+  DG:           "greenx",
+  Boiler:       "greenedge",
+  Kiln:         "greenedge",
+  Smelter:      "greenedge",
+};
+
+export const PRODUCT_NAME: Record<ProductLine, string> = {
+  greendrive: "GreenDrive",
+  greenx:     "GreenX",
+  greenedge:  "GreenEdge",
+};
+
+// ─── Fuel-saving caps (the "up to" figures) ───────────────────────────────────
+/** The highest fuel-saving percentage the calculator may ever apply or show. */
+export const SAVING_CAP_PCT: Record<ProductLine, number> = {
+  greendrive: CLAIMS.greendrive.fuelSavingPct,
+  greenx:     CLAIMS.greenx.fuelSavingPct,
+  greenedge:  CLAIMS.greenedge.fuelSavingPct,
+};
+
+/**
+ * Fuel-saving percentage used for an asset: always the product's "up to"
+ * figure, never above it. Returns null for an asset the calculator does not cover.
+ */
+export function savingPctFor(asset: string): number | null {
+  const product = ASSET_PRODUCT[asset];
+  if (!product) return null;
+  return SAVING_CAP_PCT[product];
+}
+
 // ─── Asset → Allowed Fuels ────────────────────────────────────────────────────
 export const ASSET_FUELS: Record<string, string[]> = {
-  Boiler:       ["Coal", "Biomass", "Diesel", "HFO", "Kerosene", "Propane", "CNG"],
-  Kiln:         ["Coal", "Biomass", "Diesel", "HFO", "Pet Coke", "Propane", "CNG"],
-  Smelter:      ["Coal", "Biomass", "Diesel", "HFO", "Pet Coke", "CNG"],
-  DG:           ["Diesel"],
-  MarineAux:    ["MDO", "VLSFO", "HFO"],
-  MarineProp:   ["MDO", "VLSFO", "HFO"],
-  MarineVessel: ["MDO", "VLSFO", "HFO"],
-  MarineBoiler: ["MDO", "HFO"],
   Truck:        ["Diesel"],
   Earthmover:   ["Diesel"],
   Construction: ["Diesel"],
+  DG:           ["Diesel"],
+  Boiler:       ["Coal", "Biomass", "Diesel", "HFO", "Kerosene", "Propane", "Natural Gas"],
+  Kiln:         ["Coal", "Biomass", "Diesel", "HFO", "Pet Coke", "Propane", "Natural Gas"],
+  Smelter:      ["Coal", "Biomass", "Diesel", "HFO", "Pet Coke", "Natural Gas"],
 };
 
 // ─── Fuel → Consumption Units ─────────────────────────────────────────────────
 export const FUEL_UNITS: Record<string, string[]> = {
-  Diesel:      ["Litres", "m³", "Tonnes"],
-  Kerosene:    ["Litres", "m³"],
-  MDO:         ["Litres", "Tonnes"],
-  VLSFO:       ["Litres", "Tonnes"],
-  HFO:         ["Litres", "Tonnes"],
-  Coal:        ["kg", "Tonnes"],
-  Biomass:     ["kg", "Tonnes"],
-  "Pet Coke":  ["kg", "Tonnes"],
-  Propane:     ["kg", "Litres"],
-  CNG:         ["SCM", "Nm³", "kg"],
+  Diesel:        ["Litres", "m³", "Tonnes"],
+  Kerosene:      ["Litres", "m³"],
+  HFO:           ["Litres", "Tonnes"],
+  Coal:          ["kg", "Tonnes"],
+  Biomass:       ["kg", "Tonnes"],
+  "Pet Coke":    ["kg", "Tonnes"],
+  Propane:       ["kg", "Litres"],
+  "Natural Gas": ["SCM", "Nm³", "kg"],
 };
 
 // ─── Emission Factors (IPCC AR6) ──────────────────────────────────────────────
@@ -51,14 +84,6 @@ export const EF: Record<string, Record<string, EFEntry>> = {
   Kerosene: {
     Litres: { co2: 2.54, tco2e: 2.57, src: "IPCC AR6, 2.54 kg CO₂/L" },
     "m³":   { co2: 2540, tco2e: 2570, src: "IPCC AR6 (×1000)" },
-  },
-  MDO: {
-    Litres: { co2: 2.75, tco2e: 2.78, src: "IMO / GHG Protocol, 2.75 kg CO₂/L" },
-    Tonnes: { co2: 3206, tco2e: 3240, src: "IMO DCS factor, 3.206 t CO₂/t" },
-  },
-  VLSFO: {
-    Litres: { co2: 3.00, tco2e: 3.03, src: "IMO, VLSFO ~3.00 kg CO₂/L" },
-    Tonnes: { co2: 3114, tco2e: 3147, src: "IMO DCS factor, 3.114 t CO₂/t" },
   },
   HFO: {
     Litres: { co2: 3.114, tco2e: 3.15, src: "IPCC AR6 / IMO, 3.114 kg CO₂/L" },
@@ -80,69 +105,48 @@ export const EF: Record<string, Record<string, EFEntry>> = {
     kg:     { co2: 2.99, tco2e: 3.02, src: "IPCC AR6, 2.99 kg CO₂/kg LPG" },
     Litres: { co2: 1.51, tco2e: 1.53, src: "IPCC AR6, ~0.505 kg/L × 2.99" },
   },
-  CNG: {
+  "Natural Gas": {
     SCM:  { co2: 1.93, tco2e: 1.97, src: "IPCC AR6, natural gas 1.93 kg CO₂/SCM" },
     "Nm³":{ co2: 1.93, tco2e: 1.97, src: "IPCC AR6, same as SCM approx" },
-    kg:   { co2: 2.75, tco2e: 2.80, src: "IPCC AR6, 2.75 kg CO₂/kg CNG" },
+    kg:   { co2: 2.75, tco2e: 2.80, src: "IPCC AR6, 2.75 kg CO₂/kg natural gas" },
   },
 };
 
-// ─── Savings Bands [min%, max%] ───────────────────────────────────────────────
-export const SAVINGS_BANDS: Record<string, [number, number]> = {
-  Truck:        [0.04, 0.15],
-  Earthmover:   [0.04, 0.15],
-  Construction: [0.04, 0.15],
-  DG:           [0.02, 0.12],
-  MarineAux:    [0.02, 0.12],
-  MarineProp:   [0.02, 0.12],
-  MarineVessel: [0.02, 0.12],
-  MarineBoiler: [0.02, 0.12],
-  Boiler:       [0.02, 0.12],
-  Kiln:         [0.02, 0.12],
-  Smelter:      [0.02, 0.12],
-};
-
 // ─── Asset Metadata ───────────────────────────────────────────────────────────
+const TECH_CHIP = "CHFA Technology";
+
 export const ASSET_META: Record<string, { label: string; sub: string; specs: string[] }> = {
-  Boiler:       { label: "Industrial Boiler",          sub: "GreenEdge Technology",  specs: ["Coal / Diesel / HFO / Biomass / CNG", "CHCA Technology", "2–12% Fuel Savings", "IoT + Digital Twin Ready"] },
-  Kiln:         { label: "Rotary / Tunnel Kiln",       sub: "GreenEdge Technology",  specs: ["Coal / Pet Coke / HFO / CNG", "CHCA Technology", "2–12% Fuel Savings", "ESG-Grade Reporting"] },
-  Smelter:      { label: "Smelter / Furnace",          sub: "GreenEdge Technology",  specs: ["Coal / HFO / CNG", "CHCA Technology", "2–12% Fuel Savings", "Pilot Phase"] },
-  DG:           { label: "DG Set / Diesel Generator",  sub: "GreenX Technology",     specs: ["Diesel Only", "CHFA Technology (Proven)", "2–12% Fuel Savings", "Remote Monitoring"] },
-  MarineAux:    { label: "Marine — Auxiliary Engine",  sub: "GreenMarine Technology",specs: ["MDO / VLSFO / HFO", "CHFA Technology", "2–12% Fuel Savings", "IMO Compliance Support"] },
-  MarineProp:   { label: "Marine — Propulsion Engine", sub: "GreenMarine Technology",specs: ["MDO / VLSFO / HFO", "CHFA Technology", "2–12% Fuel Savings", "CII Rating Support"] },
-  MarineVessel: { label: "Marine — Full Vessel",       sub: "GreenMarine Technology",specs: ["Overall Vessel Spend", "All Engine Types", "2–12% Fuel Savings", "GreenVision Integration"] },
-  MarineBoiler: { label: "Marine — Boiler",            sub: "GreenMarine Technology",specs: ["MDO / HFO", "CHCA Technology", "2–12% Fuel Savings", "Pilot Phase"] },
-  Truck:        { label: "Truck / HCV / LCV",          sub: "GreenDrive Technology", specs: ["Diesel Only", "CHFA Technology (Proven)", "4–15% Fuel Savings", "ARAI Validated"] },
-  Earthmover:   { label: "Earthmover / Mining Equipment", sub: "GreenDrive Technology", specs: ["Diesel Only", "CHFA Technology (Proven)", "4–15% Fuel Savings", "Off-Road Applications"] },
-  Construction: { label: "Construction Equipment",     sub: "GreenDrive Technology", specs: ["Diesel Only", "CHFA Technology (Proven)", "4–15% Fuel Savings", "Retrofit Solution"] },
+  Truck:        { label: "Truck / Commercial Vehicle",    sub: "GreenDrive — diesel vehicles",   specs: ["Diesel", TECH_CHIP, `${CLAIMS.greendrive.fuelSaving} fuel saving*`, CLAIMS.greendrive.install] },
+  Earthmover:   { label: "Earthmover / Mining Equipment", sub: "GreenDrive — diesel vehicles",   specs: ["Diesel", TECH_CHIP, `${CLAIMS.greendrive.fuelSaving} fuel saving*`, CLAIMS.greendrive.install] },
+  Construction: { label: "Construction Equipment",        sub: "GreenDrive — diesel vehicles",   specs: ["Diesel", TECH_CHIP, `${CLAIMS.greendrive.fuelSaving} fuel saving*`, CLAIMS.greendrive.install] },
+  DG:           { label: "DG Set / Diesel Generator",     sub: "GreenX — diesel generator sets", specs: ["Diesel", TECH_CHIP, `${CLAIMS.greenx.fuelSaving} fuel saving*`, "Sized per DG capacity"] },
+  Boiler:       { label: "Industrial Boiler",             sub: "GreenEdge — burners and furnaces", specs: ["Gas / Oil / Coal / Biomass", TECH_CHIP, `${CLAIMS.greenedge.fuelSaving} fuel saving*`] },
+  Kiln:         { label: "Rotary / Tunnel Kiln",          sub: "GreenEdge — burners and furnaces", specs: ["Gas / Oil / Coal / Biomass", TECH_CHIP, `${CLAIMS.greenedge.fuelSaving} fuel saving*`] },
+  Smelter:      { label: "Smelter / Furnace",             sub: "GreenEdge — burners and furnaces", specs: ["Gas / Oil / Coal / Biomass", TECH_CHIP, `${CLAIMS.greenedge.fuelSaving} fuel saving*`] },
 };
 
 // ─── Asset Groups for Select ──────────────────────────────────────────────────
 export const ASSET_GROUPS = [
   {
-    label: "Industrial",
+    label: "Engines — GreenDrive (road)",
+    options: [
+      { value: "Truck",        label: "Truck / Commercial Vehicle" },
+      { value: "Earthmover",   label: "Earthmover / Mining Equipment" },
+      { value: "Construction", label: "Construction Equipment" },
+    ],
+  },
+  {
+    label: "Engines — GreenX (power)",
+    options: [
+      { value: "DG", label: "DG Set / Diesel Generator" },
+    ],
+  },
+  {
+    label: "Burners & Furnaces — GreenEdge",
     options: [
       { value: "Boiler",  label: "Boiler" },
       { value: "Kiln",    label: "Kiln" },
       { value: "Smelter", label: "Smelter / Furnace" },
-      { value: "DG",      label: "DG Set / Diesel Generator" },
-    ],
-  },
-  {
-    label: "Marine",
-    options: [
-      { value: "MarineAux",    label: "Marine — Auxiliary Engine" },
-      { value: "MarineProp",   label: "Marine — Propulsion Engine" },
-      { value: "MarineVessel", label: "Marine — Overall Vessel Spend" },
-      { value: "MarineBoiler", label: "Marine — Boiler" },
-    ],
-  },
-  {
-    label: "Engine on Wheels",
-    options: [
-      { value: "Truck",        label: "Truck / HCV / LCV" },
-      { value: "Earthmover",   label: "Earthmover / Mining Equipment" },
-      { value: "Construction", label: "Construction Equipment" },
     ],
   },
 ];
@@ -154,7 +158,7 @@ export const ASSET_SVGS: Record<string, string> = {
   <rect x="88" y="68" width="144" height="114" rx="9" fill="#f0faf4" stroke="#1B6B3D" stroke-width="1.5"/>
   <rect x="100" y="120" width="120" height="50" rx="6" fill="#1B6B3D" opacity="0.08" stroke="#1B6B3D" stroke-width="1.2" stroke-dasharray="4,3"/>
   <g transform="translate(105,155)"><path d="M0 0 Q5-20 10-8 Q15-32 20-5 Q25-24 30-0 Z" fill="#FFD700" opacity="0.9"/><path d="M8 0 Q13-14 18-6 Q23-22 28-0 Z" fill="#ff8c00" opacity="0.7"/></g>
-  <g transform="translate(155,155)"><path d="M0 0 Q5-18 10-6 Q15-28 20-4 Q25-20 30-0 Z" fill="#FFD700" opacity="0.9"/><path d="M8 0 Q13-12 18-5 Q23-18 28-0 Z" fill="#ff8c00" opacity="0.7"/></g>
+  <g transform="translate(155,155)"><path d="M0 0 Q5-18 10-6 Q15-28 20-4 Q25-20 30-0 Z" fill="#FFD700" opacity="0.9"/><path d="M8 0 Q13 -12 18-5 Q23-18 28-0 Z" fill="#ff8c00" opacity="0.7"/></g>
   <rect x="135" y="20" width="50" height="44" rx="5" fill="#e8f5ee" stroke="#1B6B3D" stroke-width="2"/>
   <rect x="128" y="15" width="64" height="12" rx="4" fill="#1B6B3D"/>
   <circle cx="148" cy="8" r="6" fill="#adb5bd" opacity="0.4"/><circle cx="162" cy="3" r="7" fill="#adb5bd" opacity="0.3"/><circle cx="175" cy="7" r="5" fill="#adb5bd" opacity="0.35"/>
@@ -244,100 +248,6 @@ export const ASSET_SVGS: Record<string, string> = {
   <line x1="268" y1="124" x2="300" y2="124" stroke="#FFD700" stroke-width="2"/>
   <line x1="268" y1="138" x2="300" y2="154" stroke="#FFD700" stroke-width="2"/>
   <circle cx="155" cy="108" r="5" fill="#FFD700"/><circle cx="155" cy="108" r="9" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.5"/>
-</svg>`,
-
-  MarineAux: `<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
-  <path d="M0 165 Q40 155 80 165 Q120 175 160 165 Q200 155 240 165 Q280 175 320 165 L320 220 L0 220 Z" fill="#e8f5ee" opacity="0.6"/>
-  <path d="M40 130 L50 175 Q160 195 270 175 L280 130 Z" fill="#1B6B3D" opacity="0.85"/>
-  <rect x="100" y="75" width="120" height="58" rx="6" fill="#e8f5ee" stroke="#1B6B3D" stroke-width="2"/>
-  <rect x="78" y="90" width="28" height="22" rx="3" fill="#c8e6d4" stroke="#1B6B3D" stroke-width="1.5"/>
-  <rect x="214" y="90" width="28" height="22" rx="3" fill="#c8e6d4" stroke="#1B6B3D" stroke-width="1.5"/>
-  <rect x="110" y="85" width="16" height="10" rx="2" fill="#1B6B3D" opacity="0.4"/>
-  <rect x="134" y="85" width="16" height="10" rx="2" fill="#1B6B3D" opacity="0.4"/>
-  <rect x="158" y="85" width="16" height="10" rx="2" fill="#1B6B3D" opacity="0.4"/>
-  <rect x="182" y="85" width="16" height="10" rx="2" fill="#1B6B3D" opacity="0.4"/>
-  <rect x="190" y="45" width="28" height="35" rx="4" fill="#134f2e" stroke="#1B6B3D" stroke-width="1.5"/>
-  <circle cx="200" cy="38" r="7" fill="#adb5bd" opacity="0.5"/><circle cx="212" cy="30" r="9" fill="#adb5bd" opacity="0.4"/>
-  <line x1="160" y1="75" x2="160" y2="38" stroke="#1B6B3D" stroke-width="1.5"/>
-  <line x1="148" y1="42" x2="172" y2="42" stroke="#1B6B3D" stroke-width="1.5"/>
-  <circle cx="280" cy="165" r="14" fill="none" stroke="#FFD700" stroke-width="2"/>
-  <path d="M280 151 Q290 158 280 165" fill="#FFD700" opacity="0.7"/>
-  <path d="M280 179 Q270 172 280 165" fill="#FFD700" opacity="0.7"/>
-  <line x1="78" y1="90" x2="78" y2="60" stroke="#1B6B3D" stroke-width="1.5"/>
-  <polygon points="78,60 96,66 78,72" fill="#FFD700"/>
-  <rect x="112" y="100" width="44" height="22" rx="4" fill="#1B6B3D" opacity="0.12" stroke="#1B6B3D" stroke-width="1" stroke-dasharray="3,2"/>
-  <text x="134" y="111" text-anchor="middle" font-size="7" fill="#1B6B3D" font-weight="700">GreenMarine</text>
-  <text x="134" y="119" text-anchor="middle" font-size="6" fill="#1B6B3D">HHO System</text>
-  <circle cx="168" cy="60" r="5" fill="#FFD700"/><circle cx="168" cy="60" r="9" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.5"/>
-</svg>`,
-
-  MarineProp: `<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
-  <path d="M0 170 Q40 160 80 170 Q120 180 160 170 Q200 160 240 170 Q280 180 320 170 L320 220 L0 220 Z" fill="#e8f5ee" opacity="0.6"/>
-  <path d="M30 135 L42 180 Q160 200 278 180 L290 135 Z" fill="#1B6B3D" opacity="0.85"/>
-  <rect x="95" y="78" width="130" height="60" rx="6" fill="#e8f5ee" stroke="#1B6B3D" stroke-width="2"/>
-  <rect x="73" y="92" width="28" height="24" rx="3" fill="#c8e6d4" stroke="#1B6B3D" stroke-width="1.5"/>
-  <rect x="219" y="92" width="28" height="24" rx="3" fill="#c8e6d4" stroke="#1B6B3D" stroke-width="1.5"/>
-  <rect x="104" y="87" width="16" height="10" rx="2" fill="#1B6B3D" opacity="0.4"/>
-  <rect x="128" y="87" width="16" height="10" rx="2" fill="#1B6B3D" opacity="0.4"/>
-  <rect x="152" y="87" width="16" height="10" rx="2" fill="#1B6B3D" opacity="0.4"/>
-  <rect x="176" y="87" width="16" height="10" rx="2" fill="#1B6B3D" opacity="0.4"/>
-  <rect x="185" y="48" width="26" height="34" rx="4" fill="#134f2e" stroke="#1B6B3D" stroke-width="1.5"/>
-  <circle cx="290" cy="168" r="22" fill="none" stroke="#FFD700" stroke-width="2.5"/>
-  <circle cx="290" cy="168" r="5" fill="#FFD700"/>
-  <path d="M290 146 Q305 157 290 168" fill="#FFD700" opacity="0.75"/>
-  <path d="M290 190 Q275 179 290 168" fill="#FFD700" opacity="0.75"/>
-  <path d="M268 168 Q279 153 290 168" fill="#FFD700" opacity="0.75"/>
-  <path d="M312 168 Q301 183 290 168" fill="#FFD700" opacity="0.75"/>
-  <line x1="268" y1="168" x2="42" y2="168" stroke="#1B6B3D" stroke-width="2" stroke-dasharray="6,4" opacity="0.4"/>
-  <rect x="108" y="102" width="44" height="22" rx="4" fill="#1B6B3D" opacity="0.12" stroke="#1B6B3D" stroke-width="1" stroke-dasharray="3,2"/>
-  <text x="130" y="113" text-anchor="middle" font-size="7" fill="#1B6B3D" font-weight="700">GreenMarine</text>
-  <text x="130" y="121" text-anchor="middle" font-size="6" fill="#1B6B3D">Propulsion</text>
-  <circle cx="165" cy="62" r="5" fill="#FFD700"/><circle cx="165" cy="62" r="9" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.5"/>
-</svg>`,
-
-  MarineVessel: `<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
-  <path d="M0 168 Q80 158 160 168 Q240 178 320 168 L320 220 L0 220 Z" fill="#e8f5ee" opacity="0.6"/>
-  <path d="M15 140 L25 182 Q160 200 295 182 L305 140 Z" fill="#1B6B3D" opacity="0.85"/>
-  <rect x="15" y="138" width="290" height="6" rx="2" fill="#134f2e"/>
-  <rect x="40" y="108" width="50" height="32" rx="4" fill="#c8e6d4" stroke="#1B6B3D" stroke-width="1.5"/>
-  <rect x="100" y="108" width="50" height="32" rx="4" fill="#c8e6d4" stroke="#1B6B3D" stroke-width="1.5"/>
-  <rect x="160" y="108" width="50" height="32" rx="4" fill="#c8e6d4" stroke="#1B6B3D" stroke-width="1.5"/>
-  <rect x="220" y="75" width="70" height="66" rx="6" fill="#e8f5ee" stroke="#1B6B3D" stroke-width="2"/>
-  <rect x="226" y="82" width="16" height="10" rx="2" fill="#1B6B3D" opacity="0.4"/>
-  <rect x="248" y="82" width="16" height="10" rx="2" fill="#1B6B3D" opacity="0.4"/>
-  <rect x="250" y="45" width="24" height="34" rx="4" fill="#134f2e"/>
-  <circle cx="258" cy="38" r="7" fill="#adb5bd" opacity="0.45"/>
-  <circle cx="270" cy="30" r="8" fill="#adb5bd" opacity="0.38"/>
-  <line x1="60" y1="108" x2="60" y2="70" stroke="#1B6B3D" stroke-width="2"/>
-  <line x1="60" y1="70" x2="88" y2="80" stroke="#1B6B3D" stroke-width="1.5"/>
-  <line x1="120" y1="108" x2="120" y2="72" stroke="#1B6B3D" stroke-width="2"/>
-  <circle cx="305" cy="172" r="16" fill="none" stroke="#FFD700" stroke-width="2"/>
-  <circle cx="305" cy="172" r="4" fill="#FFD700"/>
-  <circle cx="50" cy="95" r="4" fill="#FFD700" opacity="0.8"/>
-  <circle cx="130" cy="95" r="4" fill="#FFD700" opacity="0.8"/>
-  <circle cx="200" cy="95" r="4" fill="#FFD700" opacity="0.8"/>
-  <line x1="54" y1="95" x2="126" y2="95" stroke="#FFD700" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
-  <line x1="134" y1="95" x2="196" y2="95" stroke="#FFD700" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
-</svg>`,
-
-  MarineBoiler: `<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
-  <path d="M0 175 Q160 185 320 175 L320 220 L0 220 Z" fill="#e8f5ee" opacity="0.5"/>
-  <path d="M20 155 L30 185 Q160 200 290 185 L300 155 Z" fill="#1B6B3D" opacity="0.6"/>
-  <rect x="90" y="70" width="140" height="110" rx="10" fill="#e8f5ee" stroke="#1B6B3D" stroke-width="2"/>
-  <rect x="100" y="80" width="120" height="90" rx="7" fill="#f0faf4"/>
-  <circle cx="160" cy="130" r="32" fill="#1B6B3D" opacity="0.08" stroke="#1B6B3D" stroke-width="1.5"/>
-  <path d="M148 148 Q152 128 158 140 Q163 120 170 138 Q175 122 178 148 Z" fill="#FFD700" opacity="0.8"/>
-  <path d="M153 148 Q157 132 162 144 Q167 128 172 148 Z" fill="#ff8c00" opacity="0.65"/>
-  <rect x="142" y="35" width="36" height="38" rx="4" fill="#134f2e" stroke="#1B6B3D" stroke-width="1.5"/>
-  <circle cx="153" cy="27" r="7" fill="#adb5bd" opacity="0.45"/><circle cx="168" cy="20" r="9" fill="#adb5bd" opacity="0.38"/>
-  <line x1="32" y1="110" x2="90" y2="110" stroke="#1B6B3D" stroke-width="2" stroke-dasharray="5,4"/>
-  <circle cx="20" cy="110" r="14" fill="#e8f5ee" stroke="#1B6B3D" stroke-width="1.5"/>
-  <text x="20" y="106" text-anchor="middle" font-size="7" fill="#1B6B3D" font-weight="700">HHO</text>
-  <text x="20" y="115" text-anchor="middle" font-size="7" fill="#1B6B3D">GEN</text>
-  <polygon points="86,106 90,110 86,114" fill="#1B6B3D"/>
-  <circle cx="250" cy="95" r="13" fill="#e8f5ee" stroke="#1B6B3D" stroke-width="1.5"/>
-  <line x1="250" y1="95" x2="258" y2="89" stroke="#1B6B3D" stroke-width="1.5"/>
-  <circle cx="248" cy="165" r="5" fill="#FFD700"/><circle cx="248" cy="165" r="9" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.5"/>
 </svg>`,
 
   Truck: `<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">

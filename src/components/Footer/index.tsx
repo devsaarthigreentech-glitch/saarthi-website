@@ -1,33 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
-
-// --- NAV LINK DATA STRUCTURE (Grouped) ---
-// const linkGroups = [
-//   // {
-//   //   title: "Ecosystem",
-//   //   links: [
-//   //     { name: "Ecosystem Overview", href: "/ecosystem" },
-//   //     { name: "GreenMentor", href: "/ecosystem/greenmentor" },
-//   //     { name: "GreenLabs", href: "/ecosystem/greenlabs" },
-//   //     { name: "GreenVision", href: "/ecosystem/greenvision" },
-//   //     { name: "DaaS Solution", href: "/solutions/daas" },
-//   //   ]
-//   // },
-//   {
-//     title: "Company & Resources",
-//     links: [
-//       { name: "Home", href: "/" },
-//       { name: "Solutions", href: "/solutions" },
-//       { name: "Evidence Hub", href: "/evidence/certificates" },
-//       { name: "Resources", href: "/resources" },
-//       { name: "About Saarthi", href: "/about/leadership" },
-//     ]
-//   },
-// ];
+import { CLAIMS, COMPANY, ROUTES, TECHNOLOGY } from '@/data/siteContent';
 
 // --- MAIN FOOTER COMPONENT ---
 const Footer = () => {
-  // Define a consistent Saarthi Green color variable for hover/brand
   const brandColor = 'var(--brand, #33A04A)';
 
   // Array for Social Links (Text based)
@@ -50,6 +26,7 @@ const Footer = () => {
         </svg>
       ),
     },
+    // TODO(owner): the X and Facebook accounts below still carry the old company name — keep, rename or remove?
     {
       name: "X",
       href: "https://x.com/SaarthiGreen",
@@ -86,7 +63,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Patent-applied CHFA and CHCA technologies delivering proven emissions reduction at scale across industry, marine, and logistics.
+              Decarbonisation infrastructure for the engines, burners and furnaces the world already runs. Patented {TECHNOLOGY.short} technology (Patent No. {TECHNOLOGY.patentNo}) — hydrogen made on demand, never stored. {CLAIMS.madeIn}.
             </p>
           </div>
 
@@ -94,10 +71,10 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4">Solutions</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/solutions/new-industrial" className="hover:text-sgt-green transition-colors">Industrial Solutions</a></li>
-              <li><a href="/solutions/new-marine" className="hover:text-sgt-green transition-colors">Marine Solutions</a></li>
-              <li><a href="/solutions/new-logistics" className="hover:text-sgt-green transition-colors">Logistics & Fleet</a></li>
-              {/* <li><a href="#" className="hover:text-sgt-green transition-colors">DaaS Model</a></li> */}
+              <li><a href={ROUTES.greendrive} className="hover:text-sgt-green transition-colors">GreenDrive — Road</a></li>
+              <li><a href={ROUTES.greenx} className="hover:text-sgt-green transition-colors">GreenX — Power</a></li>
+              <li><a href={ROUTES.greenmarine} className="hover:text-sgt-green transition-colors">GreenMarine — Marine</a></li>
+              <li><a href={ROUTES.greenedge} className="hover:text-sgt-green transition-colors">GreenEdge — Burners &amp; Furnaces</a></li>
             </ul>
           </div>
 
@@ -105,10 +82,9 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4">Technology</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/technology/chfa" className="hover:text-sgt-green transition-colors">CHFA Technology</a></li>
-              <li><a href="/technology/chca" className="hover:text-sgt-green transition-colors">CHCA Technology</a></li>
-              <li><a href="/technology/greenvision" className="hover:text-sgt-green transition-colors">GreenVision Platform</a></li>
-              {/* <li><a href="#" className="hover:text-sgt-green transition-colors">Research & Validation</a></li> */}
+              <li><a href={ROUTES.chfa} className="hover:text-sgt-green transition-colors">CHFA Technology</a></li>
+              <li><a href={ROUTES.sgtos} className="hover:text-sgt-green transition-colors">SGT OS</a></li>
+              <li><a href={ROUTES.greenvision} className="hover:text-sgt-green transition-colors">GreenVision</a></li>
             </ul>
           </div>
 
@@ -118,7 +94,6 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li><a href="/about/journey" className="hover:text-sgt-green transition-colors">About Us</a></li>
               <li><a href="/about/leadership" className="hover:text-sgt-green transition-colors">Leadership</a></li>
-              {/* <li><a href="#" className="hover:text-sgt-green transition-colors">Certifications</a></li> */}
               <li><a href="/about/partners" className="hover:text-sgt-green transition-colors">Partner With Us</a></li>
               <li><a href="/resources/media" className="hover:text-sgt-green transition-colors">Media</a></li>
             </ul>
@@ -133,6 +108,7 @@ const Footer = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={social.name}
                 className="text-gray-300 text-sm hover:text-white transition-colors duration-200 w-fit"
                 style={{ '--tw-text-hover': brandColor } as React.CSSProperties}
               >
@@ -154,11 +130,10 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* <div className="mt-8 text-center">
-            <a href="mailto:solutions@sgthydroedge.com" className="text-sgt-green font-semibold hover:text-sgt-yellow transition-colors">
-              contact@sgthydroedge.com
-            </a>
-          </div> */}
+<p className="mt-6 text-center text-xs text-gray-500">
+          <a href={`mailto:${COMPANY.email}`} className="hover:text-white transition-colors">{COMPANY.email}</a>
+          {' · '}{COMPANY.website}
+        </p>
       </div>
     </footer>
   );

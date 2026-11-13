@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     if ("error" in valid) {
       return NextResponse.json({ error: valid.error }, { status: 400 });
     }
-    const { name, email, message } = valid.data;
+    const { name, email, message, partnerType } = valid.data;
 
     // Spam filtering: dropped submissions get the same response as real ones
     // so bots can't tell they were caught.
@@ -27,7 +27,9 @@ export async function POST(req: NextRequest) {
       name,
       email,
       message,
-      source: "website-contact",
+      // Present only for enquiries from the partner form
+      ...(partnerType ? { partnerType } : {}),
+      source: partnerType ? "website-partner-enquiry" : "website-contact",
       timestamp: new Date().toISOString(),
     };
 

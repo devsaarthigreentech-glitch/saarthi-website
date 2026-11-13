@@ -1,36 +1,13 @@
-// import Breadcrumb from "@/components/Common/Breadcrumb";
-// import Contact from "@/components/Contact";
-
-// import { Metadata } from "next";
-
-// export const metadata: Metadata = {
-//   title: "Contact Page | Free Next.js Template for Startup and SaaS",
-//   description: "This is Contact Page for Startup Nextjs Template",
-//   // other metadata
-// };
-
-// const ContactPage = () => {
-//   return (
-//     <>
-//       <Breadcrumb
-//         pageName="Contact Page"
-//         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
-//       />
-
-//       <Contact />
-//     </>
-//   );
-// };
-
-// export default ContactPage;
-// src/app/contact/page.tsx
-
-// src/app/contact/page.tsx
 import ContactForm from "@/components/Contact/ContactForm";
 
-export const metadata = {
-  title: "Contact Us — SGT HydroEdge",
-  description: "Get in touch with SGT HydroEdge for solutions, demos and partnerships.",
+import type { Metadata } from "next";
+import { COMPANY, ROUTES } from "@/data/siteContent";
+
+export const metadata: Metadata = {
+  title: `Contact Us | ${COMPANY.name}`,
+  description:
+    "Talk to SGT HydroEdge about decarbonisation infrastructure for engines, burners and furnaces — as a customer, distributor, dealer or referral partner.",
+  alternates: { canonical: `${COMPANY.url}${ROUTES.contact}` },
 };
 
 export default function ContactPage() {
@@ -41,7 +18,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-3xl md:text-4xl font-extrabold">Contact Us</h1>
           <p className="mt-3 text-slate-200 max-w-2xl mx-auto">
-            We’d love to hear from you. Reach out for demos, partnerships, or general enquiries.
+            We’d love to hear from you. Reach out as a customer or a partner, or with a general enquiry.
           </p>
         </div>
       </section>
@@ -70,6 +47,7 @@ export default function ContactPage() {
                 <br />
                 Pune, Maharashtra,  411014
               </p>
+              {/* TODO(owner): confirm factory address stays public; confirm whether to add phone numbers */}
               <p>
                 <strong>Factory Office</strong>
                 <br />
@@ -81,6 +59,7 @@ export default function ContactPage() {
                 <br />
                 Pune, Maharashtra, 410501
               </p>
+              {/* TODO(owner): confirm registered legal entity name of the Australia office (still shown under the old company name) */}
               <strong>Australia Office</strong>
               <br />
 
@@ -89,11 +68,18 @@ export default function ContactPage() {
               <p>41 Pokolbin Avenue, The Ponds, NSW 2769
               </p>
               <p>
-                <strong>Email:</strong> contact@sgthydroedge.com
+                <strong>Email:</strong>{" "}
+                <a href={`mailto:${COMPANY.email}`} className="text-[#1B6B3D] hover:underline">
+                  {COMPANY.email}
+                </a>
               </p>
-              {/* <p>
-                <strong>Phone:</strong> +91 90492 70404
-              </p> */}
+              <p>
+                <strong>Website:</strong>{" "}
+                <a href={COMPANY.url} className="text-[#1B6B3D] hover:underline">
+                  {COMPANY.website}
+                </a>
+              </p>
+              {/* TODO(owner): working days look like an error — confirm */}
               <p>
                 <strong>Working Hours:</strong> Friday - Wednesday, 9:30 AM - 6:30 PM IST
               </p>
@@ -102,14 +88,14 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Optional: Map placeholder */}
-      {/* Optional: Map */}
+      {/* TODO(owner): the Google Maps listing embedded here is still registered under the old company name — update the listing, then this embed URL */}
       <section className="h-80 w-full">
         <iframe
           className="w-full h-full border-0"
           loading="lazy"
           allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
+          title="Map showing the SGT HydroEdge factory office, Chakan, Pune"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.381469114199!2d73.8201413751926!3d18.76631778243647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2cb080bada133%3A0x81eac66d3d22fdf4!2sSaarthi%20GreenTech%20Pvt%20Limited!5e0!3m2!1sen!2sin!4v1725700000000"
         ></iframe>
       </section>

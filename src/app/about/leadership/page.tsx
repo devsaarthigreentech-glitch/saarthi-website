@@ -1,4 +1,12 @@
-import React from 'react';
+import type { Metadata } from "next";
+import { COMPANY, ROUTES } from "@/data/siteContent";
+
+export const metadata: Metadata = {
+	title: `Leadership | ${COMPANY.name}`,
+	description:
+		"Meet the leadership team and advisory board of SGT HydroEdge, led by Alok Kumar, Founder & Managing Director.",
+	alternates: { canonical: `${COMPANY.url}${ROUTES.leadership}` },
+};
 
 // --- PLACEHOLDER COMPONENTS (Assumed External) ---
 // Define the Person type as assumed from the user's code
@@ -12,7 +20,7 @@ export type Person = {
 
 // Placeholder for the external AboutHeader component
 // We assume it handles its own internal styling based on props like 'hero' and 'title'.
-const AboutHeader = ({ title, subtitle, imgSrc, hero }) => {
+const AboutHeader = ({ title, subtitle, imgSrc, hero }: { title: string; subtitle: string; imgSrc?: string; hero?: boolean }) => {
 	// This is a minimal placeholder mimicking the required behavior/styling
 	const isHero = hero;
 	const paddingClass = isHero ? 'py-20 md:py-32' : 'pt-20 pb-12';
@@ -47,7 +55,7 @@ const AboutHeader = ({ title, subtitle, imgSrc, hero }) => {
 };
 
 // Placeholder for the external TeamGrid component - UPDATED
-const TeamGrid = ({ people, columns, cardSize }) => {
+const TeamGrid = ({ people, columns, cardSize }: { people: Person[]; columns: number; cardSize: string }) => {
 	const brandColor = '#33A04A'; 
 	const sizeClasses = cardSize === 'lg' ? 'md:col-span-1' : 'md:col-span-1'; // Simplified
 	const gridCols = `grid-cols-1 sm:grid-cols-2 md:grid-cols-${columns}`;
@@ -86,34 +94,13 @@ const TeamGrid = ({ people, columns, cardSize }) => {
 	);
 };
 
-// Placeholder for the Vision component (Removed from final export but keeping definition for completeness if needed)
-const Vision = () => {
-    const brandColor = '#33A04A';
-    return (
-        <section className="py-20 md:py-24 bg-gray-100 dark:bg-gray-900">
-            <div className="container mx-auto px-6 lg:px-8 max-w-7xl text-center">
-                <h2 className="text-4xl font-extrabold mb-4 text-gray-900 dark:text-white">Our Vision • Mission • Goal</h2>
-                <p className="text-xl max-w-3xl mx-auto text-gray-600 dark:text-gray-400">
-                    To be the leading global partner for hydrogen-enabled diesel efficiency, accelerating the transition to a sustainable future while ensuring economic viability for our clients.
-                </p>
-                <div className="mt-8">
-                    <button className="px-6 py-3 rounded-lg font-bold text-white transition duration-300" style={{ backgroundColor: brandColor }}>
-                        Discover Our Core Values
-                    </button>
-                </div>
-            </div>
-        </section>
-    );
-};
-
-
 const leadership: Person[] = [
 	{
 		id: "alok",
 		name: "Alok Kumar",
-		role: "Director",
+		role: COMPANY.founder.title,
 		bio:
-			"A seasoned leader with over three decades of experience in engineering, technology, and sustainability, Alok Kumar spearheads SGT HydroEdge’s vision for transformative green solutions.",
+			"Three decades in engineering and manufacturing. Alok Kumar has filed patents and authored papers on hydrogen-enhanced combustion, and leads SGT HydroEdge as its founder.",
 		photo: "/images/team/alok-kumar.png",
 	},
 	{
@@ -151,6 +138,7 @@ const advisory: Person[] = [
 			"A seasoned expert in technology and sustainability, offering strategic direction for SGT HydroEdge’s long-term vision.",
 			photo: "/images/team/a-ramasubramanian.png",
 		},
+		// TODO(owner): should this read "Himmat Singh Daulatrao Lagad, Non-Executive Director"?
 		{
 			id: "harry",
 			name: "Harry Lagad",
@@ -178,7 +166,6 @@ const advisory: Person[] = [
 	];
 	
 export default function AboutPage() {
-	// The Vision component is removed as requested by the original code's comment.
 	const brandColor = '#33A04A'; 
 
 	return (
@@ -219,6 +206,7 @@ export default function AboutPage() {
 			</div>
 
 			{/* 5. Advisory Board grid */}
+			{/* TODO(owner): should this read "Himmat Singh Daulatrao Lagad, Non-Executive Director"? (Harry Lagad, Advisor — left as is) */}
 			<TeamGrid people={advisory} columns={4} cardSize="lg" />
 			
 			<div className="h-16"></div> {/* Final spacing */}

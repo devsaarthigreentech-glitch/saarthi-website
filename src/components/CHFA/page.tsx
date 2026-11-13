@@ -1,618 +1,422 @@
-"use client"
-import React from 'react';
-import { Zap, CheckCircle, Award, FileText, Settings, TrendingUp, ArrowRight, Download, Database } from 'lucide-react';
-import Link from 'next/link';
+import Link from "next/link";
+import {
+  ArrowRight,
+  Award,
+  CheckCircle,
+  Cpu,
+  Droplets,
+  Factory,
+  Flame,
+  Gauge,
+  Leaf,
+  Truck,
+  Wind,
+  Zap,
+} from "lucide-react";
+import SavingsDisclaimer from "@/components/Shared/SavingsDisclaimer";
+import {
+  CLAIMS,
+  GREENEDGE_GE12,
+  LINES,
+  PHOTOS,
+  PLATFORM_LAYERS,
+  PRODUCTS,
+  ROUTES,
+  TECHNOLOGY,
+} from "@/data/siteContent";
 
-const CHFATechnologyPage = () => {
+const STEPS = [
+  {
+    icon: Droplets,
+    title: "Hydrogen is made from water, on demand",
+    body: "The unit makes hydrogen from water as it is needed, in small controlled volumes, and the gas is used immediately. Nothing is stored — no cylinders, no tanks of gas.",
+  },
+  {
+    icon: Zap,
+    title: "A small dose changes how the fuel burns",
+    body: "The dose is under 5% of fuel energy. Hydrogen ignites sooner and burns about eight times faster, so peak heat arrives at the right crank angle and more work comes from every drop.",
+  },
+  {
+    icon: Wind,
+    title: "It burns off what would otherwise escape",
+    body: "Hydrogen helps burn off soot that would otherwise leave through the exhaust. In burners and furnaces, a steadier flame needs less excess air.",
+  },
+  {
+    icon: Gauge,
+    title: "The dose follows the load",
+    body: "Too little hydrogen does nothing. Too much does harm. The right amount changes as the load changes — which is why control is the technology.",
+  },
+  {
+    icon: Leaf,
+    title: "Less fuel burned means less CO₂",
+    body: "All of it without changing the engine, the burner, the furnace or the fuel.",
+  },
+] as const;
+
+const NOT_STORED = [
+  { title: "No cylinders", body: "There is no stored hydrogen anywhere in the system." },
+  { title: "No change of fuel", body: "Your engine, burner or furnace keeps running on the fuel it runs on today." },
+  { title: "No replacement", body: "It is fitted to the equipment you already own." },
+] as const;
+
+const ENGINE_PRODUCTS = [PRODUCTS.greendrive, PRODUCTS.greenx, PRODUCTS.greenmarine];
+
+const PROOF = [
+  {
+    title: "Patented technology",
+    body: `Patent No. ${TECHNOLOGY.patentNo}, “${TECHNOLOGY.patentTitle}”.`,
+  },
+  { title: CLAIMS.arai.testing, body: "Engine R&D testing and work on test procedures." },
+  { title: CLAIMS.arai.research, body: `${CLAIMS.arai.papers}.` },
+  {
+    title: CLAIMS.greendrive.tested,
+    body: "Validated across multiple customer sites — fleets, DG sets, boilers and furnaces.",
+  },
+] as const;
+
+export default function CHFATechnologyPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Breadcrumb */}
-      <div className="bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="border-b border-gray-200 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-6 py-4">
           <p className="text-sm text-gray-600">
-            <a href="/" className="hover:text-sgt-green">Home</a> / <a href="/technology" className="hover:text-sgt-green">Technology</a> / <span className="text-gray-900 font-medium">CHFA Technology</span>
+            <Link href={ROUTES.home} className="hover:text-[#1B6B3D]">
+              Home
+            </Link>{" "}
+            / Technology / <span className="font-medium text-gray-900">CHFA Technology</span>
           </p>
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-blue-50 to-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-green-50 to-white py-16">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full text-sm font-bold text-blue-800 mb-6">
-                <CheckCircle className="w-4 h-4 mr-2" />
-                ARAI RESEARCH PUBLISHED | 3,00,000+ KM TESTED
+              <div className="mb-6 inline-flex items-center rounded-full border border-green-300 bg-green-100 px-4 py-2 text-sm font-bold text-green-800">
+                <Award className="mr-2 h-4 w-4" />
+                PATENTED · PATENT NO. {TECHNOLOGY.patentNo}
               </div>
 
-              <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                CHFA Technology
+              <h1 className="mb-3 text-4xl font-bold leading-tight text-gray-900 md:text-5xl">
+                {TECHNOLOGY.full}
               </h1>
+              <p className="mb-6 text-lg font-semibold text-[#1B6B3D]">{TECHNOLOGY.credit}</p>
 
-              <p className="text-2xl text-blue-600 font-semibold mb-6">
-                Controlled Hydrogen Fuel Assist
+              <p className="mb-4 text-2xl font-semibold text-gray-900">{LINES.onDemand}</p>
+              <p className="mb-8 text-lg leading-relaxed text-gray-600">
+                This is not hydrogen as a fuel, and it is not hydrogen in cylinders. A compact unit
+                makes a small amount of hydrogen from water, exactly when it is needed, and feeds
+                it in as a combustion booster — so the fuel you already buy burns more completely.
               </p>
-
-              <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                Patent-applied precision HHO generation for engines. Low-volume, precisely measured hydrogen injection optimized for diesel engines, DG sets, and mobile applications. Delivers 3-22% fuel savings depending on engine age and type.
-              </p>
-
-              <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-6">
-                <p className="text-sm font-bold text-blue-900 mb-3">Research-Backed Technology</p>
-                <div className="space-y-2 text-sm text-blue-800">
-                  <div className="flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                    <span>Published in ARAI journal</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                    <span>Tested on multiple DG sets and vehicle engines at ARAI</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                    <span>3,00,000+ km road testing completed</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                    <span>3-22% savings (varies by engine age and emission standard)</span>
-                  </div>
-                </div>
-              </div>
 
               <div className="flex flex-wrap gap-4">
-                <Link href="/resources/downloads" className="inline-flex items-center justify-center bg-sgt-green text-white px-8 py-4 rounded-md hover:bg-green-800 transition-all font-medium text-lg flex items-center">
-                  Download Technical Datasheet <Download className="ml-2 w-5 h-5" />
+                <Link
+                  href={ROUTES.contact}
+                  className="inline-flex items-center rounded-md bg-[#1B6B3D] px-8 py-4 text-lg font-medium text-white transition-all hover:bg-[#155730]"
+                >
+                  Talk to us <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-                <Link href="/resources/downloads" className="inline-flex items-center justify-center bg-white border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-md hover:border-sgt-green hover:text-sgt-green transition-all font-medium text-lg">
-                  View Research Paper
+                <Link
+                  href={ROUTES.sgtos}
+                  className="inline-flex items-center rounded-md border-2 border-gray-300 bg-white px-8 py-4 text-lg font-medium text-gray-700 transition-all hover:border-[#1B6B3D] hover:text-[#1B6B3D]"
+                >
+                  How it is controlled
                 </Link>
               </div>
             </div>
 
             <div className="relative">
-              <div className="aspect-[4/3] bg-gray-200 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-white shadow-2xl">
                 <img
-                  src="/images/solutions/chfa.jpg"
-                  alt="CHFA Technology System"
-                  className="w-full h-full object-cover"
+                  src={PHOTOS.greendriveUnit.src}
+                  alt={PHOTOS.greendriveUnit.alt}
+                  loading="lazy"
+                  className="h-full w-full object-contain p-6"
                 />
               </div>
-
-              {/* Floating Stats */}
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-2xl border border-gray-100">
-                <p className="text-sm text-gray-600 mb-1">Fuel Efficiency</p>
-                <p className="text-4xl font-bold text-sgt-green">3-22%</p>
-                <p className="text-xs text-gray-500 mt-1">Improvement</p>
-              </div>
-
-              <div className="absolute -top-6 -right-6 bg-white p-6 rounded-xl shadow-2xl border border-gray-100">
-                <p className="text-sm text-gray-600 mb-1">Testing</p>
-                <p className="text-4xl font-bold text-blue-600">3L+</p>
-                <p className="text-xs text-gray-500 mt-1">km Verified</p>
+              <div className="absolute -bottom-6 left-4 rounded-xl border border-gray-100 bg-white p-5 shadow-2xl sm:-left-6">
+                <p className="mb-1 text-sm text-gray-600">Hydrogen dose</p>
+                <p className="text-3xl font-bold text-[#1B6B3D]">Under 5%</p>
+                <p className="mt-1 text-xs text-gray-500">of fuel energy</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              How CHFA Technology Works
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Precision hydrogen injection optimized for variable-load engine applications
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl font-bold text-blue-600">1</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">On-Demand Generation</h3>
-              <p className="text-gray-600">
-                Water electrolysis produces HHO gas on-demand. No storage required - zero safety risk from stored hydrogen.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl font-bold text-blue-600">2</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Precision Metering</h3>
-              <p className="text-gray-600">
-                Low-volume HHO precisely measured and injected based on engine load, RPM, and operating conditions.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl font-bold text-blue-600">3</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Enhanced Combustion</h3>
-              <p className="text-gray-600">
-                HHO increases flame speed and combustion efficiency, resulting in better fuel utilization and lower emissions.
-              </p>
-            </div>
-          </div>
-
-          {/* <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-12 text-white">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="inline-flex px-4 py-2 bg-white/20 rounded-full text-white text-sm font-bold mb-6">
-                  <Database className="w-4 h-4 mr-2" />
-                  IoT Digital Twin
+      {/* Not stored hydrogen */}
+      <section className="bg-white pb-4 pt-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid gap-6 md:grid-cols-3">
+            {NOT_STORED.map((item) => (
+              <div key={item.title} className="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+                <div className="mb-2 flex items-center">
+                  <CheckCircle className="mr-2 h-5 w-5 flex-shrink-0 text-[#1B6B3D]" />
+                  <h2 className="text-lg font-bold text-gray-900">{item.title}</h2>
                 </div>
-                <h3 className="text-3xl font-bold mb-6">GreenVision Digital Twin Platform</h3>
-                <p className="text-xl text-gray-300 mb-8">
-                  Every CHCA installation includes IoT connectivity to the GreenVision platform - your digital twin for complete system visibility and performance analytics.
-                </p>
-                <ul className="space-y-3 text-gray-200">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
-                    <span>Real-time system monitoring from anywhere</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
-                    <span>Predictive maintenance alerts and diagnostics</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
-                    <span>Performance analytics and baseline trending</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
-                    <span>Automated ESG reporting (BRSR, CBAM compliant)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
-                    <span>Mobile app for plant operators</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0 mt-0.5" />
-                    <span>Historical data archival and reporting</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <img
-                  src="/images/technology/digital-twin.png"
-                  alt="GreenVision Dashboard"
-                  className="w-full rounded-xl shadow-2xl"
-                />
-                <div className='mt-3' />
-                <img
-                  src="/images/technology/digital-twin-2.png"
-                  alt="GreenVision Dashboard"
-                  className="w-full rounded-xl shadow-2xl"
-                />
-              </div>
-            </div>
-          </div> */}
-
-          {/* Technical Diagram Placeholder */}
-          {/* <div className="bg-gray-100 rounded-2xl p-12 text-center">
-            <img 
-              src="/images/technology/wet-cell-chfa.jpg" 
-              alt="CHFA Technology Diagram"
-              className="w-full rounded-xl"
-            />
-            <p className="text-sm text-gray-600 mt-4">CHFA System Architecture and Integration</p>
-          </div> */}
-        </div>
-      </section>
-
-      {/* Key Features */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Key Technical Features
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Zap className="w-8 h-8" />,
-                title: "Precision Low-Volume",
-                description: "150-3000 ml/min capacity range. Precise dosing based on real-time engine parameters and application requirements."
-              },
-              {
-                icon: <Settings className="w-8 h-8" />,
-                title: "Variable Load Adaptation",
-                description: "Automatically adjusts HHO generation based on engine load, RPM, and operating conditions for optimal performance."
-              },
-              {
-                icon: <CheckCircle className="w-8 h-8" />,
-                title: "Retrofit Compatible",
-                description: "Integrates with existing engines without modification. Installation on air intake - no engine changes required."
-              },
-              {
-                icon: <TrendingUp className="w-8 h-8" />,
-                title: "3-22% Efficiency Gain",
-                description: "Savings depend on engine age and emission standard (Euro/BS). Older engines show higher savings due to carbon cleaning effect. Newer engines deliver 3-8%, older engines achieve 12-22%."
-              },
-              {
-                icon: <Award className="w-8 h-8" />,
-                title: "Safety by Design",
-                description: "On-demand generation eliminates storage risks. Multiple fail-safe systems and automatic shutdown protection."
-              },
-              {
-                icon: <FileText className="w-8 h-8" />,
-                title: "Real-Time Monitoring",
-                description: "Integrated with GreenVision platform for live performance tracking and predictive maintenance."
-              }
-            ].map((feature, idx) => (
-              <div key={idx} className="bg-white border border-gray-200 rounded-xl p-6 hover:border-sgt-green hover:shadow-lg transition-all">
-                <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mb-4 text-blue-600">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <p className="text-gray-600">{item.body}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Engine Age & Savings Relationship */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Savings Vary by Engine Age & Type
-              </h2>
-
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Fuel savings from CHFA technology range from 3% to 22%, depending on the engine's age, emission standard, and baseline condition. Older engines show significantly higher savings due to carbon cleaning effects.
-              </p>
-
-              <div className="space-y-6">
-                <div className="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-500">
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-bold text-gray-900">Newer Engines (BS-VI, Euro 5/6)</h3>
-                    <span className="text-2xl font-bold text-blue-600">3-8%</span>
-                  </div>
-                  <p className="text-sm text-gray-700 mb-3">
-                    Modern engines with advanced emission controls already operate at higher baseline efficiency. CHFA provides incremental efficiency gains.
-                  </p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Lower baseline carbon deposits</li>
-                    <li>• Already optimized combustion</li>
-                    <li>• Still delivers attractive ROI</li>
-                  </ul>
-                </div>
-
-                <div className="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500">
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-bold text-gray-900">Mid-Age Engines (BS-IV, Euro 3/4)</h3>
-                    <span className="text-2xl font-bold text-orange-600">8-15%</span>
-                  </div>
-                  <p className="text-sm text-gray-700 mb-3">
-                    Moderate carbon buildup over operating life. CHFA improves efficiency and begins carbon cleaning process.
-                  </p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Moderate carbon deposits present</li>
-                    <li>• Efficiency improvement plus cleaning</li>
-                    <li>• Excellent ROI potential</li>
-                  </ul>
-                </div>
-
-                <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-500">
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-bold text-gray-900">Older Engines (BS-III, Pre-Euro 3)</h3>
-                    <span className="text-2xl font-bold text-sgt-green">12-22%</span>
-                  </div>
-                  <p className="text-sm text-gray-700 mb-3">
-                    Significant carbon buildup reduces baseline efficiency. CHFA delivers substantial efficiency gains through improved combustion and carbon cleaning.
-                  </p>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Heavy carbon deposits cleaned</li>
-                    <li>• Maximum efficiency improvement</li>
-                    <li>• Outstanding ROI - often under 12 months</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border-2 border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Why Older Engines Save More</h3>
-
-                <div className="space-y-6">
-                  <div>
-                    <div className="flex items-center mb-3">
-                      <div className="w-10 h-10 bg-sgt-green/10 rounded-lg flex items-center justify-center mr-3">
-                        <span className="text-sgt-green font-bold">1</span>
-                      </div>
-                      <h4 className="font-bold text-gray-900">Carbon Deposit Cleaning</h4>
-                    </div>
-                    <p className="text-sm text-gray-600 ml-13">
-                      HHO combustion breaks down accumulated carbon deposits in combustion chambers, valves, and piston crowns, restoring engine efficiency.
-                    </p>
-                  </div>
-
-                  <div>
-                    <div className="flex items-center mb-3">
-                      <div className="w-10 h-10 bg-sgt-green/10 rounded-lg flex items-center justify-center mr-3">
-                        <span className="text-sgt-green font-bold">2</span>
-                      </div>
-                      <h4 className="font-bold text-gray-900">Lower Baseline Efficiency</h4>
-                    </div>
-                    <p className="text-sm text-gray-600 ml-13">
-                      Older engines operate at lower baseline efficiency, providing more room for improvement compared to optimized modern engines.
-                    </p>
-                  </div>
-
-                  <div>
-                    <div className="flex items-center mb-3">
-                      <div className="w-10 h-10 bg-sgt-green/10 rounded-lg flex items-center justify-center mr-3">
-                        <span className="text-sgt-green font-bold">3</span>
-                      </div>
-                      <h4 className="font-bold text-gray-900">Cumulative Benefits</h4>
-                    </div>
-                    <p className="text-sm text-gray-600 ml-13">
-                      Immediate combustion improvement plus gradual carbon cleaning creates compounding efficiency gains over time.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-8 bg-blue-50 rounded-lg p-4">
-                  <p className="text-sm text-blue-900">
-                    <strong>ROI Impact:</strong> Older engines typically achieve ROI in 6-12 months due to higher fuel savings, while newer engines achieve ROI in 12-24 months.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Applications */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              CHFA Applications
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Proven across multiple engine applications with consistent results
+      {/* How it works — five steps */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-bold text-gray-900">How CHFA works</h2>
+            <p className="mx-auto max-w-3xl text-xl text-gray-600">
+              Part of every litre of fuel never fully burns. A little hydrogen, at the right
+              moment, changes that.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* DG Sets */}
-            <div className="flex flex-col bg-gradient-to-br from-green-50 to-white border-2 border-green-200 rounded-2xl p-8">
-              <div className="inline-flex px-3 py-1 bg-green-100 rounded-full text-green-800 text-xs font-bold mb-4">
-                DEPLOYED & OPERATIONAL
+          <ol className="mx-auto max-w-4xl space-y-6">
+            {STEPS.map((step, idx) => {
+              const Icon = step.icon;
+              return (
+                <li
+                  key={step.title}
+                  className="flex gap-6 rounded-2xl border border-gray-200 bg-white p-6 transition-all hover:border-[#1B6B3D] hover:shadow-lg md:p-8"
+                >
+                  <div className="flex flex-shrink-0 flex-col items-center">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#1B6B3D] text-2xl font-bold text-white">
+                      {idx + 1}
+                    </span>
+                    <Icon className="mt-4 h-7 w-7 text-[#1B6B3D]" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="mb-2 text-xl font-bold text-gray-900 md:text-2xl">{step.title}</h3>
+                    <p className="text-lg leading-relaxed text-gray-600">{step.body}</p>
+                    {idx === 3 && (
+                      <Link
+                        href={ROUTES.sgtos}
+                        className="mt-4 inline-flex items-center font-semibold text-[#1B6B3D] hover:underline"
+                      >
+                        Meet SGT OS, the control layer <ArrowRight className="ml-1 h-4 w-4" />
+                      </Link>
+                    )}
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      </section>
+
+      {/* One platform, two applications */}
+      <section className="bg-gray-50 py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-bold text-gray-900">
+              One technology. Two applications.
+            </h2>
+            <p className="mx-auto max-w-3xl text-xl text-gray-600">{LINES.onePlatform}</p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-2">
+            {/* Engines */}
+            <div className="flex flex-col rounded-2xl border-2 border-green-200 bg-white p-8">
+              <div className="mb-4 flex items-center">
+                <span className="mr-4 flex h-14 w-14 items-center justify-center rounded-xl bg-[#1B6B3D]/10">
+                  <Truck className="h-7 w-7 text-[#1B6B3D]" />
+                </span>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">Engines</h3>
+                  <p className="text-sm text-gray-600">Diesel — on the road, in power, at sea</p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">DG Sets</h3>
-              <p className="text-gray-600 mb-6">
-                Diesel and CNG generator sets from 125 kVA to 1,500 kVA capacity.
+              <p className="mb-6 text-gray-600">
+                Metered hydrogen joins the air the engine already breathes. {CLAIMS.greendrive.install},
+                with no engine modification and no change to wiring. {CLAIMS.norms}.
               </p>
-              <ul className="space-y-3 mb-6 text-sm text-gray-700">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span>3-12% fuel savings demonstrated</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span>Multiple installations live</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span>Proven reliability 24/7 operation</span>
-                </li>
+
+              <ul className="mb-6 space-y-4">
+                {ENGINE_PRODUCTS.map((p) => (
+                  <li key={p.name}>
+                    <Link
+                      href={p.href}
+                      className="group flex items-center justify-between rounded-xl border border-gray-200 p-4 transition-all hover:border-[#1B6B3D] hover:shadow-md"
+                    >
+                      <div>
+                        <p className="font-bold text-gray-900">
+                          {p.name}
+                          {p.badge && (
+                            <span className="ml-2 rounded-full bg-[#FFD700] px-2 py-0.5 text-xs font-bold text-gray-900">
+                              {p.badge}
+                            </span>
+                          )}
+                        </p>
+                        <p className="text-sm text-gray-600">{p.segment}</p>
+                      </div>
+                      <div className="ml-4 flex flex-shrink-0 items-center text-right">
+                        <div>
+                          <p className="text-lg font-bold text-[#1B6B3D]">{p.figure}</p>
+                          <p className="text-xs text-gray-500">{p.figureLabel}</p>
+                        </div>
+                        <ArrowRight className="ml-3 h-5 w-5 text-gray-400 group-hover:text-[#1B6B3D]" />
+                      </div>
+                    </Link>
+                  </li>
+                ))}
               </ul>
-              <Link href="/solutions/new-industrial#dg-details" className="mt-auto inline-flex items-center justify-center w-full bg-green-600 text-white py-3 rounded-lg font-medium hover:bg-green-700 transition-all">
-                View DG Set Solutions
-              </Link>
+
+              <div className="mt-auto rounded-xl bg-green-50 p-4 text-sm text-green-900">
+                <p className="font-bold">
+                  GreenDrive and GreenX: {CLAIMS.greendrive.pm} · {CLAIMS.greendrive.nox}
+                </p>
+                <p className="mt-1">{CLAIMS.co2}</p>
+              </div>
             </div>
 
-            {/* Marine */}
-            <div className="flex flex-col bg-gradient-to-br from-blue-50 to-white border-2 border-blue-200 rounded-2xl p-8">
-              <div className="inline-flex px-3 py-1 bg-blue-100 rounded-full text-blue-800 text-xs font-bold mb-4">
-                PROVEN TECHNOLOGY
+            {/* Burners and furnaces */}
+            <div className="flex flex-col rounded-2xl border-2 border-yellow-200 bg-white p-8">
+              <div className="mb-4 flex items-center">
+                <span className="mr-4 flex h-14 w-14 items-center justify-center rounded-xl bg-[#FFD700]/20">
+                  <Flame className="h-7 w-7 text-[#1B6B3D]" />
+                </span>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">Burners and furnaces</h3>
+                  <p className="text-sm text-gray-600">Any hydrocarbon fuel — gas, oil, coal or biomass</p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Marine Engines</h3>
-              <p className="text-gray-600 mb-6">
-                Auxiliary engines and ship boilers. All marine fuels - HFO, MDO, MGO, diesel.
+              <p className="mb-6 text-gray-600">
+                The same technology at industrial scale. {GREENEDGE_GE12.howItHelps} No fuel
+                switching, and no replacement of the burner or the furnace.
               </p>
-              <ul className="space-y-3 mb-6 text-sm text-gray-700">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span>IMO 2050 compliant</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span>Works with any marine fuel</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span>DaaS model available</span>
-                </li>
-              </ul>
-              <Link href="/solutions/new-marine" className="mt-auto inline-flex items-center justify-center w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-all">
-                View Marine Solutions
-              </Link>
-            </div>
 
-            {/* Logistics */}
-            <div className="flex flex-col bg-gradient-to-br from-green-50 to-white border-2 border-green-200 rounded-2xl p-8">
-              <div className="inline-flex px-3 py-1 bg-green-100 rounded-full text-green-800 text-xs font-bold mb-4">
-                ROAD TESTED
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Logistics Fleet</h3>
-              <p className="text-gray-600 mb-6">
-                Trucks, mining, construction equipment. Diesel engine applications.
-              </p>
-              <ul className="space-y-3 mb-6 text-sm text-gray-700">
+              <Link
+                href={PRODUCTS.greenedge.href}
+                className="group mb-6 flex items-center justify-between rounded-xl border border-gray-200 p-4 transition-all hover:border-[#1B6B3D] hover:shadow-md"
+              >
+                <div>
+                  <p className="font-bold text-gray-900">{PRODUCTS.greenedge.name}</p>
+                  <p className="text-sm text-gray-600">{PRODUCTS.greenedge.segment}</p>
+                </div>
+                <div className="ml-4 flex flex-shrink-0 items-center text-right">
+                  <div>
+                    <p className="text-lg font-bold text-[#1B6B3D]">{PRODUCTS.greenedge.figure}</p>
+                    <p className="text-xs text-gray-500">{PRODUCTS.greenedge.figureLabel}</p>
+                  </div>
+                  <ArrowRight className="ml-3 h-5 w-5 text-gray-400 group-hover:text-[#1B6B3D]" />
+                </div>
+              </Link>
+
+              <ul className="mb-6 space-y-3 text-sm text-gray-700">
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span>3,00,000+ km tested</span>
+                  <Factory className="mr-2 mt-0.5 h-5 w-5 flex-shrink-0 text-[#1B6B3D]" />
+                  <span>
+                    One model, {GREENEDGE_GE12.model}: {GREENEDGE_GE12.power}, {GREENEDGE_GE12.output}.
+                  </span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span>3-22% fuel efficiency (depends on engine age)</span>
+                  <Cpu className="mr-2 mt-0.5 h-5 w-5 flex-shrink-0 text-[#1B6B3D]" />
+                  <span>{GREENEDGE_GE12.cluster}</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <span>Fleet management via GreenVision</span>
+                  <CheckCircle className="mr-2 mt-0.5 h-5 w-5 flex-shrink-0 text-[#1B6B3D]" />
+                  <span>For {GREENEDGE_GE12.applications.join(", ").toLowerCase()}.</span>
                 </li>
               </ul>
-              <Link href='/solutions/new-logistics' className="mt-auto inline-flex items-center justify-center w-full bg-green-600 text-white py-3 rounded-lg font-medium hover:bg-green-700 transition-all">
-                View Logistics Solutions
-              </Link>
+
+              <div className="mt-auto rounded-xl bg-yellow-50 p-4 text-sm text-gray-900">
+                <p className="font-bold">{CLAIMS.greenedge.emissions}</p>
+              </div>
             </div>
+          </div>
+
+          <SavingsDisclaimer className="mt-6 text-center text-gray-500" />
+        </div>
+      </section>
+
+      {/* Three platform layers */}
+      <section className="bg-gradient-to-br from-green-800 to-[#1B6B3D] py-20 text-white">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-4xl font-bold">The platform, in three layers</h2>
+            <p className="mx-auto max-w-3xl text-xl text-green-100">{LINES.equation}</p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-3">
+            {PLATFORM_LAYERS.map((layer, idx) => (
+              <Link
+                key={layer.layer}
+                href={layer.href}
+                className="group flex flex-col rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-lg transition-all hover:bg-white/15"
+              >
+                <p className="mb-3 text-sm font-bold uppercase tracking-wider text-[#FFD700]">
+                  {idx + 1} · {layer.layer}
+                </p>
+                <h3 className="mb-3 text-2xl font-bold">{layer.title}</h3>
+                <p className="mb-6 leading-relaxed text-green-100">{layer.body}</p>
+                <span className="mt-auto inline-flex items-center font-semibold text-white group-hover:text-[#FFD700]">
+                  {idx === 0 ? "You are here" : "Learn more"}
+                  {idx !== 0 && <ArrowRight className="ml-1 h-4 w-4" />}
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ARAI Research */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* Proof */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <div className="inline-flex px-4 py-2 bg-white/20 rounded-full text-white text-sm font-bold mb-6">
-                <Award className="w-4 h-4 mr-2" />
-                Published Research
-              </div>
-
-              <h2 className="text-4xl font-bold mb-6">
-                ARAI Journal Published Research
-              </h2>
-
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                SGT's research on CHFA technology and hydrogen dosing for engines has been published in the ARAI (Automotive Research Association of India) scientific journal.
-              </p>
-
-              <div className="space-y-4 mb-8">
-                {[
-                  "Research conducted at ARAI facilities",
-                  "Published in ARAI scientific journal",
-                  "3,00,000+ km real-world road testing",
-                  "Multiple vehicle types tested",
-                  "Comprehensive engine behavior analysis"
-                ].map((point, idx) => (
-                  <div key={idx} className="flex items-center">
-                    <CheckCircle className="w-6 h-6 text-sgt-yellow mr-3 flex-shrink-0" />
-                    <span className="text-lg text-white">{point}</span>
-                  </div>
+              <h2 className="mb-6 text-4xl font-bold text-gray-900">Engineered, tested, published</h2>
+              <p className="mb-8 text-xl leading-relaxed text-gray-600">{LINES.core}</p>
+              <ul className="space-y-5">
+                {PROOF.map((item) => (
+                  <li key={item.title} className="flex items-start">
+                    <CheckCircle className="mr-3 mt-1 h-6 w-6 flex-shrink-0 text-[#1B6B3D]" />
+                    <div>
+                      <p className="font-bold text-gray-900">{item.title}</p>
+                      <p className="text-sm text-gray-600">{item.body}</p>
+                    </div>
+                  </li>
                 ))}
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 mb-8">
-                <p className="text-sm font-semibold text-sgt-yellow mb-3">SGT's Unique Position</p>
-                <p className="text-white leading-relaxed">
-                  Through published research and extensive testing, SGT has developed the most comprehensive understanding of hydrogen dosing technology for engines. This enables us to optimize CHFA systems for maximum fuel savings across applications.
-                </p>
-              </div>
-
-              <Link href ='/resources/downloads'className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-bold hover:bg-sgt-yellow hover:text-gray-900 transition-all inline-flex items-center">
-                Download Research Paper <Download className="ml-2" />
-              </Link>
+              </ul>
             </div>
-
-            <div className="relative">
+            <div className="mx-auto w-full max-w-md overflow-hidden rounded-2xl shadow-2xl">
               <img
-                src="/images/technology/arai.jpg"
-                alt="Research Testing"
-                className="w-full rounded-xl shadow-2xl"
+                src={PHOTOS.engineTestCell.src}
+                alt={PHOTOS.engineTestCell.alt}
+                loading="lazy"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Technical Specifications */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Technical Specifications
-            </h2>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead className="bg-gray-50 border-b border-gray-200">
-                  <tr>
-                    <th className="px-6 py-4 text-left text-sm font-bold text-gray-900">Parameter</th>
-                    <th className="px-6 py-4 text-left text-sm font-bold text-gray-900">Specification</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  {[
-                    { param: "HHO Generation Capacity", spec: "150 - 3000 ml/min (application dependent)" },
-                    { param: "Power Supply", spec: "12V DC or 24V DC" },
-                    { param: "Power Consumption", spec: "80W - 450W (load dependent)" },
-                    { param: "Operating Temperature", spec: "0°C to 55°C ambient" },
-                    { param: "Water Requirement", spec: "Distilled water or DM (demineralized) water" },
-                    { param: "Control System", spec: "Microcontroller-based with load sensing" },
-                    { param: "Safety Features", spec: "Pressure relief, flashback arrestor, auto-shutdown" },
-                    { param: "Installation", spec: "Retrofit to air intake, no engine modification" },
-                    { param: "Maintenance", spec: "Water refill every 3-6 months (usage dependent)" },
-                    { param: "Certifications", spec: "CE, UL, RoHS, EMC, ISO 9001" },
-                    { param: "Warranty", spec: "1 year standard warranty, 2 years support via annual AMC" }
-                  ].map((row, idx) => (
-                    <tr key={idx} className="hover:bg-gray-50">
-                      <td className="px-6 py-4 text-sm font-medium text-gray-900">{row.param}</td>
-                      <td className="px-6 py-4 text-sm text-gray-600">{row.spec}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div className="text-center mt-8">
-            <Link href="/resources/downloads" className="inline-flex items-center justify-center bg-sgt-green text-white px-8 py-4 rounded-lg font-bold hover:bg-green-800 transition-all inline-flex items-center">
-              Download Complete Technical Datasheet <Download className="ml-2" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
-      <section className="py-16 bg-white border-t border-gray-200">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Ready to Deploy CHFA Technology?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Contact our engineering team to discuss your specific application
+      <section className="border-t border-gray-200 bg-white py-16">
+        <div className="mx-auto max-w-4xl px-6 text-center">
+          <h2 className="mb-6 text-3xl font-bold text-gray-900">{LINES.saveCutProve}</h2>
+          <p className="mb-8 text-xl text-gray-600">
+            Tell us what you run — engines, or burners and furnaces — and we will show you where
+            CHFA fits.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href='/contact' className="inline-flex items-center justify-center bg-sgt-green text-white px-10 py-4 rounded-lg text-lg font-bold hover:bg-green-800 transition-all">
-              Schedule Technical Consultation
+            <Link
+              href={ROUTES.contact}
+              className="inline-flex items-center justify-center rounded-lg bg-[#1B6B3D] px-10 py-4 text-lg font-bold text-white transition-all hover:bg-[#155730]"
+            >
+              Schedule a consultation
             </Link>
-            <Link href='/contact' className="inline-flex items-center justify-center bg-white border-2 border-gray-300 text-gray-700 px-10 py-4 rounded-lg text-lg font-bold hover:border-sgt-green hover:text-sgt-green transition-all">
-              Request Quote
+            <Link
+              href={ROUTES.partners}
+              className="inline-flex items-center justify-center rounded-lg border-2 border-gray-300 bg-white px-10 py-4 text-lg font-bold text-gray-700 transition-all hover:border-[#1B6B3D] hover:text-[#1B6B3D]"
+            >
+              Become a partner
             </Link>
           </div>
         </div>
       </section>
-
-
-      <style>{`
-        .text-sgt-green { color: #1B6B3D; }
-        .bg-sgt-green { background-color: #1B6B3D; }
-        .border-sgt-green { border-color: #1B6B3D; }
-        .hover\\:bg-sgt-green:hover { background-color: #1B6B3D; }
-        .hover\\:text-sgt-green:hover { color: #1B6B3D; }
-        .hover\\:border-sgt-green:hover { border-color: #1B6B3D; }
-        .text-sgt-yellow { color: #FFD700; }
-        .bg-sgt-yellow { background-color: #FFD700; }
-        .hover\\:bg-sgt-yellow:hover { background-color: #FFD700; }
-      `}</style>
     </div>
   );
-};
-
-export default CHFATechnologyPage;
+}

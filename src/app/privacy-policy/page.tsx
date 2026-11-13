@@ -1,9 +1,16 @@
 // PrivacyPolicy.tsx
 // Converted from standalone HTML. CSS scoped under .sgt-privacy.
 
-"use client";
+import type { Metadata } from "next";
+import { COMPANY } from "@/data/siteContent";
 
-import { useEffect, useRef } from "react";
+// TODO(owner): confirm registered legal entity name ("SGT HydroEdge Private Limited" is used throughout this page)
+
+export const metadata: Metadata = {
+  title: `Privacy Policy | ${COMPANY.name}`,
+  description: "How SGT HydroEdge collects, uses and protects personal and platform data.",
+  alternates: { canonical: `${COMPANY.url}/privacy-policy` },
+};
 
 const PAGE_CSS = `
     .sgt-privacy, .sgt-privacy *, .sgt-privacy *::before, .sgt-privacy *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -431,7 +438,7 @@ const PAGE_CSS = `
 
       <h3>C. IoT and Platform Data (GreenVision Users)</h3>
       <ul>
-        <li><strong>Device telemetry</strong> — HHO system performance metrics, fuel flow rates, engine parameters, emission sensor readings, and operating conditions transmitted by installed GreenDrive, GreenEdge, GreenMarine, or GreenX devices.</li>
+        <li><strong>Device telemetry</strong> — System performance metrics, fuel flow rates, engine parameters, emission sensor readings, and operating conditions transmitted by installed GreenDrive, GreenEdge, GreenMarine, or GreenX devices.</li>
         <li><strong>Fleet and operational data</strong> — GPS-derived trip data, vehicle identifiers, route information, and driver performance scores where applicable.</li>
         <li><strong>Account data</strong> — platform login credentials, user roles, and access logs.</li>
       </ul>
@@ -736,23 +743,14 @@ const PAGE_CSS = `
 <!-- FOOTER -->
 <footer class="site-footer">
   <p>© 2026 SGT HydroEdge Private Limited · Pune, India &nbsp;|&nbsp;
-     <a href="https://www.sgthydroedge.com">`;
+     <a href="https://www.sgthydroedge.com">www.sgthydroedge.com</a></p>
+</footer>`;
 
 export default function PrivacyPolicy() {
-  const stylesRef = useRef(false);
-
-  useEffect(() => {
-    if (stylesRef.current) return;
-    const style = document.createElement("style");
-    style.setAttribute("data-page", "PrivacyPolicy");
-    style.textContent = PAGE_CSS;
-    document.head.appendChild(style);
-    stylesRef.current = true;
-    return () => {
-      style.remove();
-      stylesRef.current = false;
-    };
-  }, []);
-
-  return <div className="sgt-privacy" dangerouslySetInnerHTML={{ __html: PAGE_HTML }} />;
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
+      <div className="sgt-privacy" dangerouslySetInnerHTML={{ __html: PAGE_HTML }} />
+    </>
+  );
 }

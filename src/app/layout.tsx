@@ -1,13 +1,24 @@
-"use client";
-
+import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
 import "../styles/index.css";
 import Script from "next/script";
+import { COMPANY, LINES } from "@/data/siteContent";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  metadataBase: new URL(COMPANY.url),
+  title: {
+    default: "SGT HydroEdge — Decarbonisation Infrastructure",
+    template: "%s | SGT HydroEdge",
+  },
+  description: `${LINES.positioning} ${LINES.heroSub}`,
+  openGraph: { siteName: COMPANY.name, type: "website" },
+  icons: { icon: "/favicon.ico" },
+};
 
 export default function RootLayout({
   children,
@@ -51,11 +62,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <ScrollToTop />
-        {/* <ChatbotWidget /> */}
       </body>
     </html>
   );
 }
-
-import ChatbotWidget from "@/components/Chatbot/page";
-

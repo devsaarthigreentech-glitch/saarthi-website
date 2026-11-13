@@ -1,3 +1,5 @@
+// TODO(owner): keep GreenLabs as a named service? This page is unlinked and temporarily redirected (see next.config.js)
+// until confirmed. Its CE / UL / RoHS and other statements are unconfirmed and must be reviewed before it goes live again.
 "use client"
 import React from 'react';
 import { Microscope, Cog, Award, CheckCircle, ArrowRight, Lightbulb, Shield, FlaskConical, Zap, FileCheck, Boxes, TrendingUp } from 'lucide-react';
@@ -190,7 +192,7 @@ const GreenLabsPage = () => {
                 We protect our innovations through patent filings. Our intellectual property portfolio covers system design, control methods, and manufacturing processes.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li>• Wet cell architecture (patent applied)</li>
+                <li>• Hydrogen generation apparatus and method (Patent No. 582824)</li>
                 <li>• Control algorithms</li>
                 <li>• Safety systems</li>
                 <li>• Manufacturing methods</li>
@@ -236,7 +238,7 @@ const GreenLabsPage = () => {
                     <h4 className="font-bold text-gray-900">Modular Manufacturing</h4>
                   </div>
                   <p className="text-sm text-gray-600">
-                    Standardized modules for CHFA/CHCA systems enable efficient production while maintaining quality consistency.
+                    Standardized modules for CHFA systems enable efficient production while maintaining quality consistency.
                   </p>
                 </div>
 
@@ -401,7 +403,7 @@ const GreenLabsPage = () => {
                 </p>
               </div>
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-                <h3 className="font-bold mb-2">Advanced CHCA</h3>
+                <h3 className="font-bold mb-2">CHFA for burners and furnaces</h3>
                 <p className="text-sm text-blue-100">
                   Scaled capacity, improved thermal management, modular architecture, simplified maintenance.
                 </p>

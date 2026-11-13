@@ -1,26 +1,17 @@
+import type { Metadata } from "next";
 import GallerySection from "@/components/Resources/Gallery/GallerySection";
+import { COMPANY, ROUTES } from "@/data/siteContent";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Gallery — SGT HydroEdge",
   description:
-    "Event-based gallery of SGT HydroEdge — launches, pilots, and industry engagements.",
+    "Pictures of SGT HydroEdge systems and how they are fitted — GreenEdge on burners and furnaces, GreenX on diesel generator sets, GreenDrive on diesel vehicles — plus events and awards.",
+  alternates: { canonical: `${COMPANY.url}${ROUTES.gallery}` },
 };
 
 export default function GalleryPage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      {/* Hero */}
-      {/* <section className="py-20 bg-slate-900 text-white">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-3xl md:text-4xl font-extrabold">Gallery</h1>
-          <p className="mt-3 text-slate-200 max-w-2xl mx-auto">
-            Explore highlights from our events, pilots, and partner
-            collaborations.
-          </p>
-        </div>
-      </section> */}
-
-      {/* Gallery Section */}
       <GallerySection />
     </main>
   );

@@ -37,7 +37,7 @@ export interface PartnerStore {
   phones?: string[];
   /** Dealer's own website, shown as an outbound link. */
   website?: { label: string; url: string };
-  /** Show the GreenX DG-set model range table (names + ratings, no pricing). */
+  /** Show the GreenX sizing section (base units; sized per DG capacity, no pricing). */
   showGreenXRange?: boolean;
   /** Photo from the gallery, used as the storefront banner. */
   banner?: { src: string; alt: string; caption?: string };
@@ -53,15 +53,14 @@ export const partnerStores: PartnerStore[] = [
     name: "Continental Power System & Triumph Engineer",
     shortName: "Continental Power Systems",
     initials: "CP",
-    // Drop the dealer logo at the path below and uncomment to replace the monogram:
     logo: "/images/about/partners/continental-power-system-logo.png",
     badge: "Exclusive Authorised Dealer · Rajasthan",
     tagline:
-      "Hydrogen-on-Demand retrofits for diesel generators and industrial plant across Rajasthan.",
+      "GreenX — Controlled Hydrogen Fuel Assist for diesel generator sets across Rajasthan.",
     about:
-      "Continental Power System and its sister concern Triumph Engineer have supplied diesel generating sets since 2005, serving customers across North India from their registered office in Jaipur and a branch office in New Delhi. Their range spans CPCB IV+ certified silent gensets from 7.5 to 750 kVA and CPCB II certified sets up to 2250 kVA, supplied with AMF and synchronising panels, complete installation, testing and commissioning, and warranty and post-warranty support. As SGT HydroEdge's exclusive authorised dealer for Rajasthan, they bring that DG expertise to our patent-approved CHFA hydrogen retrofit technology — sizing, installing and servicing GreenX on the generators their customers already run.",
+      "Continental Power System and its sister concern Triumph Engineer have supplied diesel generating sets since 2005, serving customers across North India from their registered office in Jaipur and a branch office in New Delhi. Their range spans CPCB IV+ certified silent gensets from 7.5 to 750 kVA and CPCB II certified sets up to 2250 kVA, supplied with AMF and synchronising panels, complete installation, testing and commissioning, and warranty and post-warranty support. As SGT HydroEdge's exclusive authorised dealer for Rajasthan, they bring that DG expertise to our patented CHFA technology — sizing, installing and servicing GreenX on the generators their customers already run.",
     coverage: "Exclusive — Rajasthan",
-    focus: "GreenX (DG sets · industrial)",
+    focus: "GreenX (diesel generator sets)",
     appointed: "July 2026",
     verticals: ["Industrial"],
     offices: [
@@ -79,18 +78,18 @@ export const partnerStores: PartnerStore[] = [
     website: { label: "continentalpowersystem.com", url: "https://www.continentalpowersystem.com" },
     showGreenXRange: true,
     banner: {
-      src: "/images/gallery/event-7/cover.jpeg",
+      src: "/images/gallery/event-7/6.jpeg",
       alt: "SGT HydroEdge and Continental Power Systems teams at the dealership certificate handover, Pune",
       caption: "Dealership certificate handover at SGT HydroEdge, Pune — July 2026",
     },
     capabilities: [
       {
         title: "Sizing & site survey",
-        desc: "On-site assessment of your DG sets and load profile to match the right GreenX model to each generator.",
+        desc: "On-site assessment of your DG sets and load profile, so GreenX is sized to each generator's capacity.",
       },
       {
         title: "Installation & commissioning",
-        desc: "Retrofit to the air intake with no engine modification, commissioned and baseline-tested.",
+        desc: "Fitted at the air intake with no engine modification. Installed in hours.",
       },
       {
         title: "After-sales service",
@@ -98,14 +97,14 @@ export const partnerStores: PartnerStore[] = [
       },
       {
         title: "GreenVision onboarding",
-        desc: "Setup of IoT monitoring so you can track fuel savings and emissions in real time.",
+        desc: "Setup of GreenVision over 4G, so you can see fuel saved, CO₂ avoided and system health.",
       },
     ],
     credentials: [
       "DG specialists since 2005",
-      "Patent-approved CHFA technology",
-      "ARAI validated · NABL tested",
-      "Fits 30–2500 kVA DG sets",
+      "Patented CHFA technology",
+      "R&D testing with ARAI",
+      "Field-tested on DG sets from 125 to 1,500 kVA",
       "No engine modification",
     ],
   },

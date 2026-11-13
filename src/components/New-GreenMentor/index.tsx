@@ -1,3 +1,4 @@
+// TODO(owner): keep GreenMentor as a named service? This page is unlinked and temporarily redirected (see next.config.js) until confirmed.
 "use client"
 import React from 'react';
 import { Lightbulb, CheckCircle, ArrowRight, ClipboardCheck, Wrench, Activity, Database, FileText, Award, Target, TrendingUp, Users } from 'lucide-react';

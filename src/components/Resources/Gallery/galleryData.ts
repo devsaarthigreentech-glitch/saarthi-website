@@ -1,4 +1,6 @@
 // galleryData.ts
+import { PHOTOS } from "@/data/siteContent";
+
 export type GalleryEvent = {
   id: string;
   title: string;
@@ -8,110 +10,161 @@ export type GalleryEvent = {
   images: string[];   // array of image paths for modal
 };
 
+// ─── Systems and installations ──────────────────────────────────────────────
+// Captions are generic and customer-neutral: no customer names, no site names.
+export type GalleryPhoto = {
+  src: string;
+  alt: string;
+  caption: string;
+  fit?: "cover" | "contain";
+};
+
+export type GalleryPhotoGroup = {
+  id: string;
+  title: string;
+  subtitle: string;
+  photos: GalleryPhoto[];
+};
+
+export const photoGroups: GalleryPhotoGroup[] = [
+  {
+    id: "greenedge",
+    title: "GreenEdge",
+    subtitle: "Burners and furnaces",
+    photos: [
+      {
+        ...PHOTOS.greenedgeSystem,
+        caption: "GreenEdge system for industrial burners and furnaces",
+        fit: "contain",
+      },
+      {
+        ...PHOTOS.greenedgeFurnace,
+        caption: "GreenEdge unit and digital rectifier installed beside an industrial furnace",
+      },
+      {
+        ...PHOTOS.greenedgeAssembly,
+        caption: "Engineers assembling a GreenEdge module",
+      },
+    ],
+  },
+  {
+    id: "greenx",
+    title: "GreenX",
+    subtitle: "Diesel generator sets",
+    photos: [
+      {
+        ...PHOTOS.greenxSiteUnits,
+        caption: "Two GreenX units fitted inside a diesel generator enclosure",
+      },
+      {
+        ...PHOTOS.greenxGasMixer,
+        caption: "Gas mixer fitted on a diesel generator air intake",
+      },
+      {
+        ...PHOTOS.greenxWithDg,
+        caption: "GreenX unit connected to the air intake of a diesel generator set",
+        fit: "contain",
+      },
+    ],
+  },
+  {
+    id: "greendrive",
+    title: "GreenDrive",
+    subtitle: "Diesel vehicles",
+    photos: [
+      {
+        ...PHOTOS.malaysia1,
+        caption: "GreenDrive unit being fitted on a truck chassis, Malaysia",
+      },
+      {
+        ...PHOTOS.malaysia2,
+        caption: "Connecting a GreenDrive unit during installation, Malaysia",
+      },
+      // TODO(owner): the truck and quarry application images
+      // (PHOTOS.greendriveTruck, PHOTOS.greendriveQuarry) show the old company
+      // name on the cab door. Supply corrected artwork and
+      // they can be added here.
+    ],
+  },
+];
+
+// ─── Events ─────────────────────────────────────────────────────────────────
 const galleryData: GalleryEvent[] = [
   {
     id: "event-7",
     date: "22 July 2026",
+    // TODO(owner): confirm the dealer may be named publicly on the gallery.
     title: "Continental Power Systems Appointed Authorised Dealer for Rajasthan",
     excerpt:
-      "SGT HydroEdge welcomed the team from Continental Power System & Triumph Engineer to our Pune facility to formalise their appointment as our authorised dealer for Rajasthan. The visit included the handover of the dealership certificate, a walkthrough of our assembly area, and a demonstration of the GreenDrive and GreenX hydrogen retrofit units. The partnership brings our Hydrogen-on-Demand technology to diesel generator and industrial customers across Rajasthan.",
-    cover: "/images/gallery/event-7/cover.jpeg",
+      "SGT HydroEdge welcomed the team from Continental Power System & Triumph Engineer to our Pune facility to formalise their appointment as our authorised dealer for Rajasthan. The visit included the handover of the dealership certificate, a walkthrough of our assembly area, and a demonstration of the GreenDrive and GreenX units.",
+    cover: "/images/gallery/event-7/6.jpeg",
     images: [
-      "/images/gallery/event-7/cover.jpeg",
-      "/images/gallery/event-7/1.jpeg",
-      "/images/gallery/event-7/2.jpeg",
-      "/images/gallery/event-7/3.jpeg",
+      "/images/gallery/event-7/6.jpeg",
       "/images/gallery/event-7/4.jpeg",
       "/images/gallery/event-7/5.jpeg",
-      "/images/gallery/event-7/6.jpeg",
       "/images/gallery/event-7/7.jpeg",
     ],
-  },
-  {
-    id: "event-6",
-    date: "30 January 2026",
-    title: "Recognized Among the 10 Best Climate Tech Startups of 2026",
-    excerpt:
-      "Honored among the 10 Best Climate Tech Startups of 2026 for innovation across energy and industrial sustainability.The award reflects our mission to accelerate the transition to low-carbon, resilient systems.",
-    cover: "/images/gallery/event-6/cover.png",
-    images: [
-      "/images/gallery/event-6/1.png",
-      "/images/gallery/event-6/cover.png",
-    ]
   },
   {
     id: "event-5",
     date: "19 December 2025",
     title: "Surakshit Awards 2025 - Green Impact Award",
     excerpt:
-      "Saarthi Greentech Pvt. Ltd. was honoured with the Green Impact Award at the Surakshit Awards 2025 in Pune, recognising outstanding contributions to safety, security, and sustainable impact.",
-    cover: "/images/gallery/event-5/3.jpeg",
+      "SGT HydroEdge was honoured with the Green Impact Award at the Surakshit Awards 2025 in Pune.",
+    cover: "/images/gallery/event-5/1.jpeg",
     images: [
       "/images/gallery/event-5/1.jpeg",
-      "/images/gallery/event-5/2.jpeg",
-      "/images/gallery/event-5/3.jpeg",
-      "/images/gallery/event-5/4.jpeg",
-      "/images/gallery/event-5/5.jpeg"
-    ]
+      "/images/gallery/event-5/5.jpeg",
+    ],
   },
   {
     id: "event-4",
-    title: "Showcasing Sustainable Innovation at the 1st International Science & Technology Clusters Conference",
+    title: "1st International Science & Technology Clusters Conference",
     date: "December 2025",
-    excerpt: "Saarthi Green had the privilege of presenting our Decarbonization as a Service (DaaS) technologies at the 1st International Science & Technology Clusters Conference, held at the Dr. Ambedkar International Center, New Delhi. We showcased innovative solutions like GreenX for Diesel Generator applications, GreenMarine for marine and ship applications, and GreenDrive for commercial trucks. The event, organized by the Office of the Principal Scientific Adviser to the Government of India, fostered collaboration between industry, startups, research institutions, and policymakers — reinforcing our mission toward clean energy and sustainable mobility.",
-    cover: "/images/gallery/event-4/cover.jpeg",
+    excerpt:
+      "SGT HydroEdge exhibited at the 1st International Science & Technology Clusters Conference, held at the Dr. Ambedkar International Center, New Delhi, showing GreenX for diesel generator sets, GreenDrive for commercial vehicles and GreenMarine for marine engines. The event, organised by the Office of the Principal Scientific Adviser to the Government of India, brought together industry, startups, research institutions and policymakers.",
+    cover: "/images/gallery/event-4/4.jpeg",
     images: [
-      "/images/gallery/event-4/1.jpeg",
-      "/images/gallery/event-4/2.jpeg",
-      "/images/gallery/event-4/3.jpeg",
       "/images/gallery/event-4/4.jpeg",
-      "/images/gallery/event-4/5.jpeg"
+      "/images/gallery/event-4/5.jpeg",
     ],
   },
   {
     id: "event-2",
-    title: "Saarthi GreenTech Recieves the Energy Leap Award",
+    title: "Winner — LEAP Energy Award",
     date: "September 03, 2025",
-    excerpt: "We are proud to announce that Saarthi Greentech has been honoured with the 𝐄𝐧𝐞𝐫𝐠𝐲 𝐋𝐞𝐚𝐩 𝐀𝐰𝐚𝐫𝐝 at the 𝐆𝐇2 𝐈𝐧𝐝𝐢𝐚 𝐂𝐨𝐧𝐟𝐞𝐫𝐞𝐧𝐜𝐞 2025 in New Delhi.This recognition is a testament to our commitment to innovation in the green hydrogen sector and our efforts to contribute towards a sustainable energy future.The conference also provided us with a valuable opportunity to engage with global industry leaders, policymakers, and investors — exchanging ideas, insights, and collaborations that will help accelerate the clean energy transition.We are deeply encouraged by this recognition and remain dedicated to advancing 𝐠𝐫𝐞𝐞𝐧 𝐡𝐲𝐝𝐫𝐨𝐠𝐞𝐧 as a key driver of sustainability and innovation.",
-    cover: "/images/gallery/event-2/cover.jpg",
-    images: [
-      "/images/gallery/event-2/1.jpg",
-    //   "/images/gallery/event-2/2.jpeg",
-      "/images/gallery/event-2/3.jpeg",
-      "/images/gallery/event-2/4.jpeg",
-      "/images/gallery/event-2/5.jpeg"
-    ],
+    excerpt:
+      "SGT HydroEdge was honoured with the Energy Leap Award at the GH2 India Conference 2025 in New Delhi. The conference was also an opportunity to engage with industry leaders, policymakers and investors on accelerating the clean energy transition.",
+    cover: "/images/gallery/event-2/1.jpg",
+    images: ["/images/gallery/event-2/1.jpg"],
   },
   {
     id: "event-1",
     title: "Advancing Sustainable Mobility with On-Demand Hydrogen at EGYPES 2025",
     date: "June 12, 2024",
-    excerpt: "At EGYPES 2025, We presented our work on On-Demand Hydrogen Generation for Internal Combustion Engines, a cost-effective, scalable solution to cut fuel consumption and emissions. This patented technology accelerates cleaner transportation without overhauling existing engines. Engaging with global experts reinforced the potential of bridging today’s systems with a zero-emission future.",
+    excerpt:
+      "At EGYPES 2025, we presented our work on on-demand hydrogen generation for internal combustion engines — a scalable way to save fuel and cut emissions without overhauling existing engines.",
     cover: "/images/gallery/event-1/cover.jpg",
     images: [
       "/images/gallery/event-1/1.jpg",
       "/images/gallery/event-1/2.jpg",
       "/images/gallery/event-1/3.jpg",
-      "/images/gallery/event-1/4.jpg"
-
+      "/images/gallery/event-1/4.jpg",
     ],
   },
-  
   {
     id: "event-3",
-    title: "Saarthi GreenTech Inauguration: A New Era of Innovation and Sustainability",
+    title: "Facility Inauguration: A New Era of Innovation and Sustainability",
     date: "April 10, 2024",
-    excerpt: "On April 10, 2024, Saarthi GreenTech inaugurated its state-of-the-art facility, marking a milestone in sustainable innovation. Our esteemed Chief Guest Mr. Paul Murphy, Australia's Consul General, and Ms. Malini Dutt, Investment NSW Trade, attended along with entrepreneurs, potential customers from India, and media. This event celebrated our achievements and set the stage for future advancements in hydrogen fuel technology.",
+    excerpt:
+      "On April 10, 2024, we inaugurated our facility in Pune. Our Chief Guest Mr. Paul Murphy, Australia's Consul General, and Ms. Malini Dutt, Investment NSW Trade, attended along with entrepreneurs, industry guests and media.",
     cover: "/images/gallery/event-3/cover.jpeg",
     images: [
-      "/images/gallery/event-3/1.jpg",
+      "/images/gallery/event-3/cover.jpeg",
       "/images/gallery/event-3/2.jpeg",
-      "/images/gallery/event-3/3.jpeg"
+      "/images/gallery/event-3/3.jpeg",
     ],
   },
-
-  
-  // add more events...
 ];
 
 export default galleryData;

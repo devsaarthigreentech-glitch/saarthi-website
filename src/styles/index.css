@@ -15,8 +15,8 @@ layer(base);
   --breakpoint-2xl: 1400px;
 
   
-  --sgt-green: #1B6B3D,
-  --sgt-yellow: #FFD700,
+  --color-sgt-green: #1B6B3D;
+  --color-sgt-yellow: #FFD700;
   
 
   --color-current: currentColor;

@@ -14,10 +14,17 @@ const LIMITS = {
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
+// The only values the optional partner-type field may carry (partner enquiry
+// form on /about/partners). Anything else is rejected, so the field cannot be
+// used to smuggle free text past the content checks.
+export const PARTNER_TYPES = ["distributor", "dealer", "referral"] as const;
+export type PartnerType = (typeof PARTNER_TYPES)[number];
+
 export type ContactInput = {
   name: string;
   email: string;
   message: string;
+  partnerType?: PartnerType;
 };
 
 type ValidationResult =
@@ -36,7 +43,14 @@ export function validateContact(body: any): ValidationResult {
   if (email.length > LIMITS.email.max || !EMAIL_RE.test(email)) return { error: "Invalid email" };
   if (message.length < LIMITS.message.min || message.length > LIMITS.message.max) return { error: "Invalid message" };
 
-  return { data: { name, email, message } };
+  // Optional; when present it must be one of the fixed values.
+  const rawType = body?.partnerType;
+  if (rawType == null || rawType === "") return { data: { name, email, message } };
+  if (typeof rawType !== "string" || !(PARTNER_TYPES as readonly string[]).includes(rawType)) {
+    return { error: "Invalid partner type" };
+  }
+
+  return { data: { name, email, message, partnerType: rawType as PartnerType } };
 }
 
 // Counts lowercase->uppercase switches inside a word, e.g. "zaVXklwUJXuzxSofn" has 3.

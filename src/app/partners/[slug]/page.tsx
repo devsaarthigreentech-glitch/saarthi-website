@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { partnerStores, getPartnerStore } from "@/data/partnerStores";
 import { products } from "@/data/productCatalog";
 import PartnerStorefront from "@/components/PartnerStore";
+import { COMPANY } from "@/data/siteContent";
 
 export function generateStaticParams() {
   return partnerStores.map((store) => ({ slug: store.slug }));
@@ -21,6 +22,7 @@ export async function generateMetadata({
   return {
     title: `${store.shortName} — Authorised SGT HydroEdge Dealer`,
     description: store.tagline,
+    alternates: { canonical: `${COMPANY.url}/partners/${store.slug}` },
   };
 }
 

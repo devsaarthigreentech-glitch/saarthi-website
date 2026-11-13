@@ -1,9 +1,18 @@
 // TermsOfService.tsx
 // Converted from standalone HTML. CSS scoped under .sgt-tos.
 
-"use client";
+import type { Metadata } from "next";
+import { COMPANY } from "@/data/siteContent";
 
-import { useEffect, useRef } from "react";
+// TODO(owner): DaaS / zero-upfront wording awaits confirmation (brief 4.6) - DaaS terms on this page left as they are
+// TODO(owner): keep GreenMentor as a named service?
+// TODO(owner): confirm registered legal entity name ("SGT HydroEdge Private Limited" is used throughout this page)
+
+export const metadata: Metadata = {
+  title: `Terms of Service | ${COMPANY.name}`,
+  description: "Terms governing the use of the SGT HydroEdge website, products, the GreenVision platform and related services.",
+  alternates: { canonical: `${COMPANY.url}/terms-of-service` },
+};
 
 const PAGE_CSS = `
     .sgt-tos, .sgt-tos *, .sgt-tos *::before, .sgt-tos *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -434,7 +443,7 @@ const PAGE_HTML = `<!-- HERO -->
         <li><span class="def-term">"SGT HydroEdge" / "we" / "us" / "our"</span> — SGT HydroEdge Private Limited, a company incorporated under the Companies Act, 2013, with its principal place of business in Pune, Maharashtra, India.</li>
         <li><span class="def-term">"You" / "User" / "Customer"</span> — any individual or legal entity that accesses the Website, uses our Products, or enters into a Service agreement with SGT HydroEdge.</li>
         <li><span class="def-term">"Website"</span> — the website located at <strong>www.sgthydroedge.com</strong> and all associated sub-domains and pages.</li>
-        <li><span class="def-term">"Products"</span> — all SGT HydroEdge hardware devices, including GreenEdge (industrial boilers/kilns), GreenMarine (marine vessels), GreenX (DG sets and power backup), and GreenDrive (engines on wheels: logistics, mining, and construction), as well as any future products.</li>
+        <li><span class="def-term">"Products"</span> — all SGT HydroEdge hardware devices, including GreenDrive (diesel vehicles), GreenX (diesel generator sets), GreenMarine (marine engines) and GreenEdge (industrial burners and furnaces), as well as any future products.</li>
         <li><span class="def-term">"Platform" / "GreenVision"</span> — the AI-powered IoT Digital Twin software platform operated by SGT HydroEdge, including web dashboards, mobile applications, APIs, and associated services.</li>
         <li><span class="def-term">"DaaS"</span> — Decarbonisation-as-a-Service, SGT HydroEdge's subscription-based rental and managed service model where hardware is deployed without upfront capital expenditure in exchange for a recurring monthly fee.</li>
         <li><span class="def-term">"GreenMentor Services"</span> — decarbonisation consulting, regulatory advisory, carbon credit documentation, and training services provided by SGT HydroEdge.</li>
@@ -462,13 +471,13 @@ const PAGE_HTML = `<!-- HERO -->
         <div class="section-num">3</div>
         <h2>Products &amp; Services Overview</h2>
       </div>
-      <p>SGT HydroEdge offers a hardware + software + consulting model across three industry verticals:</p>
+      <p>SGT HydroEdge offers one platform — hardware, controls and software — for two applications: engines, and burners and furnaces.</p>
       <div class="product-tags">
-        <span class="ptag">GreenEdge — Industry</span>
+        <span class="ptag">GreenDrive — Road</span>
+        <span class="ptag">GreenX — Power</span>
         <span class="ptag">GreenMarine — Marine</span>
-        <span class="ptag">GreenX — DG &amp; Power</span>
-        <span class="ptag">GreenDrive — Engines on Wheels</span>
-        <span class="ptag">GreenVision — IoT Platform</span>
+        <span class="ptag">GreenEdge — Burners &amp; Furnaces</span>
+        <span class="ptag">GreenVision — Data Platform</span>
         <span class="ptag">GreenMentor — Consulting</span>
       </div>
       <p>Our Products and Services are offered under three commercial models:</p>
@@ -663,13 +672,13 @@ const PAGE_HTML = `<!-- HERO -->
         <h2>Performance Claims &amp; Results</h2>
       </div>
       <div class="warning-box">
-        <strong>Important Notice:</strong> Fuel savings and emission reduction figures referenced in SGT HydroEdge marketing materials, website content, and product literature represent ranges observed across research studies and customer deployments. Actual results will vary depending on application, fuel type, engine condition, operating load, maintenance practices, and other site-specific factors.
+        <strong>Important Notice:</strong> Fuel savings and emission reduction figures referenced in SGT HydroEdge marketing materials, website content, and product literature are stated as "up to" figures. Savings vary by engine, asset and operating conditions. Actual results will vary depending on application, fuel type, engine condition, operating load, maintenance practices, and other site-specific factors.
       </div>
       <ul>
         <li>SGT HydroEdge does not guarantee specific fuel savings percentages or emission reduction figures for any individual installation. Performance projections provided during pre-sales assessments are estimates based on available data and are not contractual commitments unless explicitly stated in a signed Service Level Agreement.</li>
         <li>GreenVision platform data, baselines, and efficiency calculations are derived from IoT sensor readings and AI-normalised models. While these provide commercially reasonable measurement and verification, they are not a substitute for formal third-party audit where required for regulatory or carbon credit purposes.</li>
         <li>Any performance guarantees or minimum savings thresholds, if applicable, will be explicitly stated in a signed Performance Guarantee Schedule forming part of the relevant Agreement.</li>
-        <li>SGT HydroEdge's ARAI-validated research and NABL laboratory results represent tested conditions and do not constitute a warranty of identical results in all operational environments.</li>
+        <li>SGT HydroEdge's R&amp;D testing with ARAI and its peer-reviewed research published with ARAI represent tested conditions and do not constitute a warranty of identical results in all operational environments.</li>
       </ul>
     </section>
 
@@ -681,7 +690,7 @@ const PAGE_HTML = `<!-- HERO -->
       </div>
       <p>All intellectual property rights in and relating to SGT HydroEdge Products, the GreenVision Platform, the Website, and associated Content are and remain the exclusive property of SGT HydroEdge Private Limited or its licensors.</p>
       <ul>
-        <li><strong>Patent rights:</strong> SGT HydroEdge's HHO generation cell design, IGBT power supply architecture, and related technology are the subject of patent applications. Any unauthorised replication, reverse engineering, or copying of the technology is strictly prohibited.</li>
+        <li><strong>Patent rights:</strong> SGT HydroEdge's Controlled Hydrogen Fuel Assist (CHFA) technology is patented (Patent No. 582824, "An Apparatus for Hydrogen Generation and a Method Thereof"). Any unauthorised replication, reverse engineering, or copying of the technology is strictly prohibited.</li>
         <li><strong>Brand and trademarks:</strong> "SGT HydroEdge", "GreenEdge", "GreenMarine", "GreenX", "GreenDrive", "GreenVision", "GreenMentor", and associated logos are trademarks of SGT HydroEdge Private Limited. You may not use these marks without prior written consent.</li>
         <li><strong>Website content:</strong> You may not reproduce, republish, distribute, or create derivative works from Website Content without express written permission.</li>
         <li><strong>Customer data:</strong> Notwithstanding the above, operational and performance data generated by your equipment on the GreenVision Platform remains your property as detailed in Section 5.</li>
@@ -717,7 +726,6 @@ const PAGE_HTML = `<!-- HERO -->
         <li>The Website and its Content are provided on an "as is" and "as available" basis. SGT HydroEdge makes no representations or warranties, express or implied, regarding the accuracy, completeness, or fitness for any particular purpose of the Website Content.</li>
         <li>SGT HydroEdge does not warrant that the Website will be continuously available, uninterrupted, or free from errors or malware, or that any defects will be corrected.</li>
         <li>While we take reasonable steps to ensure that product specifications and performance data on the Website are accurate, they are subject to change without notice. Up-to-date specifications are those provided in the applicable Order Form or product documentation.</li>
-        <li>References to global validation by CEMEX, SCHOTT, Saint-Gobain, and others on our Website describe third-party adoption of hydrogen combustion technology generally, and do not constitute endorsements of SGT HydroEdge by those entities.</li>
         <li>GreenMentor consulting advice is provided in good faith based on available regulatory and technical information. It does not constitute legal, financial, or investment advice.</li>
       </ul>
     </section>
@@ -860,23 +868,14 @@ const PAGE_HTML = `<!-- HERO -->
 
 <!-- FOOTER -->
 <footer class="site-footer">
-  <p>© 2026 SGT HydroEdge Private Limited · Pu`;
+  <p>© 2026 SGT HydroEdge Private Limited · Pune, India</p>
+</footer>`;
 
 export default function TermsOfService() {
-  const stylesRef = useRef(false);
-
-  useEffect(() => {
-    if (stylesRef.current) return;
-    const style = document.createElement("style");
-    style.setAttribute("data-page", "TermsOfService");
-    style.textContent = PAGE_CSS;
-    document.head.appendChild(style);
-    stylesRef.current = true;
-    return () => {
-      style.remove();
-      stylesRef.current = false;
-    };
-  }, []);
-
-  return <div className="sgt-tos" dangerouslySetInnerHTML={{ __html: PAGE_HTML }} />;
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: PAGE_CSS }} />
+      <div className="sgt-tos" dangerouslySetInnerHTML={{ __html: PAGE_HTML }} />
+    </>
+  );
 }

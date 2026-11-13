@@ -75,7 +75,7 @@ const modules = [
   "Control and temperature",
   "Engine, vehicle data and fuel",
   "Connectivity, backup battery and fault finding",
-  "GreenVision and the NanoApp",
+  "GreenVision and the SGT OS app",
 ];
 
 const facts = [
@@ -311,6 +311,7 @@ export default function Certification() {
           <ShieldCheck className="mx-auto mb-4 h-10 w-10 text-[#4ADE80]" />
           <h2 className="mb-3 text-3xl font-bold">Verify a certificate</h2>
           <p className="mb-8 text-white/75">
+            {/* TODO(owner): the certificate ID format issued by the academy still carries the old model name — confirm whether the academy will reissue IDs before changing this example */}
             Enter the certificate ID printed on the certificate, for example{" "}
             <span className="font-mono text-white">SGT-NANO-2026-XXXXXXXX</span>.
             Or scan its QR code.

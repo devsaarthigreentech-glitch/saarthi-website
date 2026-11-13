@@ -1,19 +1,17 @@
 // src/app/resources/media/page.tsx
 import Link from "next/link";
-import MediaSection from "@/components/Resources/MediaSection/MediaSection"
+import type { Metadata } from "next";
+import MediaSection from "@/components/Resources/MediaSection/MediaSection";
+import { COMPANY, ROUTES } from "@/data/siteContent";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Media & Press — SGT HydroEdge",
-  description: "Press mentions, videos and partner logos for SGT HydroEdge",
+  description:
+    "Press coverage, interviews and video features about SGT HydroEdge and its patented Controlled Hydrogen Fuel Assist (CHFA) Technology.",
+  alternates: { canonical: `${COMPANY.url}${ROUTES.media}` },
 };
 
 export default function MediaPage() {
-  const mediaLogos = [
-    "/images/resources/press-1.png",
-    "/images/resources/press-2.png",
-    "/images/resources/press-3.png",
-    "/images/resources/press-4.png",
-  ];
 
   return (
     <main className="min-h-screen bg-white text-slate-900">
@@ -21,10 +19,10 @@ export default function MediaPage() {
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-3xl md:text-4xl font-extrabold">Media & Press</h1>
           <p className="mt-3 text-slate-200 max-w-2xl mx-auto">
-            Coverage, partner mentions and video features about SGT HydroEdge.
+            Press coverage, interviews and video features about SGT HydroEdge.
           </p>
           <div className="mt-6">
-            <Link href="/resources" className="inline-block rounded-full bg-[var(--brand,#33A04A)] px-5 py-2 text-black font-semibold">Back to Resources</Link>
+            <Link href={ROUTES.downloads} className="inline-block rounded-full bg-[var(--brand,#33A04A)] px-5 py-2 text-black font-semibold">Brochures & downloads</Link>
           </div>
         </div>
       </section>

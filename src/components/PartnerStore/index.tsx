@@ -9,7 +9,8 @@ import {
 } from "lucide-react";
 
 import type { PartnerStore } from "@/data/partnerStores";
-import { greenXModels, type Product } from "@/data/productCatalog";
+import type { Product } from "@/data/productCatalog";
+import { CLAIMS, COMPANY, GREENX_UNITS } from "@/data/siteContent";
 
 const CAPABILITY_ICONS = [
   <MapPin key="a" className="w-4 h-4" />,
@@ -168,7 +169,7 @@ export default function PartnerStorefront({
               <div className="relative h-48 bg-gray-50 overflow-hidden">
                 <Image
                   src={p.image}
-                  alt={p.name}
+                  alt={p.imageAlt ?? p.name}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -192,14 +193,15 @@ export default function PartnerStorefront({
         </div>
       </section>
 
-      {/* ── GREENX MODEL RANGE ── */}
+      {/* ── GREENX SIZING ── */}
       {store.showGreenXRange && (
         <section className="border-t border-gray-100">
           <div className="max-w-6xl mx-auto px-6 py-14">
-            <h2 className="text-2xl font-bold text-gray-900 mb-1">GreenX model range</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-1">GreenX, sized to your DG set</h2>
             <p className="text-gray-500 mb-7 max-w-2xl">
-              A GreenX model for every DG set from 30 kVA to 2500 kVA. {store.shortName} will confirm
-              the right model for your generator rating and duty cycle.
+              GreenX is identified by DG capacity, because each capacity has its own settings. Each DG gets
+              one, two or more units depending on its air intakes and engine size. {CLAIMS.greenx.range}.{" "}
+              {store.shortName} will confirm the right configuration for your generator.
             </p>
 
             <div className="border border-gray-200 rounded-2xl overflow-hidden">
@@ -207,18 +209,22 @@ export default function PartnerStorefront({
                 <table className="w-full text-sm border-collapse">
                   <thead>
                     <tr className="bg-[#1B6B3D] text-white text-left">
-                      <th className="px-5 py-3 font-semibold whitespace-nowrap">Model</th>
-                      <th className="px-5 py-3 font-semibold whitespace-nowrap">DG set rating (kVA)</th>
+                      <th className="px-5 py-3 font-semibold whitespace-nowrap">Base unit</th>
+                      <th className="px-5 py-3 font-semibold whitespace-nowrap">Size</th>
+                      <th className="px-5 py-3 font-semibold whitespace-nowrap">Weight</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {greenXModels.map((m, i) => (
-                      <tr key={m.model} className={i % 2 ? "bg-gray-50" : "bg-white"}>
+                    {GREENX_UNITS.map((u, i) => (
+                      <tr key={u.name} className={i % 2 ? "bg-gray-50" : "bg-white"}>
                         <td className="px-5 py-2.5 font-semibold text-gray-900 whitespace-nowrap border-t border-gray-100">
-                          {m.model}
+                          {u.name}
                         </td>
                         <td className="px-5 py-2.5 text-gray-600 whitespace-nowrap border-t border-gray-100">
-                          {m.rating}
+                          {u.size}
+                        </td>
+                        <td className="px-5 py-2.5 text-gray-600 whitespace-nowrap border-t border-gray-100">
+                          {u.weight}
                         </td>
                       </tr>
                     ))}
@@ -226,11 +232,9 @@ export default function PartnerStorefront({
                 </table>
               </div>
               <div className="flex items-center justify-between gap-3 flex-wrap px-5 py-3 bg-gray-50 border-t border-gray-200">
-                <span className="text-xs text-gray-500">
-                  {greenXModels.length} models · pricing on request
-                </span>
+                <span className="text-xs text-gray-500">{CLAIMS.greenx.roi}</span>
                 <Link href="/contact" className="text-xs font-semibold text-[#1B6B3D] hover:underline whitespace-nowrap">
-                  Request pricing →
+                  Request a quote →
                 </Link>
               </div>
             </div>
@@ -311,8 +315,8 @@ export default function PartnerStorefront({
             <h2 className="text-xl font-bold text-gray-900 mb-2">Request a quote</h2>
             <p className="text-sm text-gray-500 leading-relaxed mb-6">
               Send your requirement to SGT HydroEdge and we&apos;ll route it to {store.shortName}
-              {" "}for your territory. Mention your DG set rating and location so we can size the
-              right GreenX model.
+              {" "}for your territory. Mention your DG set rating and location so we can size
+              GreenX for your generator.
             </p>
 
             <Link
@@ -346,7 +350,7 @@ export default function PartnerStorefront({
         <div className="max-w-6xl mx-auto px-6 py-10 text-center">
           <p className="text-sm text-gray-500 max-w-2xl mx-auto leading-relaxed">
             {store.name} is an authorised dealer of{" "}
-            <Link href="/" className="text-[#1B6B3D] font-medium hover:underline">SGT HydroEdge Pvt Ltd</Link>.
+            <Link href="/" className="text-[#1B6B3D] font-medium hover:underline">{COMPANY.name}</Link>.
             Products and technology are manufactured and warranted by SGT HydroEdge.
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-6">
