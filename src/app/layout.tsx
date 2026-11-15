@@ -11,10 +11,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(COMPANY.url),
-  title: {
-    default: "SGT HydroEdge — Decarbonisation Infrastructure",
-    template: "%s | SGT HydroEdge",
-  },
+  // Each page sets its own full title, including the company name.
+  title: "SGT HydroEdge — Decarbonisation Infrastructure",
   description: `${LINES.positioning} ${LINES.heroSub}`,
   openGraph: { siteName: COMPANY.name, type: "website" },
   icons: { icon: "/favicon.ico" },

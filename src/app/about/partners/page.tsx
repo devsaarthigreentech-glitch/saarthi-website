@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import PartnerEnquiryForm from '@/components/Contact/PartnerEnquiryForm';
+import LivePartners from '@/components/About/LivePartners';
 import { CLAIMS, COMPANY, LINES, ROUTES } from '@/data/siteContent';
 
 export const metadata: Metadata = {
@@ -111,6 +112,16 @@ export default function PartnershipPage() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* ── LIVE PARTNERSHIPS ── */}
+        <div style={{ marginBottom: '2.5rem' }}>
+          <div style={eyebrow}>Live partnerships</div>
+          <h2 style={{ fontSize: 20, fontWeight: 500, marginBottom: '0.5rem' }}>The network in motion</h2>
+          <p style={{ fontSize: 13, color: 'var(--color-text-secondary, #6b7280)', marginBottom: '1.25rem', lineHeight: 1.6 }}>
+            Our partner model isn&apos;t theoretical. Trident Nova is our first ASEAN integrator and Continental Power System &amp; Triumph Engineer carries the programme into Rajasthan — and we&apos;re actively building the network across other geographies.
+          </p>
+          <LivePartners />
         </div>
 
         {/* ── ENQUIRY FORM ── */}
