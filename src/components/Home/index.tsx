@@ -111,13 +111,13 @@ function ProductCard({ productKey }: { productKey: ProductKey }) {
         <p className="mb-5 text-sm leading-relaxed text-gray-600">{p.oneLiner}</p>
         <div className="mt-auto flex items-end justify-between border-t border-gray-200 pt-4">
           <div>
-            <p className="text-2xl font-bold text-gray-900">
+            <p className="whitespace-nowrap text-xl font-bold text-gray-900">
               {p.figure}
               {hasSaving ? "*" : ""}
             </p>
             <p className="text-xs text-gray-500">{p.figureLabel.replace("*", "")}</p>
           </div>
-          <span className="inline-flex items-center text-sm font-semibold text-[#1B6B3D]">
+          <span className="inline-flex shrink-0 items-center whitespace-nowrap text-sm font-semibold text-[#1B6B3D]">
             Learn more
             <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </span>
@@ -316,24 +316,24 @@ export default function Home() {
 
           {/* TODO(owner): supply transparent product wordmark logos (GreenDrive, GreenX, GreenMarine, GreenEdge) to replace the text names on these cards. */}
           <div className="grid gap-10 lg:grid-cols-4">
-            <div className="lg:col-span-3">
-              <h3 className="mb-5 flex items-center text-xl font-bold text-gray-900">
-                <Zap className="mr-2 h-5 w-5 text-[#1B6B3D]" />
-                Engines <span className="ml-2 text-base font-medium text-gray-500">(diesel)</span>
+            <div className="flex flex-col lg:col-span-3">
+              <h3 className="mb-5 flex items-center whitespace-nowrap text-lg font-bold text-gray-900">
+                <Zap className="mr-2 h-5 w-5 shrink-0 text-[#1B6B3D]" />
+                Engines <span className="ml-2 text-sm font-medium text-gray-500 lg:hidden xl:inline">(diesel)</span>
               </h3>
-              <div className="grid gap-6 md:grid-cols-3">
+              <div className="grid flex-1 gap-6 md:grid-cols-3">
                 {engineKeys.map((k) => (
                   <ProductCard key={k} productKey={k} />
                 ))}
               </div>
             </div>
-            <div>
-              <h3 className="mb-5 flex items-center text-xl font-bold text-gray-900">
-                <Flame className="mr-2 h-5 w-5 text-[#1B6B3D]" />
-                Burners &amp; Furnaces{" "}
-                <span className="ml-2 text-base font-medium text-gray-500">(any fuel)</span>
+            <div className="flex flex-col">
+              <h3 className="mb-5 flex items-center whitespace-nowrap text-lg font-bold text-gray-900">
+                <Flame className="mr-2 h-5 w-5 shrink-0 text-[#1B6B3D]" />
+                Burners &amp; Furnaces
+                <span className="ml-2 text-sm font-medium text-gray-500 lg:hidden xl:inline">(any fuel)</span>
               </h3>
-              <div className="grid gap-6">
+              <div className="grid flex-1 gap-6">
                 {burnerKeys.map((k) => (
                   <ProductCard key={k} productKey={k} />
                 ))}
