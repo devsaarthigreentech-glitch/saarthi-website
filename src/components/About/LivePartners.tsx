@@ -33,7 +33,7 @@ const LIVE_PARTNERS: LivePartner[] = [
     email: 'cpsdgsets@gmail.com',
     storeSlug: 'continental-power-systems',
     photo: {
-      src: '/images/gallery/event-7/6.jpeg',
+      src: '/images/gallery/event-7/cover.jpeg',
       alt: 'SGT HydroEdge and Continental Power Systems teams at the dealership certificate handover, Pune',
       caption: 'Dealership certificate handover at our Pune facility, July 2026',
     },
