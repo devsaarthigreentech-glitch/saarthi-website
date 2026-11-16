@@ -78,7 +78,7 @@ export const partnerStores: PartnerStore[] = [
     website: { label: "continentalpowersystem.com", url: "https://www.continentalpowersystem.com" },
     showGreenXRange: true,
     banner: {
-      src: "/images/gallery/event-7/cover.jpeg",
+      src: "/images/gallery/event-7/handover.jpeg",
       alt: "SGT HydroEdge and Continental Power Systems teams at the dealership certificate handover, Pune",
       caption: "Dealership certificate handover at SGT HydroEdge, Pune — July 2026",
     },

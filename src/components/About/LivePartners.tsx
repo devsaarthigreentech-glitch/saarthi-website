@@ -33,7 +33,7 @@ const LIVE_PARTNERS: LivePartner[] = [
     email: 'cpsdgsets@gmail.com',
     storeSlug: 'continental-power-systems',
     photo: {
-      src: '/images/gallery/event-7/cover.jpeg',
+      src: '/images/gallery/event-7/handover.jpeg',
       alt: 'SGT HydroEdge and Continental Power Systems teams at the dealership certificate handover, Pune',
       caption: 'Dealership certificate handover at our Pune facility, July 2026',
     },
@@ -159,7 +159,7 @@ export default function LivePartners() {
                   src={p.photo.src}
                   alt={p.photo.alt}
                   loading="lazy"
-                  style={{ width: '100%', maxHeight: 360, objectFit: 'cover', borderRadius: 10 }}
+                  style={{ width: '100%', maxHeight: 520, objectFit: 'cover', borderRadius: 10 }}
                 />
                 <figcaption style={{ fontSize: 11.5, color: secondary, marginTop: 6 }}>{p.photo.caption}</figcaption>
               </figure>

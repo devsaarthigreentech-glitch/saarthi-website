@@ -97,9 +97,9 @@ const galleryData: GalleryEvent[] = [
     title: "Continental Power Systems Appointed Authorised Dealer for Rajasthan",
     excerpt:
       "SGT HydroEdge welcomed the team from Continental Power System & Triumph Engineer to our Pune facility to formalise their appointment as our authorised dealer for Rajasthan. The visit included the handover of the dealership certificate, a walkthrough of our assembly area, and a demonstration of the GreenDrive and GreenX units.",
-    cover: "/images/gallery/event-7/cover.jpeg",
+    cover: "/images/gallery/event-7/handover.jpeg",
     images: [
-      "/images/gallery/event-7/cover.jpeg",
+      "/images/gallery/event-7/handover.jpeg",
       "/images/gallery/event-7/6.jpeg",
       "/images/gallery/event-7/4.jpeg",
       "/images/gallery/event-7/5.jpeg",
