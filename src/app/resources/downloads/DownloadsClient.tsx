@@ -8,16 +8,17 @@ import {
   Factory, Truck, Beaker, Shield,
   BookOpen, ArrowRight,
   Award,
-  BadgeCheck
+  BadgeCheck,
+  FileText, LayoutGrid, Settings, Ship
 } from "lucide-react";
 import { BROCHURES, ROUTES, TECHNOLOGY } from "@/data/siteContent";
 import BrochureLanguageButton, { type BrochureLanguage } from "@/components/Common/BrochureLanguageButton";
 
 
 // ─── DOWNLOADS DATA ───
-// Only current documents are listed. Pre-November-2026 flyers, pamphlets,
-// presentations and technical briefs were withdrawn because they carried
-// superseded claims and model names.
+// The flyers, pamphlets, presentations, technical documents and certificates
+// below were restored at the owner's request (Nov 2026). They pre-date the
+// November 2026 brochures and may carry earlier figures and wording.
 const downloadCategories = [
   {
     id: "brochures",
@@ -52,11 +53,68 @@ const downloadCategories = [
   },
   {
     id: "certificates",
-    name: "Certification",
-    description: "ISO 9001:2015 quality management system certificate",
+    name: "Certifications",
+    description: "Quality, safety and compliance certificates",
     icon: <Award className="w-5 h-5" />,
     files: [
       { name: "ISO 9001:2015 certificate", path: "/downloads/certifications/ISO_Certificate.jpg", size: "79 KB", tag: "Quality", tagIcon: <BadgeCheck className="w-3 h-3" /> },
+      { name: "RoHS Certificate", path: "/downloads/certifications/ROHS-SGT-1.jpg", size: "112 KB", tag: "Compliance", tagIcon: <BadgeCheck className="w-3 h-3" /> },
+      { name: "CE Certificate", path: "/downloads/certifications/CE.pdf", size: "515 KB", tag: "Compliance", tagIcon: <BadgeCheck className="w-3 h-3" /> },
+      { name: "UL Certificate", path: "/downloads/certifications/UL.pdf", size: "337 KB", tag: "Compliance", tagIcon: <BadgeCheck className="w-3 h-3" /> },
+      { name: "FCC Certificate", path: "/downloads/certifications/FCC.pdf", size: "360 KB", tag: "Compliance", tagIcon: <BadgeCheck className="w-3 h-3" /> },
+      { name: "EMC Certificate", path: "/downloads/certifications/EMC.pdf", size: "417 KB", tag: "Compliance", tagIcon: <BadgeCheck className="w-3 h-3" /> },
+      { name: "IEC Certificate", path: "/downloads/certifications/IEC.pdf", size: "418 KB", tag: "Compliance", tagIcon: <BadgeCheck className="w-3 h-3" /> },
+    ]
+  },
+  {
+    id: "flyers",
+    name: "Flyers",
+    description: "Product one-pagers",
+    icon: <FileText className="w-5 h-5" />,
+    files: [
+      { name: "Boiler Solution Flyer", path: "/downloads/flyers/Boiler_Flyer.pdf", size: "3.3 MB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
+      { name: "Kiln Solution Flyer", path: "/downloads/flyers/Kiln_Flyer.pdf", size: "3.4 MB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
+      { name: "GreenX DG Solution Flyer", path: "/downloads/flyers/GreenX_DG_Flyer.pdf", size: "5.1 MB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
+      { name: "GreenDrive Logistics Flyer", path: "/downloads/flyers/GreenDrive_Flyer.pdf", size: "4.5 MB", tag: "Logistics", tagIcon: <Truck className="w-3 h-3" /> },
+      { name: "GreenMarine Solution Flyer", path: "/downloads/flyers/GreenMarine_Flyer.pdf", size: "4.2 MB", tag: "Marine", tagIcon: <Ship className="w-3 h-3" /> },
+    ]
+  },
+  {
+    id: "pamphlets",
+    name: "Pamphlets",
+    description: "Solution pamphlets",
+    icon: <BookOpen className="w-5 h-5" />,
+    files: [
+      { name: "Boiler Solution Pamphlet", path: "/downloads/pamphlets/SGT_Pamphlet_Boiler_Solution.pdf", size: "713 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
+      { name: "Kiln Solution Pamphlet", path: "/downloads/pamphlets/SGT_Pamphlet_Kiln_Solution.pdf", size: "724 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
+      { name: "DG Set Solution Pamphlet", path: "/downloads/pamphlets/SGT_Pamphlet_DG_Set_Solution.pdf", size: "257 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
+      { name: "Logistics Fleet Solution Pamphlet", path: "/downloads/pamphlets/SGT_Pamphlet_Logistics_Fleet_Solution.pdf", size: "579 KB", tag: "Logistics", tagIcon: <Truck className="w-3 h-3" /> },
+      { name: "Marine Engine Solution Pamphlet", path: "/downloads/pamphlets/SGT_Pamphlet_Marine_Engine_Solution.pdf", size: "260 KB", tag: "Marine", tagIcon: <Ship className="w-3 h-3" /> },
+    ]
+  },
+  {
+    id: "presentations",
+    name: "Presentations",
+    description: "Corporate and solution decks",
+    icon: <LayoutGrid className="w-5 h-5" />,
+    files: [
+      { name: "GreenDrive Immediate Decarbonisation", path: "/downloads/presentations/GreenDrive_Immediate_Decarbonisation.pdf", size: "16.9 MB", tag: "Logistics", tagIcon: <Truck className="w-3 h-3" /> },
+      { name: "GreenMarine Overview", path: "/downloads/presentations/GreenMarine Overview.pdf", size: "2.0 MB", tag: "Marine", tagIcon: <Ship className="w-3 h-3" /> },
+      { name: "Reducing GHG Emissions from DG Using GreenX™", path: "/downloads/presentations/Reducing GHG Emissions from Diesel Generators Using GreenX™ Hydrogen Fuel Assist Retrofit.pdf", size: "1.8 MB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
+      { name: "SGT HydroEdge Corporate Presentation (Feb 2026)", path: "/downloads/presentations/SGT Hydroedge Corporate presentation-Feb 26.pdf", size: "1.3 MB", tag: "Company", tagIcon: <Zap className="w-3 h-3" /> },
+    ]
+  },
+  {
+    id: "technical",
+    name: "Technical Documents",
+    description: "Technical documents by application",
+    icon: <Settings className="w-5 h-5" />,
+    files: [
+      { name: "SGT Boiler Technical Document", path: "/downloads/technical/SGT_Boiler_Technical_Document.pdf", size: "498 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
+      { name: "SGT GreenDrive Technical Document", path: "/downloads/technical/SGT_GreenDrive_Technical Document.pdf", size: "310 KB", tag: "Logistics", tagIcon: <Truck className="w-3 h-3" /> },
+      { name: "SGT GreenX DG Technical Document", path: "/downloads/technical/SGT_GreenX_DG_Technical_document.pdf", size: "400 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
+      { name: "SGT Kiln Technical Document", path: "/downloads/technical/SGT_Kiln_Technical_document.pdf", size: "260 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
+      { name: "SGT Smelter Technical Document", path: "/downloads/technical/SGT_Smelter_technical_Document.pdf", size: "325 KB", tag: "Industrial", tagIcon: <Factory className="w-3 h-3" /> },
     ]
   },
 ];
@@ -68,6 +126,11 @@ const tagStyles: Record<string, string> = {
   Research: "bg-cyan-50 text-cyan-700 border-cyan-200",
   Quality: "bg-gray-100 text-gray-600 border-gray-200",
   Technology: "bg-amber-50 text-amber-700 border-amber-200",
+  Industrial: "bg-green-50 text-green-700 border-green-200",
+  Logistics: "bg-blue-50 text-blue-700 border-blue-200",
+  Marine: "bg-cyan-50 text-cyan-700 border-cyan-200",
+  Compliance: "bg-gray-100 text-gray-600 border-gray-200",
+  Company: "bg-amber-50 text-amber-700 border-amber-200",
 };
 
 const featuredBrochures = [
