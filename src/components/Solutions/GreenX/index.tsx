@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrochureLanguageButton from "@/components/Common/BrochureLanguageButton";
 import {
   Activity,
   ArrowRight,
@@ -165,15 +166,14 @@ const GreenXPage = () => {
                   Talk to us about your DG sets
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <a
-                  href={BROCHURES.greenx.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <BrochureLanguageButton
+                  languages={BROCHURES.greenx.languages}
+                  mode="view"
                   className="inline-flex items-center bg-white border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-md hover:border-[#1B6B3D] hover:text-[#1B6B3D] transition-all font-medium text-base"
                 >
                   <Download className="mr-2 w-5 h-5" />
                   Download the GreenX brochure
-                </a>
+                </BrochureLanguageButton>
               </div>
 
               <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-gray-700">
@@ -545,15 +545,15 @@ const GreenXPage = () => {
             >
               Talk to us <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <a
-              href={BROCHURES.greenx.href}
-              target="_blank"
-              rel="noopener noreferrer"
+            <BrochureLanguageButton
+              languages={BROCHURES.greenx.languages}
+              mode="view"
+              placement="top"
               className="inline-flex items-center bg-white text-gray-900 px-10 py-4 rounded-lg text-lg font-bold hover:bg-[#FFD700] transition-colors"
             >
               <Download className="mr-2 w-5 h-5" />
               Download the brochure
-            </a>
+            </BrochureLanguageButton>
             <Link
               href={ROUTES.partners}
               className="inline-flex items-center border-2 border-white/40 text-white px-10 py-4 rounded-lg text-lg font-bold hover:border-[#FFD700] hover:text-[#FFD700] transition-colors"

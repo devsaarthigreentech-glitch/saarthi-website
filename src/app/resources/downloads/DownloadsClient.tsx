@@ -11,6 +11,7 @@ import {
   BadgeCheck
 } from "lucide-react";
 import { BROCHURES, ROUTES, TECHNOLOGY } from "@/data/siteContent";
+import BrochureLanguageButton, { type BrochureLanguage } from "@/components/Common/BrochureLanguageButton";
 
 
 // ─── DOWNLOADS DATA ───
@@ -24,8 +25,8 @@ const downloadCategories = [
     description: "The latest product brochures (November 2026)",
     icon: <BookOpen className="w-5 h-5" />,
     files: [
-      { name: BROCHURES.greendrive.title, path: BROCHURES.greendrive.href, size: "10.2 MB", tag: "GreenDrive", tagIcon: <Truck className="w-3 h-3" /> },
-      { name: BROCHURES.greenx.title, path: BROCHURES.greenx.href, size: "16.0 MB", tag: "GreenX", tagIcon: <Factory className="w-3 h-3" /> },
+      { name: BROCHURES.greendrive.title, path: BROCHURES.greendrive.href, languages: BROCHURES.greendrive.languages, size: "10.2 MB", tag: "GreenDrive", tagIcon: <Truck className="w-3 h-3" /> },
+      { name: BROCHURES.greenx.title, path: BROCHURES.greenx.href, languages: BROCHURES.greenx.languages, size: "16.0 MB", tag: "GreenX", tagIcon: <Factory className="w-3 h-3" /> },
     ]
   },
   {
@@ -227,29 +228,20 @@ export default function DownloadsClient() {
                       {b.icon}
                     </div>
                     <span className="text-xs text-gray-400 font-medium bg-gray-100 px-2.5 py-1 rounded-full">
-                      PDF · {b.size}
+                      PDF · {b.size} · EN / ES
                     </span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-1">{b.title}</h3>
                   <p className="text-sm text-gray-500 leading-relaxed flex-1">{b.blurb}</p>
                   <div className="flex items-center gap-2 mt-5">
-                    <a
-                      href={b.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-4 py-2 bg-sgt-green text-white text-xs font-semibold rounded-lg hover:bg-green-800 transition-all"
-                    >
+                    <BrochureLanguageButton languages={b.languages} mode="view" className="inline-flex items-center gap-1.5 px-4 py-2 bg-sgt-green text-white text-xs font-semibold rounded-lg hover:bg-green-800 transition-all">
                       <Eye className="w-3.5 h-3.5" />
                       View
-                    </a>
-                    <a
-                      href={b.href}
-                      download
-                      className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-gray-200 text-gray-600 text-xs font-semibold rounded-lg hover:bg-gray-50 hover:border-gray-300 transition-all"
-                    >
+                    </BrochureLanguageButton>
+                    <BrochureLanguageButton languages={b.languages} className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-gray-200 text-gray-600 text-xs font-semibold rounded-lg hover:bg-gray-50 hover:border-gray-300 transition-all">
                       <Download className="w-3.5 h-3.5" />
                       Download
-                    </a>
+                    </BrochureLanguageButton>
                   </div>
                 </div>
               ))}
@@ -385,6 +377,7 @@ interface FileRowProps {
   file: {
     name: string;
     path: string;
+    languages?: readonly BrochureLanguage[];
     size: string;
     tag: string;
     tagIcon?: React.ReactNode;
@@ -412,6 +405,12 @@ function FileRow({ file, showCategory = false }: FileRowProps) {
         </h4>
         <div className="flex items-center gap-3 mt-0.5">
           <span className="text-xs text-gray-400">{file.size}</span>
+          {file.languages && (
+            <>
+              <span className="text-gray-300">·</span>
+              <span className="text-xs text-gray-400">{file.languages.map((l) => l.label).join(" / ")}</span>
+            </>
+          )}
           {showCategory && file.category && (
             <>
               <span className="text-gray-300">·</span>
@@ -429,24 +428,38 @@ function FileRow({ file, showCategory = false }: FileRowProps) {
 
       {/* Actions */}
       <div className="flex items-center gap-2 flex-shrink-0">
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 px-4 py-2 bg-sgt-green text-white text-xs font-semibold rounded-lg hover:bg-green-800 transition-all"
-        >
-          <Eye className="w-3.5 h-3.5" />
-          View
-        </a>
+        {file.languages ? (
+          <BrochureLanguageButton languages={file.languages} mode="view" className="inline-flex items-center gap-1.5 px-4 py-2 bg-sgt-green text-white text-xs font-semibold rounded-lg hover:bg-green-800 transition-all">
+            <Eye className="w-3.5 h-3.5" />
+            View
+          </BrochureLanguageButton>
+        ) : (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-sgt-green text-white text-xs font-semibold rounded-lg hover:bg-green-800 transition-all"
+          >
+            <Eye className="w-3.5 h-3.5" />
+            View
+          </a>
+        )}
         {/* ── DOWNLOAD BUTTON START — comment out to hide ── */}
-        <a
-          href={href}
-          download
-          className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-gray-200 text-gray-600 text-xs font-semibold rounded-lg hover:bg-gray-50 hover:border-gray-300 transition-all"
-        >
-          <Download className="w-3.5 h-3.5" />
-          Download
-        </a>
+        {file.languages ? (
+          <BrochureLanguageButton languages={file.languages} className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-gray-200 text-gray-600 text-xs font-semibold rounded-lg hover:bg-gray-50 hover:border-gray-300 transition-all">
+            <Download className="w-3.5 h-3.5" />
+            Download
+          </BrochureLanguageButton>
+        ) : (
+          <a
+            href={href}
+            download
+            className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-gray-200 text-gray-600 text-xs font-semibold rounded-lg hover:bg-gray-50 hover:border-gray-300 transition-all"
+          >
+            <Download className="w-3.5 h-3.5" />
+            Download
+          </a>
+        )}
         {/* ── DOWNLOAD BUTTON END ── */}
       </div>
     </div>

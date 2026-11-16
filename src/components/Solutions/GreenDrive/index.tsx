@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrochureLanguageButton from "@/components/Common/BrochureLanguageButton";
 import {
   Activity,
   AlertTriangle,
@@ -275,14 +276,13 @@ const GreenDrivePage = () => {
                 Request a fleet assessment
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <a
-                href={BROCHURES.greendrive.href}
-                download
+              <BrochureLanguageButton
+                languages={BROCHURES.greendrive.languages}
                 className="inline-flex items-center bg-white/10 border border-white/30 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-base px-8 py-4 rounded-md transition-colors"
               >
                 <Download className="mr-2 w-5 h-5" />
                 Download the GreenDrive brochure
-              </a>
+              </BrochureLanguageButton>
             </div>
 
             <div className="flex flex-wrap items-center gap-6 text-sm text-white/75">
@@ -745,14 +745,14 @@ const GreenDrivePage = () => {
               Request a fleet assessment
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <a
-              href={BROCHURES.greendrive.href}
-              download
+            <BrochureLanguageButton
+              languages={BROCHURES.greendrive.languages}
+              placement="top"
               className="inline-flex items-center bg-white border-2 border-gray-300 text-gray-700 px-10 py-5 rounded-lg text-lg font-bold hover:border-[#1B6B3D] hover:text-[#1B6B3D] transition-all"
             >
               <Download className="mr-2 w-5 h-5" />
               Download the GreenDrive brochure
-            </a>
+            </BrochureLanguageButton>
             <Link
               href={ROUTES.partners}
               className="inline-flex items-center bg-white border-2 border-gray-300 text-gray-700 px-10 py-5 rounded-lg text-lg font-bold hover:border-[#1B6B3D] hover:text-[#1B6B3D] transition-all"

@@ -352,14 +352,24 @@ export const youtubePoster = (id: string) => `https://i.ytimg.com/vi/${id}/hqdef
 export const youtubeWatchUrl = (id: string) => `https://www.youtube.com/watch?v=${id}`;
 
 // ─── Downloads ──────────────────────────────────────────────────────────────
+// `href` is the English file; `languages` lists every language version and
+// drives the language menu on the brochure buttons.
 export const BROCHURES = {
   greendrive: {
     title: "GreenDrive brochure (November 2026)",
     href: "/downloads/brochures/SGT-HydroEdge-GreenDrive-Brochure-Nov-2026.pdf",
+    languages: [
+      { code: "en", label: "English", href: "/downloads/brochures/SGT-HydroEdge-GreenDrive-Brochure-Nov-2026.pdf" },
+      { code: "es", label: "Español", href: "/downloads/brochures/SGT-HydroEdge-GreenDrive-Brochure-Nov-2026-ES.pdf" },
+    ],
   },
   greenx: {
     title: "GreenX brochure (November 2026)",
     href: "/downloads/brochures/SGT-HydroEdge-GreenX-Brochure-Nov-2026.pdf",
+    languages: [
+      { code: "en", label: "English", href: "/downloads/brochures/SGT-HydroEdge-GreenX-Brochure-Nov-2026.pdf" },
+      { code: "es", label: "Español", href: "/downloads/brochures/SGT-HydroEdge-GreenX-Brochure-Nov-2026-ES.pdf" },
+    ],
   },
   // GreenEdge brochure is being updated to GE12 — do not publish the old one.
 } as const;
